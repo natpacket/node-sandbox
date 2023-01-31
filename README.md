@@ -7,4 +7,8 @@
 
 有啥bug联系我...
 
+其实直接看例子就行了，视频 文章都是水出来的~
+视频：https://www.bilibili.com/video/BV1Sv4y1k7Mu
+文章：https://blog.csdn.net/weixin_44862184/article/details/128814472
+
 后续更新会放到星球里 : https://t.zsxq.com/06bIUvBEM
