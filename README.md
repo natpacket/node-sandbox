@@ -1,16 +1,55 @@
-# Node补环境壳
-思路灵感来自陈不不大佬~
+# 魔改Node Js补环境框架
 
-例子请看test.js
+## 内置模块wanfeng
+内置模块wanfeng, 模块里面存放的是构造函数, 是未初始化的, 也就是原型对象以及链都没有设置.
 
-介绍: 目前是将128个常用的原型链对象的壳嵌入到node中了.壳是什么意思呢？就是将JS沙箱中定义原型链,定义property以及保护方法等庞大且冗余的代码，我们在node中直接定义(C++). 然后核心逻辑代码我们依旧使用JS实现.这样的话，大大减少了JS初始化沙箱耗时.我们只需要实现方法核心逻辑即可. 因为在底层定义对象, 大部分检测是不需要考虑的.
+var undefined_obj = new wanfeng.xtd;
+这样就可以得到一个type为undefined的对象了,感谢泰迪大佬提供的代码。
 
-有啥bug联系我...
+ps:我实现的有bug,蓝瘦
 
-其实直接看例子就行了，视频 文章都是水出来的~
+## 内置对象Utils
+1. Utils对象里的方法都是做初始化用的, 使用参考util目录下的init_env.js文件, 
+这里就不赘述了,使用Utils对象初始化对象之前,先定义一个globalMy对象,否则会报错.
 
-视频：https://www.bilibili.com/video/BV1Sv4y1k7Mu
+2. Error_get_stack: 报错堆栈获取的时候会在这里被拦截,然后再返回堆栈字符串出去。(感谢陈不不大佬给予的帮助)
 
-文章：https://blog.csdn.net/weixin_44862184/article/details/128814472
+3. newWindow newDocument newLocation 是返回一个对象,定义好属性的对象,不过原型以及链没设置,需要手动设置下.
+实现可以看init_env.js  globalMy.newWindow, 初始化 window location document.
 
-后续更新会放到星球里 : https://t.zsxq.com/06bIUvBEM
+## node框架使用说明
+
+1. 以window对象为例, window 获取 window对象时, 会走到 globalMy.window_get_window 这个方法里,我们在这里写方法逻辑。
+
+2. 以document对象为例, document 调用 createElement方法时, 会走到 globalMy.Document_createElement 这个方法里,因为是原型链上的方法,所以是Document
+
+3. 还是以document为例, document 获取 location对象时, 会走到 globalMy.document_get_location 这个方法里, 因为location是直接属于document对象下的。
+
+ps : 核心就是在node底层定义了一层拦截器, 然后最终又走到我们定义的js方法里完成调用. 底层定义的方法不需要考虑toString检测. 而且node设置属性比js的defineProperty快很多.
+ 
+## js框架简介
+
+1. 因为之前自己写的沙箱太垃圾, 所以没有和node框架做结合. 不过node框架初始化也快, 干脆就直接用jsdom了, 偷懒了. 
+
+2. 创建节点对象时, 我会定义一个壳对象来映射jsdom对象达到过检测的目的. 我实现的没有很优雅, 够用就行了
+
+## 注意事项
+
+1. 框架默认重写Promise, 如果需要用自带的, 请在初始化之前备份这个对象, 然后替换~
+
+2. 不要代理任何对象,代理对象调用方法时会直接报错,和浏览器一样的机制。建议在方法调用时打印,像我的js框架一样。
+
+3. 代码默认使用vm2模块, 陈不不大佬改了一些vm2模块代码, 否则用不了. 所以如果你使用vm2模块, 暂时就只能起服务调用了. python无法用库调用js.
+
+4. 如果直接用node环境的话, 应该就能用python库调用了, 没去试.  因为node环境检测太多了, 不想用.
+
+5. 非构造函数的原型对象, 就实现了个别, 比如WindowProperties这种的原型对象.
+
+6. 如果遇到方法没有定义的话, node会挂掉噢...
+
+## 警告
+
+此代码开源仅供学习使用,  如有影响请联系作者删除. 请勿用于非法用途, 否则法律后果自负. 最后请不要利用信息差用此框架去获利.
+
+## 赞助
+我、陈不不大佬、泰迪大佬一起合作的星球 : https://t.zsxq.com/06bIUvBEM
