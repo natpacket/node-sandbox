@@ -1,7 +1,6 @@
 var a = +new Date;
-const { VM, VMScript } = require('cyvm2');
+// const { VM, VMScript } = require('cyvm2');
 const fs = require("fs");
-// const {VM, VMScript} = require('vm2');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 // var ws = require("nodejs-websocket");
@@ -56,12 +55,9 @@ const sandbox = {
     globalMy: globalMy,
     console: console,
 }
-var vm = new VM({ sandbox: sandbox });
-
-var script = new VMScript("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, './zcj.js');
-console.log("jsdom初始化 + new VMScript 耗时:", +new Date - a, "毫秒");
+console.log("jsdom初始化 耗时:", +new Date - a, "毫秒");
+var vm = require("vm");
 
 a = +new Date;
-vm.run(script);
+vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
-

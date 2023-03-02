@@ -1,6 +1,8 @@
 a = +new Date;
-
+global = this;
 // console.log(Error("a").stack);
+Object.setPrototypeOf(wanfeng, Object.prototype);
+Object.setPrototypeOf(globalMy, Object.prototype);
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
@@ -12,8 +14,8 @@ Utils.initEnv();
 
 // 删除重复对象,否则会导致我们注册函数到global下时失败
 for (var i in wanfeng) {
-    if (i in global) {
-        delete global[i];
+    if (i in this) {
+        delete this[i];
     }
     // 自定义的构造函数 比如Document. 这里只是随便生成了一个函数
     globalMy[i] = function () {
@@ -262,18 +264,18 @@ globalMy.newWindow = function (dom_window, is_init) {
         var window_name = globalMy.setfoundName(Utils.newWindow());
         globalMy.jsdom_element[window_name] = dom_window;
     } else {
-        globalMy.window = global;
-        var window_name = globalMy.setfoundName(window);
+        globalMy.window = this;
+        var window_name = globalMy.setfoundName(this);
         globalMy.jsdom_element[window_name] = dom_window;
         var m = +new Date;
-        var desp = Object.getOwnPropertyDescriptors(global);
+        var desp = Object.getOwnPropertyDescriptors(this);
         for (var i in desp) {
             if ("get" in desp[i]) {
-                Object.defineProperty(global, i, desp[i]);
+                Object.defineProperty(this, i, desp[i]);
             }
         }
         console.log("重定义window get set 耗时 ", +new Date - m, " 毫秒");
-        delete global[Symbol.toStringTag];
+        delete this[Symbol.toStringTag];
     }
 
     globalMy.element[window_name].__proto__ = Window.prototype;
@@ -5974,4 +5976,4 @@ globalMy.location_reload = function (val) {
 }
 
 // 初始化window
-globalMy.newWindow(globalMy.jsdom.window, true);
+globalMy.newWindow.apply(this, [globalMy.jsdom.window, true]);
