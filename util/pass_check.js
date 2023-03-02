@@ -8,10 +8,8 @@ delete module;
 delete VMError;
 delete Buffer;
 delete KNBCore;
-this.i = 1;
-delete i;
 delete global;
-globalMy.console.log("js沙箱环境框架初始化耗时:", +new Date - a, "毫秒");
+globalMy.console.log("js沙箱环境框架初始化耗时:", +new Date - zcj, "毫秒");
 delete a;
 debugger;
 
@@ -23,7 +21,8 @@ debugger;
 
 // 是否打印日志
 globalMy.is_log = true;
-globalMy.is_log = false;
+// globalMy.is_log = false;
 
 // js开始运行时的时间戳, 用来计算整个js耗时
 globalMy.memory.end_time = globalMy.memory.begin_time = Date.now();
+Math.random = function(){ return 0.5 }

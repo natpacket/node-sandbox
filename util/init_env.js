@@ -1,28 +1,32 @@
-a = +new Date;
+zcj = +new Date;
 // console.log(Error("a").stack);
 Object.setPrototypeOf(wanfeng, Object.prototype);
 Object.setPrototypeOf(globalMy, Object.prototype);
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
-    // console.log(arguments[0]);
+    // console.log("stack", arguments[0]);
     return arguments[0];
 }
 // 给构造函数添加原型对象等属性
 Utils.initEnv();
-
-// 删除重复对象,否则会导致我们注册函数到global下时失败
-for (var i in wanfeng) {
-    if (i in this) { delete this[i]; }
-    // 自定义的构造函数 比如Document. 这里只是随便生成了一个函数
-    globalMy[i] = function () { globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]); };
-    Object.setPrototypeOf(wanfeng[i], Function.prototype);
-    globalMy[i].prototype = wanfeng[i].prototype;
+globalMy.initEnv = function(){
+    var i;
+    for (i in wanfeng) {
+        // 删除重复对象,否则会导致我们注册函数到global下时失败
+        if (i in this) { delete this[i]; }
+        // 自定义的构造函数 比如Document. 这里只是随便生成了一个函数
+        globalMy[i] = function () { globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]); };
+        Object.setPrototypeOf(wanfeng[i], Function.prototype);
+        globalMy[i].prototype = wanfeng[i].prototype;
+    }
 }
+
+globalMy.initEnv();
 // 初始化global, 然后设置__proto__链
 Utils.register();
-globalMy.console.log("node环境框架初始化耗时:", +new Date - a, "毫秒");
-a = +new Date;
+globalMy.console.log("node环境框架初始化耗时:", +new Date - zcj, "毫秒");
+zcj = +new Date;
 
 
 // jsdom 对象
@@ -241,7 +245,7 @@ globalMy.initDomChildren = function (dom) {
     }
 }
 globalMy.initDomTree = function (dom_document) {
-    var a = +new Date;
+    var zcj = +new Date;
     var name = globalMy.setfoundName({});
     Object.setPrototypeOf(globalMy.element[name], DocumentType.prototype);
     globalMy.jsdom_element[name] = dom_document.doctype;
@@ -250,7 +254,7 @@ globalMy.initDomTree = function (dom_document) {
     Object.setPrototypeOf(globalMy.element[name], HTMLHtmlElement.prototype);
     globalMy.jsdom_element[name] = dom_document.documentElement;
     globalMy.initDomChildren(globalMy.jsdom_element[name], name);
-    console.log("clone jsdom 节点对象完成,耗时 ", +new Date - a, "毫秒");
+    console.log("clone jsdom 节点对象完成,耗时 ", +new Date - zcj, "毫秒");
 }
 // 创建一份window对象
 globalMy.newWindow = function (dom_window, is_init) {
@@ -927,6 +931,9 @@ globalMy.window_get_location = function () {
         var foundName = globalMy.foundName(window);
     }
     result = globalMy.value[foundName]['location'];
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了globalMy.window_get_location,result => ', result)
+    }
     return result;
 }
 globalMy.window_get_document = function () {
@@ -937,6 +944,10 @@ globalMy.window_get_document = function () {
         var foundName = globalMy.foundName(window);
     }
     result = globalMy.value[foundName]['document'];
+
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了globalMy.window_get_document,result => ', '' + result)
+    }
     return result;
 }
 globalMy.document_get_location = function () {
@@ -5768,6 +5779,9 @@ globalMy.location_valueOf = function () {
     return this;
 }
 globalMy.location_toString = function () {
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了globalMy.location_toString,result => ', '' + this.href)
+    }
     return this.href;
 }
 globalMy.location_get_ancestorOrigins = function () {

@@ -1,5 +1,5 @@
 var a = +new Date;
-// const { VM, VMScript } = require('cyvm2');
+const { VM, VMScript } = require('cyvm2');
 const fs = require("fs");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
@@ -19,7 +19,8 @@ var html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 // html = ``;
 let configure = {
     // url:"https://pastebin.com/login",
-    url: "http://epub.cnipa.gov.cn/SW/",
+    // url: "http://epub.cnipa.gov.cn/SW/",
+    url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
 }
 const dom = new JSDOM(html, configure);
 
@@ -41,8 +42,9 @@ envCode +=  cover_function + pass_check;
 // let workCode = '';
 // let workCode = fs.readFileSync("./work/tdc.js");
 // let workCode = fs.readFileSync("./work/dy.js");
-let workCode = fs.readFileSync("./work/rsvmp.js");
+// let workCode = fs.readFileSync("./work/rsvmp.js");
 // let workCode = fs.readFileSync("./work/5s.js");
+let workCode = fs.readFileSync("./work/zhihu.js");
 
 let endCode = fs.readFileSync("./work/end.js");
 wanfeng = require("wanfeng");
@@ -56,8 +58,13 @@ const sandbox = {
     console: console,
 }
 console.log("jsdom初始化 耗时:", +new Date - a, "毫秒");
+
+// var vm = new VM({ sandbox: sandbox });
+// var script = new VMScript("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, './zcj.js');
+
 var vm = require("vm");
 
 a = +new Date;
+// vm.run(script);
 vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");

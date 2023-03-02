@@ -1,11 +1,10 @@
-new Promise((resolve, reject) => {
-    var event = globalMy.createEvent("load")
-    resolve(event);
-}).then((event) => {
-    window.dispatchEvent(event);
-});
+// new Promise((resolve, reject) => {
+//     var event = globalMy.createEvent("load")
+//     resolve(event);
+// }).then((event) => {
+//     window.dispatchEvent(event);
+// });
 
-// window.dispatchEvent(globalMy.createEvent("load"))
 
 
 globalMy.asyncFunc = function () {
@@ -50,7 +49,7 @@ function getData(url) {
     return document.cookie.split("GW1gelwM5YZuT=")[1].split(";")[0] + "******" + window.url;
 }
 
-globalMy.console.log("运行瑞数vmp耗时:", +new Date - globalMy.memory.begin_time, "毫秒");
-
-globalMy.console.log(document.cookie);
-globalMy.console.log(localStorage._$rc);
+debugger;
+// globalMy.console.log("运行瑞数vmp耗时:", +new Date - globalMy.memory.begin_time, "毫秒");
+// globalMy.console.log(document.cookie);
+// globalMy.console.log(localStorage._$rc);
