@@ -1,5 +1,4 @@
 a = +new Date;
-global = this;
 // console.log(Error("a").stack);
 Object.setPrototypeOf(wanfeng, Object.prototype);
 Object.setPrototypeOf(globalMy, Object.prototype);
@@ -14,16 +13,11 @@ Utils.initEnv();
 
 // 删除重复对象,否则会导致我们注册函数到global下时失败
 for (var i in wanfeng) {
-    if (i in this) {
-        delete this[i];
-    }
+    if (i in this) { delete this[i]; }
     // 自定义的构造函数 比如Document. 这里只是随便生成了一个函数
-    globalMy[i] = function () {
-        globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]);
-    };
+    globalMy[i] = function () { globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]); };
     Object.setPrototypeOf(wanfeng[i], Function.prototype);
     globalMy[i].prototype = wanfeng[i].prototype;
-
 }
 // 初始化global, 然后设置__proto__链
 Utils.register();
