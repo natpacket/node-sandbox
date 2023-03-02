@@ -39,17 +39,17 @@ let pass_check = fs.readFileSync("./util/pass_check.js");
 envCode +=  cover_function + pass_check;
 
 // workCode
-// let workCode = '';
+let workCode = '';
 // let workCode = fs.readFileSync("./work/tdc.js");
 // let workCode = fs.readFileSync("./work/dy.js");
-let workCode = fs.readFileSync("./work/rsvmp.js");
+// let workCode = fs.readFileSync("./work/rsvmp.js");
 // let workCode = fs.readFileSync("./work/5s.js");
+
 let endCode = fs.readFileSync("./work/end.js");
 wanfeng = require("wanfeng");
 
 globalMy = {
     jsdom: dom,
-    // script_text: `<script type="text/javascript" r='m'>_$a0();</script>`,
 };
 const sandbox = {
     wanfeng: wanfeng,
@@ -65,57 +65,3 @@ a = +new Date;
 vm.run(script);
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 
-
-
-// test
-
-// a = +new Date;
-// const dom = new JSDOM(`<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="report" content='{"spm" :"1011.2124", "disabled": "true" }'><script src="https://g.csdnimg.cn/lib/jquery/1.12.4/jquery.min.js"></script><script src="https://g.csdnimg.cn/user-login/3.0.0/user-login.js"></script><script src="https://g.csdnimg.cn/common/csdn-login-box/csdn-login-box.js"></script><script src="https://g.csdnimg.cn/common/csdn-report/report.js"></script><script src="https://g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://g.csdnimg.cn/lib/social-share/1.0.1/css/share.min.css"><link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="SHORTCUT
-// ICON"><title>CSDN</title><link href="https://csdnimg.cn/release/mp_new/css/app.df82a859.css" rel="preload" as="style"><link href="https://csdnimg.cn/release/mp_new/css/chunk-vendors.cf27d676.css" rel="preload" as="style"><link href="https://csdnimg.cn/release/mp_new/js/app.debeab61.js" rel="preload" as="script"><link href="https://csdnimg.cn/release/mp_new/js/chunk-vendors.35ec7ab4.js" rel="preload" as="script"><link href="https://csdnimg.cn/release/mp_new/css/chunk-vendors.cf27d676.css" rel="stylesheet"><link href="https://csdnimg.cn/release/mp_new/css/app.df82a859.css" rel="stylesheet"></head><body><script>!(function(c,b,d,a){c[a]||(c[a]={});c[a].config={pid:"dyiaei5ihw@b0a6434a57fc89a",appType:"web",imgUrl:"https://arms-retcode.aliyuncs.com/r.png?",sendResource:true,enableLinkTrace:true,behavior:true,enableSPA:true};
-// with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
-// })(window,document,"https://retcode.alicdn.com/retcode/bl.js","__bl");</script><noscript><strong>We're sorry but main doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="https://csdnimg.cn/release/mp_new/js/chunk-vendors.35ec7ab4.js"></script><script src="https://csdnimg.cn/release/mp_new/js/app.debeab61.js"></script></body></html>`)
-// console.log("new jsdom耗时:", +new Date - a);
-// var document = dom.window.document;
-// a = +new Date;
-// for(var i = 0 ;i < 100; i++){
-//     var node = document.createElement("a");
-//     document.body.appendChild(node);
-//     document.body.removeChild(node);
-// }
-// console.log("耗时:", +new Date - a);
-
-
-// function looseJsonParse(){
-//     return Function("debugger;\r\n")();
-// }
-// console.log(looseJsonParse())
-
-
-// ws = require("nodejs-websocket");
-// var _server = ws.createServer(conn => {
-//     // 接收客户端返回的数据
-//     conn.on("text", function (str) {
-//         console.log(str, "接收客户端传过来的值");
-//         //         conn.send("hello ");
-//         if (str + '' === "close") {
-//             throw "close"
-//         }
-//
-//     });
-//
-//     //客户端关闭连接
-//     conn.on("close", function () {
-//
-//     });
-//
-//     conn.on("error", function (err) {
-//         //error
-//         console.log(err, "连接报错");
-//     });
-// });
-// // 定义端口为2002【端口自己随意定义】
-// const port = 8889;
-// _server.listen(port, function () {
-//     console.log("连接成功")
-//     console.log('listening on websocketServer');
-// });

@@ -42,16 +42,6 @@ function getCK() {
     return document.cookie;
 }
 
-function getEnv() {
-    var env = "globalMy.mydefineProperty(sessionStorage, '$_YVTX', '" + localStorage.$_YVTX + "', true, undefined, true, undefined, undefined);\n" +
-        "globalMy.mydefineProperty(sessionStorage, '$_YWTU', '" + localStorage.$_YWTU + "', true, undefined, true, undefined, undefined);\n" +
-        "globalMy.mydefineProperty(localStorage, '__#classType', 'localStorage', true, undefined, true, undefined, undefined);\n" +
-        "globalMy.mydefineProperty(localStorage, '_$rc', '" + localStorage._$rc + "', true, undefined, true, undefined, undefined);\n" +
-        "globalMy.mydefineProperty(localStorage, '$_YVTX', '" + localStorage.$_YVTX + "', true, undefined, true, undefined, undefined);\n" +
-        "globalMy.mydefineProperty(localStorage, '$_YWTU', '" + localStorage.$_YWTU + "', true, undefined, true, undefined, undefined);\n";
-    return env;
-}
-
 function getData(url) {
     // mouseEvent()
     !globalMy.xhr ? globalMy.xhr = new XMLHttpRequest : 1;

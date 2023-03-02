@@ -974,7 +974,6 @@ globalMy.setPromise = function setPromise(func, delay, ...args) {
         globalMy.console.log("setPromise args=>", args);
     }
     globalMy.func_promise.push([func, args]);
-    //返回一个id
 }
 globalMy.callInterval = function callInterval() {
     while (1) {
@@ -1010,7 +1009,7 @@ globalMy.window_setInterval = function setInterval(func, delay, ...args) {
     }
     globalMy.IntervalId += 1;
     globalMy.Id.push(globalMy.IntervalId);
-    globalMy.func_interval.push([func, args]);
+    globalMy.func_interval.push([func, args, this]);
     //返回一个id
     return globalMy.IntervalId;
 
