@@ -39,10 +39,10 @@ let pass_check = fs.readFileSync("./util/pass_check.js");
 envCode +=  cover_function + pass_check;
 
 // workCode
-let workCode = '';
+// let workCode = '';
 // let workCode = fs.readFileSync("./work/tdc.js");
 // let workCode = fs.readFileSync("./work/dy.js");
-// let workCode = fs.readFileSync("./work/rsvmp.js");
+let workCode = fs.readFileSync("./work/rsvmp.js");
 // let workCode = fs.readFileSync("./work/5s.js");
 
 let endCode = fs.readFileSync("./work/end.js");
