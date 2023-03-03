@@ -53,7 +53,7 @@ let endCode = fs.readFileSync("./work/end.js");
 wanfeng = require("wanfeng");
 
 globalMy = {
-    jsdom: dom,
+    dom_window: dom.window,
 };
 const sandbox = {
     wanfeng: wanfeng,
@@ -61,13 +61,17 @@ const sandbox = {
     console: console,
 }
 console.log("jsdom初始化 耗时:", +new Date - a, "毫秒");
-
+let initCode = init_env + envCode;
 // var vm = new VM({ sandbox: sandbox });
 // var script = new VMScript("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, './zcj.js');
 
 var vm = require("vm");
+globalMy.vm = vm;
+globalMy.initCode = initCode;
+globalMy.workCode = workCode;
+globalMy.endCode = endCode;
 
 a = +new Date;
 // vm.run(script);
-vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
+vm.runInNewContext("debugger;\r\n" + initCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");

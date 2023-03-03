@@ -49,7 +49,7 @@ function getData(url) {
     return document.cookie.split("GW1gelwM5YZuT=")[1].split(";")[0] + "******" + window.url;
 }
 
-console.log((new window.ABC).z("et6DuZOBezkCoI40DI0QqdRieXNtVrwrpcAjtzr9/fk=", parseInt("1677821727513") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3));
+console.log((new _window.ABC).z("et6DuZOBezkCoI40DI0QqdRieXNtVrwrpcAjtzr9/fk=", parseInt("1677821727513") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3));
 // console.log((new window.ABC).z("et6DuZOBezkCoI40DI0QqdRieXNtVrwrpcAjtzr9/fk=", parseInt("1677821727513") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3));
 // console.log((new window.ABC).z("et6DuZOBezkCoI40DI0QqdRieXNtVrwrpcAjtzr9/fk=", parseInt("1677821727513") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3));
 // console.log((new window.ABC).z("et6DuZOBezkCoI40DI0QqdRieXNtVrwrpcAjtzr9/fk=", parseInt("1677821727513") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3));

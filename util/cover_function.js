@@ -1591,6 +1591,7 @@ globalMy.Document_createEvent = function (type) {
 };
 globalMy.Document_createElement = function () {
     if (!(this instanceof Document)) {
+        debugger;
         throw new TypeError("Illegal invocation");
     }
     var result;
@@ -2945,7 +2946,7 @@ globalMy.window_matchMedia = function () {
 }
 globalMy.window_getComputedStyle = function () {
     var name = globalMy.foundName(arguments[0]);
-    var result = globalMy.jsdom.window.getComputedStyle(globalMy.jsdom_element[name]);
+    var result = globalMy.dom_window.getComputedStyle(globalMy.jsdom_element[name]);
     name = globalMy.foundJsdomName(result);
     Object.setPrototypeOf(globalMy.element[name], CSSStyleDeclaration.prototype);
     result = globalMy.element[name];
@@ -3051,7 +3052,7 @@ globalMy["WebSocket"].prototype = wanfeng["WebSocket"].prototype;
 
 globalMy.MutationObserver = function MutationObserver() {
     var callback_function = arguments[0];
-    var result = new globalMy.jsdom.window.MutationObserver(callback);
+    var result = new globalMy.dom_window.MutationObserver(callback);
     var name = globalMy.setfoundName(this);
     globalMy.jsdom_element[name] = result;
     result = this;

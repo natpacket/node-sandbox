@@ -1,14 +1,15 @@
 // 过检测
-this.exports = undefined;
-this.module = undefined;
-delete define;
-delete exports;
-delete GLOBAL;
-delete module;
-delete VMError;
-delete Buffer;
-delete KNBCore;
-delete global;
+// this.exports = undefined;
+// this.module = undefined;
+// delete define;
+// delete exports;
+// delete GLOBAL;
+// delete module;
+// delete VMError;
+// delete Buffer;
+// delete KNBCore;
+// delete global;
+
 globalMy.console.log("js沙箱环境框架初始化耗时:", +new Date - zcj, "毫秒");
 delete a;
 debugger;

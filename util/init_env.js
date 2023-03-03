@@ -1,12 +1,14 @@
 zcj = +new Date;
-globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
-.split("; ");
 
-globalMy.cookies.map((item) => { globalMy.jsdom.window.document.cookie = item + "; " });
+// globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
+//     .split("; ");
+//
+// globalMy.cookies.map((item) => {
+//     globalMy.dom_window.document.cookie = item + "; "
+// });
 
 // console.log(Error("a").stack);
-Object.setPrototypeOf(wanfeng, Object.prototype);
-Object.setPrototypeOf(globalMy, Object.prototype);
+
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
@@ -14,26 +16,34 @@ Utils.Error_get_stack = function () {
     return arguments[0];
 }
 // 给构造函数添加原型对象等属性
-
-globalMy.initEnv = function(){
+Object.setPrototypeOf(wanfeng, Object.prototype);
+Object.setPrototypeOf(globalMy, Object.prototype);
+globalMy.initEnv = function () {
     Utils.initEnv();
     var i;
     for (i in wanfeng) {
         // 删除重复对象,否则会导致我们注册函数到global下时失败
-        if (i in this) { delete this[i]; }
+        if (i in this) {
+            delete this[i];
+        }
         // 自定义的构造函数 比如Document. 这里只是随便生成了一个函数
-        globalMy[i] = function () { globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]); };
+        globalMy[i] = function () {
+            globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]);
+        };
         Object.setPrototypeOf(wanfeng[i], Function.prototype);
         globalMy[i].prototype = wanfeng[i].prototype;
     }
+    // 初始化global, 然后设置__proto__链
     Utils.register();
 }
 globalMy.initEnv();
-// 初始化global, 然后设置__proto__链
+
 
 globalMy.console.log("node环境框架初始化耗时:", +new Date - zcj, "毫秒");
 zcj = +new Date;
 
+// 基础对象
+globalMy.basic_obj = ["console", "Object", "Function", "Array", "Number", "parseFloat", "parseInt", "Infinity", "NaN", "undefined", "Boolean", "String", "Symbol", "Date", "Promise", "RegExp", "Error", "AggregateError", "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError", "globalThis", "JSON", "Math", "Intl", "ArrayBuffer", "Uint8Array", "Int8Array", "Uint16Array", "Int16Array", "Uint32Array", "Int32Array", "Float32Array", "Float64Array", "Uint8ClampedArray", "BigUint64Array", "BigInt64Array", "DataView", "Map", "BigInt", "Set", "WeakMap", "WeakSet", "Proxy", "Reflect", "FinalizationRegistry", "WeakRef", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape", "eval", "isFinite", "isNaN", "Atomics", "WebAssembly", "atob", "btoa"];
 
 // jsdom 对象
 globalMy.jsdom_element = [];
@@ -101,7 +111,7 @@ globalMy.foundJsdomName = function foundName(obj, name) {
         Object.setPrototypeOf(globalMy.element[name], window[construct].prototype);
         globalMy.jsdom_element[name] = obj;
         foundName = name;
-        // if (obj instanceof globalMy.jsdom.window.HTMLElement) { }
+        // if (obj instanceof globalMy.dom_window.HTMLElement) { }
         // else {
         //     debugger;
         // }
@@ -265,8 +275,13 @@ globalMy.initDomTree = function (dom_document) {
 // 创建一份window对象
 globalMy.newWindow = function (dom_window, is_init) {
     if (!is_init) {
-        var window_name = globalMy.setfoundName(Utils.newWindow());
+        var sandbox = {win: undefined, wanfeng: wanfeng, globalMy: {dom_window: dom_window}}
+        globalMy.vm.runInNewContext(globalMy.initCode + `\r\nwin=this;`, sandbox);
+        // var window_name = globalMy.setfoundName(Utils.newWindow());
+        var window_name = globalMy.setfoundName(sandbox.win);
         globalMy.jsdom_element[window_name] = dom_window;
+        debugger;
+        return globalMy.element[window_name];
     } else {
         globalMy.window = this;
         var window_name = globalMy.setfoundName(this);
@@ -324,7 +339,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[window_name]['status'] = '';
     globalMy.value[window_name]['closed'] = false;
     globalMy.value[window_name]['length'] = 0;
-    globalMy.value[window_name]['origin'] = globalMy.jsdom.window.origin;
+    globalMy.value[window_name]['origin'] = globalMy.dom_window.origin;
     globalMy.value[window_name]['innerWidth'] = 1920;
     globalMy.value[window_name]['innerHeight'] = 937;
     globalMy.value[window_name]['scrollX'] = 0;
@@ -351,7 +366,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[window_name]['frames'] = globalMy.element[window_name];
 
     globalMy.value[window_name]['webkitStorageInfo'] = {};
-    
+
     globalMy.value[window_name]['scheduler'] = {};
     Object.setPrototypeOf(globalMy.value[window_name]['scheduler'], Scheduler.prototype);
 
@@ -429,7 +444,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     };
 
     globalMy.value[globalMy.obj_name]['onresourcetimingbufferfull'] = null;
-    
+
     globalMy.value[globalMy.obj_name_1] = {
         jsHeapSizeLimit: 4294705152,
         totalJSHeapSize: 10156931,
@@ -6019,4 +6034,4 @@ globalMy.location_reload = function (val) {
 }
 
 // 初始化window
-globalMy.newWindow.apply(this, [globalMy.jsdom.window, true]);
+globalMy.newWindow.apply(this, [globalMy.dom_window, true]);
