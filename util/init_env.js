@@ -275,13 +275,13 @@ globalMy.initDomTree = function (dom_document) {
 // 创建一份window对象
 globalMy.newWindow = function (dom_window, is_init) {
     if (!is_init) {
-        var sandbox = {win: undefined, wanfeng: wanfeng, globalMy: {dom_window: dom_window}}
-        globalMy.vm.runInNewContext(globalMy.initCode + `\r\nwin=this;`, sandbox);
-        // var window_name = globalMy.setfoundName(Utils.newWindow());
-        var window_name = globalMy.setfoundName(sandbox.win);
+        // var sandbox = {win: undefined, wanfeng: wanfeng, globalMy: {dom_window: dom_window}}
+        // globalMy.vm.runInNewContext(globalMy.envCode + `\r\nwin=this;`, sandbox);
+        // var window_name = globalMy.setfoundName(sandbox.win);
+
+        var window_name = globalMy.setfoundName(Utils.newWindow());
         globalMy.jsdom_element[window_name] = dom_window;
-        debugger;
-        return globalMy.element[window_name];
+
     } else {
         globalMy.window = this;
         var window_name = globalMy.setfoundName(this);
@@ -5853,8 +5853,6 @@ globalMy.location_get_href = function () {
     return result;
 }
 globalMy.location_set_href = function (val) {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['href'] = val;
@@ -5863,8 +5861,6 @@ globalMy.location_set_href = function (val) {
     }
 }
 globalMy.location_get_origin = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['origin'];
@@ -5883,8 +5879,6 @@ globalMy.location_get_protocol = function () {
     return result;
 }
 globalMy.location_set_protocol = function (val) {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['protocol'] = val;
@@ -5893,8 +5887,6 @@ globalMy.location_set_protocol = function (val) {
     }
 }
 globalMy.location_get_host = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['host'];
@@ -5904,8 +5896,6 @@ globalMy.location_get_host = function () {
     return result;
 }
 globalMy.location_set_host = function (val) {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['host'] = val;
@@ -5914,8 +5904,6 @@ globalMy.location_set_host = function (val) {
     }
 }
 globalMy.location_get_hostname = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['hostname'];
@@ -5925,8 +5913,6 @@ globalMy.location_get_hostname = function () {
     return result;
 }
 globalMy.location_set_hostname = function (val) {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['hostname'] = val;
@@ -5935,8 +5921,6 @@ globalMy.location_set_hostname = function (val) {
     }
 }
 globalMy.location_get_port = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['port'];
@@ -5946,8 +5930,6 @@ globalMy.location_get_port = function () {
     return result;
 }
 globalMy.location_set_port = function (val) {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['port'] = val;
@@ -5956,8 +5938,6 @@ globalMy.location_set_port = function (val) {
     }
 }
 globalMy.location_get_pathname = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['pathname'];
@@ -5975,8 +5955,6 @@ globalMy.location_set_pathname = function (val) {
     }
 }
 globalMy.location_get_search = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['search'];
@@ -5996,8 +5974,6 @@ globalMy.location_set_search = function (val) {
     }
 }
 globalMy.location_get_hash = function () {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['hash'];
@@ -6007,8 +5983,6 @@ globalMy.location_get_hash = function () {
     return result;
 }
 globalMy.location_set_hash = function (val) {
-
-
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['hash'] = val;
@@ -6020,7 +5994,6 @@ globalMy.location_replace = function (val) {
     var result;
     var foundName = globalMy.foundName(this);
     if (globalMy.is_log) {
-        // globalMy.console.log(localStorage._$rc);
         globalMy.console.log('[*]  调用了location_replace, 传参val => ' + val + '  result => ', '' + result)
     }
 }
@@ -6028,7 +6001,6 @@ globalMy.location_reload = function (val) {
     var result;
     var foundName = globalMy.foundName(this);
     if (globalMy.is_log) {
-        // globalMy.console.log(localStorage._$rc);
         globalMy.console.log('[*]  调用了location_reload, 传参val => ' + val + '  result => ', '' + result)
     }
 }

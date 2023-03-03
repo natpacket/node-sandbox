@@ -28,7 +28,7 @@ const dom = new JSDOM(html, configure);
 
 let filePath = fs.readdirSync('./env');
 let envCode = '';
-filePath.map((item)=>{
+filePath.map((item) => {
     envCode += fs.readFileSync(`./env/${item}`) + '\n';
 });
 
@@ -38,8 +38,8 @@ let init_env = fs.readFileSync("./util/init_env.js");
 let cover_function = fs.readFileSync("./util/cover_function.js");
 let pass_check = fs.readFileSync("./util/pass_check.js");
 
-envCode +=  cover_function + pass_check;
-
+envCode += cover_function + pass_check;
+envCode = init_env + envCode;
 // workCode
 // let workCode = '';
 // let workCode = fs.readFileSync("./work/tdc.js");
@@ -52,26 +52,38 @@ let workCode = fs.readFileSync("./work/boss.js");
 let endCode = fs.readFileSync("./work/end.js");
 wanfeng = require("wanfeng");
 
-globalMy = {
+var globalMy = {
     dom_window: dom.window,
 };
-const sandbox = {
+var sandbox = {
     wanfeng: wanfeng,
     globalMy: globalMy,
-    console: console,
+    // console: console,
 }
 console.log("jsdom初始化 耗时:", +new Date - a, "毫秒");
-let initCode = init_env + envCode;
 // var vm = new VM({ sandbox: sandbox });
-// var script = new VMScript("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, './zcj.js');
+// var script = new VMScript("debugger;\r\n" + envCode + "\r\n" + workCode + "\r\n" + endCode, './zcj.js');
 
 var vm = require("vm");
-globalMy.vm = vm;
-globalMy.initCode = initCode;
-globalMy.workCode = workCode;
-globalMy.endCode = endCode;
+
+// globalMy.vm = vm;
+// globalMy.envCode = envCode;
+// globalMy.workCode = workCode;
+// globalMy.endCode = endCode;
 
 a = +new Date;
 // vm.run(script);
-vm.runInNewContext("debugger;\r\n" + initCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
+vm.runInNewContext("debugger;\r\n" + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
+// vm.runInNewContext(envCode + "\r\nwin=this;", sandbox);
+
+// debugger;
+// var ifr = dom.window.document.createElement("iframe");
+// dom.window.document.body.appendChild(ifr);
+// var sandbox_ = { wanfeng: wanfeng, globalMy: { dom_window: ifr.contentWindow, parent_window: sandbox.win }, console: console }
+// vm.runInNewContext(envCode + "\r\nwindow.parent = window.top = globalMy.parent_window;\r\ndebugger;\r\n" + workCode + "\r\n" + endCode + "\r\n", sandbox_);
+
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+
+
+
+
