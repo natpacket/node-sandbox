@@ -9,8 +9,9 @@ Utils.Error_get_stack = function () {
     return arguments[0];
 }
 // 给构造函数添加原型对象等属性
-Utils.initEnv();
+
 globalMy.initEnv = function(){
+    Utils.initEnv();
     var i;
     for (i in wanfeng) {
         // 删除重复对象,否则会导致我们注册函数到global下时失败
@@ -20,11 +21,11 @@ globalMy.initEnv = function(){
         Object.setPrototypeOf(wanfeng[i], Function.prototype);
         globalMy[i].prototype = wanfeng[i].prototype;
     }
+    Utils.register();
 }
-
 globalMy.initEnv();
 // 初始化global, 然后设置__proto__链
-Utils.register();
+
 globalMy.console.log("node环境框架初始化耗时:", +new Date - zcj, "毫秒");
 zcj = +new Date;
 
