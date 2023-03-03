@@ -1043,45 +1043,6 @@ globalMy.PluginArray_get_length = function () {
     return result;
 };
 
-// BaseAudioContext
-globalMy.BaseAudioContext_createOscillator = function () {
-    if (!(this instanceof BaseAudioContext)) {
-        throw new TypeError("Illegal invocation");
-    }
-    var result;
-    //这里写方法实体
-
-    let oscillatorNode = {};
-    Object.setPrototypeOf(oscillatorNode, OscillatorNode.prototype);
-    let obj_name = globalMy.setfoundName(oscillatorNode);
-    globalMy.value[obj_name]['type'] = 'sine';
-    globalMy.value[obj_name]['numberOfInputs'] = 0;
-    globalMy.value[obj_name]['numberOfOutputs'] = 1;
-    globalMy.value[obj_name]['channelCount'] = 2;
-    globalMy.value[obj_name]['channelCountMode'] = "max";
-    globalMy.value[obj_name]['channelInterpretation'] = "speakers";
-    globalMy.value[obj_name]['frequency'] = {};
-    globalMy.value[obj_name]['detune'] = {};
-    Object.setPrototypeOf(globalMy.value[obj_name]['frequency'], AudioParam.prototype);
-    Object.setPrototypeOf(globalMy.value[obj_name]['detune'], AudioParam.prototype);
-    let foundName = globalMy.setfoundName(globalMy.value[obj_name]['frequency']);
-    globalMy.value[foundName]['value'] = 440;
-    globalMy.value[foundName]['automationRate'] = 'a-rate';
-    globalMy.value[foundName]['defaultValue'] = 440;
-    globalMy.value[foundName]['minValue'] = -22050;
-    globalMy.value[foundName]['maxValue'] = 22050;
-    foundName = globalMy.setfoundName(globalMy.value[obj_name]['detune']);
-    globalMy.value[foundName]['value'] = 0;
-    globalMy.value[foundName]['automationRate'] = 'a-rate';
-    globalMy.value[foundName]['defaultValue'] = 0;
-    globalMy.value[foundName]['minValue'] = -153600;
-    globalMy.value[foundName]['maxValue'] = 153600;
-    if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了BaseAudioContext_createOscillator, arguments => ', arguments, '  result => ' + oscillatorNode);
-    }
-    return oscillatorNode;
-};
-
 // Plugin
 globalMy.Plugin_item = function () {
     if (!(this instanceof Plugin)) {
@@ -2754,6 +2715,209 @@ globalMy.Performance_now = function () {
     return result;
 };
 
+// AudioParam
+globalMy.AudioParam_setValueAtTime = function () {
+    let result;
+    //这里写方法实体
+    result = this;
+    if (globalMy.is_log) {
+        console.log('[*]  调用了AudioParam_setValueAtTime, arguments => ' + JSON.stringify(arguments) + '  result => ', result)
+    }
+    return result;
+}
+
+// BaseAudioContext
+globalMy.BaseAudioContext_createOscillator = function () {
+    if (!(this instanceof BaseAudioContext)) {
+        throw new TypeError("Illegal invocation");
+    }
+    var oscillatorNode = {};
+    Object.setPrototypeOf(oscillatorNode, OscillatorNode.prototype);
+    var obj_name = globalMy.setfoundName(oscillatorNode);
+    globalMy.value[obj_name]['type'] = 'sine';
+    globalMy.value[obj_name]['numberOfInputs'] = 0;
+    globalMy.value[obj_name]['numberOfOutputs'] = 1;
+    globalMy.value[obj_name]['channelCount'] = 2;
+    globalMy.value[obj_name]['channelCountMode'] = "max";
+    globalMy.value[obj_name]['channelInterpretation'] = "speakers";
+    globalMy.value[obj_name]['frequency'] = {};
+    globalMy.value[obj_name]['detune'] = {};
+    Object.setPrototypeOf(globalMy.value[obj_name]['frequency'], AudioParam.prototype);
+    Object.setPrototypeOf(globalMy.value[obj_name]['detune'], AudioParam.prototype);
+
+    var foundName = globalMy.setfoundName(globalMy.value[obj_name]['frequency']);
+    globalMy.value[foundName]['value'] = 440;
+    globalMy.value[foundName]['automationRate'] = 'a-rate';
+    globalMy.value[foundName]['defaultValue'] = 440;
+    globalMy.value[foundName]['minValue'] = -22050;
+    globalMy.value[foundName]['maxValue'] = 22050;
+
+    foundName = globalMy.setfoundName(globalMy.value[obj_name]['detune']);
+    globalMy.value[foundName]['value'] = 0;
+    globalMy.value[foundName]['automationRate'] = 'a-rate';
+    globalMy.value[foundName]['defaultValue'] = 0;
+    globalMy.value[foundName]['minValue'] = -153600;
+    globalMy.value[foundName]['maxValue'] = 153600;
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了BaseAudioContext_createOscillator, arguments => ', arguments, '  result => ' + oscillatorNode);
+    }
+    return oscillatorNode;
+};
+globalMy.BaseAudioContext_createDynamicsCompressor = function () {
+    let result;
+    //这里写方法实体
+    result = {};
+    Object.setPrototypeOf(result, DynamicsCompressorNode.prototype);
+    var name = globalMy.setfoundName(result);
+    globalMy.value[name]["channelCount"] = 2;
+    globalMy.value[name]["channelCountMode"] = "clamped-max";
+    globalMy.value[name]["channelInterpretation"] = "speakers";
+    globalMy.value[name]["reduction"] = 0;
+    globalMy.value[name]["numberOfInputs"] = 1;
+    globalMy.value[name]["numberOfOutputs"] = 1;
+    globalMy.value[name]["context"] = this;
+
+    globalMy.value[name]["knee"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["knee"], AudioParam.prototype);
+    var obj_name = globalMy.setfoundName(globalMy.value[name]["knee"]);
+    globalMy.value[obj_name]['value'] = 40;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 30;
+    globalMy.value[obj_name]['minValue'] = 0;
+    globalMy.value[obj_name]['maxValue'] = 40;
+
+    globalMy.value[name]["ratio"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["ratio"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["ratio"]);
+    globalMy.value[obj_name]['value'] = 12;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 12;
+    globalMy.value[obj_name]['minValue'] = 1;
+    globalMy.value[obj_name]['maxValue'] = 20;
+
+    globalMy.value[name]["release"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["release"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["release"]);
+    globalMy.value[obj_name]['value'] = 0.25;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 0.25;
+    globalMy.value[obj_name]['minValue'] = 0;
+    globalMy.value[obj_name]['maxValue'] = 1;
+
+    globalMy.value[name]["attack"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["attack"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["attack"]);
+    globalMy.value[obj_name]['value'] = 0;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 0.003000000026077032;
+    globalMy.value[obj_name]['minValue'] = 0;
+    globalMy.value[obj_name]['maxValue'] = 1;
+
+    globalMy.value[name]["threshold"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["threshold"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["threshold"]);
+    globalMy.value[obj_name]['value'] = -50;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = -24;
+    globalMy.value[obj_name]['minValue'] = -100;
+    globalMy.value[obj_name]['maxValue'] = 0;
+
+    if (globalMy.is_log) {
+        console.log('[*]  调用了BaseAudioContext_createDynamicsCompressor, arguments => ' + JSON.stringify(arguments) + '  result => ', result)
+    }
+    return result;
+}
+
+// OscillatorNode
+
+// OfflineAudioContext
+globalMy.OfflineAudioContext_startRendering = function () {
+    let result;
+    //这里写方法实体
+    result = new Promise((resolve) => {
+        resolve(this);
+    });
+    if (globalMy.is_log) {
+        console.log('[*]  调用了OfflineAudioContext_startRendering, arguments => ' + JSON.stringify(arguments) + '  result => ', result)
+    }
+    return result;
+}
+
+// AudioNode
+globalMy.AudioNode_connect = function () {
+    let result;
+    //这里写方法实体
+    result = {};
+    Object.setPrototypeOf(result, DynamicsCompressorNode.prototype);
+    var name = globalMy.setfoundName(result);
+    globalMy.value[name]["channelCount"] = 2;
+    globalMy.value[name]["channelCountMode"] = "clamped-max";
+    globalMy.value[name]["channelInterpretation"] = "speakers";
+    globalMy.value[name]["reduction"] = 0;
+    globalMy.value[name]["numberOfInputs"] = 1;
+    globalMy.value[name]["numberOfOutputs"] = 1;
+    globalMy.value[name]["context"] = this;
+
+    globalMy.value[name]["knee"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["knee"], AudioParam.prototype);
+    var obj_name = globalMy.setfoundName(globalMy.value[name]["knee"]);
+    globalMy.value[obj_name]['value'] = 40;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 30;
+    globalMy.value[obj_name]['minValue'] = 0;
+    globalMy.value[obj_name]['maxValue'] = 40;
+
+    globalMy.value[name]["ratio"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["ratio"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["ratio"]);
+    globalMy.value[obj_name]['value'] = 12;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 12;
+    globalMy.value[obj_name]['minValue'] = 1;
+    globalMy.value[obj_name]['maxValue'] = 20;
+
+    globalMy.value[name]["release"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["release"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["release"]);
+    globalMy.value[obj_name]['value'] = 0.25;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 0.25;
+    globalMy.value[obj_name]['minValue'] = 0;
+    globalMy.value[obj_name]['maxValue'] = 1;
+
+    globalMy.value[name]["attack"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["attack"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["attack"]);
+    globalMy.value[obj_name]['value'] = 0;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = 0.003000000026077032;
+    globalMy.value[obj_name]['minValue'] = 0;
+    globalMy.value[obj_name]['maxValue'] = 1;
+
+    globalMy.value[name]["threshold"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["threshold"], AudioParam.prototype);
+    obj_name = globalMy.setfoundName(globalMy.value[name]["threshold"]);
+    globalMy.value[obj_name]['value'] = -50;
+    globalMy.value[obj_name]['automationRate'] = 'k-rate';
+    globalMy.value[obj_name]['defaultValue'] = -24;
+    globalMy.value[obj_name]['minValue'] = -100;
+    globalMy.value[obj_name]['maxValue'] = 0;
+    if (globalMy.is_log) {
+        console.log('[*]  调用了AudioNode_connect, arguments => ' + JSON.stringify(arguments) + '  result => ', result)
+    }
+    return result;
+}
+
+// AudioDestinationNode
+globalMy.AudioDestinationNode_get_maxChannelCount = function () {
+    let result;
+    var foundName = globalMy.foundName(this);
+    result = globalMy.value[foundName]['maxChannelCount'];
+    if (globalMy.is_log) {
+        console.log('[*]  调用了AudioDestinationNode_get_maxChannelCount,result => ', result)
+    }
+    return result;
+}
 
 
 // window function
@@ -2806,7 +2970,6 @@ globalMy.window_openDatabase = function () {
     }
     return result;
 }
-
 
 
 // 构造函数实现覆盖
@@ -2911,6 +3074,37 @@ globalMy.MutationObserver = function MutationObserver() {
 }
 globalMy.MutationObserver.prototype = wanfeng.MutationObserver.prototype;
 
+
+globalMy.OfflineAudioContext = function OfflineAudioContext() {
+    if (globalMy.is_log) {
+        globalMy.console.log("[*]  new 构造函数 -> OfflineAudioContext, ", "arguments => ", arguments)
+    }
+    var offlineAudioContext = this;
+    Object.setPrototypeOf(offlineAudioContext, OfflineAudioContext.prototype);
+    var name = globalMy.setfoundName(offlineAudioContext);
+    globalMy.value[name]["audioWorklet"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["audioWorklet"], AudioWorklet.prototype);
+    globalMy.value[name]["currentTime"] = 0;
+    globalMy.value[name]["length"] = arguments[1];
+    globalMy.value[name]["sampleRate"] = arguments[2];
+    globalMy.value[name]["state"] = "running";
+    globalMy.value[name]["onstatechange"] = null;
+    globalMy.value[name]["oncomplete"] = null;
+
+    globalMy.value[name]["destination"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["destination"], AudioDestinationNode.prototype);
+    var obj_name = globalMy.setfoundName(globalMy.value[name]["destination"]);
+    globalMy.value[obj_name]["context"] = offlineAudioContext;
+    globalMy.value[obj_name]["channelCount"] = 1;
+    globalMy.value[obj_name]["channelCountMode"] = "explicit";
+    globalMy.value[obj_name]["channelInterpretation"] = "speakers";
+    globalMy.value[obj_name]["maxChannelCount"] = 1;
+    globalMy.value[obj_name]["numberOfInputs"] = 1;
+    globalMy.value[obj_name]["numberOfOutputs"] = 0;
+
+    return offlineAudioContext;
+}
+globalMy.OfflineAudioContext.prototype = wanfeng.OfflineAudioContext.prototype;
 
 /*
 自定义Promise函数模块：IIFE
