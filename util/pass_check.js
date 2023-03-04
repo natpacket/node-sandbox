@@ -10,7 +10,7 @@
 // delete KNBCore;
 // delete global;
 
-globalMy.console.log("js沙箱环境框架初始化耗时:", +new Date - zcj, "毫秒");
+globalMy.console.log("js沙箱环境框架初始化耗时:", +new Date - a, "毫秒");
 delete a;
 debugger;
 

@@ -1,23 +1,14 @@
-zcj = +new Date;
-
-// globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
-//     .split("; ");
-//
-// globalMy.cookies.map((item) => {
-//     globalMy.dom_window.document.cookie = item + "; "
-// });
-
+a = +new Date;
+Object.setPrototypeOf(wanfeng, Object.prototype);
+Object.setPrototypeOf(globalMy, Object.prototype);
 // console.log(Error("a").stack);
-
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
-    // console.log("stack", arguments[0]);
+    // console.log(arguments[0]);
     return arguments[0];
 }
-// 给构造函数添加原型对象等属性
-Object.setPrototypeOf(wanfeng, Object.prototype);
-Object.setPrototypeOf(globalMy, Object.prototype);
+
 globalMy.initEnv = function () {
     Utils.initEnv();
     var i;
@@ -38,12 +29,9 @@ globalMy.initEnv = function () {
 }
 globalMy.initEnv();
 
+globalMy.console.log("node环境框架初始化耗时:", +new Date - a, "毫秒");
+a = +new Date;
 
-globalMy.console.log("node环境框架初始化耗时:", +new Date - zcj, "毫秒");
-zcj = +new Date;
-
-// 基础对象
-globalMy.basic_obj = ["console", "Object", "Function", "Array", "Number", "parseFloat", "parseInt", "Infinity", "NaN", "undefined", "Boolean", "String", "Symbol", "Date", "Promise", "RegExp", "Error", "AggregateError", "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError", "globalThis", "JSON", "Math", "Intl", "ArrayBuffer", "Uint8Array", "Int8Array", "Uint16Array", "Int16Array", "Uint32Array", "Int32Array", "Float32Array", "Float64Array", "Uint8ClampedArray", "BigUint64Array", "BigInt64Array", "DataView", "Map", "BigInt", "Set", "WeakMap", "WeakSet", "Proxy", "Reflect", "FinalizationRegistry", "WeakRef", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape", "eval", "isFinite", "isNaN", "Atomics", "WebAssembly", "atob", "btoa"];
 
 // jsdom 对象
 globalMy.jsdom_element = [];
@@ -111,7 +99,7 @@ globalMy.foundJsdomName = function foundName(obj, name) {
         Object.setPrototypeOf(globalMy.element[name], window[construct].prototype);
         globalMy.jsdom_element[name] = obj;
         foundName = name;
-        // if (obj instanceof globalMy.dom_window.HTMLElement) { }
+        // if (obj instanceof globalMy.jsdom.window.HTMLElement) { }
         // else {
         //     debugger;
         // }
@@ -261,7 +249,7 @@ globalMy.initDomChildren = function (dom) {
     }
 }
 globalMy.initDomTree = function (dom_document) {
-    var zcj = +new Date;
+    var a = +new Date;
     var name = globalMy.setfoundName({});
     Object.setPrototypeOf(globalMy.element[name], DocumentType.prototype);
     globalMy.jsdom_element[name] = dom_document.doctype;
@@ -270,18 +258,14 @@ globalMy.initDomTree = function (dom_document) {
     Object.setPrototypeOf(globalMy.element[name], HTMLHtmlElement.prototype);
     globalMy.jsdom_element[name] = dom_document.documentElement;
     globalMy.initDomChildren(globalMy.jsdom_element[name], name);
-    console.log("clone jsdom 节点对象完成,耗时 ", +new Date - zcj, "毫秒");
+    console.log("clone jsdom 节点对象完成,耗时 ", +new Date - a, "毫秒");
 }
+
 // 创建一份window对象
 globalMy.newWindow = function (dom_window, is_init) {
     if (!is_init) {
-        // var sandbox = {win: undefined, wanfeng: wanfeng, globalMy: {dom_window: dom_window}}
-        // globalMy.vm.runInNewContext(globalMy.envCode + `\r\nwin=this;`, sandbox);
-        // var window_name = globalMy.setfoundName(sandbox.win);
-
         var window_name = globalMy.setfoundName(Utils.newWindow());
         globalMy.jsdom_element[window_name] = dom_window;
-
     } else {
         globalMy.window = this;
         var window_name = globalMy.setfoundName(this);
@@ -360,12 +344,10 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[window_name]['status'] = '';
     globalMy.value[window_name]['closed'] = false;
     globalMy.value[window_name]['length'] = 0;
-    globalMy.value[window_name]['self'] = globalMy.element[window_name];
+    globalMy.value[window_name]['self'] = window;
     globalMy.value[window_name]['parent'] = window;
     globalMy.value[window_name]['top'] = window;
-    globalMy.value[window_name]['frames'] = globalMy.element[window_name];
-
-    globalMy.value[window_name]['webkitStorageInfo'] = {};
+    globalMy.value[window_name]['frames'] = window;
 
     globalMy.value[window_name]['scheduler'] = {};
     Object.setPrototypeOf(globalMy.value[window_name]['scheduler'], Scheduler.prototype);
@@ -444,13 +426,13 @@ globalMy.newWindow = function (dom_window, is_init) {
     };
 
     globalMy.value[globalMy.obj_name]['onresourcetimingbufferfull'] = null;
-
+    
     globalMy.value[globalMy.obj_name_1] = {
         jsHeapSizeLimit: 4294705152,
         totalJSHeapSize: 10156931,
         usedJSHeapSize: 6103087,
     }
-
+    
     globalMy.value[window_name]['locationbar'] = {};
     globalMy.value[window_name]['menubar'] = {};
     globalMy.value[window_name]['personalbar'] = {};
@@ -624,7 +606,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[navigator_name]['product'] = 'Gecko';
     globalMy.value[navigator_name]['userAgent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36';
     globalMy.value[navigator_name]['language'] = 'zh-CN';
-    globalMy.value[navigator_name]['languages'] = ['zh-CN'];
+    globalMy.value[navigator_name]['languages'] = ['zh-CN', 'zh'];
     globalMy.value[navigator_name]['onLine'] = true;
     globalMy.value[navigator_name]['webdriver'] = false;
     globalMy.value[navigator_name]['doNotTrack'] = null;
@@ -980,9 +962,6 @@ globalMy.window_get_location = function () {
         var foundName = globalMy.foundName(window);
     }
     result = globalMy.value[foundName]['location'];
-    if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了window_get_location,result => ', result)
-    }
     return result;
 }
 globalMy.window_get_document = function () {
@@ -993,10 +972,6 @@ globalMy.window_get_document = function () {
         var foundName = globalMy.foundName(window);
     }
     result = globalMy.value[foundName]['document'];
-
-    if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了window_get_document,result => ', '' + result)
-    }
     return result;
 }
 globalMy.document_get_location = function () {
@@ -1030,6 +1005,7 @@ globalMy.setPromise = function setPromise(func, delay, ...args) {
         globalMy.console.log("setPromise args=>", args);
     }
     globalMy.func_promise.push([func, args]);
+    //返回一个id
 }
 globalMy.callInterval = function callInterval() {
     while (1) {
@@ -1065,7 +1041,7 @@ globalMy.window_setInterval = function setInterval(func, delay, ...args) {
     }
     globalMy.IntervalId += 1;
     globalMy.Id.push(globalMy.IntervalId);
-    globalMy.func_interval.push([func, args, this]);
+    globalMy.func_interval.push([func, args]);
     //返回一个id
     return globalMy.IntervalId;
 
@@ -1482,8 +1458,6 @@ globalMy.window_get_opener = function () {
     return result;
 }
 globalMy.window_set_opener = function (val) {
-
-
     var result;
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
@@ -1521,7 +1495,7 @@ globalMy.window_set_parent = function (val) {
     }
     globalMy.value[foundName]['parent'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了window_get_parent, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了window_set_parent, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.window_get_frameElement = function () {
@@ -1570,8 +1544,6 @@ globalMy.window_get_origin = function () {
     return result;
 }
 globalMy.window_set_origin = function (val) {
-
-
     var result;
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
@@ -1580,7 +1552,7 @@ globalMy.window_set_origin = function (val) {
     }
     globalMy.value[foundName]['origin'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了window_get_origin, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了window_set_origin, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.window_get_external = function () {
@@ -1599,8 +1571,6 @@ globalMy.window_get_external = function () {
     return result;
 }
 globalMy.window_set_external = function (val) {
-
-
     var result;
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
@@ -1609,7 +1579,7 @@ globalMy.window_set_external = function (val) {
     }
     globalMy.value[foundName]['external'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了window_get_external, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了window_set_external, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.window_get_screen = function () {
@@ -5828,18 +5798,14 @@ globalMy.location_valueOf = function () {
     return this;
 }
 globalMy.location_toString = function () {
-    var result = this.href;
-    if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_toString,result => ', '' + result)
-    }
-    return result;
+    return this.href;
 }
 globalMy.location_get_ancestorOrigins = function () {
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['ancestorOrigins'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_ancestorOrigins,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_ancestorOrigins,result => ', '' + result)
     }
     return result;
 }
@@ -5848,24 +5814,28 @@ globalMy.location_get_href = function () {
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['href'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_href,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_href,result => ', '' + result)
     }
     return result;
 }
 globalMy.location_set_href = function (val) {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['href'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_href, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_href, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_origin = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['origin'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_origin,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_origin,result => ', '' + result)
     }
     return result;
 }
@@ -5874,75 +5844,91 @@ globalMy.location_get_protocol = function () {
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['protocol'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_protocol,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_protocol,result => ', '' + result)
     }
     return result;
 }
 globalMy.location_set_protocol = function (val) {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['protocol'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_protocol, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_protocol, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_host = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['host'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_host,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_host,result => ', '' + result)
     }
     return result;
 }
 globalMy.location_set_host = function (val) {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['host'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_host, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_host, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_hostname = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['hostname'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_hostname,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_hostname,result => ', '' + result)
     }
     return result;
 }
 globalMy.location_set_hostname = function (val) {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['hostname'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_hostname, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_hostname, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_port = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['port'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_port,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_port,result => ', '' + result)
     }
     return result;
 }
 globalMy.location_set_port = function (val) {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['port'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_port, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_port, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_pathname = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['pathname'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_pathname,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_pathname,result => ', '' + result)
     }
     return result;
 }
@@ -5951,15 +5937,17 @@ globalMy.location_set_pathname = function (val) {
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['pathname'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_pathname, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_pathname, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_search = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['search'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_search,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_search,result => ', '' + result)
     }
     return result;
 }
@@ -5970,40 +5958,46 @@ globalMy.location_set_search = function (val) {
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['search'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_search, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_search, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_get_hash = function () {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     result = globalMy.value[foundName]['hash'];
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_hash,result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_hash,result => ', '' + result)
     }
     return result;
 }
 globalMy.location_set_hash = function (val) {
+
+
     var result;
     var foundName = globalMy.foundName(this);
     globalMy.value[foundName]['hash'] = val;
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_get_hash, 传参val => ' + val + '  result => ', '' + result)
+        globalMy.console.log('[*]  调用了globalMy.location_get_hash, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_replace = function (val) {
     var result;
     var foundName = globalMy.foundName(this);
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_replace, 传参val => ' + val + '  result => ', '' + result)
+        // globalMy.console.log(localStorage._$rc);
+        globalMy.console.log('[*]  调用了globalMy.location_replace, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 globalMy.location_reload = function (val) {
     var result;
     var foundName = globalMy.foundName(this);
     if (globalMy.is_log) {
-        globalMy.console.log('[*]  调用了location_reload, 传参val => ' + val + '  result => ', '' + result)
+        // globalMy.console.log(localStorage._$rc);
+        globalMy.console.log('[*]  调用了globalMy.location_reload, 传参val => ' + val + '  result => ', '' + result)
     }
 }
 
 // 初始化window
-globalMy.newWindow.apply(this, [globalMy.dom_window, true]);
+globalMy.newWindow.apply(this, [ globalMy.dom_window, true ]);
