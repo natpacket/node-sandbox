@@ -1,7 +1,4 @@
 globalMy.XMLHttpRequestEventTarget_get_onloadstart = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onloadstart'];
@@ -11,9 +8,6 @@ globalMy.XMLHttpRequestEventTarget_get_onloadstart = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_onloadstart = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onloadstart'] = val;
@@ -22,9 +16,6 @@ globalMy.XMLHttpRequestEventTarget_set_onloadstart = function (val) {
   }
 };
 globalMy.XMLHttpRequestEventTarget_get_onprogress = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onprogress'];
@@ -34,9 +25,6 @@ globalMy.XMLHttpRequestEventTarget_get_onprogress = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_onprogress = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onprogress'] = val;
@@ -45,9 +33,6 @@ globalMy.XMLHttpRequestEventTarget_set_onprogress = function (val) {
   }
 };
 globalMy.XMLHttpRequestEventTarget_get_onabort = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onabort'];
@@ -57,9 +42,6 @@ globalMy.XMLHttpRequestEventTarget_get_onabort = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_onabort = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onabort'] = val;
@@ -68,9 +50,6 @@ globalMy.XMLHttpRequestEventTarget_set_onabort = function (val) {
   }
 };
 globalMy.XMLHttpRequestEventTarget_get_onerror = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -80,9 +59,6 @@ globalMy.XMLHttpRequestEventTarget_get_onerror = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_onerror = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -91,9 +67,6 @@ globalMy.XMLHttpRequestEventTarget_set_onerror = function (val) {
   }
 };
 globalMy.XMLHttpRequestEventTarget_get_onload = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onload'];
@@ -103,9 +76,6 @@ globalMy.XMLHttpRequestEventTarget_get_onload = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_onload = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onload'] = val;
@@ -114,9 +84,6 @@ globalMy.XMLHttpRequestEventTarget_set_onload = function (val) {
   }
 };
 globalMy.XMLHttpRequestEventTarget_get_ontimeout = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ontimeout'];
@@ -126,9 +93,6 @@ globalMy.XMLHttpRequestEventTarget_get_ontimeout = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_ontimeout = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['ontimeout'] = val;
@@ -137,9 +101,6 @@ globalMy.XMLHttpRequestEventTarget_set_ontimeout = function (val) {
   }
 };
 globalMy.XMLHttpRequestEventTarget_get_onloadend = function () {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onloadend'];
@@ -149,9 +110,6 @@ globalMy.XMLHttpRequestEventTarget_get_onloadend = function () {
   return result;
 };
 globalMy.XMLHttpRequestEventTarget_set_onloadend = function (val) {
-  if (!(this instanceof XMLHttpRequestEventTarget)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onloadend'] = val;
@@ -159,3 +117,4 @@ globalMy.XMLHttpRequestEventTarget_set_onloadend = function (val) {
     globalMy.console.log('[*]  调用了XMLHttpRequestEventTarget_set_onloadend, 传参val => ' + val + '  result => ', '' + result);
   }
 };
+// dom构造函数原型方法

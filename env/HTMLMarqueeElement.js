@@ -1,7 +1,4 @@
 globalMy.HTMLMarqueeElement_get_behavior = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_behavior');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLMarqueeElement_get_behavior = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_behavior = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_behavior, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLMarqueeElement_set_behavior = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_bgColor = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_bgColor');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLMarqueeElement_get_bgColor = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_bgColor = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_bgColor, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLMarqueeElement_set_bgColor = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_direction = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_direction');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLMarqueeElement_get_direction = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_direction = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_direction, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLMarqueeElement_set_direction = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_height = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_height');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLMarqueeElement_get_height = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_height = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_height, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLMarqueeElement_set_height = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_hspace = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_hspace');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLMarqueeElement_get_hspace = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_hspace = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_hspace, 传参val => ' + val);
   }
@@ -269,9 +239,6 @@ globalMy.HTMLMarqueeElement_set_hspace = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_loop = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_loop');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLMarqueeElement_get_loop = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_loop = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_loop, 传参val => ' + val);
   }
@@ -323,9 +287,6 @@ globalMy.HTMLMarqueeElement_set_loop = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_scrollAmount = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_scrollAmount');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLMarqueeElement_get_scrollAmount = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_scrollAmount = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_scrollAmount, 传参val => ' + val);
   }
@@ -377,9 +335,6 @@ globalMy.HTMLMarqueeElement_set_scrollAmount = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_scrollDelay = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_scrollDelay');
   }
@@ -404,9 +359,6 @@ globalMy.HTMLMarqueeElement_get_scrollDelay = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_scrollDelay = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_scrollDelay, 传参val => ' + val);
   }
@@ -431,9 +383,6 @@ globalMy.HTMLMarqueeElement_set_scrollDelay = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_trueSpeed = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_trueSpeed');
   }
@@ -458,9 +407,6 @@ globalMy.HTMLMarqueeElement_get_trueSpeed = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_trueSpeed = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_trueSpeed, 传参val => ' + val);
   }
@@ -485,9 +431,6 @@ globalMy.HTMLMarqueeElement_set_trueSpeed = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_vspace = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_vspace');
   }
@@ -512,9 +455,6 @@ globalMy.HTMLMarqueeElement_get_vspace = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_vspace = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_vspace, 传参val => ' + val);
   }
@@ -539,9 +479,6 @@ globalMy.HTMLMarqueeElement_set_vspace = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_get_width = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_get_width');
   }
@@ -566,9 +503,6 @@ globalMy.HTMLMarqueeElement_get_width = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_set_width = function (val) {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_set_width, 传参val => ' + val);
   }
@@ -593,9 +527,6 @@ globalMy.HTMLMarqueeElement_set_width = function (val) {
   }
 };
 globalMy.HTMLMarqueeElement_start = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_start, arguments => ', arguments);
   }
@@ -622,9 +553,6 @@ globalMy.HTMLMarqueeElement_start = function () {
   return result;
 };
 globalMy.HTMLMarqueeElement_stop = function () {
-  if (!(this instanceof HTMLMarqueeElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMarqueeElement_stop, arguments => ', arguments);
   }

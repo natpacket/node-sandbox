@@ -1,7 +1,4 @@
 globalMy.HTMLFormElement_get_acceptCharset = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_acceptCharset');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLFormElement_get_acceptCharset = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_acceptCharset = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_acceptCharset, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLFormElement_set_acceptCharset = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_action = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_action');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLFormElement_get_action = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_action = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_action, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLFormElement_set_action = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_autocomplete = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_autocomplete');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLFormElement_get_autocomplete = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_autocomplete = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_autocomplete, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLFormElement_set_autocomplete = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_enctype = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_enctype');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLFormElement_get_enctype = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_enctype = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_enctype, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLFormElement_set_enctype = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_encoding = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_encoding');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLFormElement_get_encoding = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_encoding = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_encoding, 传参val => ' + val);
   }
@@ -269,9 +239,6 @@ globalMy.HTMLFormElement_set_encoding = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_method = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_method');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLFormElement_get_method = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_method = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_method, 传参val => ' + val);
   }
@@ -323,9 +287,6 @@ globalMy.HTMLFormElement_set_method = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_name = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_name');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLFormElement_get_name = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_name = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_name, 传参val => ' + val);
   }
@@ -377,9 +335,6 @@ globalMy.HTMLFormElement_set_name = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_noValidate = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_noValidate');
   }
@@ -404,9 +359,6 @@ globalMy.HTMLFormElement_get_noValidate = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_noValidate = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_noValidate, 传参val => ' + val);
   }
@@ -431,9 +383,6 @@ globalMy.HTMLFormElement_set_noValidate = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_target = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_target');
   }
@@ -458,9 +407,6 @@ globalMy.HTMLFormElement_get_target = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_target = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_target, 传参val => ' + val);
   }
@@ -485,9 +431,6 @@ globalMy.HTMLFormElement_set_target = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_elements = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_elements');
   }
@@ -512,9 +455,6 @@ globalMy.HTMLFormElement_get_elements = function () {
   return result;
 };
 globalMy.HTMLFormElement_get_length = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_length');
   }
@@ -539,9 +479,6 @@ globalMy.HTMLFormElement_get_length = function () {
   return result;
 };
 globalMy.HTMLFormElement_checkValidity = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_checkValidity, arguments => ', arguments);
   }
@@ -568,9 +505,6 @@ globalMy.HTMLFormElement_checkValidity = function () {
   return result;
 };
 globalMy.HTMLFormElement_reportValidity = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_reportValidity, arguments => ', arguments);
   }
@@ -597,9 +531,6 @@ globalMy.HTMLFormElement_reportValidity = function () {
   return result;
 };
 globalMy.HTMLFormElement_requestSubmit = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_requestSubmit, arguments => ', arguments);
   }
@@ -626,9 +557,6 @@ globalMy.HTMLFormElement_requestSubmit = function () {
   return result;
 };
 globalMy.HTMLFormElement_reset = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_reset, arguments => ', arguments);
   }
@@ -655,9 +583,6 @@ globalMy.HTMLFormElement_reset = function () {
   return result;
 };
 globalMy.HTMLFormElement_submit = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_submit, arguments => ', arguments);
   }
@@ -684,9 +609,6 @@ globalMy.HTMLFormElement_submit = function () {
   return result;
 };
 globalMy.HTMLFormElement_get_rel = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_rel');
   }
@@ -711,9 +633,6 @@ globalMy.HTMLFormElement_get_rel = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_rel = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_rel, 传参val => ' + val);
   }
@@ -738,9 +657,6 @@ globalMy.HTMLFormElement_set_rel = function (val) {
   }
 };
 globalMy.HTMLFormElement_get_relList = function () {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_get_relList');
   }
@@ -765,9 +681,6 @@ globalMy.HTMLFormElement_get_relList = function () {
   return result;
 };
 globalMy.HTMLFormElement_set_relList = function (val) {
-  if (!(this instanceof HTMLFormElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFormElement_set_relList, 传参val => ' + val);
   }

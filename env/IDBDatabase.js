@@ -1,7 +1,4 @@
 globalMy.IDBDatabase_get_name = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['name'];
@@ -11,9 +8,6 @@ globalMy.IDBDatabase_get_name = function () {
   return result;
 };
 globalMy.IDBDatabase_get_version = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['version'];
@@ -23,9 +17,6 @@ globalMy.IDBDatabase_get_version = function () {
   return result;
 };
 globalMy.IDBDatabase_get_objectStoreNames = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['objectStoreNames'];
@@ -35,9 +26,6 @@ globalMy.IDBDatabase_get_objectStoreNames = function () {
   return result;
 };
 globalMy.IDBDatabase_get_onabort = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onabort'];
@@ -47,9 +35,6 @@ globalMy.IDBDatabase_get_onabort = function () {
   return result;
 };
 globalMy.IDBDatabase_set_onabort = function (val) {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onabort'] = val;
@@ -58,9 +43,6 @@ globalMy.IDBDatabase_set_onabort = function (val) {
   }
 };
 globalMy.IDBDatabase_get_onclose = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onclose'];
@@ -70,9 +52,6 @@ globalMy.IDBDatabase_get_onclose = function () {
   return result;
 };
 globalMy.IDBDatabase_set_onclose = function (val) {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onclose'] = val;
@@ -81,9 +60,6 @@ globalMy.IDBDatabase_set_onclose = function (val) {
   }
 };
 globalMy.IDBDatabase_get_onerror = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -93,9 +69,6 @@ globalMy.IDBDatabase_get_onerror = function () {
   return result;
 };
 globalMy.IDBDatabase_set_onerror = function (val) {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -104,9 +77,6 @@ globalMy.IDBDatabase_set_onerror = function (val) {
   }
 };
 globalMy.IDBDatabase_get_onversionchange = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onversionchange'];
@@ -116,9 +86,6 @@ globalMy.IDBDatabase_get_onversionchange = function () {
   return result;
 };
 globalMy.IDBDatabase_set_onversionchange = function (val) {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onversionchange'] = val;
@@ -127,9 +94,6 @@ globalMy.IDBDatabase_set_onversionchange = function (val) {
   }
 };
 globalMy.IDBDatabase_close = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -138,9 +102,6 @@ globalMy.IDBDatabase_close = function () {
   return result;
 };
 globalMy.IDBDatabase_createObjectStore = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -149,9 +110,6 @@ globalMy.IDBDatabase_createObjectStore = function () {
   return result;
 };
 globalMy.IDBDatabase_deleteObjectStore = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -160,9 +118,6 @@ globalMy.IDBDatabase_deleteObjectStore = function () {
   return result;
 };
 globalMy.IDBDatabase_transaction = function () {
-  if (!(this instanceof IDBDatabase)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

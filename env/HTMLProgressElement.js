@@ -1,7 +1,4 @@
 globalMy.HTMLProgressElement_get_value = function () {
-  if (!(this instanceof HTMLProgressElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLProgressElement_get_value');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLProgressElement_get_value = function () {
   return result;
 };
 globalMy.HTMLProgressElement_set_value = function (val) {
-  if (!(this instanceof HTMLProgressElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLProgressElement_set_value, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLProgressElement_set_value = function (val) {
   }
 };
 globalMy.HTMLProgressElement_get_max = function () {
-  if (!(this instanceof HTMLProgressElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLProgressElement_get_max');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLProgressElement_get_max = function () {
   return result;
 };
 globalMy.HTMLProgressElement_set_max = function (val) {
-  if (!(this instanceof HTMLProgressElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLProgressElement_set_max, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLProgressElement_set_max = function (val) {
   }
 };
 globalMy.HTMLProgressElement_get_position = function () {
-  if (!(this instanceof HTMLProgressElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLProgressElement_get_position');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLProgressElement_get_position = function () {
   return result;
 };
 globalMy.HTMLProgressElement_get_labels = function () {
-  if (!(this instanceof HTMLProgressElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLProgressElement_get_labels');
   }

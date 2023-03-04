@@ -1,7 +1,4 @@
 globalMy.HTMLCanvasElement_get_width = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_get_width');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLCanvasElement_get_width = function () {
   return result;
 };
 globalMy.HTMLCanvasElement_set_width = function (val) {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_set_width, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLCanvasElement_set_width = function (val) {
   }
 };
 globalMy.HTMLCanvasElement_get_height = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_get_height');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLCanvasElement_get_height = function () {
   return result;
 };
 globalMy.HTMLCanvasElement_set_height = function (val) {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_set_height, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLCanvasElement_set_height = function (val) {
   }
 };
 globalMy.HTMLCanvasElement_captureStream = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_captureStream, arguments => ', arguments);
   }
@@ -136,9 +121,6 @@ globalMy.HTMLCanvasElement_captureStream = function () {
   return result;
 };
 globalMy.HTMLCanvasElement_getContext = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_getContext, arguments => ', arguments);
   }
@@ -165,9 +147,6 @@ globalMy.HTMLCanvasElement_getContext = function () {
   return result;
 };
 globalMy.HTMLCanvasElement_toBlob = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_toBlob, arguments => ', arguments);
   }
@@ -194,9 +173,6 @@ globalMy.HTMLCanvasElement_toBlob = function () {
   return result;
 };
 globalMy.HTMLCanvasElement_toDataURL = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_toDataURL, arguments => ', arguments);
   }
@@ -223,9 +199,6 @@ globalMy.HTMLCanvasElement_toDataURL = function () {
   return result;
 };
 globalMy.HTMLCanvasElement_transferControlToOffscreen = function () {
-  if (!(this instanceof HTMLCanvasElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLCanvasElement_transferControlToOffscreen, arguments => ', arguments);
   }

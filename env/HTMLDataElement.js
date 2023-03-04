@@ -1,7 +1,4 @@
 globalMy.HTMLDataElement_get_value = function () {
-  if (!(this instanceof HTMLDataElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDataElement_get_value');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLDataElement_get_value = function () {
   return result;
 };
 globalMy.HTMLDataElement_set_value = function (val) {
-  if (!(this instanceof HTMLDataElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDataElement_set_value, 传参val => ' + val);
   }

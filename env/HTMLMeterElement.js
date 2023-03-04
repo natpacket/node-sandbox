@@ -1,7 +1,4 @@
 globalMy.HTMLMeterElement_get_value = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_value');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLMeterElement_get_value = function () {
   return result;
 };
 globalMy.HTMLMeterElement_set_value = function (val) {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_set_value, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLMeterElement_set_value = function (val) {
   }
 };
 globalMy.HTMLMeterElement_get_min = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_min');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLMeterElement_get_min = function () {
   return result;
 };
 globalMy.HTMLMeterElement_set_min = function (val) {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_set_min, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLMeterElement_set_min = function (val) {
   }
 };
 globalMy.HTMLMeterElement_get_max = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_max');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLMeterElement_get_max = function () {
   return result;
 };
 globalMy.HTMLMeterElement_set_max = function (val) {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_set_max, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLMeterElement_set_max = function (val) {
   }
 };
 globalMy.HTMLMeterElement_get_low = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_low');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLMeterElement_get_low = function () {
   return result;
 };
 globalMy.HTMLMeterElement_set_low = function (val) {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_set_low, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLMeterElement_set_low = function (val) {
   }
 };
 globalMy.HTMLMeterElement_get_high = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_high');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLMeterElement_get_high = function () {
   return result;
 };
 globalMy.HTMLMeterElement_set_high = function (val) {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_set_high, 传参val => ' + val);
   }
@@ -269,9 +239,6 @@ globalMy.HTMLMeterElement_set_high = function (val) {
   }
 };
 globalMy.HTMLMeterElement_get_optimum = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_optimum');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLMeterElement_get_optimum = function () {
   return result;
 };
 globalMy.HTMLMeterElement_set_optimum = function (val) {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_set_optimum, 传参val => ' + val);
   }
@@ -323,9 +287,6 @@ globalMy.HTMLMeterElement_set_optimum = function (val) {
   }
 };
 globalMy.HTMLMeterElement_get_labels = function () {
-  if (!(this instanceof HTMLMeterElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMeterElement_get_labels');
   }

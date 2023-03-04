@@ -1,6 +1,6 @@
 
 var a = +new Date;
-const { VM, VMScript } = require('cyvm2');
+// const { VM, VMScript } = require('cyvm2');
 const fs = require("fs");
 // const {VM, VMScript} = require('vm2');
 const jsdom = require("jsdom");
@@ -23,15 +23,15 @@ let configure = {
     // url:"https://pastebin.com/login",
     // url: "http://epub.cnipa.gov.cn/SW/",
     // url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
-    // url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=3',
-    url: "https://www.zhipin.com/wapi/zpgeek/search/joblist.json?scene=1&query=%E7%88%AC%E8%99%AB&city=101190100&experience=&degree=&industry=&scale=&stage=&position=&jobType=&salary=&multiBusinessDistrict=&multiSubway=&page=2&pageSize=30",
+    url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=3',
+    // url: "https://www.zhipin.com/wapi/zpgeek/search/joblist.json?scene=1&query=%E7%88%AC%E8%99%AB&city=101190100&experience=&degree=&industry=&scale=&stage=&position=&jobType=&salary=&multiBusinessDistrict=&multiSubway=&page=2&pageSize=30",
 }
 const dom = new JSDOM(html, configure);
 
 let filePath = fs.readdirSync('./env');
 let envCode = '';
 filePath.map((item)=>{
-    envCode += fs.readFileSync(`./env/${item}`) + '\n';
+    envCode += fs.readFileSync(`./env/${item}`) + '\r\n';
 });
 
 
@@ -49,6 +49,8 @@ envCode +=  cover_function + pass_check;
 // let workCode = fs.readFileSync("./work/5s.js");
 // let workCode = fs.readFileSync("./work/zhihu.js");
 let workCode = fs.readFileSync("./work/boss.js");
+// let workCode = fs.readFileSync("./work/test.js");
+
 let endCode = fs.readFileSync("./work/end.js");
 wanfeng = require("wanfeng");
 
@@ -72,7 +74,9 @@ const sandbox = {
 
 var vm = require("vm");
 a = +new Date;
-vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\nWin=this;\r\n", sandbox);
+var code = "debugger;\r\n" + init_env + envCode + "\r\nWin=this;\r\n" + ``;
+// code = code.replace('throw new TypeError("Illegal invocation");',";");
+vm.runInNewContext(code, sandbox);
 
 var ifr = dom.window.document.createElement("iframe");
 dom.window.document.body.appendChild(ifr);
@@ -81,9 +85,14 @@ const sandbox_ = {
     wanfeng: wanfeng,
     globalMy: {
         dom_window: ifr.contentWindow,
-        parent_window: sandbox.Win
+        window_frameElement: ifr,
+        window_parent: sandbox.Win
     },
     console: console,
 }
-vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\nwindow.parent = window.top = globalMy.parent_window;\r\n" + workCode + "\r\n" + endCode, sandbox_);
+code = ("debugger;\r\n" + init_env + envCode + "\r\nwindow.parent = window.top = globalMy.window_parent;\r\n" + workCode + "\r\n" + endCode).replace("throw new TypeError(\"Illegal invocation\");",";");
+
+vm.runInNewContext(code, sandbox_);
+
+// vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");

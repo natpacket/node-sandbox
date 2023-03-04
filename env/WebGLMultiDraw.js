@@ -30,3 +30,4 @@ globalMy.WebGLMultiDraw_multiDrawElementsWEBGL = function () {
   }
   return result;
 };
+// WebGLRenderingContext

@@ -1,7 +1,4 @@
 globalMy.RTCSessionDescription_get_type = function () {
-  if (!(this instanceof RTCSessionDescription)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['type'];
@@ -11,9 +8,6 @@ globalMy.RTCSessionDescription_get_type = function () {
   return result;
 };
 globalMy.RTCSessionDescription_set_type = function (val) {
-  if (!(this instanceof RTCSessionDescription)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['type'] = val;
@@ -22,9 +16,6 @@ globalMy.RTCSessionDescription_set_type = function (val) {
   }
 };
 globalMy.RTCSessionDescription_get_sdp = function () {
-  if (!(this instanceof RTCSessionDescription)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['sdp'];
@@ -34,9 +25,6 @@ globalMy.RTCSessionDescription_get_sdp = function () {
   return result;
 };
 globalMy.RTCSessionDescription_set_sdp = function (val) {
-  if (!(this instanceof RTCSessionDescription)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['sdp'] = val;
@@ -45,9 +33,6 @@ globalMy.RTCSessionDescription_set_sdp = function (val) {
   }
 };
 globalMy.RTCSessionDescription_toJSON = function () {
-  if (!(this instanceof RTCSessionDescription)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
   result = {

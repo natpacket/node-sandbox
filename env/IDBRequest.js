@@ -1,7 +1,4 @@
 globalMy.IDBRequest_get_result = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['result'];
@@ -11,9 +8,6 @@ globalMy.IDBRequest_get_result = function () {
   return result;
 };
 globalMy.IDBRequest_get_error = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['error'];
@@ -23,9 +17,6 @@ globalMy.IDBRequest_get_error = function () {
   return result;
 };
 globalMy.IDBRequest_get_source = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['source'];
@@ -35,9 +26,6 @@ globalMy.IDBRequest_get_source = function () {
   return result;
 };
 globalMy.IDBRequest_get_transaction = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['transaction'];
@@ -47,9 +35,6 @@ globalMy.IDBRequest_get_transaction = function () {
   return result;
 };
 globalMy.IDBRequest_get_readyState = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['readyState'];
@@ -59,9 +44,6 @@ globalMy.IDBRequest_get_readyState = function () {
   return result;
 };
 globalMy.IDBRequest_get_onsuccess = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onsuccess'];
@@ -71,9 +53,6 @@ globalMy.IDBRequest_get_onsuccess = function () {
   return result;
 };
 globalMy.IDBRequest_set_onsuccess = function (val) {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onsuccess'] = val;
@@ -82,9 +61,6 @@ globalMy.IDBRequest_set_onsuccess = function (val) {
   }
 };
 globalMy.IDBRequest_get_onerror = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -94,9 +70,6 @@ globalMy.IDBRequest_get_onerror = function () {
   return result;
 };
 globalMy.IDBRequest_set_onerror = function (val) {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -105,9 +78,6 @@ globalMy.IDBRequest_set_onerror = function (val) {
   }
 };
 globalMy.IDBRequest_get_result = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['result'];
@@ -117,9 +87,6 @@ globalMy.IDBRequest_get_result = function () {
   return result;
 };
 globalMy.IDBRequest_get_error = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['error'];
@@ -129,9 +96,6 @@ globalMy.IDBRequest_get_error = function () {
   return result;
 };
 globalMy.IDBRequest_get_source = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['source'];
@@ -141,9 +105,6 @@ globalMy.IDBRequest_get_source = function () {
   return result;
 };
 globalMy.IDBRequest_get_transaction = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['transaction'];
@@ -153,9 +114,6 @@ globalMy.IDBRequest_get_transaction = function () {
   return result;
 };
 globalMy.IDBRequest_get_readyState = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['readyState'];
@@ -165,9 +123,6 @@ globalMy.IDBRequest_get_readyState = function () {
   return result;
 };
 globalMy.IDBRequest_get_onsuccess = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onsuccess'];
@@ -177,9 +132,6 @@ globalMy.IDBRequest_get_onsuccess = function () {
   return result;
 };
 globalMy.IDBRequest_set_onsuccess = function (val) {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onsuccess'] = val;
@@ -188,9 +140,6 @@ globalMy.IDBRequest_set_onsuccess = function (val) {
   }
 };
 globalMy.IDBRequest_get_onerror = function () {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -200,9 +149,6 @@ globalMy.IDBRequest_get_onerror = function () {
   return result;
 };
 globalMy.IDBRequest_set_onerror = function (val) {
-  if (!(this instanceof IDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -210,6 +156,3 @@ globalMy.IDBRequest_set_onerror = function (val) {
     console.log('[*]  调用了IDBRequest_set_onerror, 传参val => ' + val + '  result => ', result);
   }
 };
-
-
-

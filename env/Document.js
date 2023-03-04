@@ -1,7 +1,6 @@
+// 函数实现
+// SpeechSynthesis
 globalMy.Document_get_implementation = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_implementation');
   }
@@ -26,9 +25,6 @@ globalMy.Document_get_implementation = function () {
   return result;
 };
 globalMy.Document_get_URL = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_URL');
   }
@@ -53,9 +49,6 @@ globalMy.Document_get_URL = function () {
   return result;
 };
 globalMy.Document_get_documentURI = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_documentURI');
   }
@@ -80,9 +73,6 @@ globalMy.Document_get_documentURI = function () {
   return result;
 };
 globalMy.Document_get_compatMode = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_compatMode');
   }
@@ -107,9 +97,6 @@ globalMy.Document_get_compatMode = function () {
   return result;
 };
 globalMy.Document_get_characterSet = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_characterSet');
   }
@@ -134,9 +121,6 @@ globalMy.Document_get_characterSet = function () {
   return result;
 };
 globalMy.Document_get_charset = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_charset');
   }
@@ -161,9 +145,6 @@ globalMy.Document_get_charset = function () {
   return result;
 };
 globalMy.Document_get_inputEncoding = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_inputEncoding');
   }
@@ -188,9 +169,6 @@ globalMy.Document_get_inputEncoding = function () {
   return result;
 };
 globalMy.Document_get_contentType = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_contentType');
   }
@@ -215,9 +193,6 @@ globalMy.Document_get_contentType = function () {
   return result;
 };
 globalMy.Document_get_doctype = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_doctype');
   }
@@ -242,9 +217,6 @@ globalMy.Document_get_doctype = function () {
   return result;
 };
 globalMy.Document_get_documentElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_documentElement');
   }
@@ -269,9 +241,6 @@ globalMy.Document_get_documentElement = function () {
   return result;
 };
 globalMy.Document_get_xmlEncoding = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_xmlEncoding');
   }
@@ -296,9 +265,6 @@ globalMy.Document_get_xmlEncoding = function () {
   return result;
 };
 globalMy.Document_get_xmlVersion = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_xmlVersion');
   }
@@ -323,9 +289,6 @@ globalMy.Document_get_xmlVersion = function () {
   return result;
 };
 globalMy.Document_set_xmlVersion = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_xmlVersion, 传参val => ' + val);
   }
@@ -350,9 +313,6 @@ globalMy.Document_set_xmlVersion = function (val) {
   }
 };
 globalMy.Document_get_xmlStandalone = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_xmlStandalone');
   }
@@ -377,9 +337,6 @@ globalMy.Document_get_xmlStandalone = function () {
   return result;
 };
 globalMy.Document_set_xmlStandalone = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_xmlStandalone, 传参val => ' + val);
   }
@@ -404,9 +361,6 @@ globalMy.Document_set_xmlStandalone = function (val) {
   }
 };
 globalMy.Document_get_domain = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_domain');
   }
@@ -431,9 +385,6 @@ globalMy.Document_get_domain = function () {
   return result;
 };
 globalMy.Document_set_domain = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_domain, 传参val => ' + val);
   }
@@ -458,9 +409,6 @@ globalMy.Document_set_domain = function (val) {
   }
 };
 globalMy.Document_get_referrer = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_referrer');
   }
@@ -485,9 +433,6 @@ globalMy.Document_get_referrer = function () {
   return result;
 };
 globalMy.Document_get_cookie = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_cookie');
   }
@@ -512,9 +457,6 @@ globalMy.Document_get_cookie = function () {
   return result;
 };
 globalMy.Document_set_cookie = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_cookie, 传参val => ' + val);
   }
@@ -540,9 +482,6 @@ globalMy.Document_set_cookie = function (val) {
   }
 };
 globalMy.Document_get_lastModified = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_lastModified');
   }
@@ -567,9 +506,6 @@ globalMy.Document_get_lastModified = function () {
   return result;
 };
 globalMy.Document_get_readyState = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_readyState');
   }
@@ -595,9 +531,6 @@ globalMy.Document_get_readyState = function () {
   return result;
 };
 globalMy.Document_get_title = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_title');
   }
@@ -622,9 +555,6 @@ globalMy.Document_get_title = function () {
   return result;
 };
 globalMy.Document_set_title = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_title, 传参val => ' + val);
   }
@@ -649,9 +579,6 @@ globalMy.Document_set_title = function (val) {
   }
 };
 globalMy.Document_get_dir = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_dir');
   }
@@ -676,9 +603,6 @@ globalMy.Document_get_dir = function () {
   return result;
 };
 globalMy.Document_set_dir = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_dir, 传参val => ' + val);
   }
@@ -703,9 +627,6 @@ globalMy.Document_set_dir = function (val) {
   }
 };
 globalMy.Document_get_body = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_body');
   }
@@ -730,9 +651,6 @@ globalMy.Document_get_body = function () {
   return result;
 };
 globalMy.Document_set_body = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_body, 传参val => ' + val);
   }
@@ -757,9 +675,6 @@ globalMy.Document_set_body = function (val) {
   }
 };
 globalMy.Document_get_head = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_head');
   }
@@ -784,9 +699,6 @@ globalMy.Document_get_head = function () {
   return result;
 };
 globalMy.Document_get_images = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_images');
   }
@@ -811,9 +723,6 @@ globalMy.Document_get_images = function () {
   return result;
 };
 globalMy.Document_get_embeds = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_embeds');
   }
@@ -838,9 +747,6 @@ globalMy.Document_get_embeds = function () {
   return result;
 };
 globalMy.Document_get_plugins = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_plugins');
   }
@@ -865,9 +771,6 @@ globalMy.Document_get_plugins = function () {
   return result;
 };
 globalMy.Document_get_links = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_links');
   }
@@ -892,9 +795,6 @@ globalMy.Document_get_links = function () {
   return result;
 };
 globalMy.Document_get_forms = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_forms');
   }
@@ -919,9 +819,6 @@ globalMy.Document_get_forms = function () {
   return result;
 };
 globalMy.Document_get_scripts = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_scripts');
   }
@@ -946,9 +843,6 @@ globalMy.Document_get_scripts = function () {
   return result;
 };
 globalMy.Document_get_currentScript = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_currentScript');
   }
@@ -973,9 +867,6 @@ globalMy.Document_get_currentScript = function () {
   return result;
 };
 globalMy.Document_get_defaultView = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_defaultView');
   }
@@ -1000,9 +891,6 @@ globalMy.Document_get_defaultView = function () {
   return result;
 };
 globalMy.Document_get_designMode = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_designMode');
   }
@@ -1027,9 +915,6 @@ globalMy.Document_get_designMode = function () {
   return result;
 };
 globalMy.Document_set_designMode = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_designMode, 传参val => ' + val);
   }
@@ -1054,9 +939,6 @@ globalMy.Document_set_designMode = function (val) {
   }
 };
 globalMy.Document_get_onreadystatechange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onreadystatechange');
   }
@@ -1081,9 +963,6 @@ globalMy.Document_get_onreadystatechange = function () {
   return result;
 };
 globalMy.Document_set_onreadystatechange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onreadystatechange, 传参val => ' + val);
   }
@@ -1108,9 +987,6 @@ globalMy.Document_set_onreadystatechange = function (val) {
   }
 };
 globalMy.Document_get_anchors = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_anchors');
   }
@@ -1135,9 +1011,6 @@ globalMy.Document_get_anchors = function () {
   return result;
 };
 globalMy.Document_get_applets = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_applets');
   }
@@ -1162,9 +1035,6 @@ globalMy.Document_get_applets = function () {
   return result;
 };
 globalMy.Document_get_fgColor = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_fgColor');
   }
@@ -1189,9 +1059,6 @@ globalMy.Document_get_fgColor = function () {
   return result;
 };
 globalMy.Document_set_fgColor = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_fgColor, 传参val => ' + val);
   }
@@ -1216,9 +1083,6 @@ globalMy.Document_set_fgColor = function (val) {
   }
 };
 globalMy.Document_get_linkColor = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_linkColor');
   }
@@ -1243,9 +1107,6 @@ globalMy.Document_get_linkColor = function () {
   return result;
 };
 globalMy.Document_set_linkColor = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_linkColor, 传参val => ' + val);
   }
@@ -1270,9 +1131,6 @@ globalMy.Document_set_linkColor = function (val) {
   }
 };
 globalMy.Document_get_vlinkColor = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_vlinkColor');
   }
@@ -1297,9 +1155,6 @@ globalMy.Document_get_vlinkColor = function () {
   return result;
 };
 globalMy.Document_set_vlinkColor = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_vlinkColor, 传参val => ' + val);
   }
@@ -1324,9 +1179,6 @@ globalMy.Document_set_vlinkColor = function (val) {
   }
 };
 globalMy.Document_get_alinkColor = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_alinkColor');
   }
@@ -1351,9 +1203,6 @@ globalMy.Document_get_alinkColor = function () {
   return result;
 };
 globalMy.Document_set_alinkColor = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_alinkColor, 传参val => ' + val);
   }
@@ -1378,9 +1227,6 @@ globalMy.Document_set_alinkColor = function (val) {
   }
 };
 globalMy.Document_get_bgColor = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_bgColor');
   }
@@ -1405,9 +1251,6 @@ globalMy.Document_get_bgColor = function () {
   return result;
 };
 globalMy.Document_set_bgColor = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_bgColor, 传参val => ' + val);
   }
@@ -1432,9 +1275,6 @@ globalMy.Document_set_bgColor = function (val) {
   }
 };
 globalMy.Document_get_all = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_all');
   }
@@ -1459,9 +1299,6 @@ globalMy.Document_get_all = function () {
   return result;
 };
 globalMy.Document_get_scrollingElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_scrollingElement');
   }
@@ -1486,9 +1323,6 @@ globalMy.Document_get_scrollingElement = function () {
   return result;
 };
 globalMy.Document_get_onpointerlockchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerlockchange');
   }
@@ -1513,9 +1347,6 @@ globalMy.Document_get_onpointerlockchange = function () {
   return result;
 };
 globalMy.Document_set_onpointerlockchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerlockchange, 传参val => ' + val);
   }
@@ -1540,9 +1371,6 @@ globalMy.Document_set_onpointerlockchange = function (val) {
   }
 };
 globalMy.Document_get_onpointerlockerror = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerlockerror');
   }
@@ -1567,9 +1395,6 @@ globalMy.Document_get_onpointerlockerror = function () {
   return result;
 };
 globalMy.Document_set_onpointerlockerror = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerlockerror, 传参val => ' + val);
   }
@@ -1594,9 +1419,6 @@ globalMy.Document_set_onpointerlockerror = function (val) {
   }
 };
 globalMy.Document_get_hidden = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_hidden');
   }
@@ -1621,9 +1443,6 @@ globalMy.Document_get_hidden = function () {
   return result;
 };
 globalMy.Document_get_visibilityState = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_visibilityState');
   }
@@ -1648,9 +1467,6 @@ globalMy.Document_get_visibilityState = function () {
   return result;
 };
 globalMy.Document_get_wasDiscarded = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_wasDiscarded');
   }
@@ -1675,9 +1491,6 @@ globalMy.Document_get_wasDiscarded = function () {
   return result;
 };
 globalMy.Document_get_featurePolicy = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_featurePolicy');
   }
@@ -1702,9 +1515,6 @@ globalMy.Document_get_featurePolicy = function () {
   return result;
 };
 globalMy.Document_get_webkitVisibilityState = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_webkitVisibilityState');
   }
@@ -1729,9 +1539,6 @@ globalMy.Document_get_webkitVisibilityState = function () {
   return result;
 };
 globalMy.Document_get_webkitHidden = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_webkitHidden');
   }
@@ -1756,9 +1563,6 @@ globalMy.Document_get_webkitHidden = function () {
   return result;
 };
 globalMy.Document_get_onbeforecopy = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onbeforecopy');
   }
@@ -1783,9 +1587,6 @@ globalMy.Document_get_onbeforecopy = function () {
   return result;
 };
 globalMy.Document_set_onbeforecopy = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onbeforecopy, 传参val => ' + val);
   }
@@ -1810,9 +1611,6 @@ globalMy.Document_set_onbeforecopy = function (val) {
   }
 };
 globalMy.Document_get_onbeforecut = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onbeforecut');
   }
@@ -1837,9 +1635,6 @@ globalMy.Document_get_onbeforecut = function () {
   return result;
 };
 globalMy.Document_set_onbeforecut = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onbeforecut, 传参val => ' + val);
   }
@@ -1864,9 +1659,6 @@ globalMy.Document_set_onbeforecut = function (val) {
   }
 };
 globalMy.Document_get_onbeforepaste = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onbeforepaste');
   }
@@ -1891,9 +1683,6 @@ globalMy.Document_get_onbeforepaste = function () {
   return result;
 };
 globalMy.Document_set_onbeforepaste = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onbeforepaste, 传参val => ' + val);
   }
@@ -1918,9 +1707,6 @@ globalMy.Document_set_onbeforepaste = function (val) {
   }
 };
 globalMy.Document_get_onfreeze = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onfreeze');
   }
@@ -1945,9 +1731,6 @@ globalMy.Document_get_onfreeze = function () {
   return result;
 };
 globalMy.Document_set_onfreeze = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onfreeze, 传参val => ' + val);
   }
@@ -1972,9 +1755,6 @@ globalMy.Document_set_onfreeze = function (val) {
   }
 };
 globalMy.Document_get_onresume = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onresume');
   }
@@ -1999,9 +1779,6 @@ globalMy.Document_get_onresume = function () {
   return result;
 };
 globalMy.Document_set_onresume = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onresume, 传参val => ' + val);
   }
@@ -2026,9 +1803,6 @@ globalMy.Document_set_onresume = function (val) {
   }
 };
 globalMy.Document_get_onsearch = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onsearch');
   }
@@ -2053,9 +1827,6 @@ globalMy.Document_get_onsearch = function () {
   return result;
 };
 globalMy.Document_set_onsearch = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onsearch, 传参val => ' + val);
   }
@@ -2080,9 +1851,6 @@ globalMy.Document_set_onsearch = function (val) {
   }
 };
 globalMy.Document_get_onvisibilitychange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onvisibilitychange');
   }
@@ -2107,9 +1875,6 @@ globalMy.Document_get_onvisibilitychange = function () {
   return result;
 };
 globalMy.Document_set_onvisibilitychange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onvisibilitychange, 传参val => ' + val);
   }
@@ -2134,9 +1899,6 @@ globalMy.Document_set_onvisibilitychange = function (val) {
   }
 };
 globalMy.Document_get_fullscreenEnabled = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_fullscreenEnabled');
   }
@@ -2161,9 +1923,6 @@ globalMy.Document_get_fullscreenEnabled = function () {
   return result;
 };
 globalMy.Document_set_fullscreenEnabled = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_fullscreenEnabled, 传参val => ' + val);
   }
@@ -2188,9 +1947,6 @@ globalMy.Document_set_fullscreenEnabled = function (val) {
   }
 };
 globalMy.Document_get_fullscreen = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_fullscreen');
   }
@@ -2215,9 +1971,6 @@ globalMy.Document_get_fullscreen = function () {
   return result;
 };
 globalMy.Document_set_fullscreen = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_fullscreen, 传参val => ' + val);
   }
@@ -2242,9 +1995,6 @@ globalMy.Document_set_fullscreen = function (val) {
   }
 };
 globalMy.Document_get_onfullscreenchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onfullscreenchange');
   }
@@ -2269,9 +2019,6 @@ globalMy.Document_get_onfullscreenchange = function () {
   return result;
 };
 globalMy.Document_set_onfullscreenchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onfullscreenchange, 传参val => ' + val);
   }
@@ -2296,9 +2043,6 @@ globalMy.Document_set_onfullscreenchange = function (val) {
   }
 };
 globalMy.Document_get_onfullscreenerror = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onfullscreenerror');
   }
@@ -2323,9 +2067,6 @@ globalMy.Document_get_onfullscreenerror = function () {
   return result;
 };
 globalMy.Document_set_onfullscreenerror = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onfullscreenerror, 传参val => ' + val);
   }
@@ -2350,9 +2091,6 @@ globalMy.Document_set_onfullscreenerror = function (val) {
   }
 };
 globalMy.Document_get_webkitIsFullScreen = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_webkitIsFullScreen');
   }
@@ -2377,9 +2115,6 @@ globalMy.Document_get_webkitIsFullScreen = function () {
   return result;
 };
 globalMy.Document_get_webkitCurrentFullScreenElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_webkitCurrentFullScreenElement');
   }
@@ -2404,9 +2139,6 @@ globalMy.Document_get_webkitCurrentFullScreenElement = function () {
   return result;
 };
 globalMy.Document_get_webkitFullscreenEnabled = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_webkitFullscreenEnabled');
   }
@@ -2431,9 +2163,6 @@ globalMy.Document_get_webkitFullscreenEnabled = function () {
   return result;
 };
 globalMy.Document_get_webkitFullscreenElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_webkitFullscreenElement');
   }
@@ -2458,9 +2187,6 @@ globalMy.Document_get_webkitFullscreenElement = function () {
   return result;
 };
 globalMy.Document_get_onwebkitfullscreenchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwebkitfullscreenchange');
   }
@@ -2485,9 +2211,6 @@ globalMy.Document_get_onwebkitfullscreenchange = function () {
   return result;
 };
 globalMy.Document_set_onwebkitfullscreenchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwebkitfullscreenchange, 传参val => ' + val);
   }
@@ -2512,9 +2235,6 @@ globalMy.Document_set_onwebkitfullscreenchange = function (val) {
   }
 };
 globalMy.Document_get_onwebkitfullscreenerror = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwebkitfullscreenerror');
   }
@@ -2539,9 +2259,6 @@ globalMy.Document_get_onwebkitfullscreenerror = function () {
   return result;
 };
 globalMy.Document_set_onwebkitfullscreenerror = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwebkitfullscreenerror, 传参val => ' + val);
   }
@@ -2566,9 +2283,6 @@ globalMy.Document_set_onwebkitfullscreenerror = function (val) {
   }
 };
 globalMy.Document_get_rootElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_rootElement');
   }
@@ -2593,9 +2307,6 @@ globalMy.Document_get_rootElement = function () {
   return result;
 };
 globalMy.Document_get_pictureInPictureEnabled = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_pictureInPictureEnabled');
   }
@@ -2620,9 +2331,6 @@ globalMy.Document_get_pictureInPictureEnabled = function () {
   return result;
 };
 globalMy.Document_get_pictureInPictureElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_pictureInPictureElement');
   }
@@ -2647,9 +2355,6 @@ globalMy.Document_get_pictureInPictureElement = function () {
   return result;
 };
 globalMy.Document_get_onbeforexrselect = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onbeforexrselect');
   }
@@ -2674,9 +2379,6 @@ globalMy.Document_get_onbeforexrselect = function () {
   return result;
 };
 globalMy.Document_set_onbeforexrselect = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onbeforexrselect, 传参val => ' + val);
   }
@@ -2701,9 +2403,6 @@ globalMy.Document_set_onbeforexrselect = function (val) {
   }
 };
 globalMy.Document_get_onabort = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onabort');
   }
@@ -2728,9 +2427,6 @@ globalMy.Document_get_onabort = function () {
   return result;
 };
 globalMy.Document_set_onabort = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onabort, 传参val => ' + val);
   }
@@ -2755,9 +2451,6 @@ globalMy.Document_set_onabort = function (val) {
   }
 };
 globalMy.Document_get_onbeforeinput = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onbeforeinput');
   }
@@ -2782,9 +2475,6 @@ globalMy.Document_get_onbeforeinput = function () {
   return result;
 };
 globalMy.Document_set_onbeforeinput = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onbeforeinput, 传参val => ' + val);
   }
@@ -2809,9 +2499,6 @@ globalMy.Document_set_onbeforeinput = function (val) {
   }
 };
 globalMy.Document_get_onblur = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onblur');
   }
@@ -2836,9 +2523,6 @@ globalMy.Document_get_onblur = function () {
   return result;
 };
 globalMy.Document_set_onblur = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onblur, 传参val => ' + val);
   }
@@ -2863,9 +2547,6 @@ globalMy.Document_set_onblur = function (val) {
   }
 };
 globalMy.Document_get_oncancel = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncancel');
   }
@@ -2890,9 +2571,6 @@ globalMy.Document_get_oncancel = function () {
   return result;
 };
 globalMy.Document_set_oncancel = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncancel, 传参val => ' + val);
   }
@@ -2917,9 +2595,6 @@ globalMy.Document_set_oncancel = function (val) {
   }
 };
 globalMy.Document_get_oncanplay = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncanplay');
   }
@@ -2944,9 +2619,6 @@ globalMy.Document_get_oncanplay = function () {
   return result;
 };
 globalMy.Document_set_oncanplay = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncanplay, 传参val => ' + val);
   }
@@ -2971,9 +2643,6 @@ globalMy.Document_set_oncanplay = function (val) {
   }
 };
 globalMy.Document_get_oncanplaythrough = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncanplaythrough');
   }
@@ -2998,9 +2667,6 @@ globalMy.Document_get_oncanplaythrough = function () {
   return result;
 };
 globalMy.Document_set_oncanplaythrough = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncanplaythrough, 传参val => ' + val);
   }
@@ -3025,9 +2691,6 @@ globalMy.Document_set_oncanplaythrough = function (val) {
   }
 };
 globalMy.Document_get_onchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onchange');
   }
@@ -3052,9 +2715,6 @@ globalMy.Document_get_onchange = function () {
   return result;
 };
 globalMy.Document_set_onchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onchange, 传参val => ' + val);
   }
@@ -3079,9 +2739,6 @@ globalMy.Document_set_onchange = function (val) {
   }
 };
 globalMy.Document_get_onclick = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onclick');
   }
@@ -3106,9 +2763,6 @@ globalMy.Document_get_onclick = function () {
   return result;
 };
 globalMy.Document_set_onclick = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onclick, 传参val => ' + val);
   }
@@ -3133,9 +2787,6 @@ globalMy.Document_set_onclick = function (val) {
   }
 };
 globalMy.Document_get_onclose = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onclose');
   }
@@ -3160,9 +2811,6 @@ globalMy.Document_get_onclose = function () {
   return result;
 };
 globalMy.Document_set_onclose = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onclose, 传参val => ' + val);
   }
@@ -3187,9 +2835,6 @@ globalMy.Document_set_onclose = function (val) {
   }
 };
 globalMy.Document_get_oncontextlost = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncontextlost');
   }
@@ -3214,9 +2859,6 @@ globalMy.Document_get_oncontextlost = function () {
   return result;
 };
 globalMy.Document_set_oncontextlost = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncontextlost, 传参val => ' + val);
   }
@@ -3241,9 +2883,6 @@ globalMy.Document_set_oncontextlost = function (val) {
   }
 };
 globalMy.Document_get_oncontextmenu = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncontextmenu');
   }
@@ -3268,9 +2907,6 @@ globalMy.Document_get_oncontextmenu = function () {
   return result;
 };
 globalMy.Document_set_oncontextmenu = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncontextmenu, 传参val => ' + val);
   }
@@ -3295,9 +2931,6 @@ globalMy.Document_set_oncontextmenu = function (val) {
   }
 };
 globalMy.Document_get_oncontextrestored = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncontextrestored');
   }
@@ -3322,9 +2955,6 @@ globalMy.Document_get_oncontextrestored = function () {
   return result;
 };
 globalMy.Document_set_oncontextrestored = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncontextrestored, 传参val => ' + val);
   }
@@ -3349,9 +2979,6 @@ globalMy.Document_set_oncontextrestored = function (val) {
   }
 };
 globalMy.Document_get_oncuechange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncuechange');
   }
@@ -3376,9 +3003,6 @@ globalMy.Document_get_oncuechange = function () {
   return result;
 };
 globalMy.Document_set_oncuechange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncuechange, 传参val => ' + val);
   }
@@ -3403,9 +3027,6 @@ globalMy.Document_set_oncuechange = function (val) {
   }
 };
 globalMy.Document_get_ondblclick = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondblclick');
   }
@@ -3430,9 +3051,6 @@ globalMy.Document_get_ondblclick = function () {
   return result;
 };
 globalMy.Document_set_ondblclick = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondblclick, 传参val => ' + val);
   }
@@ -3457,9 +3075,6 @@ globalMy.Document_set_ondblclick = function (val) {
   }
 };
 globalMy.Document_get_ondrag = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondrag');
   }
@@ -3484,9 +3099,6 @@ globalMy.Document_get_ondrag = function () {
   return result;
 };
 globalMy.Document_set_ondrag = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondrag, 传参val => ' + val);
   }
@@ -3511,9 +3123,6 @@ globalMy.Document_set_ondrag = function (val) {
   }
 };
 globalMy.Document_get_ondragend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondragend');
   }
@@ -3538,9 +3147,6 @@ globalMy.Document_get_ondragend = function () {
   return result;
 };
 globalMy.Document_set_ondragend = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondragend, 传参val => ' + val);
   }
@@ -3565,9 +3171,6 @@ globalMy.Document_set_ondragend = function (val) {
   }
 };
 globalMy.Document_get_ondragenter = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondragenter');
   }
@@ -3592,9 +3195,6 @@ globalMy.Document_get_ondragenter = function () {
   return result;
 };
 globalMy.Document_set_ondragenter = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondragenter, 传参val => ' + val);
   }
@@ -3619,9 +3219,6 @@ globalMy.Document_set_ondragenter = function (val) {
   }
 };
 globalMy.Document_get_ondragleave = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondragleave');
   }
@@ -3646,9 +3243,6 @@ globalMy.Document_get_ondragleave = function () {
   return result;
 };
 globalMy.Document_set_ondragleave = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondragleave, 传参val => ' + val);
   }
@@ -3673,9 +3267,6 @@ globalMy.Document_set_ondragleave = function (val) {
   }
 };
 globalMy.Document_get_ondragover = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondragover');
   }
@@ -3700,9 +3291,6 @@ globalMy.Document_get_ondragover = function () {
   return result;
 };
 globalMy.Document_set_ondragover = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondragover, 传参val => ' + val);
   }
@@ -3727,9 +3315,6 @@ globalMy.Document_set_ondragover = function (val) {
   }
 };
 globalMy.Document_get_ondragstart = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondragstart');
   }
@@ -3754,9 +3339,6 @@ globalMy.Document_get_ondragstart = function () {
   return result;
 };
 globalMy.Document_set_ondragstart = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondragstart, 传参val => ' + val);
   }
@@ -3781,9 +3363,6 @@ globalMy.Document_set_ondragstart = function (val) {
   }
 };
 globalMy.Document_get_ondrop = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondrop');
   }
@@ -3808,9 +3387,6 @@ globalMy.Document_get_ondrop = function () {
   return result;
 };
 globalMy.Document_set_ondrop = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondrop, 传参val => ' + val);
   }
@@ -3835,9 +3411,6 @@ globalMy.Document_set_ondrop = function (val) {
   }
 };
 globalMy.Document_get_ondurationchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ondurationchange');
   }
@@ -3862,9 +3435,6 @@ globalMy.Document_get_ondurationchange = function () {
   return result;
 };
 globalMy.Document_set_ondurationchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ondurationchange, 传参val => ' + val);
   }
@@ -3889,9 +3459,6 @@ globalMy.Document_set_ondurationchange = function (val) {
   }
 };
 globalMy.Document_get_onemptied = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onemptied');
   }
@@ -3916,9 +3483,6 @@ globalMy.Document_get_onemptied = function () {
   return result;
 };
 globalMy.Document_set_onemptied = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onemptied, 传参val => ' + val);
   }
@@ -3943,9 +3507,6 @@ globalMy.Document_set_onemptied = function (val) {
   }
 };
 globalMy.Document_get_onended = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onended');
   }
@@ -3970,9 +3531,6 @@ globalMy.Document_get_onended = function () {
   return result;
 };
 globalMy.Document_set_onended = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onended, 传参val => ' + val);
   }
@@ -3997,9 +3555,6 @@ globalMy.Document_set_onended = function (val) {
   }
 };
 globalMy.Document_get_onerror = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onerror');
   }
@@ -4024,9 +3579,6 @@ globalMy.Document_get_onerror = function () {
   return result;
 };
 globalMy.Document_set_onerror = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onerror, 传参val => ' + val);
   }
@@ -4051,9 +3603,6 @@ globalMy.Document_set_onerror = function (val) {
   }
 };
 globalMy.Document_get_onfocus = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onfocus');
   }
@@ -4078,9 +3627,6 @@ globalMy.Document_get_onfocus = function () {
   return result;
 };
 globalMy.Document_set_onfocus = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onfocus, 传参val => ' + val);
   }
@@ -4105,9 +3651,6 @@ globalMy.Document_set_onfocus = function (val) {
   }
 };
 globalMy.Document_get_onformdata = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onformdata');
   }
@@ -4132,9 +3675,6 @@ globalMy.Document_get_onformdata = function () {
   return result;
 };
 globalMy.Document_set_onformdata = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onformdata, 传参val => ' + val);
   }
@@ -4159,9 +3699,6 @@ globalMy.Document_set_onformdata = function (val) {
   }
 };
 globalMy.Document_get_oninput = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oninput');
   }
@@ -4186,9 +3723,6 @@ globalMy.Document_get_oninput = function () {
   return result;
 };
 globalMy.Document_set_oninput = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oninput, 传参val => ' + val);
   }
@@ -4213,9 +3747,6 @@ globalMy.Document_set_oninput = function (val) {
   }
 };
 globalMy.Document_get_oninvalid = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oninvalid');
   }
@@ -4240,9 +3771,6 @@ globalMy.Document_get_oninvalid = function () {
   return result;
 };
 globalMy.Document_set_oninvalid = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oninvalid, 传参val => ' + val);
   }
@@ -4267,9 +3795,6 @@ globalMy.Document_set_oninvalid = function (val) {
   }
 };
 globalMy.Document_get_onkeydown = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onkeydown');
   }
@@ -4294,9 +3819,6 @@ globalMy.Document_get_onkeydown = function () {
   return result;
 };
 globalMy.Document_set_onkeydown = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onkeydown, 传参val => ' + val);
   }
@@ -4321,9 +3843,6 @@ globalMy.Document_set_onkeydown = function (val) {
   }
 };
 globalMy.Document_get_onkeypress = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onkeypress');
   }
@@ -4348,9 +3867,6 @@ globalMy.Document_get_onkeypress = function () {
   return result;
 };
 globalMy.Document_set_onkeypress = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onkeypress, 传参val => ' + val);
   }
@@ -4375,9 +3891,6 @@ globalMy.Document_set_onkeypress = function (val) {
   }
 };
 globalMy.Document_get_onkeyup = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onkeyup');
   }
@@ -4402,9 +3915,6 @@ globalMy.Document_get_onkeyup = function () {
   return result;
 };
 globalMy.Document_set_onkeyup = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onkeyup, 传参val => ' + val);
   }
@@ -4429,9 +3939,6 @@ globalMy.Document_set_onkeyup = function (val) {
   }
 };
 globalMy.Document_get_onload = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onload');
   }
@@ -4456,9 +3963,6 @@ globalMy.Document_get_onload = function () {
   return result;
 };
 globalMy.Document_set_onload = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onload, 传参val => ' + val);
   }
@@ -4483,9 +3987,6 @@ globalMy.Document_set_onload = function (val) {
   }
 };
 globalMy.Document_get_onloadeddata = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onloadeddata');
   }
@@ -4510,9 +4011,6 @@ globalMy.Document_get_onloadeddata = function () {
   return result;
 };
 globalMy.Document_set_onloadeddata = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onloadeddata, 传参val => ' + val);
   }
@@ -4537,9 +4035,6 @@ globalMy.Document_set_onloadeddata = function (val) {
   }
 };
 globalMy.Document_get_onloadedmetadata = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onloadedmetadata');
   }
@@ -4564,9 +4059,6 @@ globalMy.Document_get_onloadedmetadata = function () {
   return result;
 };
 globalMy.Document_set_onloadedmetadata = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onloadedmetadata, 传参val => ' + val);
   }
@@ -4591,9 +4083,6 @@ globalMy.Document_set_onloadedmetadata = function (val) {
   }
 };
 globalMy.Document_get_onloadstart = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onloadstart');
   }
@@ -4618,9 +4107,6 @@ globalMy.Document_get_onloadstart = function () {
   return result;
 };
 globalMy.Document_set_onloadstart = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onloadstart, 传参val => ' + val);
   }
@@ -4645,9 +4131,6 @@ globalMy.Document_set_onloadstart = function (val) {
   }
 };
 globalMy.Document_get_onmousedown = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmousedown');
   }
@@ -4672,9 +4155,6 @@ globalMy.Document_get_onmousedown = function () {
   return result;
 };
 globalMy.Document_set_onmousedown = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmousedown, 传参val => ' + val);
   }
@@ -4699,9 +4179,6 @@ globalMy.Document_set_onmousedown = function (val) {
   }
 };
 globalMy.Document_get_onmouseenter = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmouseenter');
   }
@@ -4726,9 +4203,6 @@ globalMy.Document_get_onmouseenter = function () {
   return result;
 };
 globalMy.Document_set_onmouseenter = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmouseenter, 传参val => ' + val);
   }
@@ -4753,9 +4227,6 @@ globalMy.Document_set_onmouseenter = function (val) {
   }
 };
 globalMy.Document_get_onmouseleave = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmouseleave');
   }
@@ -4780,9 +4251,6 @@ globalMy.Document_get_onmouseleave = function () {
   return result;
 };
 globalMy.Document_set_onmouseleave = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmouseleave, 传参val => ' + val);
   }
@@ -4807,9 +4275,6 @@ globalMy.Document_set_onmouseleave = function (val) {
   }
 };
 globalMy.Document_get_onmousemove = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmousemove');
   }
@@ -4834,9 +4299,6 @@ globalMy.Document_get_onmousemove = function () {
   return result;
 };
 globalMy.Document_set_onmousemove = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmousemove, 传参val => ' + val);
   }
@@ -4861,9 +4323,6 @@ globalMy.Document_set_onmousemove = function (val) {
   }
 };
 globalMy.Document_get_onmouseout = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmouseout');
   }
@@ -4888,9 +4347,6 @@ globalMy.Document_get_onmouseout = function () {
   return result;
 };
 globalMy.Document_set_onmouseout = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmouseout, 传参val => ' + val);
   }
@@ -4915,9 +4371,6 @@ globalMy.Document_set_onmouseout = function (val) {
   }
 };
 globalMy.Document_get_onmouseover = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmouseover');
   }
@@ -4942,9 +4395,6 @@ globalMy.Document_get_onmouseover = function () {
   return result;
 };
 globalMy.Document_set_onmouseover = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmouseover, 传参val => ' + val);
   }
@@ -4969,9 +4419,6 @@ globalMy.Document_set_onmouseover = function (val) {
   }
 };
 globalMy.Document_get_onmouseup = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmouseup');
   }
@@ -4996,9 +4443,6 @@ globalMy.Document_get_onmouseup = function () {
   return result;
 };
 globalMy.Document_set_onmouseup = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmouseup, 传参val => ' + val);
   }
@@ -5023,9 +4467,6 @@ globalMy.Document_set_onmouseup = function (val) {
   }
 };
 globalMy.Document_get_onmousewheel = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onmousewheel');
   }
@@ -5050,9 +4491,6 @@ globalMy.Document_get_onmousewheel = function () {
   return result;
 };
 globalMy.Document_set_onmousewheel = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onmousewheel, 传参val => ' + val);
   }
@@ -5077,9 +4515,6 @@ globalMy.Document_set_onmousewheel = function (val) {
   }
 };
 globalMy.Document_get_onpause = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpause');
   }
@@ -5104,9 +4539,6 @@ globalMy.Document_get_onpause = function () {
   return result;
 };
 globalMy.Document_set_onpause = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpause, 传参val => ' + val);
   }
@@ -5131,9 +4563,6 @@ globalMy.Document_set_onpause = function (val) {
   }
 };
 globalMy.Document_get_onplay = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onplay');
   }
@@ -5158,9 +4587,6 @@ globalMy.Document_get_onplay = function () {
   return result;
 };
 globalMy.Document_set_onplay = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onplay, 传参val => ' + val);
   }
@@ -5185,9 +4611,6 @@ globalMy.Document_set_onplay = function (val) {
   }
 };
 globalMy.Document_get_onplaying = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onplaying');
   }
@@ -5212,9 +4635,6 @@ globalMy.Document_get_onplaying = function () {
   return result;
 };
 globalMy.Document_set_onplaying = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onplaying, 传参val => ' + val);
   }
@@ -5239,9 +4659,6 @@ globalMy.Document_set_onplaying = function (val) {
   }
 };
 globalMy.Document_get_onprogress = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onprogress');
   }
@@ -5266,9 +4683,6 @@ globalMy.Document_get_onprogress = function () {
   return result;
 };
 globalMy.Document_set_onprogress = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onprogress, 传参val => ' + val);
   }
@@ -5293,9 +4707,6 @@ globalMy.Document_set_onprogress = function (val) {
   }
 };
 globalMy.Document_get_onratechange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onratechange');
   }
@@ -5320,9 +4731,6 @@ globalMy.Document_get_onratechange = function () {
   return result;
 };
 globalMy.Document_set_onratechange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onratechange, 传参val => ' + val);
   }
@@ -5347,9 +4755,6 @@ globalMy.Document_set_onratechange = function (val) {
   }
 };
 globalMy.Document_get_onreset = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onreset');
   }
@@ -5374,9 +4779,6 @@ globalMy.Document_get_onreset = function () {
   return result;
 };
 globalMy.Document_set_onreset = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onreset, 传参val => ' + val);
   }
@@ -5401,9 +4803,6 @@ globalMy.Document_set_onreset = function (val) {
   }
 };
 globalMy.Document_get_onresize = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onresize');
   }
@@ -5428,9 +4827,6 @@ globalMy.Document_get_onresize = function () {
   return result;
 };
 globalMy.Document_set_onresize = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onresize, 传参val => ' + val);
   }
@@ -5455,9 +4851,6 @@ globalMy.Document_set_onresize = function (val) {
   }
 };
 globalMy.Document_get_onscroll = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onscroll');
   }
@@ -5482,9 +4875,6 @@ globalMy.Document_get_onscroll = function () {
   return result;
 };
 globalMy.Document_set_onscroll = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onscroll, 传参val => ' + val);
   }
@@ -5509,9 +4899,6 @@ globalMy.Document_set_onscroll = function (val) {
   }
 };
 globalMy.Document_get_onsecuritypolicyviolation = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onsecuritypolicyviolation');
   }
@@ -5536,9 +4923,6 @@ globalMy.Document_get_onsecuritypolicyviolation = function () {
   return result;
 };
 globalMy.Document_set_onsecuritypolicyviolation = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onsecuritypolicyviolation, 传参val => ' + val);
   }
@@ -5563,9 +4947,6 @@ globalMy.Document_set_onsecuritypolicyviolation = function (val) {
   }
 };
 globalMy.Document_get_onseeked = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onseeked');
   }
@@ -5590,9 +4971,6 @@ globalMy.Document_get_onseeked = function () {
   return result;
 };
 globalMy.Document_set_onseeked = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onseeked, 传参val => ' + val);
   }
@@ -5617,9 +4995,6 @@ globalMy.Document_set_onseeked = function (val) {
   }
 };
 globalMy.Document_get_onseeking = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onseeking');
   }
@@ -5644,9 +5019,6 @@ globalMy.Document_get_onseeking = function () {
   return result;
 };
 globalMy.Document_set_onseeking = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onseeking, 传参val => ' + val);
   }
@@ -5671,9 +5043,6 @@ globalMy.Document_set_onseeking = function (val) {
   }
 };
 globalMy.Document_get_onselect = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onselect');
   }
@@ -5698,9 +5067,6 @@ globalMy.Document_get_onselect = function () {
   return result;
 };
 globalMy.Document_set_onselect = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onselect, 传参val => ' + val);
   }
@@ -5725,9 +5091,6 @@ globalMy.Document_set_onselect = function (val) {
   }
 };
 globalMy.Document_get_onslotchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onslotchange');
   }
@@ -5752,9 +5115,6 @@ globalMy.Document_get_onslotchange = function () {
   return result;
 };
 globalMy.Document_set_onslotchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onslotchange, 传参val => ' + val);
   }
@@ -5779,9 +5139,6 @@ globalMy.Document_set_onslotchange = function (val) {
   }
 };
 globalMy.Document_get_onstalled = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onstalled');
   }
@@ -5806,9 +5163,6 @@ globalMy.Document_get_onstalled = function () {
   return result;
 };
 globalMy.Document_set_onstalled = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onstalled, 传参val => ' + val);
   }
@@ -5833,9 +5187,6 @@ globalMy.Document_set_onstalled = function (val) {
   }
 };
 globalMy.Document_get_onsubmit = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onsubmit');
   }
@@ -5860,9 +5211,6 @@ globalMy.Document_get_onsubmit = function () {
   return result;
 };
 globalMy.Document_set_onsubmit = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onsubmit, 传参val => ' + val);
   }
@@ -5887,9 +5235,6 @@ globalMy.Document_set_onsubmit = function (val) {
   }
 };
 globalMy.Document_get_onsuspend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onsuspend');
   }
@@ -5914,9 +5259,6 @@ globalMy.Document_get_onsuspend = function () {
   return result;
 };
 globalMy.Document_set_onsuspend = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onsuspend, 传参val => ' + val);
   }
@@ -5941,9 +5283,6 @@ globalMy.Document_set_onsuspend = function (val) {
   }
 };
 globalMy.Document_get_ontimeupdate = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ontimeupdate');
   }
@@ -5968,9 +5307,6 @@ globalMy.Document_get_ontimeupdate = function () {
   return result;
 };
 globalMy.Document_set_ontimeupdate = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ontimeupdate, 传参val => ' + val);
   }
@@ -5995,9 +5331,6 @@ globalMy.Document_set_ontimeupdate = function (val) {
   }
 };
 globalMy.Document_get_ontoggle = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ontoggle');
   }
@@ -6022,9 +5355,6 @@ globalMy.Document_get_ontoggle = function () {
   return result;
 };
 globalMy.Document_set_ontoggle = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ontoggle, 传参val => ' + val);
   }
@@ -6049,9 +5379,6 @@ globalMy.Document_set_ontoggle = function (val) {
   }
 };
 globalMy.Document_get_onvolumechange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onvolumechange');
   }
@@ -6076,9 +5403,6 @@ globalMy.Document_get_onvolumechange = function () {
   return result;
 };
 globalMy.Document_set_onvolumechange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onvolumechange, 传参val => ' + val);
   }
@@ -6103,9 +5427,6 @@ globalMy.Document_set_onvolumechange = function (val) {
   }
 };
 globalMy.Document_get_onwaiting = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwaiting');
   }
@@ -6130,9 +5451,6 @@ globalMy.Document_get_onwaiting = function () {
   return result;
 };
 globalMy.Document_set_onwaiting = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwaiting, 传参val => ' + val);
   }
@@ -6157,9 +5475,6 @@ globalMy.Document_set_onwaiting = function (val) {
   }
 };
 globalMy.Document_get_onwebkitanimationend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwebkitanimationend');
   }
@@ -6184,9 +5499,6 @@ globalMy.Document_get_onwebkitanimationend = function () {
   return result;
 };
 globalMy.Document_set_onwebkitanimationend = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwebkitanimationend, 传参val => ' + val);
   }
@@ -6211,9 +5523,6 @@ globalMy.Document_set_onwebkitanimationend = function (val) {
   }
 };
 globalMy.Document_get_onwebkitanimationiteration = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwebkitanimationiteration');
   }
@@ -6238,9 +5547,6 @@ globalMy.Document_get_onwebkitanimationiteration = function () {
   return result;
 };
 globalMy.Document_set_onwebkitanimationiteration = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwebkitanimationiteration, 传参val => ' + val);
   }
@@ -6265,9 +5571,6 @@ globalMy.Document_set_onwebkitanimationiteration = function (val) {
   }
 };
 globalMy.Document_get_onwebkitanimationstart = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwebkitanimationstart');
   }
@@ -6292,9 +5595,6 @@ globalMy.Document_get_onwebkitanimationstart = function () {
   return result;
 };
 globalMy.Document_set_onwebkitanimationstart = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwebkitanimationstart, 传参val => ' + val);
   }
@@ -6319,9 +5619,6 @@ globalMy.Document_set_onwebkitanimationstart = function (val) {
   }
 };
 globalMy.Document_get_onwebkittransitionend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwebkittransitionend');
   }
@@ -6346,9 +5643,6 @@ globalMy.Document_get_onwebkittransitionend = function () {
   return result;
 };
 globalMy.Document_set_onwebkittransitionend = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwebkittransitionend, 传参val => ' + val);
   }
@@ -6373,9 +5667,6 @@ globalMy.Document_set_onwebkittransitionend = function (val) {
   }
 };
 globalMy.Document_get_onwheel = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onwheel');
   }
@@ -6400,9 +5691,6 @@ globalMy.Document_get_onwheel = function () {
   return result;
 };
 globalMy.Document_set_onwheel = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onwheel, 传参val => ' + val);
   }
@@ -6427,9 +5715,6 @@ globalMy.Document_set_onwheel = function (val) {
   }
 };
 globalMy.Document_get_onauxclick = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onauxclick');
   }
@@ -6454,9 +5739,6 @@ globalMy.Document_get_onauxclick = function () {
   return result;
 };
 globalMy.Document_set_onauxclick = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onauxclick, 传参val => ' + val);
   }
@@ -6481,9 +5763,6 @@ globalMy.Document_set_onauxclick = function (val) {
   }
 };
 globalMy.Document_get_ongotpointercapture = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ongotpointercapture');
   }
@@ -6508,9 +5787,6 @@ globalMy.Document_get_ongotpointercapture = function () {
   return result;
 };
 globalMy.Document_set_ongotpointercapture = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ongotpointercapture, 传参val => ' + val);
   }
@@ -6535,9 +5811,6 @@ globalMy.Document_set_ongotpointercapture = function (val) {
   }
 };
 globalMy.Document_get_onlostpointercapture = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onlostpointercapture');
   }
@@ -6562,9 +5835,6 @@ globalMy.Document_get_onlostpointercapture = function () {
   return result;
 };
 globalMy.Document_set_onlostpointercapture = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onlostpointercapture, 传参val => ' + val);
   }
@@ -6589,9 +5859,6 @@ globalMy.Document_set_onlostpointercapture = function (val) {
   }
 };
 globalMy.Document_get_onpointerdown = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerdown');
   }
@@ -6616,9 +5883,6 @@ globalMy.Document_get_onpointerdown = function () {
   return result;
 };
 globalMy.Document_set_onpointerdown = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerdown, 传参val => ' + val);
   }
@@ -6643,9 +5907,6 @@ globalMy.Document_set_onpointerdown = function (val) {
   }
 };
 globalMy.Document_get_onpointermove = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointermove');
   }
@@ -6670,9 +5931,6 @@ globalMy.Document_get_onpointermove = function () {
   return result;
 };
 globalMy.Document_set_onpointermove = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointermove, 传参val => ' + val);
   }
@@ -6697,9 +5955,6 @@ globalMy.Document_set_onpointermove = function (val) {
   }
 };
 globalMy.Document_get_onpointerrawupdate = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerrawupdate');
   }
@@ -6724,9 +5979,6 @@ globalMy.Document_get_onpointerrawupdate = function () {
   return result;
 };
 globalMy.Document_set_onpointerrawupdate = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerrawupdate, 传参val => ' + val);
   }
@@ -6751,9 +6003,6 @@ globalMy.Document_set_onpointerrawupdate = function (val) {
   }
 };
 globalMy.Document_get_onpointerup = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerup');
   }
@@ -6778,9 +6027,6 @@ globalMy.Document_get_onpointerup = function () {
   return result;
 };
 globalMy.Document_set_onpointerup = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerup, 传参val => ' + val);
   }
@@ -6805,9 +6051,6 @@ globalMy.Document_set_onpointerup = function (val) {
   }
 };
 globalMy.Document_get_onpointercancel = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointercancel');
   }
@@ -6832,9 +6075,6 @@ globalMy.Document_get_onpointercancel = function () {
   return result;
 };
 globalMy.Document_set_onpointercancel = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointercancel, 传参val => ' + val);
   }
@@ -6859,9 +6099,6 @@ globalMy.Document_set_onpointercancel = function (val) {
   }
 };
 globalMy.Document_get_onpointerover = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerover');
   }
@@ -6886,9 +6123,6 @@ globalMy.Document_get_onpointerover = function () {
   return result;
 };
 globalMy.Document_set_onpointerover = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerover, 传参val => ' + val);
   }
@@ -6913,9 +6147,6 @@ globalMy.Document_set_onpointerover = function (val) {
   }
 };
 globalMy.Document_get_onpointerout = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerout');
   }
@@ -6940,9 +6171,6 @@ globalMy.Document_get_onpointerout = function () {
   return result;
 };
 globalMy.Document_set_onpointerout = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerout, 传参val => ' + val);
   }
@@ -6967,9 +6195,6 @@ globalMy.Document_set_onpointerout = function (val) {
   }
 };
 globalMy.Document_get_onpointerenter = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerenter');
   }
@@ -6994,9 +6219,6 @@ globalMy.Document_get_onpointerenter = function () {
   return result;
 };
 globalMy.Document_set_onpointerenter = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerenter, 传参val => ' + val);
   }
@@ -7021,9 +6243,6 @@ globalMy.Document_set_onpointerenter = function (val) {
   }
 };
 globalMy.Document_get_onpointerleave = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpointerleave');
   }
@@ -7048,9 +6267,6 @@ globalMy.Document_get_onpointerleave = function () {
   return result;
 };
 globalMy.Document_set_onpointerleave = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpointerleave, 传参val => ' + val);
   }
@@ -7075,9 +6291,6 @@ globalMy.Document_set_onpointerleave = function (val) {
   }
 };
 globalMy.Document_get_onselectstart = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onselectstart');
   }
@@ -7102,9 +6315,6 @@ globalMy.Document_get_onselectstart = function () {
   return result;
 };
 globalMy.Document_set_onselectstart = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onselectstart, 传参val => ' + val);
   }
@@ -7129,9 +6339,6 @@ globalMy.Document_set_onselectstart = function (val) {
   }
 };
 globalMy.Document_get_onselectionchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onselectionchange');
   }
@@ -7156,9 +6363,6 @@ globalMy.Document_get_onselectionchange = function () {
   return result;
 };
 globalMy.Document_set_onselectionchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onselectionchange, 传参val => ' + val);
   }
@@ -7183,9 +6387,6 @@ globalMy.Document_set_onselectionchange = function (val) {
   }
 };
 globalMy.Document_get_onanimationend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onanimationend');
   }
@@ -7210,9 +6411,6 @@ globalMy.Document_get_onanimationend = function () {
   return result;
 };
 globalMy.Document_set_onanimationend = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onanimationend, 传参val => ' + val);
   }
@@ -7237,9 +6435,6 @@ globalMy.Document_set_onanimationend = function (val) {
   }
 };
 globalMy.Document_get_onanimationiteration = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onanimationiteration');
   }
@@ -7264,9 +6459,6 @@ globalMy.Document_get_onanimationiteration = function () {
   return result;
 };
 globalMy.Document_set_onanimationiteration = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onanimationiteration, 传参val => ' + val);
   }
@@ -7291,9 +6483,6 @@ globalMy.Document_set_onanimationiteration = function (val) {
   }
 };
 globalMy.Document_get_onanimationstart = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onanimationstart');
   }
@@ -7318,9 +6507,6 @@ globalMy.Document_get_onanimationstart = function () {
   return result;
 };
 globalMy.Document_set_onanimationstart = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onanimationstart, 传参val => ' + val);
   }
@@ -7345,9 +6531,6 @@ globalMy.Document_set_onanimationstart = function (val) {
   }
 };
 globalMy.Document_get_ontransitionrun = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ontransitionrun');
   }
@@ -7372,9 +6555,6 @@ globalMy.Document_get_ontransitionrun = function () {
   return result;
 };
 globalMy.Document_set_ontransitionrun = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ontransitionrun, 传参val => ' + val);
   }
@@ -7399,9 +6579,6 @@ globalMy.Document_set_ontransitionrun = function (val) {
   }
 };
 globalMy.Document_get_ontransitionstart = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ontransitionstart');
   }
@@ -7426,9 +6603,6 @@ globalMy.Document_get_ontransitionstart = function () {
   return result;
 };
 globalMy.Document_set_ontransitionstart = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ontransitionstart, 传参val => ' + val);
   }
@@ -7453,9 +6627,6 @@ globalMy.Document_set_ontransitionstart = function (val) {
   }
 };
 globalMy.Document_get_ontransitionend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ontransitionend');
   }
@@ -7480,9 +6651,6 @@ globalMy.Document_get_ontransitionend = function () {
   return result;
 };
 globalMy.Document_set_ontransitionend = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ontransitionend, 传参val => ' + val);
   }
@@ -7507,9 +6675,6 @@ globalMy.Document_set_ontransitionend = function (val) {
   }
 };
 globalMy.Document_get_ontransitioncancel = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_ontransitioncancel');
   }
@@ -7534,9 +6699,6 @@ globalMy.Document_get_ontransitioncancel = function () {
   return result;
 };
 globalMy.Document_set_ontransitioncancel = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_ontransitioncancel, 传参val => ' + val);
   }
@@ -7561,9 +6723,6 @@ globalMy.Document_set_ontransitioncancel = function (val) {
   }
 };
 globalMy.Document_get_oncopy = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncopy');
   }
@@ -7588,9 +6747,6 @@ globalMy.Document_get_oncopy = function () {
   return result;
 };
 globalMy.Document_set_oncopy = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncopy, 传参val => ' + val);
   }
@@ -7615,9 +6771,6 @@ globalMy.Document_set_oncopy = function (val) {
   }
 };
 globalMy.Document_get_oncut = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncut');
   }
@@ -7642,9 +6795,6 @@ globalMy.Document_get_oncut = function () {
   return result;
 };
 globalMy.Document_set_oncut = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncut, 传参val => ' + val);
   }
@@ -7669,9 +6819,6 @@ globalMy.Document_set_oncut = function (val) {
   }
 };
 globalMy.Document_get_onpaste = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onpaste');
   }
@@ -7696,9 +6843,6 @@ globalMy.Document_get_onpaste = function () {
   return result;
 };
 globalMy.Document_set_onpaste = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onpaste, 传参val => ' + val);
   }
@@ -7723,9 +6867,6 @@ globalMy.Document_set_onpaste = function (val) {
   }
 };
 globalMy.Document_get_children = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_children');
   }
@@ -7750,9 +6891,6 @@ globalMy.Document_get_children = function () {
   return result;
 };
 globalMy.Document_get_firstElementChild = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_firstElementChild');
   }
@@ -7777,9 +6915,6 @@ globalMy.Document_get_firstElementChild = function () {
   return result;
 };
 globalMy.Document_get_lastElementChild = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_lastElementChild');
   }
@@ -7804,9 +6939,6 @@ globalMy.Document_get_lastElementChild = function () {
   return result;
 };
 globalMy.Document_get_childElementCount = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_childElementCount');
   }
@@ -7831,9 +6963,6 @@ globalMy.Document_get_childElementCount = function () {
   return result;
 };
 globalMy.Document_get_activeElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_activeElement');
   }
@@ -7858,9 +6987,6 @@ globalMy.Document_get_activeElement = function () {
   return result;
 };
 globalMy.Document_get_styleSheets = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_styleSheets');
   }
@@ -7885,9 +7011,6 @@ globalMy.Document_get_styleSheets = function () {
   return result;
 };
 globalMy.Document_get_pointerLockElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_pointerLockElement');
   }
@@ -7912,9 +7035,6 @@ globalMy.Document_get_pointerLockElement = function () {
   return result;
 };
 globalMy.Document_get_fullscreenElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_fullscreenElement');
   }
@@ -7939,9 +7059,6 @@ globalMy.Document_get_fullscreenElement = function () {
   return result;
 };
 globalMy.Document_set_fullscreenElement = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_fullscreenElement, 传参val => ' + val);
   }
@@ -7966,9 +7083,6 @@ globalMy.Document_set_fullscreenElement = function (val) {
   }
 };
 globalMy.Document_get_adoptedStyleSheets = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_adoptedStyleSheets');
   }
@@ -7993,9 +7107,6 @@ globalMy.Document_get_adoptedStyleSheets = function () {
   return result;
 };
 globalMy.Document_set_adoptedStyleSheets = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_adoptedStyleSheets, 传参val => ' + val);
   }
@@ -8020,9 +7131,6 @@ globalMy.Document_set_adoptedStyleSheets = function (val) {
   }
 };
 globalMy.Document_get_fonts = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_fonts');
   }
@@ -8047,9 +7155,6 @@ globalMy.Document_get_fonts = function () {
   return result;
 };
 globalMy.Document_adoptNode = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_adoptNode, arguments => ', arguments);
   }
@@ -8076,9 +7181,6 @@ globalMy.Document_adoptNode = function () {
   return result;
 };
 globalMy.Document_append = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_append, arguments => ', arguments);
   }
@@ -8105,9 +7207,6 @@ globalMy.Document_append = function () {
   return result;
 };
 globalMy.Document_captureEvents = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_captureEvents, arguments => ', arguments);
   }
@@ -8134,9 +7233,6 @@ globalMy.Document_captureEvents = function () {
   return result;
 };
 globalMy.Document_caretRangeFromPoint = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_caretRangeFromPoint, arguments => ', arguments);
   }
@@ -8163,9 +7259,6 @@ globalMy.Document_caretRangeFromPoint = function () {
   return result;
 };
 globalMy.Document_clear = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_clear, arguments => ', arguments);
   }
@@ -8192,9 +7285,6 @@ globalMy.Document_clear = function () {
   return result;
 };
 globalMy.Document_close = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_close, arguments => ', arguments);
   }
@@ -8221,9 +7311,6 @@ globalMy.Document_close = function () {
   return result;
 };
 globalMy.Document_createAttribute = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createAttribute, arguments => ', arguments);
   }
@@ -8250,9 +7337,6 @@ globalMy.Document_createAttribute = function () {
   return result;
 };
 globalMy.Document_createAttributeNS = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createAttributeNS, arguments => ', arguments);
   }
@@ -8279,9 +7363,6 @@ globalMy.Document_createAttributeNS = function () {
   return result;
 };
 globalMy.Document_createCDATASection = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createCDATASection, arguments => ', arguments);
   }
@@ -8308,9 +7389,6 @@ globalMy.Document_createCDATASection = function () {
   return result;
 };
 globalMy.Document_createComment = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createComment, arguments => ', arguments);
   }
@@ -8337,9 +7415,6 @@ globalMy.Document_createComment = function () {
   return result;
 };
 globalMy.Document_createDocumentFragment = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createDocumentFragment, arguments => ', arguments);
   }
@@ -8366,9 +7441,6 @@ globalMy.Document_createDocumentFragment = function () {
   return result;
 };
 globalMy.Document_createElement = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createElement, arguments => ', arguments);
   }
@@ -8395,9 +7467,6 @@ globalMy.Document_createElement = function () {
   return result;
 };
 globalMy.Document_createElementNS = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createElementNS, arguments => ', arguments);
   }
@@ -8424,9 +7493,6 @@ globalMy.Document_createElementNS = function () {
   return result;
 };
 globalMy.Document_createEvent = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createEvent, arguments => ', arguments);
   }
@@ -8453,9 +7519,6 @@ globalMy.Document_createEvent = function () {
   return result;
 };
 globalMy.Document_createExpression = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createExpression, arguments => ', arguments);
   }
@@ -8482,9 +7545,6 @@ globalMy.Document_createExpression = function () {
   return result;
 };
 globalMy.Document_createNSResolver = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createNSResolver, arguments => ', arguments);
   }
@@ -8511,9 +7571,6 @@ globalMy.Document_createNSResolver = function () {
   return result;
 };
 globalMy.Document_createNodeIterator = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createNodeIterator, arguments => ', arguments);
   }
@@ -8540,9 +7597,6 @@ globalMy.Document_createNodeIterator = function () {
   return result;
 };
 globalMy.Document_createProcessingInstruction = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createProcessingInstruction, arguments => ', arguments);
   }
@@ -8569,9 +7623,6 @@ globalMy.Document_createProcessingInstruction = function () {
   return result;
 };
 globalMy.Document_createRange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createRange, arguments => ', arguments);
   }
@@ -8598,9 +7649,6 @@ globalMy.Document_createRange = function () {
   return result;
 };
 globalMy.Document_createTextNode = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createTextNode, arguments => ', arguments);
   }
@@ -8627,9 +7675,6 @@ globalMy.Document_createTextNode = function () {
   return result;
 };
 globalMy.Document_createTreeWalker = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_createTreeWalker, arguments => ', arguments);
   }
@@ -8656,9 +7701,6 @@ globalMy.Document_createTreeWalker = function () {
   return result;
 };
 globalMy.Document_elementFromPoint = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_elementFromPoint, arguments => ', arguments);
   }
@@ -8685,9 +7727,6 @@ globalMy.Document_elementFromPoint = function () {
   return result;
 };
 globalMy.Document_elementsFromPoint = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_elementsFromPoint, arguments => ', arguments);
   }
@@ -8714,9 +7753,6 @@ globalMy.Document_elementsFromPoint = function () {
   return result;
 };
 globalMy.Document_evaluate = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_evaluate, arguments => ', arguments);
   }
@@ -8743,9 +7779,6 @@ globalMy.Document_evaluate = function () {
   return result;
 };
 globalMy.Document_execCommand = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_execCommand, arguments => ', arguments);
   }
@@ -8772,9 +7805,6 @@ globalMy.Document_execCommand = function () {
   return result;
 };
 globalMy.Document_exitFullscreen = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_exitFullscreen, arguments => ', arguments);
   }
@@ -8801,9 +7831,6 @@ globalMy.Document_exitFullscreen = function () {
   return result;
 };
 globalMy.Document_exitPictureInPicture = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_exitPictureInPicture, arguments => ', arguments);
   }
@@ -8830,9 +7857,6 @@ globalMy.Document_exitPictureInPicture = function () {
   return result;
 };
 globalMy.Document_exitPointerLock = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_exitPointerLock, arguments => ', arguments);
   }
@@ -8859,9 +7883,6 @@ globalMy.Document_exitPointerLock = function () {
   return result;
 };
 globalMy.Document_getElementById = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getElementById, arguments => ', arguments);
   }
@@ -8888,9 +7909,6 @@ globalMy.Document_getElementById = function () {
   return result;
 };
 globalMy.Document_getElementsByClassName = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getElementsByClassName, arguments => ', arguments);
   }
@@ -8917,9 +7935,6 @@ globalMy.Document_getElementsByClassName = function () {
   return result;
 };
 globalMy.Document_getElementsByName = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getElementsByName, arguments => ', arguments);
   }
@@ -8946,9 +7961,6 @@ globalMy.Document_getElementsByName = function () {
   return result;
 };
 globalMy.Document_getElementsByTagName = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getElementsByTagName, arguments => ', arguments);
   }
@@ -8975,9 +7987,6 @@ globalMy.Document_getElementsByTagName = function () {
   return result;
 };
 globalMy.Document_getElementsByTagNameNS = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getElementsByTagNameNS, arguments => ', arguments);
   }
@@ -9004,9 +8013,6 @@ globalMy.Document_getElementsByTagNameNS = function () {
   return result;
 };
 globalMy.Document_getSelection = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getSelection, arguments => ', arguments);
   }
@@ -9033,9 +8039,6 @@ globalMy.Document_getSelection = function () {
   return result;
 };
 globalMy.Document_hasFocus = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_hasFocus, arguments => ', arguments);
   }
@@ -9062,9 +8065,6 @@ globalMy.Document_hasFocus = function () {
   return result;
 };
 globalMy.Document_importNode = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_importNode, arguments => ', arguments);
   }
@@ -9091,9 +8091,6 @@ globalMy.Document_importNode = function () {
   return result;
 };
 globalMy.Document_open = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_open, arguments => ', arguments);
   }
@@ -9120,9 +8117,6 @@ globalMy.Document_open = function () {
   return result;
 };
 globalMy.Document_prepend = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_prepend, arguments => ', arguments);
   }
@@ -9149,9 +8143,6 @@ globalMy.Document_prepend = function () {
   return result;
 };
 globalMy.Document_queryCommandEnabled = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_queryCommandEnabled, arguments => ', arguments);
   }
@@ -9178,9 +8169,6 @@ globalMy.Document_queryCommandEnabled = function () {
   return result;
 };
 globalMy.Document_queryCommandIndeterm = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_queryCommandIndeterm, arguments => ', arguments);
   }
@@ -9207,9 +8195,6 @@ globalMy.Document_queryCommandIndeterm = function () {
   return result;
 };
 globalMy.Document_queryCommandState = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_queryCommandState, arguments => ', arguments);
   }
@@ -9236,9 +8221,6 @@ globalMy.Document_queryCommandState = function () {
   return result;
 };
 globalMy.Document_queryCommandSupported = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_queryCommandSupported, arguments => ', arguments);
   }
@@ -9265,9 +8247,6 @@ globalMy.Document_queryCommandSupported = function () {
   return result;
 };
 globalMy.Document_queryCommandValue = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_queryCommandValue, arguments => ', arguments);
   }
@@ -9294,9 +8273,6 @@ globalMy.Document_queryCommandValue = function () {
   return result;
 };
 globalMy.Document_querySelector = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_querySelector, arguments => ', arguments);
   }
@@ -9323,9 +8299,6 @@ globalMy.Document_querySelector = function () {
   return result;
 };
 globalMy.Document_querySelectorAll = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_querySelectorAll, arguments => ', arguments);
   }
@@ -9352,9 +8325,6 @@ globalMy.Document_querySelectorAll = function () {
   return result;
 };
 globalMy.Document_releaseEvents = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_releaseEvents, arguments => ', arguments);
   }
@@ -9381,9 +8351,6 @@ globalMy.Document_releaseEvents = function () {
   return result;
 };
 globalMy.Document_replaceChildren = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_replaceChildren, arguments => ', arguments);
   }
@@ -9410,9 +8377,6 @@ globalMy.Document_replaceChildren = function () {
   return result;
 };
 globalMy.Document_webkitCancelFullScreen = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_webkitCancelFullScreen, arguments => ', arguments);
   }
@@ -9439,9 +8403,6 @@ globalMy.Document_webkitCancelFullScreen = function () {
   return result;
 };
 globalMy.Document_webkitExitFullscreen = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_webkitExitFullscreen, arguments => ', arguments);
   }
@@ -9468,9 +8429,6 @@ globalMy.Document_webkitExitFullscreen = function () {
   return result;
 };
 globalMy.Document_write = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_write, arguments => ', arguments);
   }
@@ -9497,9 +8455,6 @@ globalMy.Document_write = function () {
   return result;
 };
 globalMy.Document_writeln = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_writeln, arguments => ', arguments);
   }
@@ -9526,9 +8481,6 @@ globalMy.Document_writeln = function () {
   return result;
 };
 globalMy.Document_get_prerendering = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_prerendering');
   }
@@ -9553,9 +8505,6 @@ globalMy.Document_get_prerendering = function () {
   return result;
 };
 globalMy.Document_get_onprerenderingchange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onprerenderingchange');
   }
@@ -9580,9 +8529,6 @@ globalMy.Document_get_onprerenderingchange = function () {
   return result;
 };
 globalMy.Document_set_onprerenderingchange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onprerenderingchange, 传参val => ' + val);
   }
@@ -9607,9 +8553,6 @@ globalMy.Document_set_onprerenderingchange = function (val) {
   }
 };
 globalMy.Document_get_fragmentDirective = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_fragmentDirective');
   }
@@ -9634,9 +8577,6 @@ globalMy.Document_get_fragmentDirective = function () {
   return result;
 };
 globalMy.Document_get_onbeforematch = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_onbeforematch');
   }
@@ -9661,9 +8601,6 @@ globalMy.Document_get_onbeforematch = function () {
   return result;
 };
 globalMy.Document_set_onbeforematch = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_onbeforematch, 传参val => ' + val);
   }
@@ -9688,9 +8625,6 @@ globalMy.Document_set_onbeforematch = function (val) {
   }
 };
 globalMy.Document_get_timeline = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_timeline');
   }
@@ -9715,9 +8649,6 @@ globalMy.Document_get_timeline = function () {
   return result;
 };
 globalMy.Document_get_oncontentvisibilityautostatechange = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_get_oncontentvisibilityautostatechange');
   }
@@ -9742,9 +8673,6 @@ globalMy.Document_get_oncontentvisibilityautostatechange = function () {
   return result;
 };
 globalMy.Document_set_oncontentvisibilityautostatechange = function (val) {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_set_oncontentvisibilityautostatechange, 传参val => ' + val);
   }
@@ -9769,9 +8697,6 @@ globalMy.Document_set_oncontentvisibilityautostatechange = function (val) {
   }
 };
 globalMy.Document_getAnimations = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_getAnimations, arguments => ', arguments);
   }
@@ -9798,9 +8723,6 @@ globalMy.Document_getAnimations = function () {
   return result;
 };
 globalMy.Document_hasStorageAccess = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_hasStorageAccess, arguments => ', arguments);
   }
@@ -9827,9 +8749,6 @@ globalMy.Document_hasStorageAccess = function () {
   return result;
 };
 globalMy.Document_requestStorageAccess = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Document_requestStorageAccess, arguments => ', arguments);
   }

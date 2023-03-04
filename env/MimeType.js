@@ -1,7 +1,4 @@
 globalMy.MimeType_get_type = function () {
-  if (!(this instanceof MimeType)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['type'];
@@ -11,9 +8,6 @@ globalMy.MimeType_get_type = function () {
   return result;
 };
 globalMy.MimeType_get_suffixes = function () {
-  if (!(this instanceof MimeType)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['suffixes'];
@@ -23,9 +17,6 @@ globalMy.MimeType_get_suffixes = function () {
   return result;
 };
 globalMy.MimeType_get_description = function () {
-  if (!(this instanceof MimeType)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['description'];
@@ -35,9 +26,6 @@ globalMy.MimeType_get_description = function () {
   return result;
 };
 globalMy.MimeType_get_enabledPlugin = function () {
-  if (!(this instanceof MimeType)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['enabledPlugin'];

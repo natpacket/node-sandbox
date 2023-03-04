@@ -1,7 +1,4 @@
 globalMy.OffscreenCanvasRenderingContext2D_get_canvas = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['canvas'];
@@ -11,9 +8,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_canvas = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_globalAlpha = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['globalAlpha'];
@@ -23,9 +17,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_globalAlpha = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_globalAlpha = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['globalAlpha'] = val;
@@ -34,9 +25,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_globalAlpha = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_globalCompositeOperation = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['globalCompositeOperation'];
@@ -46,9 +34,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_globalCompositeOperation = functi
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_globalCompositeOperation = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['globalCompositeOperation'] = val;
@@ -57,9 +42,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_globalCompositeOperation = functi
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_filter = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['filter'];
@@ -69,9 +51,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_filter = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_filter = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['filter'] = val;
@@ -80,9 +59,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_filter = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_imageSmoothingEnabled = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['imageSmoothingEnabled'];
@@ -92,9 +68,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_imageSmoothingEnabled = function 
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_imageSmoothingEnabled = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['imageSmoothingEnabled'] = val;
@@ -103,9 +76,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_imageSmoothingEnabled = function 
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_imageSmoothingQuality = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['imageSmoothingQuality'];
@@ -115,9 +85,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_imageSmoothingQuality = function 
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_imageSmoothingQuality = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['imageSmoothingQuality'] = val;
@@ -126,9 +93,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_imageSmoothingQuality = function 
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_strokeStyle = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['strokeStyle'];
@@ -138,9 +102,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_strokeStyle = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_strokeStyle = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['strokeStyle'] = val;
@@ -149,9 +110,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_strokeStyle = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_fillStyle = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['fillStyle'];
@@ -161,9 +119,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_fillStyle = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_fillStyle = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['fillStyle'] = val;
@@ -172,9 +127,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_fillStyle = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_shadowOffsetX = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['shadowOffsetX'];
@@ -184,9 +136,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_shadowOffsetX = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_shadowOffsetX = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['shadowOffsetX'] = val;
@@ -195,9 +144,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_shadowOffsetX = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_shadowOffsetY = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['shadowOffsetY'];
@@ -207,9 +153,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_shadowOffsetY = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_shadowOffsetY = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['shadowOffsetY'] = val;
@@ -218,9 +161,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_shadowOffsetY = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_shadowBlur = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['shadowBlur'];
@@ -230,9 +170,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_shadowBlur = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_shadowBlur = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['shadowBlur'] = val;
@@ -241,9 +178,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_shadowBlur = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_shadowColor = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['shadowColor'];
@@ -253,9 +187,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_shadowColor = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_shadowColor = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['shadowColor'] = val;
@@ -264,9 +195,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_shadowColor = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_lineWidth = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['lineWidth'];
@@ -276,9 +204,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_lineWidth = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_lineWidth = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['lineWidth'] = val;
@@ -287,9 +212,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_lineWidth = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_lineCap = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['lineCap'];
@@ -299,9 +221,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_lineCap = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_lineCap = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['lineCap'] = val;
@@ -310,9 +229,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_lineCap = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_lineJoin = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['lineJoin'];
@@ -322,9 +238,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_lineJoin = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_lineJoin = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['lineJoin'] = val;
@@ -333,9 +246,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_lineJoin = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_miterLimit = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['miterLimit'];
@@ -345,9 +255,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_miterLimit = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_miterLimit = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['miterLimit'] = val;
@@ -356,9 +263,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_miterLimit = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_lineDashOffset = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['lineDashOffset'];
@@ -368,9 +272,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_lineDashOffset = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_lineDashOffset = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['lineDashOffset'] = val;
@@ -379,9 +280,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_lineDashOffset = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_font = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['font'];
@@ -391,9 +289,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_font = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_font = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['font'] = val;
@@ -402,9 +297,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_font = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_textAlign = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['textAlign'];
@@ -414,9 +306,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_textAlign = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_textAlign = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['textAlign'] = val;
@@ -425,9 +314,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_textAlign = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_textBaseline = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['textBaseline'];
@@ -437,9 +323,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_textBaseline = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_textBaseline = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['textBaseline'] = val;
@@ -448,9 +331,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_textBaseline = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_direction = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['direction'];
@@ -460,9 +340,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_direction = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_direction = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['direction'] = val;
@@ -471,9 +348,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_direction = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_fontKerning = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['fontKerning'];
@@ -483,9 +357,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_fontKerning = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_fontKerning = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['fontKerning'] = val;
@@ -494,9 +365,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_fontKerning = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_fontStretch = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['fontStretch'];
@@ -506,9 +374,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_fontStretch = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_fontStretch = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['fontStretch'] = val;
@@ -517,9 +382,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_fontStretch = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_fontVariantCaps = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['fontVariantCaps'];
@@ -529,9 +391,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_fontVariantCaps = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_fontVariantCaps = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['fontVariantCaps'] = val;
@@ -540,9 +399,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_fontVariantCaps = function (val) 
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_letterSpacing = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['letterSpacing'];
@@ -552,9 +408,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_letterSpacing = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_letterSpacing = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['letterSpacing'] = val;
@@ -563,9 +416,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_letterSpacing = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_textRendering = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['textRendering'];
@@ -575,9 +425,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_textRendering = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_textRendering = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['textRendering'] = val;
@@ -586,9 +433,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_textRendering = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_get_wordSpacing = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['wordSpacing'];
@@ -598,9 +442,6 @@ globalMy.OffscreenCanvasRenderingContext2D_get_wordSpacing = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_set_wordSpacing = function (val) {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['wordSpacing'] = val;
@@ -609,9 +450,6 @@ globalMy.OffscreenCanvasRenderingContext2D_set_wordSpacing = function (val) {
   }
 };
 globalMy.OffscreenCanvasRenderingContext2D_clip = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -621,9 +459,6 @@ globalMy.OffscreenCanvasRenderingContext2D_clip = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_createConicGradient = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -633,9 +468,6 @@ globalMy.OffscreenCanvasRenderingContext2D_createConicGradient = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_createImageData = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -645,9 +477,6 @@ globalMy.OffscreenCanvasRenderingContext2D_createImageData = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_createLinearGradient = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -657,9 +486,6 @@ globalMy.OffscreenCanvasRenderingContext2D_createLinearGradient = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_createPattern = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -669,9 +495,6 @@ globalMy.OffscreenCanvasRenderingContext2D_createPattern = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_createRadialGradient = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -681,9 +504,6 @@ globalMy.OffscreenCanvasRenderingContext2D_createRadialGradient = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_drawImage = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -693,9 +513,6 @@ globalMy.OffscreenCanvasRenderingContext2D_drawImage = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_fill = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -705,9 +522,6 @@ globalMy.OffscreenCanvasRenderingContext2D_fill = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_fillText = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -717,9 +531,6 @@ globalMy.OffscreenCanvasRenderingContext2D_fillText = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_getImageData = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -729,9 +540,6 @@ globalMy.OffscreenCanvasRenderingContext2D_getImageData = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_getLineDash = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -741,9 +549,6 @@ globalMy.OffscreenCanvasRenderingContext2D_getLineDash = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_getTransform = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -753,9 +558,6 @@ globalMy.OffscreenCanvasRenderingContext2D_getTransform = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_isContextLost = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -765,9 +567,6 @@ globalMy.OffscreenCanvasRenderingContext2D_isContextLost = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_isPointInPath = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -777,9 +576,6 @@ globalMy.OffscreenCanvasRenderingContext2D_isPointInPath = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_isPointInStroke = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -789,9 +585,6 @@ globalMy.OffscreenCanvasRenderingContext2D_isPointInStroke = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_measureText = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -801,9 +594,6 @@ globalMy.OffscreenCanvasRenderingContext2D_measureText = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_putImageData = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -813,9 +603,6 @@ globalMy.OffscreenCanvasRenderingContext2D_putImageData = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_reset = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -825,9 +612,6 @@ globalMy.OffscreenCanvasRenderingContext2D_reset = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_roundRect = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -837,9 +621,6 @@ globalMy.OffscreenCanvasRenderingContext2D_roundRect = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_save = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -849,9 +630,6 @@ globalMy.OffscreenCanvasRenderingContext2D_save = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_scale = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -861,9 +639,6 @@ globalMy.OffscreenCanvasRenderingContext2D_scale = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_setLineDash = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -873,9 +648,6 @@ globalMy.OffscreenCanvasRenderingContext2D_setLineDash = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_setTransform = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -885,9 +657,6 @@ globalMy.OffscreenCanvasRenderingContext2D_setTransform = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_stroke = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -897,9 +666,6 @@ globalMy.OffscreenCanvasRenderingContext2D_stroke = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_strokeText = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -909,9 +675,6 @@ globalMy.OffscreenCanvasRenderingContext2D_strokeText = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_transform = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -921,9 +684,6 @@ globalMy.OffscreenCanvasRenderingContext2D_transform = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_translate = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -933,9 +693,6 @@ globalMy.OffscreenCanvasRenderingContext2D_translate = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_arc = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -945,9 +702,6 @@ globalMy.OffscreenCanvasRenderingContext2D_arc = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_arcTo = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -957,9 +711,6 @@ globalMy.OffscreenCanvasRenderingContext2D_arcTo = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_beginPath = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -969,9 +720,6 @@ globalMy.OffscreenCanvasRenderingContext2D_beginPath = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_bezierCurveTo = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -981,9 +729,6 @@ globalMy.OffscreenCanvasRenderingContext2D_bezierCurveTo = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_clearRect = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -993,9 +738,6 @@ globalMy.OffscreenCanvasRenderingContext2D_clearRect = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_closePath = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1005,9 +747,6 @@ globalMy.OffscreenCanvasRenderingContext2D_closePath = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_ellipse = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1017,9 +756,6 @@ globalMy.OffscreenCanvasRenderingContext2D_ellipse = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_fillRect = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1029,9 +765,6 @@ globalMy.OffscreenCanvasRenderingContext2D_fillRect = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_lineTo = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1041,9 +774,6 @@ globalMy.OffscreenCanvasRenderingContext2D_lineTo = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_moveTo = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1053,9 +783,6 @@ globalMy.OffscreenCanvasRenderingContext2D_moveTo = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_quadraticCurveTo = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1065,9 +792,6 @@ globalMy.OffscreenCanvasRenderingContext2D_quadraticCurveTo = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_rect = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1077,9 +801,6 @@ globalMy.OffscreenCanvasRenderingContext2D_rect = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_resetTransform = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1089,9 +810,6 @@ globalMy.OffscreenCanvasRenderingContext2D_resetTransform = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_restore = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1101,9 +819,6 @@ globalMy.OffscreenCanvasRenderingContext2D_restore = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_rotate = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -1113,9 +828,6 @@ globalMy.OffscreenCanvasRenderingContext2D_rotate = function () {
   return result;
 };
 globalMy.OffscreenCanvasRenderingContext2D_strokeRect = function () {
-  if (!(this instanceof OffscreenCanvasRenderingContext2D)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 

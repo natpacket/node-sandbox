@@ -1,7 +1,4 @@
 globalMy.IDBObjectStore_get_name = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['name'];
@@ -11,9 +8,6 @@ globalMy.IDBObjectStore_get_name = function () {
   return result;
 };
 globalMy.IDBObjectStore_set_name = function (val) {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['name'] = val;
@@ -22,9 +16,6 @@ globalMy.IDBObjectStore_set_name = function (val) {
   }
 };
 globalMy.IDBObjectStore_get_keyPath = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['keyPath'];
@@ -34,9 +25,6 @@ globalMy.IDBObjectStore_get_keyPath = function () {
   return result;
 };
 globalMy.IDBObjectStore_get_indexNames = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['indexNames'];
@@ -46,9 +34,6 @@ globalMy.IDBObjectStore_get_indexNames = function () {
   return result;
 };
 globalMy.IDBObjectStore_get_transaction = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['transaction'];
@@ -58,9 +43,6 @@ globalMy.IDBObjectStore_get_transaction = function () {
   return result;
 };
 globalMy.IDBObjectStore_get_autoIncrement = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['autoIncrement'];
@@ -70,9 +52,6 @@ globalMy.IDBObjectStore_get_autoIncrement = function () {
   return result;
 };
 globalMy.IDBObjectStore_add = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -81,9 +60,6 @@ globalMy.IDBObjectStore_add = function () {
   return result;
 };
 globalMy.IDBObjectStore_clear = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -92,9 +68,6 @@ globalMy.IDBObjectStore_clear = function () {
   return result;
 };
 globalMy.IDBObjectStore_count = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -103,9 +76,6 @@ globalMy.IDBObjectStore_count = function () {
   return result;
 };
 globalMy.IDBObjectStore_createIndex = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -114,9 +84,6 @@ globalMy.IDBObjectStore_createIndex = function () {
   return result;
 };
 globalMy.IDBObjectStore_delete = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -125,9 +92,6 @@ globalMy.IDBObjectStore_delete = function () {
   return result;
 };
 globalMy.IDBObjectStore_deleteIndex = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -136,9 +100,6 @@ globalMy.IDBObjectStore_deleteIndex = function () {
   return result;
 };
 globalMy.IDBObjectStore_get = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -147,9 +108,6 @@ globalMy.IDBObjectStore_get = function () {
   return result;
 };
 globalMy.IDBObjectStore_getAll = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -158,9 +116,6 @@ globalMy.IDBObjectStore_getAll = function () {
   return result;
 };
 globalMy.IDBObjectStore_getAllKeys = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -169,9 +124,6 @@ globalMy.IDBObjectStore_getAllKeys = function () {
   return result;
 };
 globalMy.IDBObjectStore_getKey = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -180,9 +132,6 @@ globalMy.IDBObjectStore_getKey = function () {
   return result;
 };
 globalMy.IDBObjectStore_index = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -191,9 +140,6 @@ globalMy.IDBObjectStore_index = function () {
   return result;
 };
 globalMy.IDBObjectStore_openCursor = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -202,9 +148,6 @@ globalMy.IDBObjectStore_openCursor = function () {
   return result;
 };
 globalMy.IDBObjectStore_openKeyCursor = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -213,9 +156,6 @@ globalMy.IDBObjectStore_openKeyCursor = function () {
   return result;
 };
 globalMy.IDBObjectStore_put = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -224,10 +164,8 @@ globalMy.IDBObjectStore_put = function () {
   return result;
 };
 // IDBObjectStore
+// IDBObjectStore
 globalMy.IDBObjectStore_put = function () {
-  if (!(this instanceof IDBObjectStore)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var name = globalMy.setfoundName({});
   Object.setPrototypeOf(globalMy.element[name], IDBRequest.prototype);

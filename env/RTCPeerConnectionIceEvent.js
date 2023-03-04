@@ -1,7 +1,4 @@
 globalMy.RTCPeerConnectionIceEvent_get_candidate = function () {
-  if (!(this instanceof RTCPeerConnectionIceEvent)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['candidate'];

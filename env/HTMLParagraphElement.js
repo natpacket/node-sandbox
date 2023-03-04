@@ -1,7 +1,4 @@
 globalMy.HTMLParagraphElement_get_align = function () {
-  if (!(this instanceof HTMLParagraphElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParagraphElement_get_align');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLParagraphElement_get_align = function () {
   return result;
 };
 globalMy.HTMLParagraphElement_set_align = function (val) {
-  if (!(this instanceof HTMLParagraphElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParagraphElement_set_align, 传参val => ' + val);
   }

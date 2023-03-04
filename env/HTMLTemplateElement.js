@@ -1,7 +1,4 @@
 globalMy.HTMLTemplateElement_get_content = function () {
-  if (!(this instanceof HTMLTemplateElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTemplateElement_get_content');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLTemplateElement_get_content = function () {
   return result;
 };
 globalMy.HTMLTemplateElement_get_shadowRoot = function () {
-  if (!(this instanceof HTMLTemplateElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTemplateElement_get_shadowRoot');
   }

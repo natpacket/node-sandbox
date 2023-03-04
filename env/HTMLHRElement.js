@@ -1,7 +1,4 @@
 globalMy.HTMLHRElement_get_align = function () {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_get_align');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLHRElement_get_align = function () {
   return result;
 };
 globalMy.HTMLHRElement_set_align = function (val) {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_set_align, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLHRElement_set_align = function (val) {
   }
 };
 globalMy.HTMLHRElement_get_color = function () {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_get_color');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLHRElement_get_color = function () {
   return result;
 };
 globalMy.HTMLHRElement_set_color = function (val) {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_set_color, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLHRElement_set_color = function (val) {
   }
 };
 globalMy.HTMLHRElement_get_noShade = function () {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_get_noShade');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLHRElement_get_noShade = function () {
   return result;
 };
 globalMy.HTMLHRElement_set_noShade = function (val) {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_set_noShade, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLHRElement_set_noShade = function (val) {
   }
 };
 globalMy.HTMLHRElement_get_size = function () {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_get_size');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLHRElement_get_size = function () {
   return result;
 };
 globalMy.HTMLHRElement_set_size = function (val) {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_set_size, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLHRElement_set_size = function (val) {
   }
 };
 globalMy.HTMLHRElement_get_width = function () {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_get_width');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLHRElement_get_width = function () {
   return result;
 };
 globalMy.HTMLHRElement_set_width = function (val) {
-  if (!(this instanceof HTMLHRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHRElement_set_width, 传参val => ' + val);
   }

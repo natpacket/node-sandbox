@@ -1,7 +1,4 @@
 globalMy.HTMLTableSectionElement_get_rows = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_get_rows');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLTableSectionElement_get_rows = function () {
   return result;
 };
 globalMy.HTMLTableSectionElement_get_align = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_get_align');
   }
@@ -53,9 +47,6 @@ globalMy.HTMLTableSectionElement_get_align = function () {
   return result;
 };
 globalMy.HTMLTableSectionElement_set_align = function (val) {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_set_align, 传参val => ' + val);
   }
@@ -80,9 +71,6 @@ globalMy.HTMLTableSectionElement_set_align = function (val) {
   }
 };
 globalMy.HTMLTableSectionElement_get_ch = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_get_ch');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLTableSectionElement_get_ch = function () {
   return result;
 };
 globalMy.HTMLTableSectionElement_set_ch = function (val) {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_set_ch, 传参val => ' + val);
   }
@@ -134,9 +119,6 @@ globalMy.HTMLTableSectionElement_set_ch = function (val) {
   }
 };
 globalMy.HTMLTableSectionElement_get_chOff = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_get_chOff');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLTableSectionElement_get_chOff = function () {
   return result;
 };
 globalMy.HTMLTableSectionElement_set_chOff = function (val) {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_set_chOff, 传参val => ' + val);
   }
@@ -188,9 +167,6 @@ globalMy.HTMLTableSectionElement_set_chOff = function (val) {
   }
 };
 globalMy.HTMLTableSectionElement_get_vAlign = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_get_vAlign');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLTableSectionElement_get_vAlign = function () {
   return result;
 };
 globalMy.HTMLTableSectionElement_set_vAlign = function (val) {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_set_vAlign, 传参val => ' + val);
   }
@@ -242,9 +215,6 @@ globalMy.HTMLTableSectionElement_set_vAlign = function (val) {
   }
 };
 globalMy.HTMLTableSectionElement_deleteRow = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_deleteRow, arguments => ', arguments);
   }
@@ -271,9 +241,6 @@ globalMy.HTMLTableSectionElement_deleteRow = function () {
   return result;
 };
 globalMy.HTMLTableSectionElement_insertRow = function () {
-  if (!(this instanceof HTMLTableSectionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableSectionElement_insertRow, arguments => ', arguments);
   }

@@ -1,7 +1,4 @@
 globalMy.HTMLButtonElement_get_disabled = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_disabled');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLButtonElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_disabled = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_disabled, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLButtonElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_form = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_form');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLButtonElement_get_form = function () {
   return result;
 };
 globalMy.HTMLButtonElement_get_formAction = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_formAction');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLButtonElement_get_formAction = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_formAction = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_formAction, 传参val => ' + val);
   }
@@ -134,9 +119,6 @@ globalMy.HTMLButtonElement_set_formAction = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_formEnctype = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_formEnctype');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLButtonElement_get_formEnctype = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_formEnctype = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_formEnctype, 传参val => ' + val);
   }
@@ -188,9 +167,6 @@ globalMy.HTMLButtonElement_set_formEnctype = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_formMethod = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_formMethod');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLButtonElement_get_formMethod = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_formMethod = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_formMethod, 传参val => ' + val);
   }
@@ -242,9 +215,6 @@ globalMy.HTMLButtonElement_set_formMethod = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_formNoValidate = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_formNoValidate');
   }
@@ -269,9 +239,6 @@ globalMy.HTMLButtonElement_get_formNoValidate = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_formNoValidate = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_formNoValidate, 传参val => ' + val);
   }
@@ -296,9 +263,6 @@ globalMy.HTMLButtonElement_set_formNoValidate = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_formTarget = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_formTarget');
   }
@@ -323,9 +287,6 @@ globalMy.HTMLButtonElement_get_formTarget = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_formTarget = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_formTarget, 传参val => ' + val);
   }
@@ -350,9 +311,6 @@ globalMy.HTMLButtonElement_set_formTarget = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_name = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_name');
   }
@@ -377,9 +335,6 @@ globalMy.HTMLButtonElement_get_name = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_name = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_name, 传参val => ' + val);
   }
@@ -404,9 +359,6 @@ globalMy.HTMLButtonElement_set_name = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_type = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_type');
   }
@@ -431,9 +383,6 @@ globalMy.HTMLButtonElement_get_type = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_type = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_type, 传参val => ' + val);
   }
@@ -458,9 +407,6 @@ globalMy.HTMLButtonElement_set_type = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_value = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_value');
   }
@@ -485,9 +431,6 @@ globalMy.HTMLButtonElement_get_value = function () {
   return result;
 };
 globalMy.HTMLButtonElement_set_value = function (val) {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_set_value, 传参val => ' + val);
   }
@@ -512,9 +455,6 @@ globalMy.HTMLButtonElement_set_value = function (val) {
   }
 };
 globalMy.HTMLButtonElement_get_willValidate = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_willValidate');
   }
@@ -539,9 +479,6 @@ globalMy.HTMLButtonElement_get_willValidate = function () {
   return result;
 };
 globalMy.HTMLButtonElement_get_validity = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_validity');
   }
@@ -566,9 +503,6 @@ globalMy.HTMLButtonElement_get_validity = function () {
   return result;
 };
 globalMy.HTMLButtonElement_get_validationMessage = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_validationMessage');
   }
@@ -593,9 +527,6 @@ globalMy.HTMLButtonElement_get_validationMessage = function () {
   return result;
 };
 globalMy.HTMLButtonElement_get_labels = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_get_labels');
   }
@@ -620,9 +551,6 @@ globalMy.HTMLButtonElement_get_labels = function () {
   return result;
 };
 globalMy.HTMLButtonElement_checkValidity = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_checkValidity, arguments => ', arguments);
   }
@@ -649,9 +577,6 @@ globalMy.HTMLButtonElement_checkValidity = function () {
   return result;
 };
 globalMy.HTMLButtonElement_reportValidity = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_reportValidity, arguments => ', arguments);
   }
@@ -678,9 +603,6 @@ globalMy.HTMLButtonElement_reportValidity = function () {
   return result;
 };
 globalMy.HTMLButtonElement_setCustomValidity = function () {
-  if (!(this instanceof HTMLButtonElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLButtonElement_setCustomValidity, arguments => ', arguments);
   }

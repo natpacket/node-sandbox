@@ -1,7 +1,4 @@
 globalMy.Screen_get_availWidth = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['availWidth'];
@@ -11,9 +8,6 @@ globalMy.Screen_get_availWidth = function () {
   return result;
 };
 globalMy.Screen_get_availHeight = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['availHeight'];
@@ -23,9 +17,6 @@ globalMy.Screen_get_availHeight = function () {
   return result;
 };
 globalMy.Screen_get_width = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['width'];
@@ -35,9 +26,6 @@ globalMy.Screen_get_width = function () {
   return result;
 };
 globalMy.Screen_get_height = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['height'];
@@ -47,9 +35,6 @@ globalMy.Screen_get_height = function () {
   return result;
 };
 globalMy.Screen_get_colorDepth = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['colorDepth'];
@@ -59,9 +44,6 @@ globalMy.Screen_get_colorDepth = function () {
   return result;
 };
 globalMy.Screen_get_pixelDepth = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pixelDepth'];
@@ -71,9 +53,6 @@ globalMy.Screen_get_pixelDepth = function () {
   return result;
 };
 globalMy.Screen_get_availLeft = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['availLeft'];
@@ -83,9 +62,6 @@ globalMy.Screen_get_availLeft = function () {
   return result;
 };
 globalMy.Screen_get_availTop = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['availTop'];
@@ -95,9 +71,6 @@ globalMy.Screen_get_availTop = function () {
   return result;
 };
 globalMy.Screen_get_orientation = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['orientation'];
@@ -107,9 +80,6 @@ globalMy.Screen_get_orientation = function () {
   return result;
 };
 globalMy.Screen_get_onchange = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onchange'];
@@ -119,9 +89,6 @@ globalMy.Screen_get_onchange = function () {
   return result;
 };
 globalMy.Screen_set_onchange = function (val) {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onchange'] = val;
@@ -130,9 +97,6 @@ globalMy.Screen_set_onchange = function (val) {
   }
 };
 globalMy.Screen_get_isExtended = function () {
-  if (!(this instanceof Screen)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['isExtended'];

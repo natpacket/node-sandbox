@@ -1,7 +1,4 @@
 globalMy.CustomElementRegistry_define = function () {
-  if (!(this instanceof CustomElementRegistry)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -10,9 +7,6 @@ globalMy.CustomElementRegistry_define = function () {
   return result;
 };
 globalMy.CustomElementRegistry_get = function () {
-  if (!(this instanceof CustomElementRegistry)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -21,9 +15,6 @@ globalMy.CustomElementRegistry_get = function () {
   return result;
 };
 globalMy.CustomElementRegistry_upgrade = function () {
-  if (!(this instanceof CustomElementRegistry)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -32,9 +23,6 @@ globalMy.CustomElementRegistry_upgrade = function () {
   return result;
 };
 globalMy.CustomElementRegistry_whenDefined = function () {
-  if (!(this instanceof CustomElementRegistry)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

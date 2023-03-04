@@ -1,7 +1,4 @@
 globalMy.HTMLMapElement_get_name = function () {
-  if (!(this instanceof HTMLMapElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMapElement_get_name');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLMapElement_get_name = function () {
   return result;
 };
 globalMy.HTMLMapElement_set_name = function (val) {
-  if (!(this instanceof HTMLMapElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMapElement_set_name, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLMapElement_set_name = function (val) {
   }
 };
 globalMy.HTMLMapElement_get_areas = function () {
-  if (!(this instanceof HTMLMapElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMapElement_get_areas');
   }

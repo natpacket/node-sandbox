@@ -1,7 +1,5 @@
+// DOMTokenList
 globalMy.IDBOpenDBRequest_get_onblocked = function () {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onblocked'];
@@ -11,9 +9,6 @@ globalMy.IDBOpenDBRequest_get_onblocked = function () {
   return result;
 };
 globalMy.IDBOpenDBRequest_set_onblocked = function (val) {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onblocked'] = val;
@@ -22,9 +17,6 @@ globalMy.IDBOpenDBRequest_set_onblocked = function (val) {
   }
 };
 globalMy.IDBOpenDBRequest_get_onupgradeneeded = function () {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onupgradeneeded'];
@@ -34,9 +26,6 @@ globalMy.IDBOpenDBRequest_get_onupgradeneeded = function () {
   return result;
 };
 globalMy.IDBOpenDBRequest_set_onupgradeneeded = function (val) {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onupgradeneeded'] = val;
@@ -45,9 +34,6 @@ globalMy.IDBOpenDBRequest_set_onupgradeneeded = function (val) {
   }
 };
 globalMy.IDBOpenDBRequest_get_onblocked = function () {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onblocked'];
@@ -57,9 +43,6 @@ globalMy.IDBOpenDBRequest_get_onblocked = function () {
   return result;
 };
 globalMy.IDBOpenDBRequest_set_onblocked = function (val) {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onblocked'] = val;
@@ -68,9 +51,6 @@ globalMy.IDBOpenDBRequest_set_onblocked = function (val) {
   }
 };
 globalMy.IDBOpenDBRequest_get_onupgradeneeded = function () {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onupgradeneeded'];
@@ -80,9 +60,6 @@ globalMy.IDBOpenDBRequest_get_onupgradeneeded = function () {
   return result;
 };
 globalMy.IDBOpenDBRequest_set_onupgradeneeded = function (val) {
-  if (!(this instanceof IDBOpenDBRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onupgradeneeded'] = val;

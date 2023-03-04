@@ -1,7 +1,4 @@
 globalMy.HTMLSourceElement_get_src = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_src');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLSourceElement_get_src = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_src = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_src, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLSourceElement_set_src = function (val) {
   }
 };
 globalMy.HTMLSourceElement_get_type = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_type');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLSourceElement_get_type = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_type = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_type, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLSourceElement_set_type = function (val) {
   }
 };
 globalMy.HTMLSourceElement_get_srcset = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_srcset');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLSourceElement_get_srcset = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_srcset = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_srcset, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLSourceElement_set_srcset = function (val) {
   }
 };
 globalMy.HTMLSourceElement_get_sizes = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_sizes');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLSourceElement_get_sizes = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_sizes = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_sizes, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLSourceElement_set_sizes = function (val) {
   }
 };
 globalMy.HTMLSourceElement_get_media = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_media');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLSourceElement_get_media = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_media = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_media, 传参val => ' + val);
   }
@@ -269,9 +239,6 @@ globalMy.HTMLSourceElement_set_media = function (val) {
   }
 };
 globalMy.HTMLSourceElement_get_width = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_width');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLSourceElement_get_width = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_width = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_width, 传参val => ' + val);
   }
@@ -323,9 +287,6 @@ globalMy.HTMLSourceElement_set_width = function (val) {
   }
 };
 globalMy.HTMLSourceElement_get_height = function () {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_get_height');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLSourceElement_get_height = function () {
   return result;
 };
 globalMy.HTMLSourceElement_set_height = function (val) {
-  if (!(this instanceof HTMLSourceElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSourceElement_set_height, 传参val => ' + val);
   }

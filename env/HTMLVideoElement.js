@@ -1,7 +1,4 @@
 globalMy.HTMLVideoElement_get_width = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_width');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLVideoElement_get_width = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_width = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_width, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLVideoElement_set_width = function (val) {
   }
 };
 globalMy.HTMLVideoElement_get_height = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_height');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLVideoElement_get_height = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_height = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_height, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLVideoElement_set_height = function (val) {
   }
 };
 globalMy.HTMLVideoElement_get_videoWidth = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_videoWidth');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLVideoElement_get_videoWidth = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_videoHeight = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_videoHeight');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLVideoElement_get_videoHeight = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_poster = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_poster');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLVideoElement_get_poster = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_poster = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_poster, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLVideoElement_set_poster = function (val) {
   }
 };
 globalMy.HTMLVideoElement_get_webkitDecodedFrameCount = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_webkitDecodedFrameCount');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLVideoElement_get_webkitDecodedFrameCount = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_webkitDroppedFrameCount = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_webkitDroppedFrameCount');
   }
@@ -269,9 +239,6 @@ globalMy.HTMLVideoElement_get_webkitDroppedFrameCount = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_playsInline = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_playsInline');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLVideoElement_get_playsInline = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_playsInline = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_playsInline, 传参val => ' + val);
   }
@@ -323,9 +287,6 @@ globalMy.HTMLVideoElement_set_playsInline = function (val) {
   }
 };
 globalMy.HTMLVideoElement_get_onenterpictureinpicture = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_onenterpictureinpicture');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLVideoElement_get_onenterpictureinpicture = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_onenterpictureinpicture = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_onenterpictureinpicture, 传参val => ' + val);
   }
@@ -377,9 +335,6 @@ globalMy.HTMLVideoElement_set_onenterpictureinpicture = function (val) {
   }
 };
 globalMy.HTMLVideoElement_get_onleavepictureinpicture = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_onleavepictureinpicture');
   }
@@ -404,9 +359,6 @@ globalMy.HTMLVideoElement_get_onleavepictureinpicture = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_onleavepictureinpicture = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_onleavepictureinpicture, 传参val => ' + val);
   }
@@ -431,9 +383,6 @@ globalMy.HTMLVideoElement_set_onleavepictureinpicture = function (val) {
   }
 };
 globalMy.HTMLVideoElement_get_disablePictureInPicture = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_disablePictureInPicture');
   }
@@ -458,9 +407,6 @@ globalMy.HTMLVideoElement_get_disablePictureInPicture = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_disablePictureInPicture = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_disablePictureInPicture, 传参val => ' + val);
   }
@@ -485,9 +431,6 @@ globalMy.HTMLVideoElement_set_disablePictureInPicture = function (val) {
   }
 };
 globalMy.HTMLVideoElement_cancelVideoFrameCallback = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_cancelVideoFrameCallback, arguments => ', arguments);
   }
@@ -514,9 +457,6 @@ globalMy.HTMLVideoElement_cancelVideoFrameCallback = function () {
   return result;
 };
 globalMy.HTMLVideoElement_requestPictureInPicture = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_requestPictureInPicture, arguments => ', arguments);
   }
@@ -543,9 +483,6 @@ globalMy.HTMLVideoElement_requestPictureInPicture = function () {
   return result;
 };
 globalMy.HTMLVideoElement_requestVideoFrameCallback = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_requestVideoFrameCallback, arguments => ', arguments);
   }
@@ -572,9 +509,6 @@ globalMy.HTMLVideoElement_requestVideoFrameCallback = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_webkitSupportsFullscreen = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_webkitSupportsFullscreen');
   }
@@ -599,9 +533,6 @@ globalMy.HTMLVideoElement_get_webkitSupportsFullscreen = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_webkitDisplayingFullscreen = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_webkitDisplayingFullscreen');
   }
@@ -626,9 +557,6 @@ globalMy.HTMLVideoElement_get_webkitDisplayingFullscreen = function () {
   return result;
 };
 globalMy.HTMLVideoElement_get_msVideoProcessing = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_get_msVideoProcessing');
   }
@@ -653,9 +581,6 @@ globalMy.HTMLVideoElement_get_msVideoProcessing = function () {
   return result;
 };
 globalMy.HTMLVideoElement_set_msVideoProcessing = function (val) {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_set_msVideoProcessing, 传参val => ' + val);
   }
@@ -680,9 +605,6 @@ globalMy.HTMLVideoElement_set_msVideoProcessing = function (val) {
   }
 };
 globalMy.HTMLVideoElement_getVideoPlaybackQuality = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_getVideoPlaybackQuality, arguments => ', arguments);
   }
@@ -709,9 +631,6 @@ globalMy.HTMLVideoElement_getVideoPlaybackQuality = function () {
   return result;
 };
 globalMy.HTMLVideoElement_msGetVideoProcessingTypes = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_msGetVideoProcessingTypes, arguments => ', arguments);
   }
@@ -738,9 +657,6 @@ globalMy.HTMLVideoElement_msGetVideoProcessingTypes = function () {
   return result;
 };
 globalMy.HTMLVideoElement_webkitEnterFullScreen = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_webkitEnterFullScreen, arguments => ', arguments);
   }
@@ -767,9 +683,6 @@ globalMy.HTMLVideoElement_webkitEnterFullScreen = function () {
   return result;
 };
 globalMy.HTMLVideoElement_webkitEnterFullscreen = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_webkitEnterFullscreen, arguments => ', arguments);
   }
@@ -796,9 +709,6 @@ globalMy.HTMLVideoElement_webkitEnterFullscreen = function () {
   return result;
 };
 globalMy.HTMLVideoElement_webkitExitFullScreen = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_webkitExitFullScreen, arguments => ', arguments);
   }
@@ -825,9 +735,6 @@ globalMy.HTMLVideoElement_webkitExitFullScreen = function () {
   return result;
 };
 globalMy.HTMLVideoElement_webkitExitFullscreen = function () {
-  if (!(this instanceof HTMLVideoElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLVideoElement_webkitExitFullscreen, arguments => ', arguments);
   }

@@ -1,7 +1,4 @@
 globalMy.HTMLQuoteElement_get_cite = function () {
-  if (!(this instanceof HTMLQuoteElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLQuoteElement_get_cite');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLQuoteElement_get_cite = function () {
   return result;
 };
 globalMy.HTMLQuoteElement_set_cite = function (val) {
-  if (!(this instanceof HTMLQuoteElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLQuoteElement_set_cite, 传参val => ' + val);
   }

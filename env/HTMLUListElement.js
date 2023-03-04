@@ -1,7 +1,4 @@
 globalMy.HTMLUListElement_get_compact = function () {
-  if (!(this instanceof HTMLUListElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLUListElement_get_compact');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLUListElement_get_compact = function () {
   return result;
 };
 globalMy.HTMLUListElement_set_compact = function (val) {
-  if (!(this instanceof HTMLUListElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLUListElement_set_compact, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLUListElement_set_compact = function (val) {
   }
 };
 globalMy.HTMLUListElement_get_type = function () {
-  if (!(this instanceof HTMLUListElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLUListElement_get_type');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLUListElement_get_type = function () {
   return result;
 };
 globalMy.HTMLUListElement_set_type = function (val) {
-  if (!(this instanceof HTMLUListElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLUListElement_set_type, 传参val => ' + val);
   }

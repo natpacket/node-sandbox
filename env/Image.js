@@ -1,7 +1,5 @@
+// IDBObjectStore
 globalMy.Image_get_alt = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_alt');
   }
@@ -26,9 +24,6 @@ globalMy.Image_get_alt = function () {
   return result;
 };
 globalMy.Image_set_alt = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_alt, 传参val => ' + val);
   }
@@ -53,9 +48,6 @@ globalMy.Image_set_alt = function (val) {
   }
 };
 globalMy.Image_get_src = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_src');
   }
@@ -80,9 +72,6 @@ globalMy.Image_get_src = function () {
   return result;
 };
 globalMy.Image_set_src = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_src, 传参val => ' + val);
   }
@@ -107,9 +96,6 @@ globalMy.Image_set_src = function (val) {
   }
 };
 globalMy.Image_get_srcset = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_srcset');
   }
@@ -134,9 +120,6 @@ globalMy.Image_get_srcset = function () {
   return result;
 };
 globalMy.Image_set_srcset = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_srcset, 传参val => ' + val);
   }
@@ -161,9 +144,6 @@ globalMy.Image_set_srcset = function (val) {
   }
 };
 globalMy.Image_get_sizes = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_sizes');
   }
@@ -188,9 +168,6 @@ globalMy.Image_get_sizes = function () {
   return result;
 };
 globalMy.Image_set_sizes = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_sizes, 传参val => ' + val);
   }
@@ -215,9 +192,6 @@ globalMy.Image_set_sizes = function (val) {
   }
 };
 globalMy.Image_get_crossOrigin = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_crossOrigin');
   }
@@ -242,9 +216,6 @@ globalMy.Image_get_crossOrigin = function () {
   return result;
 };
 globalMy.Image_set_crossOrigin = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_crossOrigin, 传参val => ' + val);
   }
@@ -269,9 +240,6 @@ globalMy.Image_set_crossOrigin = function (val) {
   }
 };
 globalMy.Image_get_useMap = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_useMap');
   }
@@ -296,9 +264,6 @@ globalMy.Image_get_useMap = function () {
   return result;
 };
 globalMy.Image_set_useMap = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_useMap, 传参val => ' + val);
   }
@@ -323,9 +288,6 @@ globalMy.Image_set_useMap = function (val) {
   }
 };
 globalMy.Image_get_isMap = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_isMap');
   }
@@ -350,9 +312,6 @@ globalMy.Image_get_isMap = function () {
   return result;
 };
 globalMy.Image_set_isMap = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_isMap, 传参val => ' + val);
   }
@@ -377,9 +336,6 @@ globalMy.Image_set_isMap = function (val) {
   }
 };
 globalMy.Image_get_width = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_width');
   }
@@ -404,9 +360,6 @@ globalMy.Image_get_width = function () {
   return result;
 };
 globalMy.Image_set_width = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_width, 传参val => ' + val);
   }
@@ -431,9 +384,6 @@ globalMy.Image_set_width = function (val) {
   }
 };
 globalMy.Image_get_height = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_height');
   }
@@ -458,9 +408,6 @@ globalMy.Image_get_height = function () {
   return result;
 };
 globalMy.Image_set_height = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_height, 传参val => ' + val);
   }
@@ -485,9 +432,6 @@ globalMy.Image_set_height = function (val) {
   }
 };
 globalMy.Image_get_naturalWidth = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_naturalWidth');
   }
@@ -512,9 +456,6 @@ globalMy.Image_get_naturalWidth = function () {
   return result;
 };
 globalMy.Image_get_naturalHeight = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_naturalHeight');
   }
@@ -539,9 +480,6 @@ globalMy.Image_get_naturalHeight = function () {
   return result;
 };
 globalMy.Image_get_complete = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_complete');
   }
@@ -566,9 +504,6 @@ globalMy.Image_get_complete = function () {
   return result;
 };
 globalMy.Image_get_currentSrc = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_currentSrc');
   }
@@ -593,9 +528,6 @@ globalMy.Image_get_currentSrc = function () {
   return result;
 };
 globalMy.Image_get_referrerPolicy = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_referrerPolicy');
   }
@@ -620,9 +552,6 @@ globalMy.Image_get_referrerPolicy = function () {
   return result;
 };
 globalMy.Image_set_referrerPolicy = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_referrerPolicy, 传参val => ' + val);
   }
@@ -647,9 +576,6 @@ globalMy.Image_set_referrerPolicy = function (val) {
   }
 };
 globalMy.Image_get_decoding = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_decoding');
   }
@@ -674,9 +600,6 @@ globalMy.Image_get_decoding = function () {
   return result;
 };
 globalMy.Image_set_decoding = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_decoding, 传参val => ' + val);
   }
@@ -701,9 +624,6 @@ globalMy.Image_set_decoding = function (val) {
   }
 };
 globalMy.Image_get_name = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_name');
   }
@@ -728,9 +648,6 @@ globalMy.Image_get_name = function () {
   return result;
 };
 globalMy.Image_set_name = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_name, 传参val => ' + val);
   }
@@ -755,9 +672,6 @@ globalMy.Image_set_name = function (val) {
   }
 };
 globalMy.Image_get_lowsrc = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_lowsrc');
   }
@@ -782,9 +696,6 @@ globalMy.Image_get_lowsrc = function () {
   return result;
 };
 globalMy.Image_set_lowsrc = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_lowsrc, 传参val => ' + val);
   }
@@ -809,9 +720,6 @@ globalMy.Image_set_lowsrc = function (val) {
   }
 };
 globalMy.Image_get_align = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_align');
   }
@@ -836,9 +744,6 @@ globalMy.Image_get_align = function () {
   return result;
 };
 globalMy.Image_set_align = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_align, 传参val => ' + val);
   }
@@ -863,9 +768,6 @@ globalMy.Image_set_align = function (val) {
   }
 };
 globalMy.Image_get_hspace = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_hspace');
   }
@@ -890,9 +792,6 @@ globalMy.Image_get_hspace = function () {
   return result;
 };
 globalMy.Image_set_hspace = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_hspace, 传参val => ' + val);
   }
@@ -917,9 +816,6 @@ globalMy.Image_set_hspace = function (val) {
   }
 };
 globalMy.Image_get_vspace = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_vspace');
   }
@@ -944,9 +840,6 @@ globalMy.Image_get_vspace = function () {
   return result;
 };
 globalMy.Image_set_vspace = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_vspace, 传参val => ' + val);
   }
@@ -971,9 +864,6 @@ globalMy.Image_set_vspace = function (val) {
   }
 };
 globalMy.Image_get_longDesc = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_longDesc');
   }
@@ -998,9 +888,6 @@ globalMy.Image_get_longDesc = function () {
   return result;
 };
 globalMy.Image_set_longDesc = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_longDesc, 传参val => ' + val);
   }
@@ -1025,9 +912,6 @@ globalMy.Image_set_longDesc = function (val) {
   }
 };
 globalMy.Image_get_border = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_border');
   }
@@ -1052,9 +936,6 @@ globalMy.Image_get_border = function () {
   return result;
 };
 globalMy.Image_set_border = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_border, 传参val => ' + val);
   }
@@ -1079,9 +960,6 @@ globalMy.Image_set_border = function (val) {
   }
 };
 globalMy.Image_get_x = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_x');
   }
@@ -1106,9 +984,6 @@ globalMy.Image_get_x = function () {
   return result;
 };
 globalMy.Image_get_y = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_y');
   }
@@ -1133,9 +1008,6 @@ globalMy.Image_get_y = function () {
   return result;
 };
 globalMy.Image_decode = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_decode, arguments => ', arguments);
   }
@@ -1162,9 +1034,6 @@ globalMy.Image_decode = function () {
   return result;
 };
 globalMy.Image_get_fetchPriority = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_fetchPriority');
   }
@@ -1189,9 +1058,6 @@ globalMy.Image_get_fetchPriority = function () {
   return result;
 };
 globalMy.Image_set_fetchPriority = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_fetchPriority, 传参val => ' + val);
   }
@@ -1216,9 +1082,6 @@ globalMy.Image_set_fetchPriority = function (val) {
   }
 };
 globalMy.Image_get_loading = function () {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_get_loading');
   }
@@ -1243,9 +1106,6 @@ globalMy.Image_get_loading = function () {
   return result;
 };
 globalMy.Image_set_loading = function (val) {
-  if (!(this instanceof Image)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Image_set_loading, 传参val => ' + val);
   }

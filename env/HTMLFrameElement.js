@@ -1,7 +1,4 @@
 globalMy.HTMLFrameElement_get_name = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_name');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLFrameElement_get_name = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_name = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_name, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLFrameElement_set_name = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_scrolling = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_scrolling');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLFrameElement_get_scrolling = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_scrolling = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_scrolling, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLFrameElement_set_scrolling = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_src = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_src');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLFrameElement_get_src = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_src = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_src, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLFrameElement_set_src = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_frameBorder = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_frameBorder');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLFrameElement_get_frameBorder = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_frameBorder = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_frameBorder, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLFrameElement_set_frameBorder = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_longDesc = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_longDesc');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLFrameElement_get_longDesc = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_longDesc = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_longDesc, 传参val => ' + val);
   }
@@ -269,9 +239,6 @@ globalMy.HTMLFrameElement_set_longDesc = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_noResize = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_noResize');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLFrameElement_get_noResize = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_noResize = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_noResize, 传参val => ' + val);
   }
@@ -323,9 +287,6 @@ globalMy.HTMLFrameElement_set_noResize = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_contentDocument = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_contentDocument');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLFrameElement_get_contentDocument = function () {
   return result;
 };
 globalMy.HTMLFrameElement_get_contentWindow = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_contentWindow');
   }
@@ -377,9 +335,6 @@ globalMy.HTMLFrameElement_get_contentWindow = function () {
   return result;
 };
 globalMy.HTMLFrameElement_get_marginHeight = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_marginHeight');
   }
@@ -404,9 +359,6 @@ globalMy.HTMLFrameElement_get_marginHeight = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_marginHeight = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_marginHeight, 传参val => ' + val);
   }
@@ -431,9 +383,6 @@ globalMy.HTMLFrameElement_set_marginHeight = function (val) {
   }
 };
 globalMy.HTMLFrameElement_get_marginWidth = function () {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_get_marginWidth');
   }
@@ -458,9 +407,6 @@ globalMy.HTMLFrameElement_get_marginWidth = function () {
   return result;
 };
 globalMy.HTMLFrameElement_set_marginWidth = function (val) {
-  if (!(this instanceof HTMLFrameElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFrameElement_set_marginWidth, 传参val => ' + val);
   }

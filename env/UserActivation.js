@@ -1,7 +1,4 @@
 globalMy.UserActivation_get_hasBeenActive = function () {
-  if (!(this instanceof UserActivation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['hasBeenActive'];
@@ -11,9 +8,6 @@ globalMy.UserActivation_get_hasBeenActive = function () {
   return result;
 };
 globalMy.UserActivation_get_isActive = function () {
-  if (!(this instanceof UserActivation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['isActive'];

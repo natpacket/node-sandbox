@@ -1,7 +1,4 @@
 globalMy.HTMLOptGroupElement_get_disabled = function () {
-  if (!(this instanceof HTMLOptGroupElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptGroupElement_get_disabled');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLOptGroupElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLOptGroupElement_set_disabled = function (val) {
-  if (!(this instanceof HTMLOptGroupElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptGroupElement_set_disabled, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLOptGroupElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLOptGroupElement_get_label = function () {
-  if (!(this instanceof HTMLOptGroupElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptGroupElement_get_label');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLOptGroupElement_get_label = function () {
   return result;
 };
 globalMy.HTMLOptGroupElement_set_label = function (val) {
-  if (!(this instanceof HTMLOptGroupElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptGroupElement_set_label, 传参val => ' + val);
   }

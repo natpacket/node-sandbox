@@ -1,7 +1,4 @@
 globalMy.NetworkInformation_get_onchange = function () {
-  if (!(this instanceof NetworkInformation)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onchange'];
@@ -11,9 +8,6 @@ globalMy.NetworkInformation_get_onchange = function () {
   return result;
 };
 globalMy.NetworkInformation_set_onchange = function (val) {
-  if (!(this instanceof NetworkInformation)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onchange'] = val;
@@ -22,9 +16,6 @@ globalMy.NetworkInformation_set_onchange = function (val) {
   }
 };
 globalMy.NetworkInformation_get_effectiveType = function () {
-  if (!(this instanceof NetworkInformation)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['effectiveType'];
@@ -34,9 +25,6 @@ globalMy.NetworkInformation_get_effectiveType = function () {
   return result;
 };
 globalMy.NetworkInformation_get_rtt = function () {
-  if (!(this instanceof NetworkInformation)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['rtt'];
@@ -46,9 +34,6 @@ globalMy.NetworkInformation_get_rtt = function () {
   return result;
 };
 globalMy.NetworkInformation_get_downlink = function () {
-  if (!(this instanceof NetworkInformation)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['downlink'];
@@ -58,9 +43,6 @@ globalMy.NetworkInformation_get_downlink = function () {
   return result;
 };
 globalMy.NetworkInformation_get_saveData = function () {
-  if (!(this instanceof NetworkInformation)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['saveData'];

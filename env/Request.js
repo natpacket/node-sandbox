@@ -1,7 +1,5 @@
+// MouseEvent
 globalMy.Request_get_method = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['method'];
@@ -11,9 +9,6 @@ globalMy.Request_get_method = function () {
   return result;
 };
 globalMy.Request_get_url = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['url'];
@@ -23,9 +18,6 @@ globalMy.Request_get_url = function () {
   return result;
 };
 globalMy.Request_get_headers = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['headers'];
@@ -35,9 +27,6 @@ globalMy.Request_get_headers = function () {
   return result;
 };
 globalMy.Request_get_destination = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['destination'];
@@ -47,9 +36,6 @@ globalMy.Request_get_destination = function () {
   return result;
 };
 globalMy.Request_get_referrer = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['referrer'];
@@ -59,9 +45,6 @@ globalMy.Request_get_referrer = function () {
   return result;
 };
 globalMy.Request_get_referrerPolicy = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['referrerPolicy'];
@@ -71,9 +54,6 @@ globalMy.Request_get_referrerPolicy = function () {
   return result;
 };
 globalMy.Request_get_mode = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['mode'];
@@ -83,9 +63,6 @@ globalMy.Request_get_mode = function () {
   return result;
 };
 globalMy.Request_get_credentials = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['credentials'];
@@ -95,9 +72,6 @@ globalMy.Request_get_credentials = function () {
   return result;
 };
 globalMy.Request_get_cache = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['cache'];
@@ -107,9 +81,6 @@ globalMy.Request_get_cache = function () {
   return result;
 };
 globalMy.Request_get_redirect = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['redirect'];
@@ -119,9 +90,6 @@ globalMy.Request_get_redirect = function () {
   return result;
 };
 globalMy.Request_get_integrity = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['integrity'];
@@ -131,9 +99,6 @@ globalMy.Request_get_integrity = function () {
   return result;
 };
 globalMy.Request_get_keepalive = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['keepalive'];
@@ -143,9 +108,6 @@ globalMy.Request_get_keepalive = function () {
   return result;
 };
 globalMy.Request_get_signal = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['signal'];
@@ -155,9 +117,6 @@ globalMy.Request_get_signal = function () {
   return result;
 };
 globalMy.Request_get_isHistoryNavigation = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['isHistoryNavigation'];
@@ -167,9 +126,6 @@ globalMy.Request_get_isHistoryNavigation = function () {
   return result;
 };
 globalMy.Request_get_bodyUsed = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['bodyUsed'];
@@ -179,9 +135,6 @@ globalMy.Request_get_bodyUsed = function () {
   return result;
 };
 globalMy.Request_arrayBuffer = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -191,9 +144,6 @@ globalMy.Request_arrayBuffer = function () {
   return result;
 };
 globalMy.Request_blob = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -203,9 +153,6 @@ globalMy.Request_blob = function () {
   return result;
 };
 globalMy.Request_clone = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -215,9 +162,6 @@ globalMy.Request_clone = function () {
   return result;
 };
 globalMy.Request_formData = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -227,9 +171,6 @@ globalMy.Request_formData = function () {
   return result;
 };
 globalMy.Request_json = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -239,9 +180,6 @@ globalMy.Request_json = function () {
   return result;
 };
 globalMy.Request_text = function () {
-  if (!(this instanceof Request)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 

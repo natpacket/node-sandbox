@@ -1,3 +1,4 @@
+
 // 函数实现,对dump下来的函数进行覆盖
 
 // IDBRequest
@@ -3076,36 +3077,36 @@ globalMy.MutationObserver = function MutationObserver() {
 globalMy.MutationObserver.prototype = wanfeng.MutationObserver.prototype;
 
 
-globalMy.OfflineAudioContext = function OfflineAudioContext() {
-    if (globalMy.is_log) {
-        globalMy.console.log("[*]  new 构造函数 -> OfflineAudioContext, ", "arguments => ", arguments)
-    }
-    var offlineAudioContext = this;
-    Object.setPrototypeOf(offlineAudioContext, OfflineAudioContext.prototype);
-    var name = globalMy.setfoundName(offlineAudioContext);
-    globalMy.value[name]["audioWorklet"] = {};
-    Object.setPrototypeOf(globalMy.value[name]["audioWorklet"], AudioWorklet.prototype);
-    globalMy.value[name]["currentTime"] = 0;
-    globalMy.value[name]["length"] = arguments[1];
-    globalMy.value[name]["sampleRate"] = arguments[2];
-    globalMy.value[name]["state"] = "running";
-    globalMy.value[name]["onstatechange"] = null;
-    globalMy.value[name]["oncomplete"] = null;
-
-    globalMy.value[name]["destination"] = {};
-    Object.setPrototypeOf(globalMy.value[name]["destination"], AudioDestinationNode.prototype);
-    var obj_name = globalMy.setfoundName(globalMy.value[name]["destination"]);
-    globalMy.value[obj_name]["context"] = offlineAudioContext;
-    globalMy.value[obj_name]["channelCount"] = 1;
-    globalMy.value[obj_name]["channelCountMode"] = "explicit";
-    globalMy.value[obj_name]["channelInterpretation"] = "speakers";
-    globalMy.value[obj_name]["maxChannelCount"] = 1;
-    globalMy.value[obj_name]["numberOfInputs"] = 1;
-    globalMy.value[obj_name]["numberOfOutputs"] = 0;
-
-    return offlineAudioContext;
-}
-globalMy.OfflineAudioContext.prototype = wanfeng.OfflineAudioContext.prototype;
+// globalMy.OfflineAudioContext = function OfflineAudioContext() {
+//     if (globalMy.is_log) {
+//         globalMy.console.log("[*]  new 构造函数 -> OfflineAudioContext, ", "arguments => ", arguments)
+//     }
+//     var offlineAudioContext = this;
+//     Object.setPrototypeOf(offlineAudioContext, OfflineAudioContext.prototype);
+//     var name = globalMy.setfoundName(offlineAudioContext);
+//     globalMy.value[name]["audioWorklet"] = {};
+//     Object.setPrototypeOf(globalMy.value[name]["audioWorklet"], AudioWorklet.prototype);
+//     globalMy.value[name]["currentTime"] = 0;
+//     globalMy.value[name]["length"] = arguments[1];
+//     globalMy.value[name]["sampleRate"] = arguments[2];
+//     globalMy.value[name]["state"] = "running";
+//     globalMy.value[name]["onstatechange"] = null;
+//     globalMy.value[name]["oncomplete"] = null;
+//
+//     globalMy.value[name]["destination"] = {};
+//     Object.setPrototypeOf(globalMy.value[name]["destination"], AudioDestinationNode.prototype);
+//     var obj_name = globalMy.setfoundName(globalMy.value[name]["destination"]);
+//     globalMy.value[obj_name]["context"] = offlineAudioContext;
+//     globalMy.value[obj_name]["channelCount"] = 1;
+//     globalMy.value[obj_name]["channelCountMode"] = "explicit";
+//     globalMy.value[obj_name]["channelInterpretation"] = "speakers";
+//     globalMy.value[obj_name]["maxChannelCount"] = 1;
+//     globalMy.value[obj_name]["numberOfInputs"] = 1;
+//     globalMy.value[obj_name]["numberOfOutputs"] = 0;
+//
+//     return offlineAudioContext;
+// }
+// globalMy.OfflineAudioContext.prototype = wanfeng.OfflineAudioContext.prototype;
 
 /*
 自定义Promise函数模块：IIFE

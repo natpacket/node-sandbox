@@ -1,7 +1,4 @@
 globalMy.Node_get_nodeType = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_nodeType');
   }
@@ -26,9 +23,6 @@ globalMy.Node_get_nodeType = function () {
   return result;
 };
 globalMy.Node_get_nodeName = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_nodeName');
   }
@@ -53,9 +47,6 @@ globalMy.Node_get_nodeName = function () {
   return result;
 };
 globalMy.Node_get_baseURI = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_baseURI');
   }
@@ -80,9 +71,6 @@ globalMy.Node_get_baseURI = function () {
   return result;
 };
 globalMy.Node_get_isConnected = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_isConnected');
   }
@@ -107,9 +95,6 @@ globalMy.Node_get_isConnected = function () {
   return result;
 };
 globalMy.Node_get_ownerDocument = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_ownerDocument');
   }
@@ -134,9 +119,6 @@ globalMy.Node_get_ownerDocument = function () {
   return result;
 };
 globalMy.Node_get_parentNode = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_parentNode');
   }
@@ -161,9 +143,6 @@ globalMy.Node_get_parentNode = function () {
   return result;
 };
 globalMy.Node_get_parentElement = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_parentElement');
   }
@@ -188,9 +167,6 @@ globalMy.Node_get_parentElement = function () {
   return result;
 };
 globalMy.Node_get_childNodes = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_childNodes');
   }
@@ -215,9 +191,6 @@ globalMy.Node_get_childNodes = function () {
   return result;
 };
 globalMy.Node_get_firstChild = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_firstChild');
   }
@@ -242,9 +215,6 @@ globalMy.Node_get_firstChild = function () {
   return result;
 };
 globalMy.Node_get_lastChild = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_lastChild');
   }
@@ -269,9 +239,6 @@ globalMy.Node_get_lastChild = function () {
   return result;
 };
 globalMy.Node_get_previousSibling = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_previousSibling');
   }
@@ -296,9 +263,6 @@ globalMy.Node_get_previousSibling = function () {
   return result;
 };
 globalMy.Node_get_nextSibling = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_nextSibling');
   }
@@ -323,9 +287,6 @@ globalMy.Node_get_nextSibling = function () {
   return result;
 };
 globalMy.Node_get_nodeValue = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_nodeValue');
   }
@@ -350,9 +311,6 @@ globalMy.Node_get_nodeValue = function () {
   return result;
 };
 globalMy.Node_set_nodeValue = function (val) {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_set_nodeValue, 传参val => ' + val);
   }
@@ -377,9 +335,6 @@ globalMy.Node_set_nodeValue = function (val) {
   }
 };
 globalMy.Node_get_textContent = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_get_textContent');
   }
@@ -404,9 +359,6 @@ globalMy.Node_get_textContent = function () {
   return result;
 };
 globalMy.Node_set_textContent = function (val) {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_set_textContent, 传参val => ' + val);
   }
@@ -431,9 +383,6 @@ globalMy.Node_set_textContent = function (val) {
   }
 };
 globalMy.Node_appendChild = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_appendChild, arguments => ', arguments);
   }
@@ -460,9 +409,6 @@ globalMy.Node_appendChild = function () {
   return result;
 };
 globalMy.Node_cloneNode = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_cloneNode, arguments => ', arguments);
   }
@@ -489,9 +435,6 @@ globalMy.Node_cloneNode = function () {
   return result;
 };
 globalMy.Node_compareDocumentPosition = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_compareDocumentPosition, arguments => ', arguments);
   }
@@ -518,9 +461,6 @@ globalMy.Node_compareDocumentPosition = function () {
   return result;
 };
 globalMy.Node_contains = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_contains, arguments => ', arguments);
   }
@@ -547,9 +487,6 @@ globalMy.Node_contains = function () {
   return result;
 };
 globalMy.Node_getRootNode = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_getRootNode, arguments => ', arguments);
   }
@@ -576,9 +513,6 @@ globalMy.Node_getRootNode = function () {
   return result;
 };
 globalMy.Node_hasChildNodes = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_hasChildNodes, arguments => ', arguments);
   }
@@ -605,9 +539,6 @@ globalMy.Node_hasChildNodes = function () {
   return result;
 };
 globalMy.Node_insertBefore = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_insertBefore, arguments => ', arguments);
   }
@@ -634,9 +565,6 @@ globalMy.Node_insertBefore = function () {
   return result;
 };
 globalMy.Node_isDefaultNamespace = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_isDefaultNamespace, arguments => ', arguments);
   }
@@ -663,9 +591,6 @@ globalMy.Node_isDefaultNamespace = function () {
   return result;
 };
 globalMy.Node_isEqualNode = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_isEqualNode, arguments => ', arguments);
   }
@@ -692,9 +617,6 @@ globalMy.Node_isEqualNode = function () {
   return result;
 };
 globalMy.Node_isSameNode = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_isSameNode, arguments => ', arguments);
   }
@@ -721,9 +643,6 @@ globalMy.Node_isSameNode = function () {
   return result;
 };
 globalMy.Node_lookupNamespaceURI = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_lookupNamespaceURI, arguments => ', arguments);
   }
@@ -750,9 +669,6 @@ globalMy.Node_lookupNamespaceURI = function () {
   return result;
 };
 globalMy.Node_lookupPrefix = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_lookupPrefix, arguments => ', arguments);
   }
@@ -779,9 +695,6 @@ globalMy.Node_lookupPrefix = function () {
   return result;
 };
 globalMy.Node_normalize = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_normalize, arguments => ', arguments);
   }
@@ -808,9 +721,6 @@ globalMy.Node_normalize = function () {
   return result;
 };
 globalMy.Node_removeChild = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_removeChild, arguments => ', arguments);
   }
@@ -837,9 +747,6 @@ globalMy.Node_removeChild = function () {
   return result;
 };
 globalMy.Node_replaceChild = function () {
-  if (!(this instanceof Node)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Node_replaceChild, arguments => ', arguments);
   }
@@ -865,3 +772,4 @@ globalMy.Node_replaceChild = function () {
   }
   return result;
 };
+// 构造函数原型方法

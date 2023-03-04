@@ -1,7 +1,4 @@
 globalMy.HTMLOptionElement_get_disabled = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_disabled');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLOptionElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLOptionElement_set_disabled = function (val) {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_set_disabled, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLOptionElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLOptionElement_get_form = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_form');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLOptionElement_get_form = function () {
   return result;
 };
 globalMy.HTMLOptionElement_get_label = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_label');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLOptionElement_get_label = function () {
   return result;
 };
 globalMy.HTMLOptionElement_set_label = function (val) {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_set_label, 传参val => ' + val);
   }
@@ -134,9 +119,6 @@ globalMy.HTMLOptionElement_set_label = function (val) {
   }
 };
 globalMy.HTMLOptionElement_get_defaultSelected = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_defaultSelected');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLOptionElement_get_defaultSelected = function () {
   return result;
 };
 globalMy.HTMLOptionElement_set_defaultSelected = function (val) {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_set_defaultSelected, 传参val => ' + val);
   }
@@ -188,9 +167,6 @@ globalMy.HTMLOptionElement_set_defaultSelected = function (val) {
   }
 };
 globalMy.HTMLOptionElement_get_selected = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_selected');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLOptionElement_get_selected = function () {
   return result;
 };
 globalMy.HTMLOptionElement_set_selected = function (val) {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_set_selected, 传参val => ' + val);
   }
@@ -242,9 +215,6 @@ globalMy.HTMLOptionElement_set_selected = function (val) {
   }
 };
 globalMy.HTMLOptionElement_get_value = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_value');
   }
@@ -269,9 +239,6 @@ globalMy.HTMLOptionElement_get_value = function () {
   return result;
 };
 globalMy.HTMLOptionElement_set_value = function (val) {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_set_value, 传参val => ' + val);
   }
@@ -296,9 +263,6 @@ globalMy.HTMLOptionElement_set_value = function (val) {
   }
 };
 globalMy.HTMLOptionElement_get_text = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_text');
   }
@@ -323,9 +287,6 @@ globalMy.HTMLOptionElement_get_text = function () {
   return result;
 };
 globalMy.HTMLOptionElement_set_text = function (val) {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_set_text, 传参val => ' + val);
   }
@@ -350,9 +311,6 @@ globalMy.HTMLOptionElement_set_text = function (val) {
   }
 };
 globalMy.HTMLOptionElement_get_index = function () {
-  if (!(this instanceof HTMLOptionElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOptionElement_get_index');
   }

@@ -1,7 +1,4 @@
 globalMy.DocumentType_get_name = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_get_name');
   }
@@ -26,9 +23,6 @@ globalMy.DocumentType_get_name = function () {
   return result;
 };
 globalMy.DocumentType_get_publicId = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_get_publicId');
   }
@@ -53,9 +47,6 @@ globalMy.DocumentType_get_publicId = function () {
   return result;
 };
 globalMy.DocumentType_get_systemId = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_get_systemId');
   }
@@ -80,9 +71,6 @@ globalMy.DocumentType_get_systemId = function () {
   return result;
 };
 globalMy.DocumentType_after = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_after, arguments => ', arguments);
   }
@@ -109,9 +97,6 @@ globalMy.DocumentType_after = function () {
   return result;
 };
 globalMy.DocumentType_before = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_before, arguments => ', arguments);
   }
@@ -138,9 +123,6 @@ globalMy.DocumentType_before = function () {
   return result;
 };
 globalMy.DocumentType_remove = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_remove, arguments => ', arguments);
   }
@@ -167,9 +149,6 @@ globalMy.DocumentType_remove = function () {
   return result;
 };
 globalMy.DocumentType_replaceWith = function () {
-  if (!(this instanceof DocumentType)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了DocumentType_replaceWith, arguments => ', arguments);
   }

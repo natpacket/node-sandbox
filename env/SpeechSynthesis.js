@@ -1,9 +1,6 @@
 // 函数实现
 // SpeechSynthesis
 globalMy.SpeechSynthesis_getVoices = function () {
-  if (!(this instanceof SpeechSynthesis)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
   let track = [];

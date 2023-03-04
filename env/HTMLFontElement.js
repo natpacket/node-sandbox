@@ -1,7 +1,4 @@
 globalMy.HTMLFontElement_get_color = function () {
-  if (!(this instanceof HTMLFontElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFontElement_get_color');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLFontElement_get_color = function () {
   return result;
 };
 globalMy.HTMLFontElement_set_color = function (val) {
-  if (!(this instanceof HTMLFontElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFontElement_set_color, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLFontElement_set_color = function (val) {
   }
 };
 globalMy.HTMLFontElement_get_face = function () {
-  if (!(this instanceof HTMLFontElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFontElement_get_face');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLFontElement_get_face = function () {
   return result;
 };
 globalMy.HTMLFontElement_set_face = function (val) {
-  if (!(this instanceof HTMLFontElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFontElement_set_face, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLFontElement_set_face = function (val) {
   }
 };
 globalMy.HTMLFontElement_get_size = function () {
-  if (!(this instanceof HTMLFontElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFontElement_get_size');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLFontElement_get_size = function () {
   return result;
 };
 globalMy.HTMLFontElement_set_size = function (val) {
-  if (!(this instanceof HTMLFontElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFontElement_set_size, 传参val => ' + val);
   }

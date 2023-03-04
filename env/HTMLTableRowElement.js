@@ -1,7 +1,4 @@
 globalMy.HTMLTableRowElement_get_rowIndex = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_rowIndex');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLTableRowElement_get_rowIndex = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_get_sectionRowIndex = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_sectionRowIndex');
   }
@@ -53,9 +47,6 @@ globalMy.HTMLTableRowElement_get_sectionRowIndex = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_get_cells = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_cells');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLTableRowElement_get_cells = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_get_align = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_align');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLTableRowElement_get_align = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_set_align = function (val) {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_set_align, 传参val => ' + val);
   }
@@ -134,9 +119,6 @@ globalMy.HTMLTableRowElement_set_align = function (val) {
   }
 };
 globalMy.HTMLTableRowElement_get_ch = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_ch');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLTableRowElement_get_ch = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_set_ch = function (val) {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_set_ch, 传参val => ' + val);
   }
@@ -188,9 +167,6 @@ globalMy.HTMLTableRowElement_set_ch = function (val) {
   }
 };
 globalMy.HTMLTableRowElement_get_chOff = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_chOff');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLTableRowElement_get_chOff = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_set_chOff = function (val) {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_set_chOff, 传参val => ' + val);
   }
@@ -242,9 +215,6 @@ globalMy.HTMLTableRowElement_set_chOff = function (val) {
   }
 };
 globalMy.HTMLTableRowElement_get_vAlign = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_vAlign');
   }
@@ -269,9 +239,6 @@ globalMy.HTMLTableRowElement_get_vAlign = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_set_vAlign = function (val) {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_set_vAlign, 传参val => ' + val);
   }
@@ -296,9 +263,6 @@ globalMy.HTMLTableRowElement_set_vAlign = function (val) {
   }
 };
 globalMy.HTMLTableRowElement_get_bgColor = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_get_bgColor');
   }
@@ -323,9 +287,6 @@ globalMy.HTMLTableRowElement_get_bgColor = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_set_bgColor = function (val) {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_set_bgColor, 传参val => ' + val);
   }
@@ -350,9 +311,6 @@ globalMy.HTMLTableRowElement_set_bgColor = function (val) {
   }
 };
 globalMy.HTMLTableRowElement_deleteCell = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_deleteCell, arguments => ', arguments);
   }
@@ -379,9 +337,6 @@ globalMy.HTMLTableRowElement_deleteCell = function () {
   return result;
 };
 globalMy.HTMLTableRowElement_insertCell = function () {
-  if (!(this instanceof HTMLTableRowElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableRowElement_insertCell, arguments => ', arguments);
   }

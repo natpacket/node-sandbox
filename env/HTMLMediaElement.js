@@ -1,7 +1,4 @@
 globalMy.HTMLMediaElement_get_error = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_error');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLMediaElement_get_error = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_src = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_src');
   }
@@ -53,9 +47,6 @@ globalMy.HTMLMediaElement_get_src = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_src = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_src, 传参val => ' + val);
   }
@@ -80,9 +71,6 @@ globalMy.HTMLMediaElement_set_src = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_currentSrc = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_currentSrc');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLMediaElement_get_currentSrc = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_crossOrigin = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_crossOrigin');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLMediaElement_get_crossOrigin = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_crossOrigin = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_crossOrigin, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLMediaElement_set_crossOrigin = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_networkState = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_networkState');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLMediaElement_get_networkState = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_preload = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_preload');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLMediaElement_get_preload = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_preload = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_preload, 传参val => ' + val);
   }
@@ -242,9 +215,6 @@ globalMy.HTMLMediaElement_set_preload = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_buffered = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_buffered');
   }
@@ -269,9 +239,6 @@ globalMy.HTMLMediaElement_get_buffered = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_readyState = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_readyState');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLMediaElement_get_readyState = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_seeking = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_seeking');
   }
@@ -323,9 +287,6 @@ globalMy.HTMLMediaElement_get_seeking = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_currentTime = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_currentTime');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLMediaElement_get_currentTime = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_currentTime = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_currentTime, 传参val => ' + val);
   }
@@ -377,9 +335,6 @@ globalMy.HTMLMediaElement_set_currentTime = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_duration = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_duration');
   }
@@ -404,9 +359,6 @@ globalMy.HTMLMediaElement_get_duration = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_paused = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_paused');
   }
@@ -431,9 +383,6 @@ globalMy.HTMLMediaElement_get_paused = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_defaultPlaybackRate = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_defaultPlaybackRate');
   }
@@ -458,9 +407,6 @@ globalMy.HTMLMediaElement_get_defaultPlaybackRate = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_defaultPlaybackRate = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_defaultPlaybackRate, 传参val => ' + val);
   }
@@ -485,9 +431,6 @@ globalMy.HTMLMediaElement_set_defaultPlaybackRate = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_playbackRate = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_playbackRate');
   }
@@ -512,9 +455,6 @@ globalMy.HTMLMediaElement_get_playbackRate = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_playbackRate = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_playbackRate, 传参val => ' + val);
   }
@@ -539,9 +479,6 @@ globalMy.HTMLMediaElement_set_playbackRate = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_played = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_played');
   }
@@ -566,9 +503,6 @@ globalMy.HTMLMediaElement_get_played = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_seekable = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_seekable');
   }
@@ -593,9 +527,6 @@ globalMy.HTMLMediaElement_get_seekable = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_ended = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_ended');
   }
@@ -620,9 +551,6 @@ globalMy.HTMLMediaElement_get_ended = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_autoplay = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_autoplay');
   }
@@ -647,9 +575,6 @@ globalMy.HTMLMediaElement_get_autoplay = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_autoplay = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_autoplay, 传参val => ' + val);
   }
@@ -674,9 +599,6 @@ globalMy.HTMLMediaElement_set_autoplay = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_loop = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_loop');
   }
@@ -701,9 +623,6 @@ globalMy.HTMLMediaElement_get_loop = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_loop = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_loop, 传参val => ' + val);
   }
@@ -728,9 +647,6 @@ globalMy.HTMLMediaElement_set_loop = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_preservesPitch = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_preservesPitch');
   }
@@ -755,9 +671,6 @@ globalMy.HTMLMediaElement_get_preservesPitch = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_preservesPitch = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_preservesPitch, 传参val => ' + val);
   }
@@ -782,9 +695,6 @@ globalMy.HTMLMediaElement_set_preservesPitch = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_controls = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_controls');
   }
@@ -809,9 +719,6 @@ globalMy.HTMLMediaElement_get_controls = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_controls = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_controls, 传参val => ' + val);
   }
@@ -836,9 +743,6 @@ globalMy.HTMLMediaElement_set_controls = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_controlsList = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_controlsList');
   }
@@ -863,9 +767,6 @@ globalMy.HTMLMediaElement_get_controlsList = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_controlsList = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_controlsList, 传参val => ' + val);
   }
@@ -890,9 +791,6 @@ globalMy.HTMLMediaElement_set_controlsList = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_volume = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_volume');
   }
@@ -917,9 +815,6 @@ globalMy.HTMLMediaElement_get_volume = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_volume = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_volume, 传参val => ' + val);
   }
@@ -944,9 +839,6 @@ globalMy.HTMLMediaElement_set_volume = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_muted = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_muted');
   }
@@ -971,9 +863,6 @@ globalMy.HTMLMediaElement_get_muted = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_muted = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_muted, 传参val => ' + val);
   }
@@ -998,9 +887,6 @@ globalMy.HTMLMediaElement_set_muted = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_defaultMuted = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_defaultMuted');
   }
@@ -1025,9 +911,6 @@ globalMy.HTMLMediaElement_get_defaultMuted = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_defaultMuted = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_defaultMuted, 传参val => ' + val);
   }
@@ -1052,9 +935,6 @@ globalMy.HTMLMediaElement_set_defaultMuted = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_textTracks = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_textTracks');
   }
@@ -1079,9 +959,6 @@ globalMy.HTMLMediaElement_get_textTracks = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_webkitAudioDecodedByteCount = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_webkitAudioDecodedByteCount');
   }
@@ -1106,9 +983,6 @@ globalMy.HTMLMediaElement_get_webkitAudioDecodedByteCount = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_webkitVideoDecodedByteCount = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_webkitVideoDecodedByteCount');
   }
@@ -1133,9 +1007,6 @@ globalMy.HTMLMediaElement_get_webkitVideoDecodedByteCount = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_onencrypted = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_onencrypted');
   }
@@ -1160,9 +1031,6 @@ globalMy.HTMLMediaElement_get_onencrypted = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_onencrypted = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_onencrypted, 传参val => ' + val);
   }
@@ -1187,9 +1055,6 @@ globalMy.HTMLMediaElement_set_onencrypted = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_onwaitingforkey = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_onwaitingforkey');
   }
@@ -1214,9 +1079,6 @@ globalMy.HTMLMediaElement_get_onwaitingforkey = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_onwaitingforkey = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_onwaitingforkey, 传参val => ' + val);
   }
@@ -1241,9 +1103,6 @@ globalMy.HTMLMediaElement_set_onwaitingforkey = function (val) {
   }
 };
 globalMy.HTMLMediaElement_get_srcObject = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_srcObject');
   }
@@ -1268,9 +1127,6 @@ globalMy.HTMLMediaElement_get_srcObject = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_srcObject = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_srcObject, 传参val => ' + val);
   }
@@ -1295,9 +1151,6 @@ globalMy.HTMLMediaElement_set_srcObject = function (val) {
   }
 };
 globalMy.HTMLMediaElement_addTextTrack = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_addTextTrack, arguments => ', arguments);
   }
@@ -1324,9 +1177,6 @@ globalMy.HTMLMediaElement_addTextTrack = function () {
   return result;
 };
 globalMy.HTMLMediaElement_canPlayType = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_canPlayType, arguments => ', arguments);
   }
@@ -1353,9 +1203,6 @@ globalMy.HTMLMediaElement_canPlayType = function () {
   return result;
 };
 globalMy.HTMLMediaElement_captureStream = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_captureStream, arguments => ', arguments);
   }
@@ -1382,9 +1229,6 @@ globalMy.HTMLMediaElement_captureStream = function () {
   return result;
 };
 globalMy.HTMLMediaElement_load = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_load, arguments => ', arguments);
   }
@@ -1411,9 +1255,6 @@ globalMy.HTMLMediaElement_load = function () {
   return result;
 };
 globalMy.HTMLMediaElement_pause = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_pause, arguments => ', arguments);
   }
@@ -1440,9 +1281,6 @@ globalMy.HTMLMediaElement_pause = function () {
   return result;
 };
 globalMy.HTMLMediaElement_play = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_play, arguments => ', arguments);
   }
@@ -1469,9 +1307,6 @@ globalMy.HTMLMediaElement_play = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_sinkId = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_sinkId');
   }
@@ -1496,9 +1331,6 @@ globalMy.HTMLMediaElement_get_sinkId = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_remote = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_remote');
   }
@@ -1523,9 +1355,6 @@ globalMy.HTMLMediaElement_get_remote = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_disableRemotePlayback = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_disableRemotePlayback');
   }
@@ -1550,9 +1379,6 @@ globalMy.HTMLMediaElement_get_disableRemotePlayback = function () {
   return result;
 };
 globalMy.HTMLMediaElement_set_disableRemotePlayback = function (val) {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_set_disableRemotePlayback, 传参val => ' + val);
   }
@@ -1577,9 +1403,6 @@ globalMy.HTMLMediaElement_set_disableRemotePlayback = function (val) {
   }
 };
 globalMy.HTMLMediaElement_setSinkId = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_setSinkId, arguments => ', arguments);
   }
@@ -1606,9 +1429,6 @@ globalMy.HTMLMediaElement_setSinkId = function () {
   return result;
 };
 globalMy.HTMLMediaElement_get_mediaKeys = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_get_mediaKeys');
   }
@@ -1633,9 +1453,6 @@ globalMy.HTMLMediaElement_get_mediaKeys = function () {
   return result;
 };
 globalMy.HTMLMediaElement_setMediaKeys = function () {
-  if (!(this instanceof HTMLMediaElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMediaElement_setMediaKeys, arguments => ', arguments);
   }

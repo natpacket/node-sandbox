@@ -1,7 +1,4 @@
 globalMy.HTMLFieldSetElement_get_disabled = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_disabled');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLFieldSetElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_set_disabled = function (val) {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_set_disabled, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLFieldSetElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLFieldSetElement_get_form = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_form');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLFieldSetElement_get_form = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_get_name = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_name');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLFieldSetElement_get_name = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_set_name = function (val) {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_set_name, 传参val => ' + val);
   }
@@ -134,9 +119,6 @@ globalMy.HTMLFieldSetElement_set_name = function (val) {
   }
 };
 globalMy.HTMLFieldSetElement_get_type = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_type');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLFieldSetElement_get_type = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_get_elements = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_elements');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLFieldSetElement_get_elements = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_get_willValidate = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_willValidate');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLFieldSetElement_get_willValidate = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_get_validity = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_validity');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLFieldSetElement_get_validity = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_get_validationMessage = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_get_validationMessage');
   }
@@ -269,9 +239,6 @@ globalMy.HTMLFieldSetElement_get_validationMessage = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_checkValidity = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_checkValidity, arguments => ', arguments);
   }
@@ -298,9 +265,6 @@ globalMy.HTMLFieldSetElement_checkValidity = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_reportValidity = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_reportValidity, arguments => ', arguments);
   }
@@ -327,9 +291,6 @@ globalMy.HTMLFieldSetElement_reportValidity = function () {
   return result;
 };
 globalMy.HTMLFieldSetElement_setCustomValidity = function () {
-  if (!(this instanceof HTMLFieldSetElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLFieldSetElement_setCustomValidity, arguments => ', arguments);
   }

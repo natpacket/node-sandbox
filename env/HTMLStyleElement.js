@@ -1,7 +1,4 @@
 globalMy.HTMLStyleElement_get_disabled = function () {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_get_disabled');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLStyleElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLStyleElement_set_disabled = function (val) {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_set_disabled, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLStyleElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLStyleElement_get_media = function () {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_get_media');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLStyleElement_get_media = function () {
   return result;
 };
 globalMy.HTMLStyleElement_set_media = function (val) {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_set_media, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLStyleElement_set_media = function (val) {
   }
 };
 globalMy.HTMLStyleElement_get_type = function () {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_get_type');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLStyleElement_get_type = function () {
   return result;
 };
 globalMy.HTMLStyleElement_set_type = function (val) {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_set_type, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLStyleElement_set_type = function (val) {
   }
 };
 globalMy.HTMLStyleElement_get_sheet = function () {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_get_sheet');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLStyleElement_get_sheet = function () {
   return result;
 };
 globalMy.HTMLStyleElement_get_blocking = function () {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_get_blocking');
   }
@@ -215,9 +191,6 @@ globalMy.HTMLStyleElement_get_blocking = function () {
   return result;
 };
 globalMy.HTMLStyleElement_set_blocking = function (val) {
-  if (!(this instanceof HTMLStyleElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLStyleElement_set_blocking, 传参val => ' + val);
   }

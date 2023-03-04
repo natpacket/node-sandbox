@@ -1,7 +1,4 @@
 globalMy.HTMLBaseElement_get_href = function () {
-  if (!(this instanceof HTMLBaseElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLBaseElement_get_href');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLBaseElement_get_href = function () {
   return result;
 };
 globalMy.HTMLBaseElement_set_href = function (val) {
-  if (!(this instanceof HTMLBaseElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLBaseElement_set_href, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLBaseElement_set_href = function (val) {
   }
 };
 globalMy.HTMLBaseElement_get_target = function () {
-  if (!(this instanceof HTMLBaseElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLBaseElement_get_target');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLBaseElement_get_target = function () {
   return result;
 };
 globalMy.HTMLBaseElement_set_target = function (val) {
-  if (!(this instanceof HTMLBaseElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLBaseElement_set_target, 传参val => ' + val);
   }

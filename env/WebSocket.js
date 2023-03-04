@@ -1,7 +1,4 @@
 globalMy.WebSocket_get_url = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['url'];
@@ -11,9 +8,6 @@ globalMy.WebSocket_get_url = function () {
   return result;
 };
 globalMy.WebSocket_get_readyState = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['readyState'];
@@ -23,9 +17,6 @@ globalMy.WebSocket_get_readyState = function () {
   return result;
 };
 globalMy.WebSocket_get_bufferedAmount = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['bufferedAmount'];
@@ -35,9 +26,6 @@ globalMy.WebSocket_get_bufferedAmount = function () {
   return result;
 };
 globalMy.WebSocket_get_onopen = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onopen'];
@@ -47,9 +35,6 @@ globalMy.WebSocket_get_onopen = function () {
   return result;
 };
 globalMy.WebSocket_set_onopen = function (val) {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onopen'] = val;
@@ -58,9 +43,6 @@ globalMy.WebSocket_set_onopen = function (val) {
   }
 };
 globalMy.WebSocket_get_onerror = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -70,9 +52,6 @@ globalMy.WebSocket_get_onerror = function () {
   return result;
 };
 globalMy.WebSocket_set_onerror = function (val) {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -81,9 +60,6 @@ globalMy.WebSocket_set_onerror = function (val) {
   }
 };
 globalMy.WebSocket_get_onclose = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onclose'];
@@ -93,9 +69,6 @@ globalMy.WebSocket_get_onclose = function () {
   return result;
 };
 globalMy.WebSocket_set_onclose = function (val) {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onclose'] = val;
@@ -104,9 +77,6 @@ globalMy.WebSocket_set_onclose = function (val) {
   }
 };
 globalMy.WebSocket_get_extensions = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['extensions'];
@@ -116,9 +86,6 @@ globalMy.WebSocket_get_extensions = function () {
   return result;
 };
 globalMy.WebSocket_get_protocol = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['protocol'];
@@ -128,9 +95,6 @@ globalMy.WebSocket_get_protocol = function () {
   return result;
 };
 globalMy.WebSocket_get_onmessage = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onmessage'];
@@ -140,9 +104,6 @@ globalMy.WebSocket_get_onmessage = function () {
   return result;
 };
 globalMy.WebSocket_set_onmessage = function (val) {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onmessage'] = val;
@@ -151,9 +112,6 @@ globalMy.WebSocket_set_onmessage = function (val) {
   }
 };
 globalMy.WebSocket_get_binaryType = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['binaryType'];
@@ -163,9 +121,6 @@ globalMy.WebSocket_get_binaryType = function () {
   return result;
 };
 globalMy.WebSocket_set_binaryType = function (val) {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['binaryType'] = val;
@@ -174,9 +129,6 @@ globalMy.WebSocket_set_binaryType = function (val) {
   }
 };
 globalMy.WebSocket_close = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -186,9 +138,6 @@ globalMy.WebSocket_close = function () {
   return result;
 };
 globalMy.WebSocket_send = function () {
-  if (!(this instanceof WebSocket)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 

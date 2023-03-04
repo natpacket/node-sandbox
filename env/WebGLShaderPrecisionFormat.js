@@ -1,7 +1,4 @@
 globalMy.WebGLShaderPrecisionFormat_get_rangeMin = function () {
-  if (!(this instanceof WebGLShaderPrecisionFormat)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['rangeMin'];
@@ -11,9 +8,6 @@ globalMy.WebGLShaderPrecisionFormat_get_rangeMin = function () {
   return result;
 };
 globalMy.WebGLShaderPrecisionFormat_get_rangeMax = function () {
-  if (!(this instanceof WebGLShaderPrecisionFormat)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['rangeMax'];
@@ -23,9 +17,6 @@ globalMy.WebGLShaderPrecisionFormat_get_rangeMax = function () {
   return result;
 };
 globalMy.WebGLShaderPrecisionFormat_get_precision = function () {
-  if (!(this instanceof WebGLShaderPrecisionFormat)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['precision'];

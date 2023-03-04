@@ -1,7 +1,4 @@
 globalMy.HTMLPreElement_get_width = function () {
-  if (!(this instanceof HTMLPreElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLPreElement_get_width');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLPreElement_get_width = function () {
   return result;
 };
 globalMy.HTMLPreElement_set_width = function (val) {
-  if (!(this instanceof HTMLPreElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLPreElement_set_width, 传参val => ' + val);
   }

@@ -1,7 +1,4 @@
 globalMy.XMLHttpRequest_get_onreadystatechange = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onreadystatechange'];
@@ -11,9 +8,6 @@ globalMy.XMLHttpRequest_get_onreadystatechange = function () {
   return result;
 };
 globalMy.XMLHttpRequest_set_onreadystatechange = function (val) {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onreadystatechange'] = val;
@@ -22,9 +16,6 @@ globalMy.XMLHttpRequest_set_onreadystatechange = function (val) {
   }
 };
 globalMy.XMLHttpRequest_get_readyState = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['readyState'];
@@ -34,9 +25,6 @@ globalMy.XMLHttpRequest_get_readyState = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_timeout = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['timeout'];
@@ -46,9 +34,6 @@ globalMy.XMLHttpRequest_get_timeout = function () {
   return result;
 };
 globalMy.XMLHttpRequest_set_timeout = function (val) {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['timeout'] = val;
@@ -57,9 +42,6 @@ globalMy.XMLHttpRequest_set_timeout = function (val) {
   }
 };
 globalMy.XMLHttpRequest_get_withCredentials = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['withCredentials'];
@@ -69,9 +51,6 @@ globalMy.XMLHttpRequest_get_withCredentials = function () {
   return result;
 };
 globalMy.XMLHttpRequest_set_withCredentials = function (val) {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['withCredentials'] = val;
@@ -80,9 +59,6 @@ globalMy.XMLHttpRequest_set_withCredentials = function (val) {
   }
 };
 globalMy.XMLHttpRequest_get_upload = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['upload'];
@@ -92,9 +68,6 @@ globalMy.XMLHttpRequest_get_upload = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_responseURL = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['responseURL'];
@@ -104,9 +77,6 @@ globalMy.XMLHttpRequest_get_responseURL = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_status = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['status'];
@@ -117,9 +87,6 @@ globalMy.XMLHttpRequest_get_status = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_statusText = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['statusText'];
@@ -129,9 +96,6 @@ globalMy.XMLHttpRequest_get_statusText = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_responseType = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['responseType'];
@@ -141,9 +105,6 @@ globalMy.XMLHttpRequest_get_responseType = function () {
   return result;
 };
 globalMy.XMLHttpRequest_set_responseType = function (val) {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['responseType'] = val;
@@ -152,9 +113,6 @@ globalMy.XMLHttpRequest_set_responseType = function (val) {
   }
 };
 globalMy.XMLHttpRequest_get_response = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['response'];
@@ -164,9 +122,6 @@ globalMy.XMLHttpRequest_get_response = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_responseText = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['responseText'];
@@ -176,9 +131,6 @@ globalMy.XMLHttpRequest_get_responseText = function () {
   return result;
 };
 globalMy.XMLHttpRequest_get_responseXML = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['responseXML'];
@@ -188,9 +140,6 @@ globalMy.XMLHttpRequest_get_responseXML = function () {
   return result;
 };
 globalMy.XMLHttpRequest_abort = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -200,9 +149,6 @@ globalMy.XMLHttpRequest_abort = function () {
   return result;
 };
 globalMy.XMLHttpRequest_getAllResponseHeaders = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -212,9 +158,6 @@ globalMy.XMLHttpRequest_getAllResponseHeaders = function () {
   return result;
 };
 globalMy.XMLHttpRequest_getResponseHeader = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -224,9 +167,6 @@ globalMy.XMLHttpRequest_getResponseHeader = function () {
   return result;
 };
 globalMy.XMLHttpRequest_open = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -236,9 +176,6 @@ globalMy.XMLHttpRequest_open = function () {
   return result;
 };
 globalMy.XMLHttpRequest_overrideMimeType = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -248,9 +185,6 @@ globalMy.XMLHttpRequest_overrideMimeType = function () {
   return result;
 };
 globalMy.XMLHttpRequest_send = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -260,9 +194,6 @@ globalMy.XMLHttpRequest_send = function () {
   return result;
 };
 globalMy.XMLHttpRequest_setRequestHeader = function () {
-  if (!(this instanceof XMLHttpRequest)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 

@@ -1,7 +1,4 @@
 globalMy.MediaQueryList_get_media = function () {
-  if (!(this instanceof MediaQueryList)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['media'];
@@ -11,9 +8,6 @@ globalMy.MediaQueryList_get_media = function () {
   return result;
 };
 globalMy.MediaQueryList_get_matches = function () {
-  if (!(this instanceof MediaQueryList)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['matches'];
@@ -23,9 +17,6 @@ globalMy.MediaQueryList_get_matches = function () {
   return result;
 };
 globalMy.MediaQueryList_get_onchange = function () {
-  if (!(this instanceof MediaQueryList)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onchange'];
@@ -35,9 +26,6 @@ globalMy.MediaQueryList_get_onchange = function () {
   return result;
 };
 globalMy.MediaQueryList_set_onchange = function (val) {
-  if (!(this instanceof MediaQueryList)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onchange'] = val;
@@ -46,9 +34,6 @@ globalMy.MediaQueryList_set_onchange = function (val) {
   }
 };
 globalMy.MediaQueryList_addListener = function () {
-  if (!(this instanceof MediaQueryList)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -57,9 +42,6 @@ globalMy.MediaQueryList_addListener = function () {
   return result;
 };
 globalMy.MediaQueryList_removeListener = function () {
-  if (!(this instanceof MediaQueryList)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

@@ -1,7 +1,4 @@
 globalMy.HTMLOutputElement_get_htmlFor = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_htmlFor');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLOutputElement_get_htmlFor = function () {
   return result;
 };
 globalMy.HTMLOutputElement_set_htmlFor = function (val) {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_set_htmlFor, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLOutputElement_set_htmlFor = function (val) {
   }
 };
 globalMy.HTMLOutputElement_get_form = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_form');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLOutputElement_get_form = function () {
   return result;
 };
 globalMy.HTMLOutputElement_get_name = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_name');
   }
@@ -107,9 +95,6 @@ globalMy.HTMLOutputElement_get_name = function () {
   return result;
 };
 globalMy.HTMLOutputElement_set_name = function (val) {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_set_name, 传参val => ' + val);
   }
@@ -134,9 +119,6 @@ globalMy.HTMLOutputElement_set_name = function (val) {
   }
 };
 globalMy.HTMLOutputElement_get_type = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_type');
   }
@@ -161,9 +143,6 @@ globalMy.HTMLOutputElement_get_type = function () {
   return result;
 };
 globalMy.HTMLOutputElement_get_defaultValue = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_defaultValue');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLOutputElement_get_defaultValue = function () {
   return result;
 };
 globalMy.HTMLOutputElement_set_defaultValue = function (val) {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_set_defaultValue, 传参val => ' + val);
   }
@@ -215,9 +191,6 @@ globalMy.HTMLOutputElement_set_defaultValue = function (val) {
   }
 };
 globalMy.HTMLOutputElement_get_value = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_value');
   }
@@ -242,9 +215,6 @@ globalMy.HTMLOutputElement_get_value = function () {
   return result;
 };
 globalMy.HTMLOutputElement_set_value = function (val) {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_set_value, 传参val => ' + val);
   }
@@ -269,9 +239,6 @@ globalMy.HTMLOutputElement_set_value = function (val) {
   }
 };
 globalMy.HTMLOutputElement_get_willValidate = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_willValidate');
   }
@@ -296,9 +263,6 @@ globalMy.HTMLOutputElement_get_willValidate = function () {
   return result;
 };
 globalMy.HTMLOutputElement_get_validity = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_validity');
   }
@@ -323,9 +287,6 @@ globalMy.HTMLOutputElement_get_validity = function () {
   return result;
 };
 globalMy.HTMLOutputElement_get_validationMessage = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_validationMessage');
   }
@@ -350,9 +311,6 @@ globalMy.HTMLOutputElement_get_validationMessage = function () {
   return result;
 };
 globalMy.HTMLOutputElement_get_labels = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_get_labels');
   }
@@ -377,9 +335,6 @@ globalMy.HTMLOutputElement_get_labels = function () {
   return result;
 };
 globalMy.HTMLOutputElement_checkValidity = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_checkValidity, arguments => ', arguments);
   }
@@ -406,9 +361,6 @@ globalMy.HTMLOutputElement_checkValidity = function () {
   return result;
 };
 globalMy.HTMLOutputElement_reportValidity = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_reportValidity, arguments => ', arguments);
   }
@@ -435,9 +387,6 @@ globalMy.HTMLOutputElement_reportValidity = function () {
   return result;
 };
 globalMy.HTMLOutputElement_setCustomValidity = function () {
-  if (!(this instanceof HTMLOutputElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLOutputElement_setCustomValidity, arguments => ', arguments);
   }

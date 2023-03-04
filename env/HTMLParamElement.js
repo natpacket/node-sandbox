@@ -1,7 +1,4 @@
 globalMy.HTMLParamElement_get_name = function () {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_get_name');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLParamElement_get_name = function () {
   return result;
 };
 globalMy.HTMLParamElement_set_name = function (val) {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_set_name, 传参val => ' + val);
   }
@@ -53,9 +47,6 @@ globalMy.HTMLParamElement_set_name = function (val) {
   }
 };
 globalMy.HTMLParamElement_get_value = function () {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_get_value');
   }
@@ -80,9 +71,6 @@ globalMy.HTMLParamElement_get_value = function () {
   return result;
 };
 globalMy.HTMLParamElement_set_value = function (val) {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_set_value, 传参val => ' + val);
   }
@@ -107,9 +95,6 @@ globalMy.HTMLParamElement_set_value = function (val) {
   }
 };
 globalMy.HTMLParamElement_get_type = function () {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_get_type');
   }
@@ -134,9 +119,6 @@ globalMy.HTMLParamElement_get_type = function () {
   return result;
 };
 globalMy.HTMLParamElement_set_type = function (val) {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_set_type, 传参val => ' + val);
   }
@@ -161,9 +143,6 @@ globalMy.HTMLParamElement_set_type = function (val) {
   }
 };
 globalMy.HTMLParamElement_get_valueType = function () {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_get_valueType');
   }
@@ -188,9 +167,6 @@ globalMy.HTMLParamElement_get_valueType = function () {
   return result;
 };
 globalMy.HTMLParamElement_set_valueType = function (val) {
-  if (!(this instanceof HTMLParamElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLParamElement_set_valueType, 传参val => ' + val);
   }

@@ -1,7 +1,4 @@
 globalMy.HTMLBRElement_get_clear = function () {
-  if (!(this instanceof HTMLBRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLBRElement_get_clear');
   }
@@ -26,9 +23,6 @@ globalMy.HTMLBRElement_get_clear = function () {
   return result;
 };
 globalMy.HTMLBRElement_set_clear = function (val) {
-  if (!(this instanceof HTMLBRElement)) {
-    throw new TypeError("Illegal invocation");
-  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLBRElement_set_clear, 传参val => ' + val);
   }

@@ -1,7 +1,4 @@
 globalMy.ScreenOrientation_get_angle = function () {
-  if (!(this instanceof ScreenOrientation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['angle'];
@@ -11,9 +8,6 @@ globalMy.ScreenOrientation_get_angle = function () {
   return result;
 };
 globalMy.ScreenOrientation_get_type = function () {
-  if (!(this instanceof ScreenOrientation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['type'];
@@ -23,9 +17,6 @@ globalMy.ScreenOrientation_get_type = function () {
   return result;
 };
 globalMy.ScreenOrientation_get_onchange = function () {
-  if (!(this instanceof ScreenOrientation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onchange'];
@@ -35,9 +26,6 @@ globalMy.ScreenOrientation_get_onchange = function () {
   return result;
 };
 globalMy.ScreenOrientation_set_onchange = function (val) {
-  if (!(this instanceof ScreenOrientation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onchange'] = val;
@@ -46,9 +34,6 @@ globalMy.ScreenOrientation_set_onchange = function (val) {
   }
 };
 globalMy.ScreenOrientation_lock = function () {
-  if (!(this instanceof ScreenOrientation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -58,9 +43,6 @@ globalMy.ScreenOrientation_lock = function () {
   return result;
 };
 globalMy.ScreenOrientation_unlock = function () {
-  if (!(this instanceof ScreenOrientation)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -69,3 +51,5 @@ globalMy.ScreenOrientation_unlock = function () {
   }
   return result;
 };
+// 函数实现
+// SpeechSynthesis

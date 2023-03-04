@@ -1,7 +1,4 @@
 globalMy.UIEvent_get_view = function () {
-  if (!(this instanceof UIEvent)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['view'];
@@ -11,9 +8,6 @@ globalMy.UIEvent_get_view = function () {
   return result;
 };
 globalMy.UIEvent_get_detail = function () {
-  if (!(this instanceof UIEvent)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['detail'];
@@ -23,9 +17,6 @@ globalMy.UIEvent_get_detail = function () {
   return result;
 };
 globalMy.UIEvent_get_sourceCapabilities = function () {
-  if (!(this instanceof UIEvent)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['sourceCapabilities'];
@@ -35,9 +26,6 @@ globalMy.UIEvent_get_sourceCapabilities = function () {
   return result;
 };
 globalMy.UIEvent_get_which = function () {
-  if (!(this instanceof UIEvent)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['which'];
@@ -47,9 +35,6 @@ globalMy.UIEvent_get_which = function () {
   return result;
 };
 globalMy.UIEvent_initUIEvent = function () {
-  if (!(this instanceof UIEvent)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 

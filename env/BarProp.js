@@ -1,7 +1,4 @@
 globalMy.BarProp_get_visible = function () {
-  if (!(this instanceof BarProp)) {
-    throw new TypeError("Illegal invocation");
-  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['visible'];

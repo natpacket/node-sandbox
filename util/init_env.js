@@ -5,7 +5,7 @@ Object.setPrototypeOf(globalMy, Object.prototype);
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
-    // console.log(arguments[0]);
+    console.log(arguments[0]);
     return arguments[0];
 }
 
@@ -317,7 +317,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[location_name]['search'] = dom_window.location.search;
     globalMy.value[location_name]['hash'] = dom_window.location.hash;
 
-
+    delete this.oncontentvisibilityautostatechange;
     // window初始化赋值
     globalMy.value[window_name]['name'] = '';
     globalMy.value[window_name]['status'] = '';
@@ -344,10 +344,13 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[window_name]['status'] = '';
     globalMy.value[window_name]['closed'] = false;
     globalMy.value[window_name]['length'] = 0;
-    globalMy.value[window_name]['self'] = window;
-    globalMy.value[window_name]['parent'] = window;
-    globalMy.value[window_name]['top'] = window;
-    globalMy.value[window_name]['frames'] = window;
+    globalMy.value[window_name]['self'] = this;
+    globalMy.value[window_name]['parent'] = this;
+    globalMy.value[window_name]['top'] = this;
+    globalMy.value[window_name]['frames'] = this;
+
+    globalMy.value[window_name]['webkitStorageInfo'] = {};
+    Object.setPrototypeOf(globalMy.value[window_name]['webkitStorageInfo'], Utils.DeprecatedStorageInfo_prototype);
 
     globalMy.value[window_name]['scheduler'] = {};
     Object.setPrototypeOf(globalMy.value[window_name]['scheduler'], Scheduler.prototype);
@@ -400,7 +403,9 @@ globalMy.newWindow = function (dom_window, is_init) {
     Object.setPrototypeOf(globalMy.value[window_name]['visualViewport'], VisualViewport.prototype);
 
     globalMy.value[window_name]['styleMedia'] = {};
-    // Object.setPrototypeOf(globalMy.value[window_name]['styleMedia'], StyleMedia.prototype);
+    Object.setPrototypeOf(globalMy.value[window_name]['styleMedia'], Utils.StyleMedia_prototype);
+    globalMy.obj_name = globalMy.setfoundName(globalMy.value[window_name]['styleMedia']);
+    globalMy.value[globalMy.obj_name]['type'] = "screen";
 
     globalMy.value[window_name]['trustedTypes'] = {};
     Object.setPrototypeOf(globalMy.value[window_name]['trustedTypes'], TrustedTypePolicyFactory.prototype);
@@ -426,13 +431,13 @@ globalMy.newWindow = function (dom_window, is_init) {
     };
 
     globalMy.value[globalMy.obj_name]['onresourcetimingbufferfull'] = null;
-    
+
     globalMy.value[globalMy.obj_name_1] = {
         jsHeapSizeLimit: 4294705152,
         totalJSHeapSize: 10156931,
         usedJSHeapSize: 6103087,
     }
-    
+
     globalMy.value[window_name]['locationbar'] = {};
     globalMy.value[window_name]['menubar'] = {};
     globalMy.value[window_name]['personalbar'] = {};
@@ -468,7 +473,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[window_name]['onbeforeinput'] = null;
     globalMy.value[window_name]['oncontentvisibilityautostatechange'] = null;
     globalMy.value[window_name]['opener'] = null;
-    globalMy.value[window_name]['frameElement'] = null;
+    globalMy.value[window_name]['frameElement'] = !globalMy.window_frameElement ? null : globalMy.window_frameElement;
     globalMy.value[window_name]['onsearch'] = null;
     globalMy.value[window_name]['onappinstalled'] = null;
     globalMy.value[window_name]['onbeforeinstallprompt'] = null;
@@ -601,12 +606,12 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[navigator_name]['cookieEnabled'] = true;
     globalMy.value[navigator_name]['appCodeName'] = 'Mozilla';
     globalMy.value[navigator_name]['appName'] = 'Netscape';
-    globalMy.value[navigator_name]['appVersion'] = '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36';
+    globalMy.value[navigator_name]['appVersion'] = '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36';
     globalMy.value[navigator_name]['platform'] = 'Win32';
     globalMy.value[navigator_name]['product'] = 'Gecko';
-    globalMy.value[navigator_name]['userAgent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36';
+    globalMy.value[navigator_name]['userAgent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36';
     globalMy.value[navigator_name]['language'] = 'zh-CN';
-    globalMy.value[navigator_name]['languages'] = ['zh-CN', 'zh'];
+    globalMy.value[navigator_name]['languages'] = ['zh-CN'];
     globalMy.value[navigator_name]['onLine'] = true;
     globalMy.value[navigator_name]['webdriver'] = false;
     globalMy.value[navigator_name]['doNotTrack'] = null;
@@ -6000,4 +6005,4 @@ globalMy.location_reload = function (val) {
 }
 
 // 初始化window
-globalMy.newWindow.apply(this, [ globalMy.dom_window, true ]);
+globalMy.newWindow.apply(this, [globalMy.dom_window, true]);

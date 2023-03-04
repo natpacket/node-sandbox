@@ -1,7 +1,4 @@
 globalMy.PluginArray_get_length = function () {
-  if (!(this instanceof PluginArray)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -11,9 +8,6 @@ globalMy.PluginArray_get_length = function () {
   return result;
 };
 globalMy.PluginArray_item = function () {
-  if (!(this instanceof PluginArray)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -23,9 +17,6 @@ globalMy.PluginArray_item = function () {
   return result;
 };
 globalMy.PluginArray_namedItem = function () {
-  if (!(this instanceof PluginArray)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -35,9 +26,6 @@ globalMy.PluginArray_namedItem = function () {
   return result;
 };
 globalMy.PluginArray_refresh = function () {
-  if (!(this instanceof PluginArray)) {
-    throw new TypeError("Illegal invocation");
-  }
   var result;
   //这里写方法实体
 
@@ -46,3 +34,4 @@ globalMy.PluginArray_refresh = function () {
   }
   return result;
 };
+// PointerEvent
