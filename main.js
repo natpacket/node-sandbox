@@ -45,10 +45,10 @@ envCode +=  cover_function + pass_check;
 // let workCode = '';
 // let workCode = fs.readFileSync("./work/tdc.js");
 // let workCode = fs.readFileSync("./work/dy.js");
-// let workCode = fs.readFileSync("./work/rsvmp.js");
+let workCode = fs.readFileSync("./work/rsvmp.js");
 // let workCode = fs.readFileSync("./work/5s.js");
 // let workCode = fs.readFileSync("./work/zhihu.js");
-let workCode = fs.readFileSync("./work/boss.js");
+// let workCode = fs.readFileSync("./work/boss.js");
 // let workCode = fs.readFileSync("./work/test.js");
 
 let endCode = fs.readFileSync("./work/end.js");
@@ -72,27 +72,41 @@ const sandbox = {
 // vm.run(script);
 // console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 
-var vm = require("vm");
+// rsvmp
 a = +new Date;
-var code = "debugger;\r\n" + init_env + envCode + "\r\nWin=this;\r\n" + ``;
-// code = code.replace('throw new TypeError("Illegal invocation");',";");
+var code = "debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
 vm.runInNewContext(code, sandbox);
-
-var ifr = dom.window.document.createElement("iframe");
-dom.window.document.body.appendChild(ifr);
-
-const sandbox_ = {
-    wanfeng: wanfeng,
-    globalMy: {
-        dom_window: ifr.contentWindow,
-        window_frameElement: ifr,
-        window_parent: sandbox.Win
-    },
-    console: console,
-}
-code = ("debugger;\r\n" + init_env + envCode + "\r\nwindow.parent = window.top = globalMy.window_parent;\r\n" + workCode + "\r\n" + endCode).replace("throw new TypeError(\"Illegal invocation\");",";");
-
-vm.runInNewContext(code, sandbox_);
-
-// vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
 console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+
+// boss
+// globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
+//     .split("; ");
+
+// globalMy.cookies.map((item) => {
+//     dom.window.document.cookie = item + "; "
+// });
+
+// var vm = require("vm");
+// a = +new Date;
+// var code = "debugger;\r\n" + init_env + envCode + "\r\nWin=this;\r\n" + ``;
+// vm.runInNewContext(code, sandbox);
+
+// var ifr = dom.window.document.createElement("iframe");
+// dom.window.document.body.appendChild(ifr);
+
+// const sandbox_ = {
+//     wanfeng: wanfeng,
+//     globalMy: {
+//         dom_window: ifr.contentWindow,
+//         window_frameElement: ifr,
+//         window_parent: sandbox.Win
+//     },
+//     console: console,
+// }
+// code = "debugger;\r\n" + init_env + envCode + "\r\nwindow.parent = window.top = globalMy.window_parent;\r\n" + workCode + "\r\n" + endCode;
+// vm.runInNewContext(code, sandbox_);
+
+// // vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
+// console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+
+
