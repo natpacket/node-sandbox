@@ -73,6 +73,7 @@ const sandbox = {
 // console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 
 // rsvmp
+var vm = require("vm");
 a = +new Date;
 var code = "debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
 vm.runInNewContext(code, sandbox);

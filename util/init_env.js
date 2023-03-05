@@ -5,7 +5,7 @@ Object.setPrototypeOf(globalMy, Object.prototype);
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
-    console.log(arguments[0]);
+    // console.log(arguments[0]);
     return arguments[0];
 }
 
@@ -27,7 +27,7 @@ globalMy.initEnv = function () {
     // 初始化global, 然后设置__proto__链
     Utils.register();
 }
-globalMy.initEnv();
+globalMy.initEnv.apply(this, []);
 
 globalMy.console.log("node环境框架初始化耗时:", +new Date - a, "毫秒");
 a = +new Date;
