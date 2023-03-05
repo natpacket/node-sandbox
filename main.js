@@ -1,10 +1,10 @@
-
 var a = +new Date;
 // const { VM, VMScript } = require('cyvm2');
-const fs = require("fs");
 // const {VM, VMScript} = require('vm2');
+const fs = require("fs");
+const vm = require("vm");
 const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
+const {JSDOM} = jsdom;
 // var ws = require("nodejs-websocket");
 console.log("导包耗时:", +new Date - a, "毫秒");
 a = +new Date;
@@ -23,14 +23,14 @@ let configure = {
     // url:"https://pastebin.com/login",
     // url: "http://epub.cnipa.gov.cn/SW/",
     // url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
-    url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=3',
+    url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=2',
     // url: "https://www.zhipin.com/wapi/zpgeek/search/joblist.json?scene=1&query=%E7%88%AC%E8%99%AB&city=101190100&experience=&degree=&industry=&scale=&stage=&position=&jobType=&salary=&multiBusinessDistrict=&multiSubway=&page=2&pageSize=30",
 }
 const dom = new JSDOM(html, configure);
 
 let filePath = fs.readdirSync('./env');
 let envCode = '';
-filePath.map((item)=>{
+filePath.map((item) => {
     envCode += fs.readFileSync(`./env/${item}`) + '\r\n';
 });
 
@@ -38,76 +38,90 @@ filePath.map((item)=>{
 let init_env = fs.readFileSync("./util/init_env.js");
 let cover_function = fs.readFileSync("./util/cover_function.js");
 let pass_check = fs.readFileSync("./util/pass_check.js");
+let globalMy_js = fs.readFileSync("./util/globalMy.js");
 
-envCode +=  cover_function + pass_check;
+envCode += cover_function + pass_check;
 
 // workCode
 // let workCode = '';
-// let workCode = fs.readFileSync("./work/tdc.js");
-// let workCode = fs.readFileSync("./work/dy.js");
-let workCode = fs.readFileSync("./work/rsvmp.js");
-// let workCode = fs.readFileSync("./work/5s.js");
+
+
 // let workCode = fs.readFileSync("./work/zhihu.js");
-// let workCode = fs.readFileSync("./work/boss.js");
-// let workCode = fs.readFileSync("./work/test.js");
 
 let endCode = fs.readFileSync("./work/end.js");
-wanfeng = require("wanfeng");
+var wanfeng = require("wanfeng");
 
 globalMy = {
-    // jsdom: dom,
     dom_window: dom.window
-    // script_text: `<script type="text/javascript" r='m'>_$a0();</script>`,
 };
 const sandbox = {
     wanfeng: wanfeng,
     globalMy: globalMy,
     console: console,
 }
+
+// rsvmp
+function runRsVmp() {
+    let workCode = fs.readFileSync("./work/rsvmp.js");
+    a = +new Date;
+    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + workCode + "\r\n" + `
+new Promise((resolve, reject) => {
+    var event = globalMy.createEvent("load")
+    resolve(event);
+}).then((event) => {
+    window.dispatchEvent(event);
+});` + endCode;
+    vm.runInNewContext(code, sandbox);
+    console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+}
+
+// boss
+function runBoss() {
+    let workCode = fs.readFileSync("./work/boss.js");
+    // jsdom iframe document.cookie 和 top window document cookie 值是一样的, jsdom没有实现, 是空值
+    globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
+        .split("; ");
+
+    globalMy.cookies.map((item) => {
+        dom.window.document.cookie = item + "; "
+    });
+
+    a = +new Date;
+    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\nWin=this;\r\n" + ``;
+    vm.runInNewContext(code, sandbox);
+
+    var ifr = dom.window.document.createElement("iframe");
+    dom.window.document.body.appendChild(ifr);
+
+    globalMy.dom_window = ifr.contentWindow;
+    globalMy.window_frameElement = ifr;
+    globalMy.window_parent = sandbox.Win;
+
+    const sandbox_ = {
+        wanfeng: wanfeng,
+        // globalMy: {
+        //     dom_window: ifr.contentWindow,
+        //     window_frameElement: ifr,
+        //     window_parent: sandbox.Win
+        // },
+        globalMy: globalMy,
+        console: console,
+    }
+    code = "debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode + `
+console.log(encodeURIComponent((new window.ABC).z("et6DuZOBezkCoI40DI0QqQ9bHByFPpZ2VUGLwTAeK8g=", parseInt("1677987995819") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3)));
+`;
+    vm.runInNewContext(code, sandbox_);
+    console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+}
+
+// runRsVmp();
+// runBoss();
+
+
+//// vm2
 // var vm = new VM({ sandbox: sandbox });
 // var script = new VMScript("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, './zcj.js');
 // console.log("jsdom初始化 + new VMScript 耗时:", +new Date - a, "毫秒");
-
 // a = +new Date;
 // vm.run(script);
 // console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
-
-// rsvmp
-var vm = require("vm");
-a = +new Date;
-var code = "debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
-vm.runInNewContext(code, sandbox);
-console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
-
-// boss
-// globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
-//     .split("; ");
-
-// globalMy.cookies.map((item) => {
-//     dom.window.document.cookie = item + "; "
-// });
-
-// var vm = require("vm");
-// a = +new Date;
-// var code = "debugger;\r\n" + init_env + envCode + "\r\nWin=this;\r\n" + ``;
-// vm.runInNewContext(code, sandbox);
-
-// var ifr = dom.window.document.createElement("iframe");
-// dom.window.document.body.appendChild(ifr);
-
-// const sandbox_ = {
-//     wanfeng: wanfeng,
-//     globalMy: {
-//         dom_window: ifr.contentWindow,
-//         window_frameElement: ifr,
-//         window_parent: sandbox.Win
-//     },
-//     console: console,
-// }
-// code = "debugger;\r\n" + init_env + envCode + "\r\nwindow.parent = window.top = globalMy.window_parent;\r\n" + workCode + "\r\n" + endCode;
-// vm.runInNewContext(code, sandbox_);
-
-// // vm.runInNewContext("debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode, sandbox);
-// console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
-
-
