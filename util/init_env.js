@@ -8,7 +8,7 @@ Utils.Error_get_stack = function () {
     return arguments[0];
 }
 
-a = +new Date;
+this.cost_time = +new Date;
 globalMy.initEnv = function () {
     Utils.initEnv();
     var i;
@@ -28,9 +28,9 @@ globalMy.initEnv = function () {
     Utils.register();
 }
 globalMy.initEnv.apply(this, []);
-globalMy.console.log("node环境框架初始化耗时:", +new Date - a, "毫秒");
+globalMy.console.log("node环境框架初始化耗时:", +new Date - cost_time, "毫秒");
 
-a = +new Date;
+cost_time = +new Date;
 // 工具类
 globalMy.getMidStr = function getValue(key1, key2, str) {
     var m = str.match(new RegExp(key1 + '(.*?)' + key2));
@@ -80,6 +80,8 @@ globalMy.foundEventName = function foundEventName(obj) {
     var foundName = globalMy.event.indexOf(obj);
     if (foundName < 0) {
         debugger;
+        globalMy.console.log("[*]  foundEventName未找到对象");
+        throw new Error("foundEventName未找到对象");
     }
     return foundName;
 }
@@ -221,12 +223,13 @@ globalMy.newWindow = function (dom_window, is_init) {
         var window_name = globalMy.setfoundName(this);
         globalMy.jsdom_element[window_name] = dom_window;
         var m = +new Date;
+        this.zzz_mark_key = this;
         var desp = Object.getOwnPropertyDescriptors(this);
-        // for (var i in desp) {
-        //     if ("get" in desp[i]) {
-        //         Object.defineProperty(this, i, desp[i]);
-        //     }
-        // }
+        for (var i in desp) {
+            if ("set" in desp[i]) {
+                Object.defineProperty(this, i, desp[i]);
+            }
+        }
         console.log("重定义window get set 耗时 ", +new Date - m, " 毫秒");
         delete this[Symbol.toStringTag];
     }
@@ -812,12 +815,15 @@ globalMy.newWindow = function (dom_window, is_init) {
 
 // 特殊对象存放在Utils对象下
 globalMy.window_get_window = function () {
+
     if (globalMy.element.indexOf(this) > -1) {
         return this;
     } else {
-        var ret = this.root;
-        if (!ret) throw new TypeError("Illegal invocation");
-        return this.root;
+        debugger;
+        // var result = this.zzz_mark_key;
+        // if (!result) throw new TypeError("Illegal invocation");
+        // return result;
+        // return window;
     }
 }
 globalMy.window_get_location = function () {
@@ -825,8 +831,9 @@ globalMy.window_get_location = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['location'];
     if (globalMy.is_log) {
@@ -839,7 +846,9 @@ globalMy.window_get_document = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['document'];
     if (globalMy.is_log) {
@@ -932,12 +941,13 @@ globalMy.window_clearTimeout = function clearTimeout(id) {
 }
 
 globalMy.window_get_self = function () {
-
     var result;
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['self'];
     if (globalMy.is_log) {
@@ -952,7 +962,9 @@ globalMy.window_set_self = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['self'] = val;
     if (globalMy.is_log) {
@@ -960,12 +972,14 @@ globalMy.window_set_self = function (val) {
     }
 }
 globalMy.window_get_name = function () {
-
+    // debugger;
     var result;
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['name'];
     if (globalMy.is_log) {
@@ -974,12 +988,14 @@ globalMy.window_get_name = function () {
     return result;
 }
 globalMy.window_set_name = function (val) {
-
+    debugger;
     var result;
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     val = '' + val;
     globalMy.value[foundName]['name'] = val;
@@ -1002,7 +1018,9 @@ globalMy.window_get_customElements = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['customElements'];
     if (globalMy.is_log) {
@@ -1015,7 +1033,9 @@ globalMy.window_get_history = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['history'];
     if (globalMy.is_log) {
@@ -1030,7 +1050,9 @@ globalMy.window_get_locationbar = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['locationbar'];
     if (globalMy.is_log) {
@@ -1045,7 +1067,9 @@ globalMy.window_set_locationbar = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['locationbar'] = val;
     if (globalMy.is_log) {
@@ -1059,7 +1083,9 @@ globalMy.window_get_menubar = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['menubar'];
     if (globalMy.is_log) {
@@ -1074,7 +1100,9 @@ globalMy.window_set_menubar = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['menubar'] = val;
     if (globalMy.is_log) {
@@ -1088,7 +1116,9 @@ globalMy.window_get_personalbar = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['personalbar'];
     if (globalMy.is_log) {
@@ -1103,7 +1133,9 @@ globalMy.window_set_personalbar = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['personalbar'] = val;
     if (globalMy.is_log) {
@@ -1117,7 +1149,9 @@ globalMy.window_get_scrollbars = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['scrollbars'];
     if (globalMy.is_log) {
@@ -1132,7 +1166,9 @@ globalMy.window_set_scrollbars = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['scrollbars'] = val;
     if (globalMy.is_log) {
@@ -1146,7 +1182,9 @@ globalMy.window_get_statusbar = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['statusbar'];
     if (globalMy.is_log) {
@@ -1161,7 +1199,9 @@ globalMy.window_set_statusbar = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['statusbar'] = val;
     if (globalMy.is_log) {
@@ -1175,7 +1215,9 @@ globalMy.window_get_toolbar = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['toolbar'];
     if (globalMy.is_log) {
@@ -1190,7 +1232,9 @@ globalMy.window_set_toolbar = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['toolbar'] = val;
     if (globalMy.is_log) {
@@ -1204,7 +1248,9 @@ globalMy.window_get_status = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['status'];
     if (globalMy.is_log) {
@@ -1219,7 +1265,9 @@ globalMy.window_set_status = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['status'] = val;
     if (globalMy.is_log) {
@@ -1233,7 +1281,9 @@ globalMy.window_get_closed = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['closed'];
     if (globalMy.is_log) {
@@ -1248,7 +1298,9 @@ globalMy.window_get_frames = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['frames'];
     if (globalMy.is_log) {
@@ -1263,7 +1315,9 @@ globalMy.window_set_frames = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['frames'] = val;
     if (globalMy.is_log) {
@@ -1277,7 +1331,9 @@ globalMy.window_get_length = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['length'];
     if (globalMy.is_log) {
@@ -1292,7 +1348,9 @@ globalMy.window_set_length = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['length'] = val;
     if (globalMy.is_log) {
@@ -1304,7 +1362,9 @@ globalMy.window_get_top = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['top'];
     if (globalMy.is_log) {
@@ -1319,7 +1379,9 @@ globalMy.window_get_opener = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['opener'];
     if (globalMy.is_log) {
@@ -1332,7 +1394,9 @@ globalMy.window_set_opener = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['opener'] = val;
     if (globalMy.is_log) {
@@ -1346,7 +1410,9 @@ globalMy.window_get_parent = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['parent'];
     if (globalMy.is_log) {
@@ -1361,7 +1427,9 @@ globalMy.window_set_parent = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['parent'] = val;
     if (globalMy.is_log) {
@@ -1375,7 +1443,9 @@ globalMy.window_get_frameElement = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['frameElement'];
     if (globalMy.is_log) {
@@ -1390,7 +1460,9 @@ globalMy.window_get_navigator = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['navigator'];
     if (globalMy.is_log) {
@@ -1405,7 +1477,9 @@ globalMy.window_get_origin = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['origin'];
     if (globalMy.is_log) {
@@ -1418,7 +1492,9 @@ globalMy.window_set_origin = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['origin'] = val;
     if (globalMy.is_log) {
@@ -1432,7 +1508,9 @@ globalMy.window_get_external = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['external'];
     if (globalMy.is_log) {
@@ -1445,7 +1523,9 @@ globalMy.window_set_external = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['external'] = val;
     if (globalMy.is_log) {
@@ -1459,7 +1539,9 @@ globalMy.window_get_screen = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['screen'];
     if (globalMy.is_log) {
@@ -1474,7 +1556,9 @@ globalMy.window_set_screen = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['screen'] = val;
     if (globalMy.is_log) {
@@ -1488,7 +1572,9 @@ globalMy.window_get_innerWidth = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['innerWidth'];
     if (globalMy.is_log) {
@@ -1503,7 +1589,9 @@ globalMy.window_set_innerWidth = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['innerWidth'] = val;
     if (globalMy.is_log) {
@@ -1517,7 +1605,9 @@ globalMy.window_get_innerHeight = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['innerHeight'];
     if (globalMy.is_log) {
@@ -1532,7 +1622,9 @@ globalMy.window_set_innerHeight = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['innerHeight'] = val;
     if (globalMy.is_log) {
@@ -1546,7 +1638,9 @@ globalMy.window_get_scrollX = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['scrollX'];
     if (globalMy.is_log) {
@@ -1561,7 +1655,9 @@ globalMy.window_set_scrollX = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['scrollX'] = val;
     if (globalMy.is_log) {
@@ -1575,7 +1671,9 @@ globalMy.window_get_pageXOffset = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['pageXOffset'];
     if (globalMy.is_log) {
@@ -1590,7 +1688,9 @@ globalMy.window_set_pageXOffset = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['pageXOffset'] = val;
     if (globalMy.is_log) {
@@ -1604,7 +1704,9 @@ globalMy.window_get_scrollY = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['scrollY'];
     if (globalMy.is_log) {
@@ -1619,7 +1721,9 @@ globalMy.window_set_scrollY = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['scrollY'] = val;
     if (globalMy.is_log) {
@@ -1633,7 +1737,9 @@ globalMy.window_get_pageYOffset = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['pageYOffset'];
     if (globalMy.is_log) {
@@ -1648,7 +1754,9 @@ globalMy.window_set_pageYOffset = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['pageYOffset'] = val;
     if (globalMy.is_log) {
@@ -1662,7 +1770,9 @@ globalMy.window_get_visualViewport = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['visualViewport'];
     if (globalMy.is_log) {
@@ -1677,7 +1787,9 @@ globalMy.window_set_visualViewport = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['visualViewport'] = val;
     if (globalMy.is_log) {
@@ -1691,7 +1803,9 @@ globalMy.window_get_screenX = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['screenX'];
     if (globalMy.is_log) {
@@ -1706,7 +1820,9 @@ globalMy.window_set_screenX = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['screenX'] = val;
     if (globalMy.is_log) {
@@ -1720,7 +1836,9 @@ globalMy.window_get_screenY = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['screenY'];
     if (globalMy.is_log) {
@@ -1735,7 +1853,9 @@ globalMy.window_set_screenY = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['screenY'] = val;
     if (globalMy.is_log) {
@@ -1749,7 +1869,9 @@ globalMy.window_get_outerWidth = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['outerWidth'];
     if (globalMy.is_log) {
@@ -1764,7 +1886,9 @@ globalMy.window_set_outerWidth = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['outerWidth'] = val;
     if (globalMy.is_log) {
@@ -1778,7 +1902,9 @@ globalMy.window_get_outerHeight = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['outerHeight'];
     if (globalMy.is_log) {
@@ -1793,7 +1919,9 @@ globalMy.window_set_outerHeight = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['outerHeight'] = val;
     if (globalMy.is_log) {
@@ -1807,7 +1935,9 @@ globalMy.window_get_devicePixelRatio = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['devicePixelRatio'];
     if (globalMy.is_log) {
@@ -1822,7 +1952,9 @@ globalMy.window_set_devicePixelRatio = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['devicePixelRatio'] = val;
     if (globalMy.is_log) {
@@ -1836,7 +1968,9 @@ globalMy.window_get_event = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['event'];
     if (globalMy.is_log) {
@@ -1851,7 +1985,9 @@ globalMy.window_set_event = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['event'] = val;
     if (globalMy.is_log) {
@@ -1865,7 +2001,9 @@ globalMy.window_get_clientInformation = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['clientInformation'];
     if (globalMy.is_log) {
@@ -1880,7 +2018,9 @@ globalMy.window_set_clientInformation = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['clientInformation'] = val;
     if (globalMy.is_log) {
@@ -1894,7 +2034,9 @@ globalMy.window_get_offscreenBuffering = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['offscreenBuffering'];
     if (globalMy.is_log) {
@@ -1909,7 +2051,9 @@ globalMy.window_set_offscreenBuffering = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['offscreenBuffering'] = val;
     if (globalMy.is_log) {
@@ -1923,7 +2067,9 @@ globalMy.window_get_screenLeft = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['screenLeft'];
     if (globalMy.is_log) {
@@ -1938,7 +2084,9 @@ globalMy.window_set_screenLeft = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['screenLeft'] = val;
     if (globalMy.is_log) {
@@ -1952,7 +2100,9 @@ globalMy.window_get_screenTop = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['screenTop'];
     if (globalMy.is_log) {
@@ -1967,7 +2117,9 @@ globalMy.window_set_screenTop = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['screenTop'] = val;
     if (globalMy.is_log) {
@@ -1981,7 +2133,9 @@ globalMy.window_get_defaultStatus = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['defaultStatus'];
     if (globalMy.is_log) {
@@ -1996,7 +2150,9 @@ globalMy.window_set_defaultStatus = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['defaultStatus'] = val;
     if (globalMy.is_log) {
@@ -2010,7 +2166,9 @@ globalMy.window_get_defaultstatus = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['defaultstatus'];
     if (globalMy.is_log) {
@@ -2025,7 +2183,9 @@ globalMy.window_set_defaultstatus = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['defaultstatus'] = val;
     if (globalMy.is_log) {
@@ -2039,7 +2199,9 @@ globalMy.window_get_styleMedia = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['styleMedia'];
     if (globalMy.is_log) {
@@ -2054,7 +2216,9 @@ globalMy.window_get_onsearch = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onsearch'];
     if (globalMy.is_log) {
@@ -2069,7 +2233,9 @@ globalMy.window_set_onsearch = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onsearch'] = val;
     if (globalMy.is_log) {
@@ -2083,7 +2249,9 @@ globalMy.window_get_isSecureContext = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['isSecureContext'];
     if (globalMy.is_log) {
@@ -2098,7 +2266,9 @@ globalMy.window_get_trustedTypes = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['trustedTypes'];
     if (globalMy.is_log) {
@@ -2113,7 +2283,9 @@ globalMy.window_get_performance = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['performance'];
     if (globalMy.is_log) {
@@ -2128,7 +2300,9 @@ globalMy.window_set_performance = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['performance'] = val;
     if (globalMy.is_log) {
@@ -2142,7 +2316,9 @@ globalMy.window_get_onappinstalled = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onappinstalled'];
     if (globalMy.is_log) {
@@ -2157,7 +2333,9 @@ globalMy.window_set_onappinstalled = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onappinstalled'] = val;
     if (globalMy.is_log) {
@@ -2171,7 +2349,9 @@ globalMy.window_get_onbeforeinstallprompt = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onbeforeinstallprompt'];
     if (globalMy.is_log) {
@@ -2186,7 +2366,9 @@ globalMy.window_set_onbeforeinstallprompt = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onbeforeinstallprompt'] = val;
     if (globalMy.is_log) {
@@ -2200,7 +2382,9 @@ globalMy.window_get_crypto = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['crypto'];
     if (globalMy.is_log) {
@@ -2215,7 +2399,9 @@ globalMy.window_get_indexedDB = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['indexedDB'];
     if (globalMy.is_log) {
@@ -2230,7 +2416,9 @@ globalMy.window_get_sessionStorage = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['sessionStorage'];
     if (globalMy.is_log) {
@@ -2245,7 +2433,9 @@ globalMy.window_get_localStorage = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['localStorage'];
     if (globalMy.is_log) {
@@ -2260,7 +2450,9 @@ globalMy.window_get_onbeforexrselect = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onbeforexrselect'];
     if (globalMy.is_log) {
@@ -2275,7 +2467,9 @@ globalMy.window_set_onbeforexrselect = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onbeforexrselect'] = val;
     if (globalMy.is_log) {
@@ -2289,7 +2483,9 @@ globalMy.window_get_onabort = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onabort'];
     if (globalMy.is_log) {
@@ -2304,7 +2500,9 @@ globalMy.window_set_onabort = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onabort'] = val;
     if (globalMy.is_log) {
@@ -2318,7 +2516,9 @@ globalMy.window_get_onbeforeinput = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onbeforeinput'];
     if (globalMy.is_log) {
@@ -2333,7 +2533,9 @@ globalMy.window_set_onbeforeinput = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onbeforeinput'] = val;
     if (globalMy.is_log) {
@@ -2347,7 +2549,9 @@ globalMy.window_get_onblur = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onblur'];
     if (globalMy.is_log) {
@@ -2362,7 +2566,9 @@ globalMy.window_set_onblur = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onblur'] = val;
     if (globalMy.is_log) {
@@ -2376,7 +2582,9 @@ globalMy.window_get_oncancel = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncancel'];
     if (globalMy.is_log) {
@@ -2391,7 +2599,9 @@ globalMy.window_set_oncancel = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncancel'] = val;
     if (globalMy.is_log) {
@@ -2405,7 +2615,9 @@ globalMy.window_get_oncanplay = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncanplay'];
     if (globalMy.is_log) {
@@ -2420,7 +2632,9 @@ globalMy.window_set_oncanplay = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncanplay'] = val;
     if (globalMy.is_log) {
@@ -2434,7 +2648,9 @@ globalMy.window_get_oncanplaythrough = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncanplaythrough'];
     if (globalMy.is_log) {
@@ -2449,7 +2665,9 @@ globalMy.window_set_oncanplaythrough = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncanplaythrough'] = val;
     if (globalMy.is_log) {
@@ -2463,7 +2681,9 @@ globalMy.window_get_onchange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onchange'];
     if (globalMy.is_log) {
@@ -2478,7 +2698,9 @@ globalMy.window_set_onchange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onchange'] = val;
     if (globalMy.is_log) {
@@ -2492,7 +2714,9 @@ globalMy.window_get_onclick = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onclick'];
     if (globalMy.is_log) {
@@ -2507,7 +2731,9 @@ globalMy.window_set_onclick = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onclick'] = val;
     if (globalMy.is_log) {
@@ -2521,7 +2747,9 @@ globalMy.window_get_onclose = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onclose'];
     if (globalMy.is_log) {
@@ -2536,7 +2764,9 @@ globalMy.window_set_onclose = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onclose'] = val;
     if (globalMy.is_log) {
@@ -2550,7 +2780,9 @@ globalMy.window_get_oncontextlost = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncontextlost'];
     if (globalMy.is_log) {
@@ -2565,7 +2797,9 @@ globalMy.window_set_oncontextlost = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncontextlost'] = val;
     if (globalMy.is_log) {
@@ -2579,7 +2813,9 @@ globalMy.window_get_oncontextmenu = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncontextmenu'];
     if (globalMy.is_log) {
@@ -2594,7 +2830,9 @@ globalMy.window_set_oncontextmenu = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncontextmenu'] = val;
     if (globalMy.is_log) {
@@ -2608,7 +2846,9 @@ globalMy.window_get_oncontextrestored = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncontextrestored'];
     if (globalMy.is_log) {
@@ -2623,7 +2863,9 @@ globalMy.window_set_oncontextrestored = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncontextrestored'] = val;
     if (globalMy.is_log) {
@@ -2637,7 +2879,9 @@ globalMy.window_get_oncuechange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncuechange'];
     if (globalMy.is_log) {
@@ -2652,7 +2896,9 @@ globalMy.window_set_oncuechange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncuechange'] = val;
     if (globalMy.is_log) {
@@ -2666,7 +2912,9 @@ globalMy.window_get_ondblclick = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondblclick'];
     if (globalMy.is_log) {
@@ -2681,7 +2929,9 @@ globalMy.window_set_ondblclick = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondblclick'] = val;
     if (globalMy.is_log) {
@@ -2695,7 +2945,9 @@ globalMy.window_get_ondrag = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondrag'];
     if (globalMy.is_log) {
@@ -2710,7 +2962,9 @@ globalMy.window_set_ondrag = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondrag'] = val;
     if (globalMy.is_log) {
@@ -2724,7 +2978,9 @@ globalMy.window_get_ondragend = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondragend'];
     if (globalMy.is_log) {
@@ -2739,7 +2995,9 @@ globalMy.window_set_ondragend = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondragend'] = val;
     if (globalMy.is_log) {
@@ -2753,7 +3011,9 @@ globalMy.window_get_ondragenter = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondragenter'];
     if (globalMy.is_log) {
@@ -2768,7 +3028,9 @@ globalMy.window_set_ondragenter = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondragenter'] = val;
     if (globalMy.is_log) {
@@ -2782,7 +3044,9 @@ globalMy.window_get_ondragleave = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondragleave'];
     if (globalMy.is_log) {
@@ -2797,7 +3061,9 @@ globalMy.window_set_ondragleave = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondragleave'] = val;
     if (globalMy.is_log) {
@@ -2811,7 +3077,9 @@ globalMy.window_get_ondragover = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondragover'];
     if (globalMy.is_log) {
@@ -2826,7 +3094,9 @@ globalMy.window_set_ondragover = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondragover'] = val;
     if (globalMy.is_log) {
@@ -2840,7 +3110,9 @@ globalMy.window_get_ondragstart = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondragstart'];
     if (globalMy.is_log) {
@@ -2855,7 +3127,9 @@ globalMy.window_set_ondragstart = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondragstart'] = val;
     if (globalMy.is_log) {
@@ -2869,7 +3143,9 @@ globalMy.window_get_ondrop = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondrop'];
     if (globalMy.is_log) {
@@ -2884,7 +3160,9 @@ globalMy.window_set_ondrop = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondrop'] = val;
     if (globalMy.is_log) {
@@ -2898,7 +3176,9 @@ globalMy.window_get_ondurationchange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondurationchange'];
     if (globalMy.is_log) {
@@ -2913,7 +3193,9 @@ globalMy.window_set_ondurationchange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondurationchange'] = val;
     if (globalMy.is_log) {
@@ -2927,7 +3209,9 @@ globalMy.window_get_onemptied = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onemptied'];
     if (globalMy.is_log) {
@@ -2942,7 +3226,9 @@ globalMy.window_set_onemptied = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onemptied'] = val;
     if (globalMy.is_log) {
@@ -2956,7 +3242,9 @@ globalMy.window_get_onended = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onended'];
     if (globalMy.is_log) {
@@ -2971,7 +3259,9 @@ globalMy.window_set_onended = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onended'] = val;
     if (globalMy.is_log) {
@@ -2985,7 +3275,9 @@ globalMy.window_get_onerror = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onerror'];
     if (globalMy.is_log) {
@@ -3000,7 +3292,9 @@ globalMy.window_set_onerror = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onerror'] = val;
     if (globalMy.is_log) {
@@ -3014,7 +3308,9 @@ globalMy.window_get_onfocus = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onfocus'];
     if (globalMy.is_log) {
@@ -3029,7 +3325,9 @@ globalMy.window_set_onfocus = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onfocus'] = val;
     if (globalMy.is_log) {
@@ -3043,7 +3341,9 @@ globalMy.window_get_onformdata = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onformdata'];
     if (globalMy.is_log) {
@@ -3058,7 +3358,9 @@ globalMy.window_set_onformdata = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onformdata'] = val;
     if (globalMy.is_log) {
@@ -3072,7 +3374,9 @@ globalMy.window_get_oninput = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oninput'];
     if (globalMy.is_log) {
@@ -3087,7 +3391,9 @@ globalMy.window_set_oninput = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oninput'] = val;
     if (globalMy.is_log) {
@@ -3101,7 +3407,9 @@ globalMy.window_get_oninvalid = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oninvalid'];
     if (globalMy.is_log) {
@@ -3116,7 +3424,9 @@ globalMy.window_set_oninvalid = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oninvalid'] = val;
     if (globalMy.is_log) {
@@ -3130,7 +3440,9 @@ globalMy.window_get_onkeydown = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onkeydown'];
     if (globalMy.is_log) {
@@ -3145,7 +3457,9 @@ globalMy.window_set_onkeydown = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onkeydown'] = val;
     if (globalMy.is_log) {
@@ -3158,7 +3472,9 @@ globalMy.window_get_oncontentvisibilityautostatechange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['oncontentvisibilityautostatechange'];
     if (globalMy.is_log) {
@@ -3172,7 +3488,9 @@ globalMy.window_set_oncontentvisibilityautostatechange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['oncontentvisibilityautostatechange'] = val;
     if (globalMy.is_log) {
@@ -3186,7 +3504,9 @@ globalMy.window_get_onkeypress = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onkeypress'];
     if (globalMy.is_log) {
@@ -3201,7 +3521,9 @@ globalMy.window_set_onkeypress = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onkeypress'] = val;
     if (globalMy.is_log) {
@@ -3215,7 +3537,9 @@ globalMy.window_get_onkeyup = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onkeyup'];
     if (globalMy.is_log) {
@@ -3230,7 +3554,9 @@ globalMy.window_set_onkeyup = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onkeyup'] = val;
     if (globalMy.is_log) {
@@ -3244,7 +3570,9 @@ globalMy.window_get_onload = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onload'];
     if (globalMy.is_log) {
@@ -3259,7 +3587,9 @@ globalMy.window_set_onload = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onload'] = val;
     if (globalMy.is_log) {
@@ -3273,7 +3603,9 @@ globalMy.window_get_onloadeddata = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onloadeddata'];
     if (globalMy.is_log) {
@@ -3288,7 +3620,9 @@ globalMy.window_set_onloadeddata = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onloadeddata'] = val;
     if (globalMy.is_log) {
@@ -3302,7 +3636,9 @@ globalMy.window_get_onloadedmetadata = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onloadedmetadata'];
     if (globalMy.is_log) {
@@ -3317,7 +3653,9 @@ globalMy.window_set_onloadedmetadata = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onloadedmetadata'] = val;
     if (globalMy.is_log) {
@@ -3331,7 +3669,9 @@ globalMy.window_get_onloadstart = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onloadstart'];
     if (globalMy.is_log) {
@@ -3346,7 +3686,9 @@ globalMy.window_set_onloadstart = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onloadstart'] = val;
     if (globalMy.is_log) {
@@ -3360,7 +3702,9 @@ globalMy.window_get_onmousedown = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmousedown'];
     if (globalMy.is_log) {
@@ -3375,7 +3719,9 @@ globalMy.window_set_onmousedown = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmousedown'] = val;
     if (globalMy.is_log) {
@@ -3389,7 +3735,9 @@ globalMy.window_get_onmouseenter = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmouseenter'];
     if (globalMy.is_log) {
@@ -3404,7 +3752,9 @@ globalMy.window_set_onmouseenter = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmouseenter'] = val;
     if (globalMy.is_log) {
@@ -3418,7 +3768,9 @@ globalMy.window_get_onmouseleave = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmouseleave'];
     if (globalMy.is_log) {
@@ -3433,7 +3785,9 @@ globalMy.window_set_onmouseleave = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmouseleave'] = val;
     if (globalMy.is_log) {
@@ -3447,7 +3801,9 @@ globalMy.window_get_onmousemove = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmousemove'];
     if (globalMy.is_log) {
@@ -3462,7 +3818,9 @@ globalMy.window_set_onmousemove = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmousemove'] = val;
     if (globalMy.is_log) {
@@ -3476,7 +3834,9 @@ globalMy.window_get_onmouseout = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmouseout'];
     if (globalMy.is_log) {
@@ -3491,7 +3851,9 @@ globalMy.window_set_onmouseout = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmouseout'] = val;
     if (globalMy.is_log) {
@@ -3505,7 +3867,9 @@ globalMy.window_get_onmouseover = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmouseover'];
     if (globalMy.is_log) {
@@ -3520,7 +3884,9 @@ globalMy.window_set_onmouseover = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmouseover'] = val;
     if (globalMy.is_log) {
@@ -3534,7 +3900,9 @@ globalMy.window_get_onmouseup = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmouseup'];
     if (globalMy.is_log) {
@@ -3549,7 +3917,9 @@ globalMy.window_set_onmouseup = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmouseup'] = val;
     if (globalMy.is_log) {
@@ -3563,7 +3933,9 @@ globalMy.window_get_onmousewheel = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmousewheel'];
     if (globalMy.is_log) {
@@ -3578,7 +3950,9 @@ globalMy.window_set_onmousewheel = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmousewheel'] = val;
     if (globalMy.is_log) {
@@ -3592,7 +3966,9 @@ globalMy.window_get_onpause = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpause'];
     if (globalMy.is_log) {
@@ -3607,7 +3983,9 @@ globalMy.window_set_onpause = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpause'] = val;
     if (globalMy.is_log) {
@@ -3621,7 +3999,9 @@ globalMy.window_get_onplay = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onplay'];
     if (globalMy.is_log) {
@@ -3636,7 +4016,9 @@ globalMy.window_set_onplay = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onplay'] = val;
     if (globalMy.is_log) {
@@ -3650,7 +4032,9 @@ globalMy.window_get_onplaying = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onplaying'];
     if (globalMy.is_log) {
@@ -3665,7 +4049,9 @@ globalMy.window_set_onplaying = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onplaying'] = val;
     if (globalMy.is_log) {
@@ -3679,7 +4065,9 @@ globalMy.window_get_onprogress = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onprogress'];
     if (globalMy.is_log) {
@@ -3694,7 +4082,9 @@ globalMy.window_set_onprogress = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onprogress'] = val;
     if (globalMy.is_log) {
@@ -3708,7 +4098,9 @@ globalMy.window_get_onratechange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onratechange'];
     if (globalMy.is_log) {
@@ -3723,7 +4115,9 @@ globalMy.window_set_onratechange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onratechange'] = val;
     if (globalMy.is_log) {
@@ -3737,7 +4131,9 @@ globalMy.window_get_onreset = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onreset'];
     if (globalMy.is_log) {
@@ -3752,7 +4148,9 @@ globalMy.window_set_onreset = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onreset'] = val;
     if (globalMy.is_log) {
@@ -3766,7 +4164,9 @@ globalMy.window_get_onresize = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onresize'];
     if (globalMy.is_log) {
@@ -3781,7 +4181,9 @@ globalMy.window_set_onresize = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onresize'] = val;
     if (globalMy.is_log) {
@@ -3795,7 +4197,9 @@ globalMy.window_get_onscroll = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onscroll'];
     if (globalMy.is_log) {
@@ -3810,7 +4214,9 @@ globalMy.window_set_onscroll = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onscroll'] = val;
     if (globalMy.is_log) {
@@ -3824,7 +4230,9 @@ globalMy.window_get_onsecuritypolicyviolation = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onsecuritypolicyviolation'];
     if (globalMy.is_log) {
@@ -3839,7 +4247,9 @@ globalMy.window_set_onsecuritypolicyviolation = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onsecuritypolicyviolation'] = val;
     if (globalMy.is_log) {
@@ -3853,7 +4263,9 @@ globalMy.window_get_onseeked = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onseeked'];
     if (globalMy.is_log) {
@@ -3868,7 +4280,9 @@ globalMy.window_set_onseeked = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onseeked'] = val;
     if (globalMy.is_log) {
@@ -3882,7 +4296,9 @@ globalMy.window_get_onseeking = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onseeking'];
     if (globalMy.is_log) {
@@ -3897,7 +4313,9 @@ globalMy.window_set_onseeking = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onseeking'] = val;
     if (globalMy.is_log) {
@@ -3911,7 +4329,9 @@ globalMy.window_get_onselect = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onselect'];
     if (globalMy.is_log) {
@@ -3926,7 +4346,9 @@ globalMy.window_set_onselect = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onselect'] = val;
     if (globalMy.is_log) {
@@ -3940,7 +4362,9 @@ globalMy.window_get_onslotchange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onslotchange'];
     if (globalMy.is_log) {
@@ -3955,7 +4379,9 @@ globalMy.window_set_onslotchange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onslotchange'] = val;
     if (globalMy.is_log) {
@@ -3969,7 +4395,9 @@ globalMy.window_get_onstalled = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onstalled'];
     if (globalMy.is_log) {
@@ -3984,7 +4412,9 @@ globalMy.window_set_onstalled = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onstalled'] = val;
     if (globalMy.is_log) {
@@ -3998,7 +4428,9 @@ globalMy.window_get_onsubmit = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onsubmit'];
     if (globalMy.is_log) {
@@ -4013,7 +4445,9 @@ globalMy.window_set_onsubmit = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onsubmit'] = val;
     if (globalMy.is_log) {
@@ -4027,7 +4461,9 @@ globalMy.window_get_onsuspend = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onsuspend'];
     if (globalMy.is_log) {
@@ -4042,7 +4478,9 @@ globalMy.window_set_onsuspend = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onsuspend'] = val;
     if (globalMy.is_log) {
@@ -4056,7 +4494,9 @@ globalMy.window_get_ontimeupdate = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ontimeupdate'];
     if (globalMy.is_log) {
@@ -4071,7 +4511,9 @@ globalMy.window_set_ontimeupdate = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ontimeupdate'] = val;
     if (globalMy.is_log) {
@@ -4085,7 +4527,9 @@ globalMy.window_get_ontoggle = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ontoggle'];
     if (globalMy.is_log) {
@@ -4100,7 +4544,9 @@ globalMy.window_set_ontoggle = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ontoggle'] = val;
     if (globalMy.is_log) {
@@ -4114,7 +4560,9 @@ globalMy.window_get_onvolumechange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onvolumechange'];
     if (globalMy.is_log) {
@@ -4129,7 +4577,9 @@ globalMy.window_set_onvolumechange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onvolumechange'] = val;
     if (globalMy.is_log) {
@@ -4143,7 +4593,9 @@ globalMy.window_get_onwaiting = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onwaiting'];
     if (globalMy.is_log) {
@@ -4158,7 +4610,9 @@ globalMy.window_set_onwaiting = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onwaiting'] = val;
     if (globalMy.is_log) {
@@ -4172,7 +4626,9 @@ globalMy.window_get_onwebkitanimationend = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onwebkitanimationend'];
     if (globalMy.is_log) {
@@ -4187,7 +4643,9 @@ globalMy.window_set_onwebkitanimationend = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onwebkitanimationend'] = val;
     if (globalMy.is_log) {
@@ -4201,7 +4659,9 @@ globalMy.window_get_onwebkitanimationiteration = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onwebkitanimationiteration'];
     if (globalMy.is_log) {
@@ -4216,7 +4676,9 @@ globalMy.window_set_onwebkitanimationiteration = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onwebkitanimationiteration'] = val;
     if (globalMy.is_log) {
@@ -4230,7 +4692,9 @@ globalMy.window_get_onwebkitanimationstart = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onwebkitanimationstart'];
     if (globalMy.is_log) {
@@ -4245,7 +4709,9 @@ globalMy.window_set_onwebkitanimationstart = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onwebkitanimationstart'] = val;
     if (globalMy.is_log) {
@@ -4259,7 +4725,9 @@ globalMy.window_get_onwebkittransitionend = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onwebkittransitionend'];
     if (globalMy.is_log) {
@@ -4274,7 +4742,9 @@ globalMy.window_set_onwebkittransitionend = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onwebkittransitionend'] = val;
     if (globalMy.is_log) {
@@ -4288,7 +4758,9 @@ globalMy.window_get_onwheel = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onwheel'];
     if (globalMy.is_log) {
@@ -4303,7 +4775,9 @@ globalMy.window_set_onwheel = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onwheel'] = val;
     if (globalMy.is_log) {
@@ -4317,7 +4791,9 @@ globalMy.window_get_onauxclick = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onauxclick'];
     if (globalMy.is_log) {
@@ -4332,7 +4808,9 @@ globalMy.window_set_onauxclick = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onauxclick'] = val;
     if (globalMy.is_log) {
@@ -4346,7 +4824,9 @@ globalMy.window_get_ongotpointercapture = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ongotpointercapture'];
     if (globalMy.is_log) {
@@ -4361,7 +4841,9 @@ globalMy.window_set_ongotpointercapture = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ongotpointercapture'] = val;
     if (globalMy.is_log) {
@@ -4375,7 +4857,9 @@ globalMy.window_get_onlostpointercapture = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onlostpointercapture'];
     if (globalMy.is_log) {
@@ -4390,7 +4874,9 @@ globalMy.window_set_onlostpointercapture = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onlostpointercapture'] = val;
     if (globalMy.is_log) {
@@ -4404,7 +4890,9 @@ globalMy.window_get_onpointerdown = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerdown'];
     if (globalMy.is_log) {
@@ -4419,7 +4907,9 @@ globalMy.window_set_onpointerdown = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerdown'] = val;
     if (globalMy.is_log) {
@@ -4433,7 +4923,9 @@ globalMy.window_get_onpointermove = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointermove'];
     if (globalMy.is_log) {
@@ -4448,7 +4940,9 @@ globalMy.window_set_onpointermove = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointermove'] = val;
     if (globalMy.is_log) {
@@ -4462,7 +4956,9 @@ globalMy.window_get_onpointerrawupdate = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerrawupdate'];
     if (globalMy.is_log) {
@@ -4477,7 +4973,9 @@ globalMy.window_set_onpointerrawupdate = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerrawupdate'] = val;
     if (globalMy.is_log) {
@@ -4491,7 +4989,9 @@ globalMy.window_get_onpointerup = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerup'];
     if (globalMy.is_log) {
@@ -4506,7 +5006,9 @@ globalMy.window_set_onpointerup = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerup'] = val;
     if (globalMy.is_log) {
@@ -4520,7 +5022,9 @@ globalMy.window_get_onpointercancel = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointercancel'];
     if (globalMy.is_log) {
@@ -4535,7 +5039,9 @@ globalMy.window_set_onpointercancel = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointercancel'] = val;
     if (globalMy.is_log) {
@@ -4549,7 +5055,9 @@ globalMy.window_get_onpointerover = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerover'];
     if (globalMy.is_log) {
@@ -4564,7 +5072,9 @@ globalMy.window_set_onpointerover = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerover'] = val;
     if (globalMy.is_log) {
@@ -4578,7 +5088,9 @@ globalMy.window_get_onpointerout = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerout'];
     if (globalMy.is_log) {
@@ -4593,7 +5105,9 @@ globalMy.window_set_onpointerout = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerout'] = val;
     if (globalMy.is_log) {
@@ -4607,7 +5121,9 @@ globalMy.window_get_onpointerenter = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerenter'];
     if (globalMy.is_log) {
@@ -4622,7 +5138,9 @@ globalMy.window_set_onpointerenter = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerenter'] = val;
     if (globalMy.is_log) {
@@ -4636,7 +5154,9 @@ globalMy.window_get_onpointerleave = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpointerleave'];
     if (globalMy.is_log) {
@@ -4651,7 +5171,9 @@ globalMy.window_set_onpointerleave = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpointerleave'] = val;
     if (globalMy.is_log) {
@@ -4665,7 +5187,9 @@ globalMy.window_get_onselectstart = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onselectstart'];
     if (globalMy.is_log) {
@@ -4680,7 +5204,9 @@ globalMy.window_set_onselectstart = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onselectstart'] = val;
     if (globalMy.is_log) {
@@ -4694,7 +5220,9 @@ globalMy.window_get_onselectionchange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onselectionchange'];
     if (globalMy.is_log) {
@@ -4709,7 +5237,9 @@ globalMy.window_set_onselectionchange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onselectionchange'] = val;
     if (globalMy.is_log) {
@@ -4723,7 +5253,9 @@ globalMy.window_get_onanimationend = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onanimationend'];
     if (globalMy.is_log) {
@@ -4738,7 +5270,9 @@ globalMy.window_set_onanimationend = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onanimationend'] = val;
     if (globalMy.is_log) {
@@ -4752,7 +5286,9 @@ globalMy.window_get_onanimationiteration = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onanimationiteration'];
     if (globalMy.is_log) {
@@ -4767,7 +5303,9 @@ globalMy.window_set_onanimationiteration = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onanimationiteration'] = val;
     if (globalMy.is_log) {
@@ -4781,7 +5319,9 @@ globalMy.window_get_onanimationstart = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onanimationstart'];
     if (globalMy.is_log) {
@@ -4796,7 +5336,9 @@ globalMy.window_set_onanimationstart = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onanimationstart'] = val;
     if (globalMy.is_log) {
@@ -4810,7 +5352,9 @@ globalMy.window_get_ontransitionrun = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ontransitionrun'];
     if (globalMy.is_log) {
@@ -4825,7 +5369,9 @@ globalMy.window_set_ontransitionrun = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ontransitionrun'] = val;
     if (globalMy.is_log) {
@@ -4839,7 +5385,9 @@ globalMy.window_get_ontransitionstart = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ontransitionstart'];
     if (globalMy.is_log) {
@@ -4854,7 +5402,9 @@ globalMy.window_set_ontransitionstart = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ontransitionstart'] = val;
     if (globalMy.is_log) {
@@ -4868,7 +5418,9 @@ globalMy.window_get_ontransitionend = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ontransitionend'];
     if (globalMy.is_log) {
@@ -4883,7 +5435,9 @@ globalMy.window_set_ontransitionend = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ontransitionend'] = val;
     if (globalMy.is_log) {
@@ -4897,7 +5451,9 @@ globalMy.window_get_ontransitioncancel = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ontransitioncancel'];
     if (globalMy.is_log) {
@@ -4912,7 +5468,9 @@ globalMy.window_set_ontransitioncancel = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ontransitioncancel'] = val;
     if (globalMy.is_log) {
@@ -4926,7 +5484,9 @@ globalMy.window_get_onafterprint = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onafterprint'];
     if (globalMy.is_log) {
@@ -4941,7 +5501,9 @@ globalMy.window_set_onafterprint = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onafterprint'] = val;
     if (globalMy.is_log) {
@@ -4955,7 +5517,9 @@ globalMy.window_get_onbeforeprint = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onbeforeprint'];
     if (globalMy.is_log) {
@@ -4970,7 +5534,9 @@ globalMy.window_set_onbeforeprint = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onbeforeprint'] = val;
     if (globalMy.is_log) {
@@ -4984,7 +5550,9 @@ globalMy.window_get_onbeforeunload = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onbeforeunload'];
     if (globalMy.is_log) {
@@ -4999,7 +5567,9 @@ globalMy.window_set_onbeforeunload = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onbeforeunload'] = val;
     if (globalMy.is_log) {
@@ -5013,7 +5583,9 @@ globalMy.window_get_onhashchange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onhashchange'];
     if (globalMy.is_log) {
@@ -5028,7 +5600,9 @@ globalMy.window_set_onhashchange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onhashchange'] = val;
     if (globalMy.is_log) {
@@ -5042,7 +5616,9 @@ globalMy.window_get_onlanguagechange = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onlanguagechange'];
     if (globalMy.is_log) {
@@ -5057,7 +5633,9 @@ globalMy.window_set_onlanguagechange = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onlanguagechange'] = val;
     if (globalMy.is_log) {
@@ -5071,7 +5649,9 @@ globalMy.window_get_onmessage = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmessage'];
     if (globalMy.is_log) {
@@ -5086,7 +5666,9 @@ globalMy.window_set_onmessage = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmessage'] = val;
     if (globalMy.is_log) {
@@ -5100,7 +5682,9 @@ globalMy.window_get_onmessageerror = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onmessageerror'];
     if (globalMy.is_log) {
@@ -5115,7 +5699,9 @@ globalMy.window_set_onmessageerror = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onmessageerror'] = val;
     if (globalMy.is_log) {
@@ -5129,7 +5715,9 @@ globalMy.window_get_onoffline = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onoffline'];
     if (globalMy.is_log) {
@@ -5144,7 +5732,9 @@ globalMy.window_set_onoffline = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onoffline'] = val;
     if (globalMy.is_log) {
@@ -5158,7 +5748,9 @@ globalMy.window_get_ononline = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ononline'];
     if (globalMy.is_log) {
@@ -5173,7 +5765,9 @@ globalMy.window_set_ononline = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ononline'] = val;
     if (globalMy.is_log) {
@@ -5187,7 +5781,9 @@ globalMy.window_get_onpagehide = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpagehide'];
     if (globalMy.is_log) {
@@ -5202,7 +5798,9 @@ globalMy.window_set_onpagehide = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpagehide'] = val;
     if (globalMy.is_log) {
@@ -5216,7 +5814,9 @@ globalMy.window_get_onpageshow = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpageshow'];
     if (globalMy.is_log) {
@@ -5231,7 +5831,9 @@ globalMy.window_set_onpageshow = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpageshow'] = val;
     if (globalMy.is_log) {
@@ -5245,7 +5847,9 @@ globalMy.window_get_onpopstate = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onpopstate'];
     if (globalMy.is_log) {
@@ -5260,7 +5864,9 @@ globalMy.window_set_onpopstate = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onpopstate'] = val;
     if (globalMy.is_log) {
@@ -5274,7 +5880,9 @@ globalMy.window_get_onrejectionhandled = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onrejectionhandled'];
     if (globalMy.is_log) {
@@ -5289,7 +5897,9 @@ globalMy.window_set_onrejectionhandled = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onrejectionhandled'] = val;
     if (globalMy.is_log) {
@@ -5303,7 +5913,9 @@ globalMy.window_get_onstorage = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onstorage'];
     if (globalMy.is_log) {
@@ -5318,7 +5930,9 @@ globalMy.window_set_onstorage = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onstorage'] = val;
     if (globalMy.is_log) {
@@ -5332,7 +5946,9 @@ globalMy.window_get_onunhandledrejection = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onunhandledrejection'];
     if (globalMy.is_log) {
@@ -5347,7 +5963,9 @@ globalMy.window_set_onunhandledrejection = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onunhandledrejection'] = val;
     if (globalMy.is_log) {
@@ -5361,7 +5979,9 @@ globalMy.window_get_onunload = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onunload'];
     if (globalMy.is_log) {
@@ -5376,7 +5996,9 @@ globalMy.window_set_onunload = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onunload'] = val;
     if (globalMy.is_log) {
@@ -5390,7 +6012,9 @@ globalMy.window_get_crossOriginIsolated = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['crossOriginIsolated'];
     if (globalMy.is_log) {
@@ -5405,7 +6029,9 @@ globalMy.window_get_scheduler = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['scheduler'];
     if (globalMy.is_log) {
@@ -5420,7 +6046,9 @@ globalMy.window_set_scheduler = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['scheduler'] = val;
     if (globalMy.is_log) {
@@ -5434,7 +6062,9 @@ globalMy.window_get_caches = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['caches'];
     if (globalMy.is_log) {
@@ -5449,7 +6079,9 @@ globalMy.window_get_cookieStore = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['cookieStore'];
     if (globalMy.is_log) {
@@ -5464,7 +6096,9 @@ globalMy.window_get_ondevicemotion = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondevicemotion'];
     if (globalMy.is_log) {
@@ -5479,7 +6113,9 @@ globalMy.window_set_ondevicemotion = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondevicemotion'] = val;
     if (globalMy.is_log) {
@@ -5493,7 +6129,9 @@ globalMy.window_get_ondeviceorientation = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondeviceorientation'];
     if (globalMy.is_log) {
@@ -5508,7 +6146,9 @@ globalMy.window_set_ondeviceorientation = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondeviceorientation'] = val;
     if (globalMy.is_log) {
@@ -5522,7 +6162,9 @@ globalMy.window_get_ondeviceorientationabsolute = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['ondeviceorientationabsolute'];
     if (globalMy.is_log) {
@@ -5537,7 +6179,9 @@ globalMy.window_set_ondeviceorientationabsolute = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['ondeviceorientationabsolute'] = val;
     if (globalMy.is_log) {
@@ -5551,7 +6195,9 @@ globalMy.window_get_launchQueue = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['launchQueue'];
     if (globalMy.is_log) {
@@ -5566,7 +6212,9 @@ globalMy.window_get_onbeforematch = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['onbeforematch'];
     if (globalMy.is_log) {
@@ -5581,7 +6229,9 @@ globalMy.window_set_onbeforematch = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['onbeforematch'] = val;
     if (globalMy.is_log) {
@@ -5595,7 +6245,9 @@ globalMy.window_get_originAgentCluster = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['originAgentCluster'];
     if (globalMy.is_log) {
@@ -5610,7 +6262,9 @@ globalMy.window_get_navigation = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['navigation'];
     if (globalMy.is_log) {
@@ -5625,7 +6279,9 @@ globalMy.window_set_navigation = function (val) {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     globalMy.value[foundName]['navigation'] = val;
     if (globalMy.is_log) {
@@ -5639,7 +6295,9 @@ globalMy.window_get_webkitStorageInfo = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['webkitStorageInfo'];
     if (globalMy.is_log) {
@@ -5654,7 +6312,9 @@ globalMy.window_get_speechSynthesis = function () {
     if (globalMy.element.indexOf(this) > -1) {
         var foundName = globalMy.foundName(this);
     } else {
-        var foundName = globalMy.foundName(window);
+        var _window = this.zzz_mark_key;
+        if (!_window) throw new TypeError("Illegal invocation");
+        var foundName = globalMy.foundName(_window);
     }
     result = globalMy.value[foundName]['speechSynthesis'];
     if (globalMy.is_log) {
@@ -5662,6 +6322,7 @@ globalMy.window_get_speechSynthesis = function () {
     }
     return result;
 }
+
 
 // location
 globalMy.location_valueOf = function () {
@@ -5871,3 +6532,4 @@ globalMy.location_reload = function (val) {
 
 // 初始化window
 globalMy.newWindow.apply(this, [globalMy.dom_window, true]);
+

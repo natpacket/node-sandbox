@@ -39,6 +39,7 @@ let init_env = fs.readFileSync("./util/init_env.js");
 let cover_function = fs.readFileSync("./util/cover_function.js");
 let pass_check = fs.readFileSync("./util/pass_check.js");
 let globalMy_js = fs.readFileSync("./util/globalMy.js");
+let endCode = fs.readFileSync("./util/end.js");
 
 envCode += cover_function + pass_check;
 
@@ -48,7 +49,6 @@ envCode += cover_function + pass_check;
 
 // let workCode = fs.readFileSync("./work/zhihu.js");
 
-let endCode = fs.readFileSync("./work/end.js");
 var wanfeng = require("wanfeng");
 
 globalMy = {
@@ -87,7 +87,7 @@ function runBoss() {
     });
 
     a = +new Date;
-    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\nWin=this;\r\n" + ``;
+    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + ``;
     vm.runInNewContext(code, sandbox);
 
     var ifr = dom.window.document.createElement("iframe");
@@ -95,7 +95,7 @@ function runBoss() {
 
     globalMy.dom_window = ifr.contentWindow;
     globalMy.window_frameElement = ifr;
-    globalMy.window_parent = sandbox.Win;
+    globalMy.window_parent = sandbox.zzz_mark_key;
 
     const sandbox_ = {
         wanfeng: wanfeng,
@@ -115,7 +115,7 @@ console.log(encodeURIComponent((new window.ABC).z("et6DuZOBezkCoI40DI0QqQ9bHByFP
 }
 
 // runRsVmp();
-// runBoss();
+runBoss();
 
 
 //// vm2

@@ -600,6 +600,7 @@ globalMy.XMLHttpRequest_send = function () {
   //这里写方法实体
   var foundName = globalMy.foundName(this);
   var this_ = this;
+
   setTimeout(function () {
     globalMy.value[foundName]['readyState'] = 2;
     this_.onreadystatechange();
@@ -609,6 +610,8 @@ globalMy.XMLHttpRequest_send = function () {
     this_.onreadystatechange();
   }, 0);
   setTimeout(function () {
+    globalMy.value[foundName]['responseText'] = globalMy.response_text[globalMy.response_text_time];
+    globalMy.response_text_time += 1;
     globalMy.value[foundName]['readyState'] = 4;
     this_.onreadystatechange();
   }, 0);
@@ -619,10 +622,8 @@ globalMy.XMLHttpRequest_send = function () {
 };
 globalMy.XMLHttpRequest_get_responseText = function () {
   var result;
-  // var foundName = globalMy.foundName(this);
-  // result = globalMy.value[foundName]['responseText'];
-  result = globalMy.response_text[globalMy.response_text_time];
-  globalMy.response_text_time += 1;
+  var foundName = globalMy.foundName(this);
+  result = globalMy.value[foundName]['responseText'];
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了XMLHttpRequest_get_responseText,result => ', '' + result);
   }
@@ -643,8 +644,8 @@ globalMy.Storage_getItem = function () {
   }
   return result;
 };
-globalMy.Storage_key = function () {
-  var result;
+globalMy.Storage_key = function (index) {
+  var result = Object.keys(this)[index];
   //这里写方法实体
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Storage_key, arguments => ', arguments, '  result => ', '' + result);
