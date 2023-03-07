@@ -6,7 +6,7 @@
 var undefined_obj = new wanfeng.xtd;
 这样就可以得到一个type为undefined的对象了,感谢泰迪大佬提供的代码。
 
-ps:我实现的有bug,蓝瘦
+ps: 我实现的有bug,蓝瘦
 
 ## 内置对象Utils
 1. Utils对象里的方法都是做初始化用的, 使用参考util目录下的init_env.js文件, 
@@ -41,9 +41,9 @@ ps : 核心就是在node底层定义了一层拦截器, 然后最终又走到我
 
 3. node无法使用正常的vm2模块, 改用vm模块了.所以暂时应该只能起服务调用.(不建议用execjs调, 真的很蠢...)
 
-4. 如果直接用node环境的话, 应该就能用python库调用了, 没去试.  因为node环境检测太多了, 不想用.
+4. 如果直接用node环境的话, 应该就能用python库调用了, 没去试.  因为node环境检测太多了, 不想用。
 
-5. 非构造函数的原型对象, 就实现了个别, 比如WindowProperties这种的原型对象.
+5. 非构造函数的原型对象, 就实现了个别, 比如WindowProperties这种的原型对象。这种会存放在Utils中, 例如Utils.WindowProperties_ptototype。
 
 6. 如果遇到方法没有定义的话, node会挂掉噢...
 
