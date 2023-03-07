@@ -1,4 +1,7 @@
 globalMy.HTMLEmbedElement_get_src = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_get_src');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLEmbedElement_get_src = function () {
   return result;
 };
 globalMy.HTMLEmbedElement_set_src = function (val) {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_set_src, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLEmbedElement_set_src = function (val) {
   }
 };
 globalMy.HTMLEmbedElement_get_type = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_get_type');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLEmbedElement_get_type = function () {
   return result;
 };
 globalMy.HTMLEmbedElement_set_type = function (val) {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_set_type, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLEmbedElement_set_type = function (val) {
   }
 };
 globalMy.HTMLEmbedElement_get_width = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_get_width');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLEmbedElement_get_width = function () {
   return result;
 };
 globalMy.HTMLEmbedElement_set_width = function (val) {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_set_width, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLEmbedElement_set_width = function (val) {
   }
 };
 globalMy.HTMLEmbedElement_get_height = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_get_height');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLEmbedElement_get_height = function () {
   return result;
 };
 globalMy.HTMLEmbedElement_set_height = function (val) {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_set_height, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLEmbedElement_set_height = function (val) {
   }
 };
 globalMy.HTMLEmbedElement_get_align = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_get_align');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLEmbedElement_get_align = function () {
   return result;
 };
 globalMy.HTMLEmbedElement_set_align = function (val) {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_set_align, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLEmbedElement_set_align = function (val) {
   }
 };
 globalMy.HTMLEmbedElement_get_name = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_get_name');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLEmbedElement_get_name = function () {
   return result;
 };
 globalMy.HTMLEmbedElement_set_name = function (val) {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_set_name, 传参val => ' + val);
   }
@@ -287,6 +323,9 @@ globalMy.HTMLEmbedElement_set_name = function (val) {
   }
 };
 globalMy.HTMLEmbedElement_getSVGDocument = function () {
+  if (!(this instanceof HTMLEmbedElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLEmbedElement_getSVGDocument, arguments => ', arguments);
   }

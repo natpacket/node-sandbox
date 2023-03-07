@@ -1,5 +1,9 @@
 // Event
+// Event
 globalMy.Event_get_type = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['type'];
@@ -9,6 +13,9 @@ globalMy.Event_get_type = function () {
   return result;
 };
 globalMy.Event_get_target = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['target'];
@@ -18,6 +25,9 @@ globalMy.Event_get_target = function () {
   return result;
 };
 globalMy.Event_get_currentTarget = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['currentTarget'];
@@ -27,6 +37,9 @@ globalMy.Event_get_currentTarget = function () {
   return result;
 };
 globalMy.Event_get_eventPhase = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['eventPhase'];
@@ -36,6 +49,9 @@ globalMy.Event_get_eventPhase = function () {
   return result;
 };
 globalMy.Event_get_bubbles = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['bubbles'];
@@ -45,6 +61,9 @@ globalMy.Event_get_bubbles = function () {
   return result;
 };
 globalMy.Event_get_cancelable = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['cancelable'];
@@ -54,6 +73,9 @@ globalMy.Event_get_cancelable = function () {
   return result;
 };
 globalMy.Event_get_defaultPrevented = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['defaultPrevented'];
@@ -63,6 +85,9 @@ globalMy.Event_get_defaultPrevented = function () {
   return result;
 };
 globalMy.Event_get_composed = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['composed'];
@@ -72,6 +97,9 @@ globalMy.Event_get_composed = function () {
   return result;
 };
 globalMy.Event_get_timeStamp = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['timeStamp'];
@@ -81,6 +109,9 @@ globalMy.Event_get_timeStamp = function () {
   return result;
 };
 globalMy.Event_get_srcElement = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['srcElement'];
@@ -90,6 +121,9 @@ globalMy.Event_get_srcElement = function () {
   return result;
 };
 globalMy.Event_get_returnValue = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['returnValue'];
@@ -99,6 +133,9 @@ globalMy.Event_get_returnValue = function () {
   return result;
 };
 globalMy.Event_set_returnValue = function (val) {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   globalMy.event_value[foundName]['returnValue'] = val;
@@ -107,6 +144,9 @@ globalMy.Event_set_returnValue = function (val) {
   }
 };
 globalMy.Event_get_cancelBubble = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['cancelBubble'];
@@ -116,6 +156,9 @@ globalMy.Event_get_cancelBubble = function () {
   return result;
 };
 globalMy.Event_set_cancelBubble = function (val) {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundEventName(this);
   globalMy.event_value[foundName]['cancelBubble'] = val;
@@ -124,6 +167,9 @@ globalMy.Event_set_cancelBubble = function (val) {
   }
 };
 globalMy.Event_composedPath = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -132,6 +178,9 @@ globalMy.Event_composedPath = function () {
   return result;
 };
 globalMy.Event_initEvent = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -140,6 +189,9 @@ globalMy.Event_initEvent = function () {
   return result;
 };
 globalMy.Event_preventDefault = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -148,6 +200,9 @@ globalMy.Event_preventDefault = function () {
   return result;
 };
 globalMy.Event_stopImmediatePropagation = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -156,6 +211,9 @@ globalMy.Event_stopImmediatePropagation = function () {
   return result;
 };
 globalMy.Event_stopPropagation = function () {
+  if (!(this instanceof Event)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

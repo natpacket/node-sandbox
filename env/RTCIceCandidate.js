@@ -1,4 +1,7 @@
 globalMy.RTCIceCandidate_get_candidate = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['candidate'];
@@ -8,6 +11,9 @@ globalMy.RTCIceCandidate_get_candidate = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_sdpMid = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['sdpMid'];
@@ -17,6 +23,9 @@ globalMy.RTCIceCandidate_get_sdpMid = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_sdpMLineIndex = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['sdpMLineIndex'];
@@ -26,6 +35,9 @@ globalMy.RTCIceCandidate_get_sdpMLineIndex = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_foundation = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['foundation'];
@@ -35,6 +47,9 @@ globalMy.RTCIceCandidate_get_foundation = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_component = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['component'];
@@ -44,6 +59,9 @@ globalMy.RTCIceCandidate_get_component = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_priority = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['priority'];
@@ -53,6 +71,9 @@ globalMy.RTCIceCandidate_get_priority = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_address = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['address'];
@@ -62,6 +83,9 @@ globalMy.RTCIceCandidate_get_address = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_protocol = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['protocol'];
@@ -71,6 +95,9 @@ globalMy.RTCIceCandidate_get_protocol = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_port = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['port'];
@@ -80,6 +107,9 @@ globalMy.RTCIceCandidate_get_port = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_type = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['type'];
@@ -89,6 +119,9 @@ globalMy.RTCIceCandidate_get_type = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_tcpType = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['tcpType'];
@@ -98,6 +131,9 @@ globalMy.RTCIceCandidate_get_tcpType = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_relatedAddress = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['relatedAddress'];
@@ -107,6 +143,9 @@ globalMy.RTCIceCandidate_get_relatedAddress = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_relatedPort = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['relatedPort'];
@@ -116,6 +155,9 @@ globalMy.RTCIceCandidate_get_relatedPort = function () {
   return result;
 };
 globalMy.RTCIceCandidate_get_usernameFragment = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['usernameFragment'];
@@ -125,6 +167,9 @@ globalMy.RTCIceCandidate_get_usernameFragment = function () {
   return result;
 };
 globalMy.RTCIceCandidate_toJSON = function () {
+  if (!(this instanceof RTCIceCandidate)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {

@@ -1,5 +1,9 @@
 // 构造函数原型方法
+// 构造函数原型方法
 globalMy.Notification_get_onclick = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onclick'];
@@ -9,6 +13,9 @@ globalMy.Notification_get_onclick = function () {
   return result;
 };
 globalMy.Notification_set_onclick = function (val) {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onclick'] = val;
@@ -17,6 +24,9 @@ globalMy.Notification_set_onclick = function (val) {
   }
 };
 globalMy.Notification_get_onshow = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onshow'];
@@ -26,6 +36,9 @@ globalMy.Notification_get_onshow = function () {
   return result;
 };
 globalMy.Notification_set_onshow = function (val) {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onshow'] = val;
@@ -34,6 +47,9 @@ globalMy.Notification_set_onshow = function (val) {
   }
 };
 globalMy.Notification_get_onerror = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -43,6 +59,9 @@ globalMy.Notification_get_onerror = function () {
   return result;
 };
 globalMy.Notification_set_onerror = function (val) {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -51,6 +70,9 @@ globalMy.Notification_set_onerror = function (val) {
   }
 };
 globalMy.Notification_get_onclose = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onclose'];
@@ -60,6 +82,9 @@ globalMy.Notification_get_onclose = function () {
   return result;
 };
 globalMy.Notification_set_onclose = function (val) {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onclose'] = val;
@@ -68,6 +93,9 @@ globalMy.Notification_set_onclose = function (val) {
   }
 };
 globalMy.Notification_get_title = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['title'];
@@ -77,6 +105,9 @@ globalMy.Notification_get_title = function () {
   return result;
 };
 globalMy.Notification_get_dir = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['dir'];
@@ -86,6 +117,9 @@ globalMy.Notification_get_dir = function () {
   return result;
 };
 globalMy.Notification_get_lang = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['lang'];
@@ -95,6 +129,9 @@ globalMy.Notification_get_lang = function () {
   return result;
 };
 globalMy.Notification_get_body = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['body'];
@@ -104,6 +141,9 @@ globalMy.Notification_get_body = function () {
   return result;
 };
 globalMy.Notification_get_tag = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['tag'];
@@ -113,6 +153,9 @@ globalMy.Notification_get_tag = function () {
   return result;
 };
 globalMy.Notification_get_icon = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['icon'];
@@ -122,6 +165,9 @@ globalMy.Notification_get_icon = function () {
   return result;
 };
 globalMy.Notification_get_badge = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['badge'];
@@ -131,6 +177,9 @@ globalMy.Notification_get_badge = function () {
   return result;
 };
 globalMy.Notification_get_vibrate = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['vibrate'];
@@ -140,6 +189,9 @@ globalMy.Notification_get_vibrate = function () {
   return result;
 };
 globalMy.Notification_get_timestamp = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['timestamp'];
@@ -149,6 +201,9 @@ globalMy.Notification_get_timestamp = function () {
   return result;
 };
 globalMy.Notification_get_renotify = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['renotify'];
@@ -158,6 +213,9 @@ globalMy.Notification_get_renotify = function () {
   return result;
 };
 globalMy.Notification_get_silent = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['silent'];
@@ -167,6 +225,9 @@ globalMy.Notification_get_silent = function () {
   return result;
 };
 globalMy.Notification_get_requireInteraction = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['requireInteraction'];
@@ -176,6 +237,9 @@ globalMy.Notification_get_requireInteraction = function () {
   return result;
 };
 globalMy.Notification_get_data = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['data'];
@@ -185,6 +249,9 @@ globalMy.Notification_get_data = function () {
   return result;
 };
 globalMy.Notification_get_actions = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['actions'];
@@ -194,6 +261,9 @@ globalMy.Notification_get_actions = function () {
   return result;
 };
 globalMy.Notification_close = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -203,6 +273,9 @@ globalMy.Notification_close = function () {
   return result;
 };
 globalMy.Notification_get_image = function () {
+  if (!(this instanceof Notification)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['image'];

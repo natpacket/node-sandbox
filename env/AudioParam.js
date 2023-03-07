@@ -1,4 +1,7 @@
 globalMy.AudioParam_get_value = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['value'];
@@ -8,6 +11,9 @@ globalMy.AudioParam_get_value = function () {
   return result;
 };
 globalMy.AudioParam_set_value = function (val) {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['value'] = val;
@@ -16,6 +22,9 @@ globalMy.AudioParam_set_value = function (val) {
   }
 };
 globalMy.AudioParam_get_automationRate = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['automationRate'];
@@ -25,6 +34,9 @@ globalMy.AudioParam_get_automationRate = function () {
   return result;
 };
 globalMy.AudioParam_set_automationRate = function (val) {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['automationRate'] = val;
@@ -33,6 +45,9 @@ globalMy.AudioParam_set_automationRate = function (val) {
   }
 };
 globalMy.AudioParam_get_defaultValue = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['defaultValue'];
@@ -42,6 +57,9 @@ globalMy.AudioParam_get_defaultValue = function () {
   return result;
 };
 globalMy.AudioParam_get_minValue = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['minValue'];
@@ -51,6 +69,9 @@ globalMy.AudioParam_get_minValue = function () {
   return result;
 };
 globalMy.AudioParam_get_maxValue = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['maxValue'];
@@ -60,6 +81,9 @@ globalMy.AudioParam_get_maxValue = function () {
   return result;
 };
 globalMy.AudioParam_cancelAndHoldAtTime = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -68,6 +92,9 @@ globalMy.AudioParam_cancelAndHoldAtTime = function () {
   return result;
 };
 globalMy.AudioParam_cancelScheduledValues = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -76,6 +103,9 @@ globalMy.AudioParam_cancelScheduledValues = function () {
   return result;
 };
 globalMy.AudioParam_exponentialRampToValueAtTime = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -84,6 +114,9 @@ globalMy.AudioParam_exponentialRampToValueAtTime = function () {
   return result;
 };
 globalMy.AudioParam_linearRampToValueAtTime = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -92,6 +125,9 @@ globalMy.AudioParam_linearRampToValueAtTime = function () {
   return result;
 };
 globalMy.AudioParam_setTargetAtTime = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -100,6 +136,9 @@ globalMy.AudioParam_setTargetAtTime = function () {
   return result;
 };
 globalMy.AudioParam_setValueAtTime = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -108,6 +147,9 @@ globalMy.AudioParam_setValueAtTime = function () {
   return result;
 };
 globalMy.AudioParam_setValueCurveAtTime = function () {
+  if (!(this instanceof AudioParam)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

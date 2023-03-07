@@ -1,4 +1,7 @@
 globalMy.HTMLMetaElement_get_name = function () {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_get_name');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLMetaElement_get_name = function () {
   return result;
 };
 globalMy.HTMLMetaElement_set_name = function (val) {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_set_name, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLMetaElement_set_name = function (val) {
   }
 };
 globalMy.HTMLMetaElement_get_httpEquiv = function () {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_get_httpEquiv');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLMetaElement_get_httpEquiv = function () {
   return result;
 };
 globalMy.HTMLMetaElement_set_httpEquiv = function (val) {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_set_httpEquiv, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLMetaElement_set_httpEquiv = function (val) {
   }
 };
 globalMy.HTMLMetaElement_get_content = function () {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_get_content');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLMetaElement_get_content = function () {
   return result;
 };
 globalMy.HTMLMetaElement_set_content = function (val) {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_set_content, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLMetaElement_set_content = function (val) {
   }
 };
 globalMy.HTMLMetaElement_get_media = function () {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_get_media');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLMetaElement_get_media = function () {
   return result;
 };
 globalMy.HTMLMetaElement_set_media = function (val) {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_set_media, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLMetaElement_set_media = function (val) {
   }
 };
 globalMy.HTMLMetaElement_get_scheme = function () {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_get_scheme');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLMetaElement_get_scheme = function () {
   return result;
 };
 globalMy.HTMLMetaElement_set_scheme = function (val) {
+  if (!(this instanceof HTMLMetaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMetaElement_set_scheme, 传参val => ' + val);
   }

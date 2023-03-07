@@ -1,4 +1,7 @@
 globalMy.HTMLHtmlElement_get_version = function () {
+  if (!(this instanceof HTMLHtmlElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHtmlElement_get_version');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLHtmlElement_get_version = function () {
   return result;
 };
 globalMy.HTMLHtmlElement_set_version = function (val) {
+  if (!(this instanceof HTMLHtmlElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHtmlElement_set_version, 传参val => ' + val);
   }

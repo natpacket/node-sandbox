@@ -1,5 +1,9 @@
 // prototype(无构造函数)的原型方法
+// prototype(无构造函数)的原型方法
 globalMy.BaseAudioContext_get_destination = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['destination'];
@@ -9,6 +13,9 @@ globalMy.BaseAudioContext_get_destination = function () {
   return result;
 };
 globalMy.BaseAudioContext_get_currentTime = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['currentTime'];
@@ -18,6 +25,9 @@ globalMy.BaseAudioContext_get_currentTime = function () {
   return result;
 };
 globalMy.BaseAudioContext_get_sampleRate = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['sampleRate'];
@@ -27,6 +37,9 @@ globalMy.BaseAudioContext_get_sampleRate = function () {
   return result;
 };
 globalMy.BaseAudioContext_get_listener = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['listener'];
@@ -36,6 +49,9 @@ globalMy.BaseAudioContext_get_listener = function () {
   return result;
 };
 globalMy.BaseAudioContext_get_state = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['state'];
@@ -45,6 +61,9 @@ globalMy.BaseAudioContext_get_state = function () {
   return result;
 };
 globalMy.BaseAudioContext_get_onstatechange = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onstatechange'];
@@ -54,6 +73,9 @@ globalMy.BaseAudioContext_get_onstatechange = function () {
   return result;
 };
 globalMy.BaseAudioContext_set_onstatechange = function (val) {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onstatechange'] = val;
@@ -62,6 +84,9 @@ globalMy.BaseAudioContext_set_onstatechange = function (val) {
   }
 };
 globalMy.BaseAudioContext_createAnalyser = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -70,6 +95,9 @@ globalMy.BaseAudioContext_createAnalyser = function () {
   return result;
 };
 globalMy.BaseAudioContext_createBiquadFilter = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -78,6 +106,9 @@ globalMy.BaseAudioContext_createBiquadFilter = function () {
   return result;
 };
 globalMy.BaseAudioContext_createBuffer = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -86,6 +117,9 @@ globalMy.BaseAudioContext_createBuffer = function () {
   return result;
 };
 globalMy.BaseAudioContext_createBufferSource = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -94,6 +128,9 @@ globalMy.BaseAudioContext_createBufferSource = function () {
   return result;
 };
 globalMy.BaseAudioContext_createChannelMerger = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -102,6 +139,9 @@ globalMy.BaseAudioContext_createChannelMerger = function () {
   return result;
 };
 globalMy.BaseAudioContext_createChannelSplitter = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -110,6 +150,9 @@ globalMy.BaseAudioContext_createChannelSplitter = function () {
   return result;
 };
 globalMy.BaseAudioContext_createConstantSource = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -118,6 +161,9 @@ globalMy.BaseAudioContext_createConstantSource = function () {
   return result;
 };
 globalMy.BaseAudioContext_createConvolver = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -126,6 +172,9 @@ globalMy.BaseAudioContext_createConvolver = function () {
   return result;
 };
 globalMy.BaseAudioContext_createDelay = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -134,6 +183,9 @@ globalMy.BaseAudioContext_createDelay = function () {
   return result;
 };
 globalMy.BaseAudioContext_createDynamicsCompressor = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -142,6 +194,9 @@ globalMy.BaseAudioContext_createDynamicsCompressor = function () {
   return result;
 };
 globalMy.BaseAudioContext_createGain = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -150,6 +205,9 @@ globalMy.BaseAudioContext_createGain = function () {
   return result;
 };
 globalMy.BaseAudioContext_createIIRFilter = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -158,6 +216,9 @@ globalMy.BaseAudioContext_createIIRFilter = function () {
   return result;
 };
 globalMy.BaseAudioContext_createOscillator = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -166,6 +227,9 @@ globalMy.BaseAudioContext_createOscillator = function () {
   return result;
 };
 globalMy.BaseAudioContext_createPanner = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -174,6 +238,9 @@ globalMy.BaseAudioContext_createPanner = function () {
   return result;
 };
 globalMy.BaseAudioContext_createPeriodicWave = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -182,6 +249,9 @@ globalMy.BaseAudioContext_createPeriodicWave = function () {
   return result;
 };
 globalMy.BaseAudioContext_createScriptProcessor = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -190,6 +260,9 @@ globalMy.BaseAudioContext_createScriptProcessor = function () {
   return result;
 };
 globalMy.BaseAudioContext_createStereoPanner = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -198,6 +271,9 @@ globalMy.BaseAudioContext_createStereoPanner = function () {
   return result;
 };
 globalMy.BaseAudioContext_createWaveShaper = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -206,6 +282,9 @@ globalMy.BaseAudioContext_createWaveShaper = function () {
   return result;
 };
 globalMy.BaseAudioContext_decodeAudioData = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -214,6 +293,9 @@ globalMy.BaseAudioContext_decodeAudioData = function () {
   return result;
 };
 globalMy.BaseAudioContext_get_audioWorklet = function () {
+  if (!(this instanceof BaseAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['audioWorklet'];

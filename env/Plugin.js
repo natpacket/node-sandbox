@@ -1,4 +1,7 @@
 globalMy.Plugin_get_name = function () {
+  if (!(this instanceof Plugin)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['name'];
@@ -8,6 +11,9 @@ globalMy.Plugin_get_name = function () {
   return result;
 };
 globalMy.Plugin_get_filename = function () {
+  if (!(this instanceof Plugin)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['filename'];
@@ -17,6 +23,9 @@ globalMy.Plugin_get_filename = function () {
   return result;
 };
 globalMy.Plugin_get_description = function () {
+  if (!(this instanceof Plugin)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['description'];
@@ -26,6 +35,9 @@ globalMy.Plugin_get_description = function () {
   return result;
 };
 globalMy.Plugin_get_length = function () {
+  if (!(this instanceof Plugin)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -35,6 +47,9 @@ globalMy.Plugin_get_length = function () {
   return result;
 };
 globalMy.Plugin_namedItem = function () {
+  if (!(this instanceof Plugin)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 

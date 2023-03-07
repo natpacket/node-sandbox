@@ -1,4 +1,7 @@
 globalMy.RTCPeerConnection_get_localDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   // debugger;
@@ -9,6 +12,9 @@ globalMy.RTCPeerConnection_get_localDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_currentLocalDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['currentLocalDescription'];
@@ -18,6 +24,9 @@ globalMy.RTCPeerConnection_get_currentLocalDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_pendingLocalDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pendingLocalDescription'];
@@ -27,6 +36,9 @@ globalMy.RTCPeerConnection_get_pendingLocalDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_remoteDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['remoteDescription'];
@@ -36,6 +48,9 @@ globalMy.RTCPeerConnection_get_remoteDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_currentRemoteDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['currentRemoteDescription'];
@@ -45,6 +60,9 @@ globalMy.RTCPeerConnection_get_currentRemoteDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_pendingRemoteDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pendingRemoteDescription'];
@@ -54,6 +72,9 @@ globalMy.RTCPeerConnection_get_pendingRemoteDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_signalingState = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['signalingState'];
@@ -63,6 +84,9 @@ globalMy.RTCPeerConnection_get_signalingState = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_iceGatheringState = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['iceGatheringState'];
@@ -72,6 +96,9 @@ globalMy.RTCPeerConnection_get_iceGatheringState = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_iceConnectionState = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['iceConnectionState'];
@@ -81,6 +108,9 @@ globalMy.RTCPeerConnection_get_iceConnectionState = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_connectionState = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['connectionState'];
@@ -90,6 +120,9 @@ globalMy.RTCPeerConnection_get_connectionState = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_canTrickleIceCandidates = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['canTrickleIceCandidates'];
@@ -99,6 +132,9 @@ globalMy.RTCPeerConnection_get_canTrickleIceCandidates = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_onnegotiationneeded = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onnegotiationneeded'];
@@ -108,6 +144,9 @@ globalMy.RTCPeerConnection_get_onnegotiationneeded = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onnegotiationneeded = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onnegotiationneeded'] = val;
@@ -116,6 +155,9 @@ globalMy.RTCPeerConnection_set_onnegotiationneeded = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onicecandidate = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onicecandidate'];
@@ -125,6 +167,9 @@ globalMy.RTCPeerConnection_get_onicecandidate = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onicecandidate = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onicecandidate'] = val;
@@ -133,6 +178,9 @@ globalMy.RTCPeerConnection_set_onicecandidate = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onsignalingstatechange = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onsignalingstatechange'];
@@ -142,6 +190,9 @@ globalMy.RTCPeerConnection_get_onsignalingstatechange = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onsignalingstatechange = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onsignalingstatechange'] = val;
@@ -150,6 +201,9 @@ globalMy.RTCPeerConnection_set_onsignalingstatechange = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_oniceconnectionstatechange = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['oniceconnectionstatechange'];
@@ -159,6 +213,9 @@ globalMy.RTCPeerConnection_get_oniceconnectionstatechange = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_oniceconnectionstatechange = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['oniceconnectionstatechange'] = val;
@@ -167,6 +224,9 @@ globalMy.RTCPeerConnection_set_oniceconnectionstatechange = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onconnectionstatechange = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onconnectionstatechange'];
@@ -176,6 +236,9 @@ globalMy.RTCPeerConnection_get_onconnectionstatechange = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onconnectionstatechange = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onconnectionstatechange'] = val;
@@ -184,6 +247,9 @@ globalMy.RTCPeerConnection_set_onconnectionstatechange = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onicegatheringstatechange = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onicegatheringstatechange'];
@@ -193,6 +259,9 @@ globalMy.RTCPeerConnection_get_onicegatheringstatechange = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onicegatheringstatechange = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onicegatheringstatechange'] = val;
@@ -201,6 +270,9 @@ globalMy.RTCPeerConnection_set_onicegatheringstatechange = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onicecandidateerror = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onicecandidateerror'];
@@ -210,6 +282,9 @@ globalMy.RTCPeerConnection_get_onicecandidateerror = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onicecandidateerror = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onicecandidateerror'] = val;
@@ -218,6 +293,9 @@ globalMy.RTCPeerConnection_set_onicecandidateerror = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_ontrack = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ontrack'];
@@ -227,6 +305,9 @@ globalMy.RTCPeerConnection_get_ontrack = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_ontrack = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['ontrack'] = val;
@@ -235,6 +316,9 @@ globalMy.RTCPeerConnection_set_ontrack = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_sctp = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['sctp'];
@@ -244,6 +328,9 @@ globalMy.RTCPeerConnection_get_sctp = function () {
   return result;
 };
 globalMy.RTCPeerConnection_get_ondatachannel = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ondatachannel'];
@@ -253,6 +340,9 @@ globalMy.RTCPeerConnection_get_ondatachannel = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_ondatachannel = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['ondatachannel'] = val;
@@ -261,6 +351,9 @@ globalMy.RTCPeerConnection_set_ondatachannel = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onaddstream = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onaddstream'];
@@ -270,6 +363,9 @@ globalMy.RTCPeerConnection_get_onaddstream = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onaddstream = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onaddstream'] = val;
@@ -278,6 +374,9 @@ globalMy.RTCPeerConnection_set_onaddstream = function (val) {
   }
 };
 globalMy.RTCPeerConnection_get_onremovestream = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onremovestream'];
@@ -287,6 +386,9 @@ globalMy.RTCPeerConnection_get_onremovestream = function () {
   return result;
 };
 globalMy.RTCPeerConnection_set_onremovestream = function (val) {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onremovestream'] = val;
@@ -295,6 +397,9 @@ globalMy.RTCPeerConnection_set_onremovestream = function (val) {
   }
 };
 globalMy.RTCPeerConnection_addIceCandidate = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -303,6 +408,9 @@ globalMy.RTCPeerConnection_addIceCandidate = function () {
   return result;
 };
 globalMy.RTCPeerConnection_addStream = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -311,6 +419,9 @@ globalMy.RTCPeerConnection_addStream = function () {
   return result;
 };
 globalMy.RTCPeerConnection_addTrack = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -319,6 +430,9 @@ globalMy.RTCPeerConnection_addTrack = function () {
   return result;
 };
 globalMy.RTCPeerConnection_addTransceiver = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -327,6 +441,9 @@ globalMy.RTCPeerConnection_addTransceiver = function () {
   return result;
 };
 globalMy.RTCPeerConnection_close = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -335,6 +452,9 @@ globalMy.RTCPeerConnection_close = function () {
   return result;
 };
 globalMy.RTCPeerConnection_createAnswer = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -343,6 +463,9 @@ globalMy.RTCPeerConnection_createAnswer = function () {
   return result;
 };
 globalMy.RTCPeerConnection_createDTMFSender = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -351,6 +474,9 @@ globalMy.RTCPeerConnection_createDTMFSender = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getConfiguration = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -359,6 +485,9 @@ globalMy.RTCPeerConnection_getConfiguration = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getLocalStreams = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -367,6 +496,9 @@ globalMy.RTCPeerConnection_getLocalStreams = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getReceivers = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -375,6 +507,9 @@ globalMy.RTCPeerConnection_getReceivers = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getRemoteStreams = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -383,6 +518,9 @@ globalMy.RTCPeerConnection_getRemoteStreams = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getSenders = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -391,6 +529,9 @@ globalMy.RTCPeerConnection_getSenders = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getStats = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -399,6 +540,9 @@ globalMy.RTCPeerConnection_getStats = function () {
   return result;
 };
 globalMy.RTCPeerConnection_getTransceivers = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -407,6 +551,9 @@ globalMy.RTCPeerConnection_getTransceivers = function () {
   return result;
 };
 globalMy.RTCPeerConnection_removeStream = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -415,6 +562,9 @@ globalMy.RTCPeerConnection_removeStream = function () {
   return result;
 };
 globalMy.RTCPeerConnection_removeTrack = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -423,6 +573,9 @@ globalMy.RTCPeerConnection_removeTrack = function () {
   return result;
 };
 globalMy.RTCPeerConnection_restartIce = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -431,6 +584,9 @@ globalMy.RTCPeerConnection_restartIce = function () {
   return result;
 };
 globalMy.RTCPeerConnection_setConfiguration = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -439,6 +595,9 @@ globalMy.RTCPeerConnection_setConfiguration = function () {
   return result;
 };
 globalMy.RTCPeerConnection_setLocalDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   result = new Promise((resolve, reject) => {
@@ -453,6 +612,9 @@ globalMy.RTCPeerConnection_setLocalDescription = function () {
   return result;
 };
 globalMy.RTCPeerConnection_setRemoteDescription = function () {
+  if (!(this instanceof RTCPeerConnection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {

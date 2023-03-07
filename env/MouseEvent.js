@@ -1,5 +1,9 @@
 // MouseEvent
+// MouseEvent
 globalMy.MouseEvent_get_screenX = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['screenX'];
@@ -9,6 +13,9 @@ globalMy.MouseEvent_get_screenX = function () {
   return result;
 };
 globalMy.MouseEvent_get_screenY = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['screenY'];
@@ -18,6 +25,9 @@ globalMy.MouseEvent_get_screenY = function () {
   return result;
 };
 globalMy.MouseEvent_get_clientX = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['clientX'];
@@ -27,6 +37,9 @@ globalMy.MouseEvent_get_clientX = function () {
   return result;
 };
 globalMy.MouseEvent_get_clientY = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['clientY'];
@@ -36,6 +49,9 @@ globalMy.MouseEvent_get_clientY = function () {
   return result;
 };
 globalMy.MouseEvent_get_ctrlKey = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['ctrlKey'];
@@ -45,6 +61,9 @@ globalMy.MouseEvent_get_ctrlKey = function () {
   return result;
 };
 globalMy.MouseEvent_get_shiftKey = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['shiftKey'];
@@ -54,6 +73,9 @@ globalMy.MouseEvent_get_shiftKey = function () {
   return result;
 };
 globalMy.MouseEvent_get_altKey = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['altKey'];
@@ -63,6 +85,9 @@ globalMy.MouseEvent_get_altKey = function () {
   return result;
 };
 globalMy.MouseEvent_get_metaKey = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['metaKey'];
@@ -72,6 +97,9 @@ globalMy.MouseEvent_get_metaKey = function () {
   return result;
 };
 globalMy.MouseEvent_get_button = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['button'];
@@ -81,6 +109,9 @@ globalMy.MouseEvent_get_button = function () {
   return result;
 };
 globalMy.MouseEvent_get_buttons = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['buttons'];
@@ -90,6 +121,9 @@ globalMy.MouseEvent_get_buttons = function () {
   return result;
 };
 globalMy.MouseEvent_get_relatedTarget = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['relatedTarget'];
@@ -99,6 +133,9 @@ globalMy.MouseEvent_get_relatedTarget = function () {
   return result;
 };
 globalMy.MouseEvent_get_pageX = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['pageX'];
@@ -108,6 +145,9 @@ globalMy.MouseEvent_get_pageX = function () {
   return result;
 };
 globalMy.MouseEvent_get_pageY = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['pageY'];
@@ -117,6 +157,9 @@ globalMy.MouseEvent_get_pageY = function () {
   return result;
 };
 globalMy.MouseEvent_get_x = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['x'];
@@ -126,6 +169,9 @@ globalMy.MouseEvent_get_x = function () {
   return result;
 };
 globalMy.MouseEvent_get_y = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['y'];
@@ -135,6 +181,9 @@ globalMy.MouseEvent_get_y = function () {
   return result;
 };
 globalMy.MouseEvent_get_offsetX = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['offsetX'];
@@ -144,6 +193,9 @@ globalMy.MouseEvent_get_offsetX = function () {
   return result;
 };
 globalMy.MouseEvent_get_offsetY = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['offsetY'];
@@ -153,6 +205,9 @@ globalMy.MouseEvent_get_offsetY = function () {
   return result;
 };
 globalMy.MouseEvent_get_movementX = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['movementX'];
@@ -162,6 +217,9 @@ globalMy.MouseEvent_get_movementX = function () {
   return result;
 };
 globalMy.MouseEvent_get_movementY = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['movementY'];
@@ -171,6 +229,9 @@ globalMy.MouseEvent_get_movementY = function () {
   return result;
 };
 globalMy.MouseEvent_get_fromElement = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['fromElement'];
@@ -180,6 +241,9 @@ globalMy.MouseEvent_get_fromElement = function () {
   return result;
 };
 globalMy.MouseEvent_get_toElement = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['toElement'];
@@ -189,6 +253,9 @@ globalMy.MouseEvent_get_toElement = function () {
   return result;
 };
 globalMy.MouseEvent_get_layerX = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['layerX'];
@@ -198,6 +265,9 @@ globalMy.MouseEvent_get_layerX = function () {
   return result;
 };
 globalMy.MouseEvent_get_layerY = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['layerY'];
@@ -207,6 +277,9 @@ globalMy.MouseEvent_get_layerY = function () {
   return result;
 };
 globalMy.MouseEvent_getModifierState = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -216,6 +289,9 @@ globalMy.MouseEvent_getModifierState = function () {
   return result;
 };
 globalMy.MouseEvent_initMouseEvent = function () {
+  if (!(this instanceof MouseEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -225,4 +301,5 @@ globalMy.MouseEvent_initMouseEvent = function () {
   return result;
 };
 
+// Event
 // Event

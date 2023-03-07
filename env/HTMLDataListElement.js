@@ -1,4 +1,7 @@
 globalMy.HTMLDataListElement_get_options = function () {
+  if (!(this instanceof HTMLDataListElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDataListElement_get_options');
   }

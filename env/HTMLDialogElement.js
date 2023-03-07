@@ -1,4 +1,7 @@
 globalMy.HTMLDialogElement_get_open = function () {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_get_open');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLDialogElement_get_open = function () {
   return result;
 };
 globalMy.HTMLDialogElement_set_open = function (val) {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_set_open, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLDialogElement_set_open = function (val) {
   }
 };
 globalMy.HTMLDialogElement_get_returnValue = function () {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_get_returnValue');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLDialogElement_get_returnValue = function () {
   return result;
 };
 globalMy.HTMLDialogElement_set_returnValue = function (val) {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_set_returnValue, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLDialogElement_set_returnValue = function (val) {
   }
 };
 globalMy.HTMLDialogElement_close = function () {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_close, arguments => ', arguments);
   }
@@ -121,6 +136,9 @@ globalMy.HTMLDialogElement_close = function () {
   return result;
 };
 globalMy.HTMLDialogElement_show = function () {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_show, arguments => ', arguments);
   }
@@ -147,6 +165,9 @@ globalMy.HTMLDialogElement_show = function () {
   return result;
 };
 globalMy.HTMLDialogElement_showModal = function () {
+  if (!(this instanceof HTMLDialogElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDialogElement_showModal, arguments => ', arguments);
   }

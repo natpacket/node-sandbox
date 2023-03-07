@@ -1,4 +1,7 @@
 globalMy.VisualViewport_get_offsetLeft = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['offsetLeft'];
@@ -8,6 +11,9 @@ globalMy.VisualViewport_get_offsetLeft = function () {
   return result;
 };
 globalMy.VisualViewport_get_offsetTop = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['offsetTop'];
@@ -17,6 +23,9 @@ globalMy.VisualViewport_get_offsetTop = function () {
   return result;
 };
 globalMy.VisualViewport_get_pageLeft = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pageLeft'];
@@ -26,6 +35,9 @@ globalMy.VisualViewport_get_pageLeft = function () {
   return result;
 };
 globalMy.VisualViewport_get_pageTop = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pageTop'];
@@ -35,6 +47,9 @@ globalMy.VisualViewport_get_pageTop = function () {
   return result;
 };
 globalMy.VisualViewport_get_width = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['width'];
@@ -44,6 +59,9 @@ globalMy.VisualViewport_get_width = function () {
   return result;
 };
 globalMy.VisualViewport_get_height = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['height'];
@@ -53,6 +71,9 @@ globalMy.VisualViewport_get_height = function () {
   return result;
 };
 globalMy.VisualViewport_get_scale = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['scale'];
@@ -62,6 +83,9 @@ globalMy.VisualViewport_get_scale = function () {
   return result;
 };
 globalMy.VisualViewport_get_onresize = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onresize'];
@@ -71,6 +95,9 @@ globalMy.VisualViewport_get_onresize = function () {
   return result;
 };
 globalMy.VisualViewport_set_onresize = function (val) {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onresize'] = val;
@@ -79,6 +106,9 @@ globalMy.VisualViewport_set_onresize = function (val) {
   }
 };
 globalMy.VisualViewport_get_onscroll = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onscroll'];
@@ -88,6 +118,9 @@ globalMy.VisualViewport_get_onscroll = function () {
   return result;
 };
 globalMy.VisualViewport_set_onscroll = function (val) {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onscroll'] = val;
@@ -96,6 +129,9 @@ globalMy.VisualViewport_set_onscroll = function (val) {
   }
 };
 globalMy.VisualViewport_get_segments = function () {
+  if (!(this instanceof VisualViewport)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['segments'];
@@ -104,3 +140,4 @@ globalMy.VisualViewport_get_segments = function () {
   }
   return result;
 };
+// WebGLRenderingContext

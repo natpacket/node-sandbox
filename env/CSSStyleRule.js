@@ -1,4 +1,7 @@
 globalMy.CSSStyleRule_get_selectorText = function () {
+  if (!(this instanceof CSSStyleRule)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleRule_get_selectorText');
   }
@@ -23,6 +26,9 @@ globalMy.CSSStyleRule_get_selectorText = function () {
   return result;
 };
 globalMy.CSSStyleRule_set_selectorText = function (val) {
+  if (!(this instanceof CSSStyleRule)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleRule_set_selectorText, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.CSSStyleRule_set_selectorText = function (val) {
   }
 };
 globalMy.CSSStyleRule_get_style = function () {
+  if (!(this instanceof CSSStyleRule)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleRule_get_style');
   }
@@ -71,6 +80,9 @@ globalMy.CSSStyleRule_get_style = function () {
   return result;
 };
 globalMy.CSSStyleRule_set_style = function (val) {
+  if (!(this instanceof CSSStyleRule)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleRule_set_style, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.CSSStyleRule_set_style = function (val) {
   }
 };
 globalMy.CSSStyleRule_get_styleMap = function () {
+  if (!(this instanceof CSSStyleRule)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleRule_get_styleMap');
   }

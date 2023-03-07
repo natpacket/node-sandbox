@@ -1,4 +1,7 @@
 globalMy.HTMLLegendElement_get_form = function () {
+  if (!(this instanceof HTMLLegendElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLegendElement_get_form');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLLegendElement_get_form = function () {
   return result;
 };
 globalMy.HTMLLegendElement_get_align = function () {
+  if (!(this instanceof HTMLLegendElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLegendElement_get_align');
   }
@@ -47,6 +53,9 @@ globalMy.HTMLLegendElement_get_align = function () {
   return result;
 };
 globalMy.HTMLLegendElement_set_align = function (val) {
+  if (!(this instanceof HTMLLegendElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLegendElement_set_align, 传参val => ' + val);
   }

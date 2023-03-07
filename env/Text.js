@@ -1,4 +1,7 @@
 globalMy.Text_get_wholeText = function () {
+  if (!(this instanceof Text)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Text_get_wholeText');
   }
@@ -23,6 +26,9 @@ globalMy.Text_get_wholeText = function () {
   return result;
 };
 globalMy.Text_get_assignedSlot = function () {
+  if (!(this instanceof Text)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Text_get_assignedSlot');
   }
@@ -47,6 +53,9 @@ globalMy.Text_get_assignedSlot = function () {
   return result;
 };
 globalMy.Text_splitText = function () {
+  if (!(this instanceof Text)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了Text_splitText, arguments => ', arguments);
   }
@@ -73,6 +82,9 @@ globalMy.Text_splitText = function () {
   return result;
 };
 globalMy.Text_get_wholeText = function () {
+  if (!(this instanceof Text)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['wholeText'];
@@ -82,6 +94,9 @@ globalMy.Text_get_wholeText = function () {
   return result;
 };
 globalMy.Text_get_assignedSlot = function () {
+  if (!(this instanceof Text)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['assignedSlot'];
@@ -91,6 +106,9 @@ globalMy.Text_get_assignedSlot = function () {
   return result;
 };
 globalMy.Text_splitText = function () {
+  if (!(this instanceof Text)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 

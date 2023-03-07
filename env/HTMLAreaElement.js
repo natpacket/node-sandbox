@@ -1,4 +1,7 @@
 globalMy.HTMLAreaElement_get_alt = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_alt');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLAreaElement_get_alt = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_alt = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_alt, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLAreaElement_set_alt = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_coords = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_coords');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLAreaElement_get_coords = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_coords = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_coords, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLAreaElement_set_coords = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_download = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_download');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLAreaElement_get_download = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_download = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_download, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLAreaElement_set_download = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_shape = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_shape');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLAreaElement_get_shape = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_shape = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_shape, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLAreaElement_set_shape = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_target = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_target');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLAreaElement_get_target = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_target = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_target, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLAreaElement_set_target = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_ping = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_ping');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLAreaElement_get_ping = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_ping = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_ping, 传参val => ' + val);
   }
@@ -287,6 +323,9 @@ globalMy.HTMLAreaElement_set_ping = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_rel = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_rel');
   }
@@ -311,6 +350,9 @@ globalMy.HTMLAreaElement_get_rel = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_rel = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_rel, 传参val => ' + val);
   }
@@ -335,6 +377,9 @@ globalMy.HTMLAreaElement_set_rel = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_relList = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_relList');
   }
@@ -359,6 +404,9 @@ globalMy.HTMLAreaElement_get_relList = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_relList = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_relList, 传参val => ' + val);
   }
@@ -383,6 +431,9 @@ globalMy.HTMLAreaElement_set_relList = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_referrerPolicy = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_referrerPolicy');
   }
@@ -407,6 +458,9 @@ globalMy.HTMLAreaElement_get_referrerPolicy = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_referrerPolicy = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_referrerPolicy, 传参val => ' + val);
   }
@@ -431,6 +485,9 @@ globalMy.HTMLAreaElement_set_referrerPolicy = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_noHref = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_noHref');
   }
@@ -455,6 +512,9 @@ globalMy.HTMLAreaElement_get_noHref = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_noHref = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_noHref, 传参val => ' + val);
   }
@@ -479,6 +539,9 @@ globalMy.HTMLAreaElement_set_noHref = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_origin = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_origin');
   }
@@ -503,6 +566,9 @@ globalMy.HTMLAreaElement_get_origin = function () {
   return result;
 };
 globalMy.HTMLAreaElement_get_protocol = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_protocol');
   }
@@ -527,6 +593,9 @@ globalMy.HTMLAreaElement_get_protocol = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_protocol = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_protocol, 传参val => ' + val);
   }
@@ -551,6 +620,9 @@ globalMy.HTMLAreaElement_set_protocol = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_username = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_username');
   }
@@ -575,6 +647,9 @@ globalMy.HTMLAreaElement_get_username = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_username = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_username, 传参val => ' + val);
   }
@@ -599,6 +674,9 @@ globalMy.HTMLAreaElement_set_username = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_password = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_password');
   }
@@ -623,6 +701,9 @@ globalMy.HTMLAreaElement_get_password = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_password = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_password, 传参val => ' + val);
   }
@@ -647,6 +728,9 @@ globalMy.HTMLAreaElement_set_password = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_host = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_host');
   }
@@ -671,6 +755,9 @@ globalMy.HTMLAreaElement_get_host = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_host = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_host, 传参val => ' + val);
   }
@@ -695,6 +782,9 @@ globalMy.HTMLAreaElement_set_host = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_hostname = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_hostname');
   }
@@ -719,6 +809,9 @@ globalMy.HTMLAreaElement_get_hostname = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_hostname = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_hostname, 传参val => ' + val);
   }
@@ -743,6 +836,9 @@ globalMy.HTMLAreaElement_set_hostname = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_port = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_port');
   }
@@ -767,6 +863,9 @@ globalMy.HTMLAreaElement_get_port = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_port = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_port, 传参val => ' + val);
   }
@@ -791,6 +890,9 @@ globalMy.HTMLAreaElement_set_port = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_pathname = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_pathname');
   }
@@ -815,6 +917,9 @@ globalMy.HTMLAreaElement_get_pathname = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_pathname = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_pathname, 传参val => ' + val);
   }
@@ -839,6 +944,9 @@ globalMy.HTMLAreaElement_set_pathname = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_search = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_search');
   }
@@ -863,6 +971,9 @@ globalMy.HTMLAreaElement_get_search = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_search = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_search, 传参val => ' + val);
   }
@@ -887,6 +998,9 @@ globalMy.HTMLAreaElement_set_search = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_hash = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_hash');
   }
@@ -911,6 +1025,9 @@ globalMy.HTMLAreaElement_get_hash = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_hash = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_hash, 传参val => ' + val);
   }
@@ -935,6 +1052,9 @@ globalMy.HTMLAreaElement_set_hash = function (val) {
   }
 };
 globalMy.HTMLAreaElement_get_href = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_get_href');
   }
@@ -959,6 +1079,9 @@ globalMy.HTMLAreaElement_get_href = function () {
   return result;
 };
 globalMy.HTMLAreaElement_set_href = function (val) {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_set_href, 传参val => ' + val);
   }
@@ -983,6 +1106,9 @@ globalMy.HTMLAreaElement_set_href = function (val) {
   }
 };
 globalMy.HTMLAreaElement_toString = function () {
+  if (!(this instanceof HTMLAreaElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAreaElement_toString, arguments => ', arguments);
   }

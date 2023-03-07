@@ -1,4 +1,7 @@
 globalMy.CanvasRenderingContext2D_get_canvas = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_canvas');
   }
@@ -23,6 +26,9 @@ globalMy.CanvasRenderingContext2D_get_canvas = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_get_globalAlpha = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_globalAlpha');
   }
@@ -47,6 +53,9 @@ globalMy.CanvasRenderingContext2D_get_globalAlpha = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_globalAlpha = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_globalAlpha, 传参val => ' + val);
   }
@@ -71,6 +80,9 @@ globalMy.CanvasRenderingContext2D_set_globalAlpha = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_globalCompositeOperation = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_globalCompositeOperation');
   }
@@ -95,6 +107,9 @@ globalMy.CanvasRenderingContext2D_get_globalCompositeOperation = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_globalCompositeOperation = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_globalCompositeOperation, 传参val => ' + val);
   }
@@ -119,6 +134,9 @@ globalMy.CanvasRenderingContext2D_set_globalCompositeOperation = function (val) 
   }
 };
 globalMy.CanvasRenderingContext2D_get_filter = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_filter');
   }
@@ -143,6 +161,9 @@ globalMy.CanvasRenderingContext2D_get_filter = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_filter = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_filter, 传参val => ' + val);
   }
@@ -167,6 +188,9 @@ globalMy.CanvasRenderingContext2D_set_filter = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_imageSmoothingEnabled = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_imageSmoothingEnabled');
   }
@@ -191,6 +215,9 @@ globalMy.CanvasRenderingContext2D_get_imageSmoothingEnabled = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_imageSmoothingEnabled = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_imageSmoothingEnabled, 传参val => ' + val);
   }
@@ -215,6 +242,9 @@ globalMy.CanvasRenderingContext2D_set_imageSmoothingEnabled = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_imageSmoothingQuality = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_imageSmoothingQuality');
   }
@@ -239,6 +269,9 @@ globalMy.CanvasRenderingContext2D_get_imageSmoothingQuality = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_imageSmoothingQuality = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_imageSmoothingQuality, 传参val => ' + val);
   }
@@ -263,6 +296,9 @@ globalMy.CanvasRenderingContext2D_set_imageSmoothingQuality = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_strokeStyle = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_strokeStyle');
   }
@@ -287,6 +323,9 @@ globalMy.CanvasRenderingContext2D_get_strokeStyle = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_strokeStyle = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_strokeStyle, 传参val => ' + val);
   }
@@ -311,6 +350,9 @@ globalMy.CanvasRenderingContext2D_set_strokeStyle = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_fillStyle = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_fillStyle');
   }
@@ -335,6 +377,9 @@ globalMy.CanvasRenderingContext2D_get_fillStyle = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_fillStyle = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_fillStyle, 传参val => ' + val);
   }
@@ -359,6 +404,9 @@ globalMy.CanvasRenderingContext2D_set_fillStyle = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_shadowOffsetX = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_shadowOffsetX');
   }
@@ -383,6 +431,9 @@ globalMy.CanvasRenderingContext2D_get_shadowOffsetX = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_shadowOffsetX = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_shadowOffsetX, 传参val => ' + val);
   }
@@ -407,6 +458,9 @@ globalMy.CanvasRenderingContext2D_set_shadowOffsetX = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_shadowOffsetY = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_shadowOffsetY');
   }
@@ -431,6 +485,9 @@ globalMy.CanvasRenderingContext2D_get_shadowOffsetY = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_shadowOffsetY = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_shadowOffsetY, 传参val => ' + val);
   }
@@ -455,6 +512,9 @@ globalMy.CanvasRenderingContext2D_set_shadowOffsetY = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_shadowBlur = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_shadowBlur');
   }
@@ -479,6 +539,9 @@ globalMy.CanvasRenderingContext2D_get_shadowBlur = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_shadowBlur = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_shadowBlur, 传参val => ' + val);
   }
@@ -503,6 +566,9 @@ globalMy.CanvasRenderingContext2D_set_shadowBlur = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_shadowColor = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_shadowColor');
   }
@@ -527,6 +593,9 @@ globalMy.CanvasRenderingContext2D_get_shadowColor = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_shadowColor = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_shadowColor, 传参val => ' + val);
   }
@@ -551,6 +620,9 @@ globalMy.CanvasRenderingContext2D_set_shadowColor = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_lineWidth = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_lineWidth');
   }
@@ -575,6 +647,9 @@ globalMy.CanvasRenderingContext2D_get_lineWidth = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_lineWidth = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_lineWidth, 传参val => ' + val);
   }
@@ -599,6 +674,9 @@ globalMy.CanvasRenderingContext2D_set_lineWidth = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_lineCap = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_lineCap');
   }
@@ -623,6 +701,9 @@ globalMy.CanvasRenderingContext2D_get_lineCap = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_lineCap = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_lineCap, 传参val => ' + val);
   }
@@ -647,6 +728,9 @@ globalMy.CanvasRenderingContext2D_set_lineCap = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_lineJoin = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_lineJoin');
   }
@@ -671,6 +755,9 @@ globalMy.CanvasRenderingContext2D_get_lineJoin = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_lineJoin = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_lineJoin, 传参val => ' + val);
   }
@@ -695,6 +782,9 @@ globalMy.CanvasRenderingContext2D_set_lineJoin = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_miterLimit = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_miterLimit');
   }
@@ -719,6 +809,9 @@ globalMy.CanvasRenderingContext2D_get_miterLimit = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_miterLimit = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_miterLimit, 传参val => ' + val);
   }
@@ -743,6 +836,9 @@ globalMy.CanvasRenderingContext2D_set_miterLimit = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_lineDashOffset = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_lineDashOffset');
   }
@@ -767,6 +863,9 @@ globalMy.CanvasRenderingContext2D_get_lineDashOffset = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_lineDashOffset = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_lineDashOffset, 传参val => ' + val);
   }
@@ -791,6 +890,9 @@ globalMy.CanvasRenderingContext2D_set_lineDashOffset = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_font = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_font');
   }
@@ -815,6 +917,9 @@ globalMy.CanvasRenderingContext2D_get_font = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_font = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_font, 传参val => ' + val);
   }
@@ -839,6 +944,9 @@ globalMy.CanvasRenderingContext2D_set_font = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_textAlign = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_textAlign');
   }
@@ -863,6 +971,9 @@ globalMy.CanvasRenderingContext2D_get_textAlign = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_textAlign = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_textAlign, 传参val => ' + val);
   }
@@ -887,6 +998,9 @@ globalMy.CanvasRenderingContext2D_set_textAlign = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_textBaseline = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_textBaseline');
   }
@@ -911,6 +1025,9 @@ globalMy.CanvasRenderingContext2D_get_textBaseline = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_textBaseline = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_textBaseline, 传参val => ' + val);
   }
@@ -935,6 +1052,9 @@ globalMy.CanvasRenderingContext2D_set_textBaseline = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_direction = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_direction');
   }
@@ -959,6 +1079,9 @@ globalMy.CanvasRenderingContext2D_get_direction = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_direction = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_direction, 传参val => ' + val);
   }
@@ -983,6 +1106,9 @@ globalMy.CanvasRenderingContext2D_set_direction = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_fontKerning = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_fontKerning');
   }
@@ -1007,6 +1133,9 @@ globalMy.CanvasRenderingContext2D_get_fontKerning = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_fontKerning = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_fontKerning, 传参val => ' + val);
   }
@@ -1031,6 +1160,9 @@ globalMy.CanvasRenderingContext2D_set_fontKerning = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_fontStretch = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_fontStretch');
   }
@@ -1055,6 +1187,9 @@ globalMy.CanvasRenderingContext2D_get_fontStretch = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_fontStretch = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_fontStretch, 传参val => ' + val);
   }
@@ -1079,6 +1214,9 @@ globalMy.CanvasRenderingContext2D_set_fontStretch = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_fontVariantCaps = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_fontVariantCaps');
   }
@@ -1103,6 +1241,9 @@ globalMy.CanvasRenderingContext2D_get_fontVariantCaps = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_fontVariantCaps = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_fontVariantCaps, 传参val => ' + val);
   }
@@ -1127,6 +1268,9 @@ globalMy.CanvasRenderingContext2D_set_fontVariantCaps = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_letterSpacing = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_letterSpacing');
   }
@@ -1151,6 +1295,9 @@ globalMy.CanvasRenderingContext2D_get_letterSpacing = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_letterSpacing = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_letterSpacing, 传参val => ' + val);
   }
@@ -1175,6 +1322,9 @@ globalMy.CanvasRenderingContext2D_set_letterSpacing = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_textRendering = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_textRendering');
   }
@@ -1199,6 +1349,9 @@ globalMy.CanvasRenderingContext2D_get_textRendering = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_textRendering = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_textRendering, 传参val => ' + val);
   }
@@ -1223,6 +1376,9 @@ globalMy.CanvasRenderingContext2D_set_textRendering = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_get_wordSpacing = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_get_wordSpacing');
   }
@@ -1247,6 +1403,9 @@ globalMy.CanvasRenderingContext2D_get_wordSpacing = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_set_wordSpacing = function (val) {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_set_wordSpacing, 传参val => ' + val);
   }
@@ -1271,6 +1430,9 @@ globalMy.CanvasRenderingContext2D_set_wordSpacing = function (val) {
   }
 };
 globalMy.CanvasRenderingContext2D_clip = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_clip, arguments => ', arguments);
   }
@@ -1297,6 +1459,9 @@ globalMy.CanvasRenderingContext2D_clip = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_createConicGradient = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_createConicGradient, arguments => ', arguments);
   }
@@ -1323,6 +1488,9 @@ globalMy.CanvasRenderingContext2D_createConicGradient = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_createImageData = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_createImageData, arguments => ', arguments);
   }
@@ -1349,6 +1517,9 @@ globalMy.CanvasRenderingContext2D_createImageData = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_createLinearGradient = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_createLinearGradient, arguments => ', arguments);
   }
@@ -1375,6 +1546,9 @@ globalMy.CanvasRenderingContext2D_createLinearGradient = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_createPattern = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_createPattern, arguments => ', arguments);
   }
@@ -1401,6 +1575,9 @@ globalMy.CanvasRenderingContext2D_createPattern = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_createRadialGradient = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_createRadialGradient, arguments => ', arguments);
   }
@@ -1427,6 +1604,9 @@ globalMy.CanvasRenderingContext2D_createRadialGradient = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_drawFocusIfNeeded = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_drawFocusIfNeeded, arguments => ', arguments);
   }
@@ -1453,6 +1633,9 @@ globalMy.CanvasRenderingContext2D_drawFocusIfNeeded = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_drawImage = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_drawImage, arguments => ', arguments);
   }
@@ -1479,6 +1662,9 @@ globalMy.CanvasRenderingContext2D_drawImage = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_fill = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_fill, arguments => ', arguments);
   }
@@ -1505,6 +1691,9 @@ globalMy.CanvasRenderingContext2D_fill = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_fillText = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_fillText, arguments => ', arguments);
   }
@@ -1531,6 +1720,9 @@ globalMy.CanvasRenderingContext2D_fillText = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_getContextAttributes = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_getContextAttributes, arguments => ', arguments);
   }
@@ -1557,6 +1749,9 @@ globalMy.CanvasRenderingContext2D_getContextAttributes = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_getImageData = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_getImageData, arguments => ', arguments);
   }
@@ -1583,6 +1778,9 @@ globalMy.CanvasRenderingContext2D_getImageData = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_getLineDash = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_getLineDash, arguments => ', arguments);
   }
@@ -1609,6 +1807,9 @@ globalMy.CanvasRenderingContext2D_getLineDash = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_getTransform = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_getTransform, arguments => ', arguments);
   }
@@ -1635,6 +1836,9 @@ globalMy.CanvasRenderingContext2D_getTransform = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_isContextLost = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_isContextLost, arguments => ', arguments);
   }
@@ -1661,6 +1865,9 @@ globalMy.CanvasRenderingContext2D_isContextLost = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_isPointInPath = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_isPointInPath, arguments => ', arguments);
   }
@@ -1687,6 +1894,9 @@ globalMy.CanvasRenderingContext2D_isPointInPath = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_isPointInStroke = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_isPointInStroke, arguments => ', arguments);
   }
@@ -1713,6 +1923,9 @@ globalMy.CanvasRenderingContext2D_isPointInStroke = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_measureText = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_measureText, arguments => ', arguments);
   }
@@ -1739,6 +1952,9 @@ globalMy.CanvasRenderingContext2D_measureText = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_putImageData = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_putImageData, arguments => ', arguments);
   }
@@ -1765,6 +1981,9 @@ globalMy.CanvasRenderingContext2D_putImageData = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_reset = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_reset, arguments => ', arguments);
   }
@@ -1791,6 +2010,9 @@ globalMy.CanvasRenderingContext2D_reset = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_roundRect = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_roundRect, arguments => ', arguments);
   }
@@ -1817,6 +2039,9 @@ globalMy.CanvasRenderingContext2D_roundRect = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_save = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_save, arguments => ', arguments);
   }
@@ -1843,6 +2068,9 @@ globalMy.CanvasRenderingContext2D_save = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_scale = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_scale, arguments => ', arguments);
   }
@@ -1869,6 +2097,9 @@ globalMy.CanvasRenderingContext2D_scale = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_setLineDash = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_setLineDash, arguments => ', arguments);
   }
@@ -1895,6 +2126,9 @@ globalMy.CanvasRenderingContext2D_setLineDash = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_setTransform = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_setTransform, arguments => ', arguments);
   }
@@ -1921,6 +2155,9 @@ globalMy.CanvasRenderingContext2D_setTransform = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_stroke = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_stroke, arguments => ', arguments);
   }
@@ -1947,6 +2184,9 @@ globalMy.CanvasRenderingContext2D_stroke = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_strokeText = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_strokeText, arguments => ', arguments);
   }
@@ -1973,6 +2213,9 @@ globalMy.CanvasRenderingContext2D_strokeText = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_transform = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_transform, arguments => ', arguments);
   }
@@ -1999,6 +2242,9 @@ globalMy.CanvasRenderingContext2D_transform = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_translate = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_translate, arguments => ', arguments);
   }
@@ -2025,6 +2271,9 @@ globalMy.CanvasRenderingContext2D_translate = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_arc = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_arc, arguments => ', arguments);
   }
@@ -2051,6 +2300,9 @@ globalMy.CanvasRenderingContext2D_arc = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_arcTo = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_arcTo, arguments => ', arguments);
   }
@@ -2077,6 +2329,9 @@ globalMy.CanvasRenderingContext2D_arcTo = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_beginPath = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_beginPath, arguments => ', arguments);
   }
@@ -2103,6 +2358,9 @@ globalMy.CanvasRenderingContext2D_beginPath = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_bezierCurveTo = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_bezierCurveTo, arguments => ', arguments);
   }
@@ -2129,6 +2387,9 @@ globalMy.CanvasRenderingContext2D_bezierCurveTo = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_clearRect = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_clearRect, arguments => ', arguments);
   }
@@ -2155,6 +2416,9 @@ globalMy.CanvasRenderingContext2D_clearRect = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_closePath = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_closePath, arguments => ', arguments);
   }
@@ -2181,6 +2445,9 @@ globalMy.CanvasRenderingContext2D_closePath = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_ellipse = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_ellipse, arguments => ', arguments);
   }
@@ -2207,6 +2474,9 @@ globalMy.CanvasRenderingContext2D_ellipse = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_fillRect = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_fillRect, arguments => ', arguments);
   }
@@ -2233,6 +2503,9 @@ globalMy.CanvasRenderingContext2D_fillRect = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_lineTo = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_lineTo, arguments => ', arguments);
   }
@@ -2259,6 +2532,9 @@ globalMy.CanvasRenderingContext2D_lineTo = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_moveTo = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_moveTo, arguments => ', arguments);
   }
@@ -2285,6 +2561,9 @@ globalMy.CanvasRenderingContext2D_moveTo = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_quadraticCurveTo = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_quadraticCurveTo, arguments => ', arguments);
   }
@@ -2311,6 +2590,9 @@ globalMy.CanvasRenderingContext2D_quadraticCurveTo = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_rect = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_rect, arguments => ', arguments);
   }
@@ -2337,6 +2619,9 @@ globalMy.CanvasRenderingContext2D_rect = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_resetTransform = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_resetTransform, arguments => ', arguments);
   }
@@ -2363,6 +2648,9 @@ globalMy.CanvasRenderingContext2D_resetTransform = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_restore = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_restore, arguments => ', arguments);
   }
@@ -2389,6 +2677,9 @@ globalMy.CanvasRenderingContext2D_restore = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_rotate = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_rotate, arguments => ', arguments);
   }
@@ -2415,6 +2706,9 @@ globalMy.CanvasRenderingContext2D_rotate = function () {
   return result;
 };
 globalMy.CanvasRenderingContext2D_strokeRect = function () {
+  if (!(this instanceof CanvasRenderingContext2D)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasRenderingContext2D_strokeRect, arguments => ', arguments);
   }

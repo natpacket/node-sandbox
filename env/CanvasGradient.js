@@ -1,4 +1,7 @@
 globalMy.CanvasGradient_addColorStop = function () {
+  if (!(this instanceof CanvasGradient)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CanvasGradient_addColorStop, arguments => ', arguments);
   }

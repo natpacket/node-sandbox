@@ -70,7 +70,10 @@ new Promise((resolve, reject) => {
     resolve(event);
 }).then((event) => {
     window.dispatchEvent(event);
-});` + endCode;
+});` + endCode + `
+globalMy.console.log(document.cookie);
+globalMy.console.log(localStorage._$rc);
+`;
     vm.runInNewContext(code, sandbox);
     console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 }
@@ -114,8 +117,8 @@ console.log(encodeURIComponent((new window.ABC).z("et6DuZOBezkCoI40DI0QqQ9bHByFP
     console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 }
 
-// runRsVmp();
-runBoss();
+runRsVmp();
+// runBoss();
 
 
 //// vm2

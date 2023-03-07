@@ -1,4 +1,7 @@
 globalMy.HTMLImageElement_get_alt = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_alt');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLImageElement_get_alt = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_alt = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_alt, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLImageElement_set_alt = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_src = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_src');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLImageElement_get_src = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_src = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_src, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLImageElement_set_src = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_srcset = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_srcset');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLImageElement_get_srcset = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_srcset = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_srcset, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLImageElement_set_srcset = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_sizes = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_sizes');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLImageElement_get_sizes = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_sizes = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_sizes, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLImageElement_set_sizes = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_crossOrigin = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_crossOrigin');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLImageElement_get_crossOrigin = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_crossOrigin = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_crossOrigin, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLImageElement_set_crossOrigin = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_useMap = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_useMap');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLImageElement_get_useMap = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_useMap = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_useMap, 传参val => ' + val);
   }
@@ -287,6 +323,9 @@ globalMy.HTMLImageElement_set_useMap = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_isMap = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_isMap');
   }
@@ -311,6 +350,9 @@ globalMy.HTMLImageElement_get_isMap = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_isMap = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_isMap, 传参val => ' + val);
   }
@@ -335,6 +377,9 @@ globalMy.HTMLImageElement_set_isMap = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_width = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_width');
   }
@@ -359,6 +404,9 @@ globalMy.HTMLImageElement_get_width = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_width = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_width, 传参val => ' + val);
   }
@@ -383,6 +431,9 @@ globalMy.HTMLImageElement_set_width = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_height = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_height');
   }
@@ -407,6 +458,9 @@ globalMy.HTMLImageElement_get_height = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_height = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_height, 传参val => ' + val);
   }
@@ -431,6 +485,9 @@ globalMy.HTMLImageElement_set_height = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_naturalWidth = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_naturalWidth');
   }
@@ -455,6 +512,9 @@ globalMy.HTMLImageElement_get_naturalWidth = function () {
   return result;
 };
 globalMy.HTMLImageElement_get_naturalHeight = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_naturalHeight');
   }
@@ -479,6 +539,9 @@ globalMy.HTMLImageElement_get_naturalHeight = function () {
   return result;
 };
 globalMy.HTMLImageElement_get_complete = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_complete');
   }
@@ -503,6 +566,9 @@ globalMy.HTMLImageElement_get_complete = function () {
   return result;
 };
 globalMy.HTMLImageElement_get_currentSrc = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_currentSrc');
   }
@@ -527,6 +593,9 @@ globalMy.HTMLImageElement_get_currentSrc = function () {
   return result;
 };
 globalMy.HTMLImageElement_get_referrerPolicy = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_referrerPolicy');
   }
@@ -551,6 +620,9 @@ globalMy.HTMLImageElement_get_referrerPolicy = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_referrerPolicy = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_referrerPolicy, 传参val => ' + val);
   }
@@ -575,6 +647,9 @@ globalMy.HTMLImageElement_set_referrerPolicy = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_decoding = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_decoding');
   }
@@ -599,6 +674,9 @@ globalMy.HTMLImageElement_get_decoding = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_decoding = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_decoding, 传参val => ' + val);
   }
@@ -623,6 +701,9 @@ globalMy.HTMLImageElement_set_decoding = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_name = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_name');
   }
@@ -647,6 +728,9 @@ globalMy.HTMLImageElement_get_name = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_name = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_name, 传参val => ' + val);
   }
@@ -671,6 +755,9 @@ globalMy.HTMLImageElement_set_name = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_lowsrc = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_lowsrc');
   }
@@ -695,6 +782,9 @@ globalMy.HTMLImageElement_get_lowsrc = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_lowsrc = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_lowsrc, 传参val => ' + val);
   }
@@ -719,6 +809,9 @@ globalMy.HTMLImageElement_set_lowsrc = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_align = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_align');
   }
@@ -743,6 +836,9 @@ globalMy.HTMLImageElement_get_align = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_align = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_align, 传参val => ' + val);
   }
@@ -767,6 +863,9 @@ globalMy.HTMLImageElement_set_align = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_hspace = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_hspace');
   }
@@ -791,6 +890,9 @@ globalMy.HTMLImageElement_get_hspace = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_hspace = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_hspace, 传参val => ' + val);
   }
@@ -815,6 +917,9 @@ globalMy.HTMLImageElement_set_hspace = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_vspace = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_vspace');
   }
@@ -839,6 +944,9 @@ globalMy.HTMLImageElement_get_vspace = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_vspace = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_vspace, 传参val => ' + val);
   }
@@ -863,6 +971,9 @@ globalMy.HTMLImageElement_set_vspace = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_longDesc = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_longDesc');
   }
@@ -887,6 +998,9 @@ globalMy.HTMLImageElement_get_longDesc = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_longDesc = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_longDesc, 传参val => ' + val);
   }
@@ -911,6 +1025,9 @@ globalMy.HTMLImageElement_set_longDesc = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_border = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_border');
   }
@@ -935,6 +1052,9 @@ globalMy.HTMLImageElement_get_border = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_border = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_border, 传参val => ' + val);
   }
@@ -959,6 +1079,9 @@ globalMy.HTMLImageElement_set_border = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_x = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_x');
   }
@@ -983,6 +1106,9 @@ globalMy.HTMLImageElement_get_x = function () {
   return result;
 };
 globalMy.HTMLImageElement_get_y = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_y');
   }
@@ -1007,6 +1133,9 @@ globalMy.HTMLImageElement_get_y = function () {
   return result;
 };
 globalMy.HTMLImageElement_decode = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_decode, arguments => ', arguments);
   }
@@ -1033,6 +1162,9 @@ globalMy.HTMLImageElement_decode = function () {
   return result;
 };
 globalMy.HTMLImageElement_get_fetchPriority = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_fetchPriority');
   }
@@ -1057,6 +1189,9 @@ globalMy.HTMLImageElement_get_fetchPriority = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_fetchPriority = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_fetchPriority, 传参val => ' + val);
   }
@@ -1081,6 +1216,9 @@ globalMy.HTMLImageElement_set_fetchPriority = function (val) {
   }
 };
 globalMy.HTMLImageElement_get_loading = function () {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_get_loading');
   }
@@ -1105,6 +1243,9 @@ globalMy.HTMLImageElement_get_loading = function () {
   return result;
 };
 globalMy.HTMLImageElement_set_loading = function (val) {
+  if (!(this instanceof HTMLImageElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLImageElement_set_loading, 传参val => ' + val);
   }

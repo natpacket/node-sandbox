@@ -1,4 +1,7 @@
 globalMy.HTMLAnchorElement_get_target = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_target');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLAnchorElement_get_target = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_target = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_target, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLAnchorElement_set_target = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_download = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_download');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLAnchorElement_get_download = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_download = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_download, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLAnchorElement_set_download = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_ping = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_ping');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLAnchorElement_get_ping = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_ping = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_ping, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLAnchorElement_set_ping = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_rel = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_rel');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLAnchorElement_get_rel = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_rel = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_rel, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLAnchorElement_set_rel = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_relList = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_relList');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLAnchorElement_get_relList = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_relList = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_relList, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLAnchorElement_set_relList = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_hreflang = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_hreflang');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLAnchorElement_get_hreflang = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_hreflang = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_hreflang, 传参val => ' + val);
   }
@@ -287,6 +323,9 @@ globalMy.HTMLAnchorElement_set_hreflang = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_type = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_type');
   }
@@ -311,6 +350,9 @@ globalMy.HTMLAnchorElement_get_type = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_type = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_type, 传参val => ' + val);
   }
@@ -335,6 +377,9 @@ globalMy.HTMLAnchorElement_set_type = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_referrerPolicy = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_referrerPolicy');
   }
@@ -359,6 +404,9 @@ globalMy.HTMLAnchorElement_get_referrerPolicy = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_referrerPolicy = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_referrerPolicy, 传参val => ' + val);
   }
@@ -383,6 +431,9 @@ globalMy.HTMLAnchorElement_set_referrerPolicy = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_text = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_text');
   }
@@ -407,6 +458,9 @@ globalMy.HTMLAnchorElement_get_text = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_text = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_text, 传参val => ' + val);
   }
@@ -431,6 +485,9 @@ globalMy.HTMLAnchorElement_set_text = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_coords = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_coords');
   }
@@ -455,6 +512,9 @@ globalMy.HTMLAnchorElement_get_coords = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_coords = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_coords, 传参val => ' + val);
   }
@@ -479,6 +539,9 @@ globalMy.HTMLAnchorElement_set_coords = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_charset = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_charset');
   }
@@ -503,6 +566,9 @@ globalMy.HTMLAnchorElement_get_charset = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_charset = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_charset, 传参val => ' + val);
   }
@@ -527,6 +593,9 @@ globalMy.HTMLAnchorElement_set_charset = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_name = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_name');
   }
@@ -551,6 +620,9 @@ globalMy.HTMLAnchorElement_get_name = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_name = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_name, 传参val => ' + val);
   }
@@ -575,6 +647,9 @@ globalMy.HTMLAnchorElement_set_name = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_rev = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_rev');
   }
@@ -599,6 +674,9 @@ globalMy.HTMLAnchorElement_get_rev = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_rev = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_rev, 传参val => ' + val);
   }
@@ -623,6 +701,9 @@ globalMy.HTMLAnchorElement_set_rev = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_shape = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_shape');
   }
@@ -647,6 +728,9 @@ globalMy.HTMLAnchorElement_get_shape = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_shape = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_shape, 传参val => ' + val);
   }
@@ -671,6 +755,9 @@ globalMy.HTMLAnchorElement_set_shape = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_origin = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_origin');
   }
@@ -695,6 +782,9 @@ globalMy.HTMLAnchorElement_get_origin = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_get_protocol = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_protocol');
   }
@@ -719,6 +809,9 @@ globalMy.HTMLAnchorElement_get_protocol = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_protocol = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_protocol, 传参val => ' + val);
   }
@@ -743,6 +836,9 @@ globalMy.HTMLAnchorElement_set_protocol = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_username = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_username');
   }
@@ -767,6 +863,9 @@ globalMy.HTMLAnchorElement_get_username = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_username = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_username, 传参val => ' + val);
   }
@@ -791,6 +890,9 @@ globalMy.HTMLAnchorElement_set_username = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_password = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_password');
   }
@@ -815,6 +917,9 @@ globalMy.HTMLAnchorElement_get_password = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_password = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_password, 传参val => ' + val);
   }
@@ -839,6 +944,9 @@ globalMy.HTMLAnchorElement_set_password = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_host = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_host');
   }
@@ -863,6 +971,9 @@ globalMy.HTMLAnchorElement_get_host = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_host = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_host, 传参val => ' + val);
   }
@@ -887,6 +998,9 @@ globalMy.HTMLAnchorElement_set_host = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_hostname = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_hostname');
   }
@@ -911,6 +1025,9 @@ globalMy.HTMLAnchorElement_get_hostname = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_hostname = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_hostname, 传参val => ' + val);
   }
@@ -935,6 +1052,9 @@ globalMy.HTMLAnchorElement_set_hostname = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_port = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_port');
   }
@@ -959,6 +1079,9 @@ globalMy.HTMLAnchorElement_get_port = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_port = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_port, 传参val => ' + val);
   }
@@ -983,6 +1106,9 @@ globalMy.HTMLAnchorElement_set_port = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_pathname = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_pathname');
   }
@@ -1007,6 +1133,9 @@ globalMy.HTMLAnchorElement_get_pathname = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_pathname = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_pathname, 传参val => ' + val);
   }
@@ -1031,6 +1160,9 @@ globalMy.HTMLAnchorElement_set_pathname = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_search = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_search');
   }
@@ -1055,6 +1187,9 @@ globalMy.HTMLAnchorElement_get_search = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_search = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_search, 传参val => ' + val);
   }
@@ -1079,6 +1214,9 @@ globalMy.HTMLAnchorElement_set_search = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_hash = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_hash');
   }
@@ -1103,6 +1241,9 @@ globalMy.HTMLAnchorElement_get_hash = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_hash = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_hash, 传参val => ' + val);
   }
@@ -1127,6 +1268,9 @@ globalMy.HTMLAnchorElement_set_hash = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_get_href = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_href');
   }
@@ -1151,6 +1295,9 @@ globalMy.HTMLAnchorElement_get_href = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_href = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_href, 传参val => ' + val);
   }
@@ -1175,6 +1322,9 @@ globalMy.HTMLAnchorElement_set_href = function (val) {
   }
 };
 globalMy.HTMLAnchorElement_toString = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_toString, arguments => ', arguments);
   }
@@ -1201,6 +1351,9 @@ globalMy.HTMLAnchorElement_toString = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_get_hrefTranslate = function () {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_get_hrefTranslate');
   }
@@ -1225,6 +1378,9 @@ globalMy.HTMLAnchorElement_get_hrefTranslate = function () {
   return result;
 };
 globalMy.HTMLAnchorElement_set_hrefTranslate = function (val) {
+  if (!(this instanceof HTMLAnchorElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLAnchorElement_set_hrefTranslate, 传参val => ' + val);
   }

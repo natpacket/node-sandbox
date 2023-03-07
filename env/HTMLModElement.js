@@ -1,4 +1,7 @@
 globalMy.HTMLModElement_get_cite = function () {
+  if (!(this instanceof HTMLModElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLModElement_get_cite');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLModElement_get_cite = function () {
   return result;
 };
 globalMy.HTMLModElement_set_cite = function (val) {
+  if (!(this instanceof HTMLModElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLModElement_set_cite, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLModElement_set_cite = function (val) {
   }
 };
 globalMy.HTMLModElement_get_dateTime = function () {
+  if (!(this instanceof HTMLModElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLModElement_get_dateTime');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLModElement_get_dateTime = function () {
   return result;
 };
 globalMy.HTMLModElement_set_dateTime = function (val) {
+  if (!(this instanceof HTMLModElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLModElement_set_dateTime, 传参val => ' + val);
   }

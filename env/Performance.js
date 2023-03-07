@@ -1,4 +1,7 @@
 globalMy.Performance_get_timeOrigin = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['timeOrigin'];
@@ -8,6 +11,9 @@ globalMy.Performance_get_timeOrigin = function () {
   return result;
 };
 globalMy.Performance_get_onresourcetimingbufferfull = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onresourcetimingbufferfull'];
@@ -17,6 +23,9 @@ globalMy.Performance_get_onresourcetimingbufferfull = function () {
   return result;
 };
 globalMy.Performance_set_onresourcetimingbufferfull = function (val) {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onresourcetimingbufferfull'] = val;
@@ -25,6 +34,9 @@ globalMy.Performance_set_onresourcetimingbufferfull = function (val) {
   }
 };
 globalMy.Performance_clearMarks = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -34,6 +46,9 @@ globalMy.Performance_clearMarks = function () {
   return result;
 };
 globalMy.Performance_clearMeasures = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -43,6 +58,9 @@ globalMy.Performance_clearMeasures = function () {
   return result;
 };
 globalMy.Performance_clearResourceTimings = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -52,6 +70,9 @@ globalMy.Performance_clearResourceTimings = function () {
   return result;
 };
 globalMy.Performance_getEntries = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -61,6 +82,9 @@ globalMy.Performance_getEntries = function () {
   return result;
 };
 globalMy.Performance_getEntriesByName = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -70,6 +94,9 @@ globalMy.Performance_getEntriesByName = function () {
   return result;
 };
 globalMy.Performance_getEntriesByType = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -79,6 +106,9 @@ globalMy.Performance_getEntriesByType = function () {
   return result;
 };
 globalMy.Performance_mark = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -88,6 +118,9 @@ globalMy.Performance_mark = function () {
   return result;
 };
 globalMy.Performance_measure = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -97,6 +130,9 @@ globalMy.Performance_measure = function () {
   return result;
 };
 globalMy.Performance_now = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -106,6 +142,9 @@ globalMy.Performance_now = function () {
   return result;
 };
 globalMy.Performance_setResourceTimingBufferSize = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -115,6 +154,9 @@ globalMy.Performance_setResourceTimingBufferSize = function () {
   return result;
 };
 globalMy.Performance_toJSON = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -124,6 +166,9 @@ globalMy.Performance_toJSON = function () {
   return result;
 };
 globalMy.Performance_get_timing = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['timing'];
@@ -133,6 +178,9 @@ globalMy.Performance_get_timing = function () {
   return result;
 };
 globalMy.Performance_get_navigation = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['navigation'];
@@ -142,6 +190,9 @@ globalMy.Performance_get_navigation = function () {
   return result;
 };
 globalMy.Performance_get_memory = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['memory'];
@@ -151,6 +202,9 @@ globalMy.Performance_get_memory = function () {
   return result;
 };
 globalMy.Performance_get_eventCounts = function () {
+  if (!(this instanceof Performance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['eventCounts'];

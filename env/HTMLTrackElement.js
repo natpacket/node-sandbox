@@ -1,4 +1,7 @@
 globalMy.HTMLTrackElement_get_kind = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_kind');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLTrackElement_get_kind = function () {
   return result;
 };
 globalMy.HTMLTrackElement_set_kind = function (val) {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_set_kind, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLTrackElement_set_kind = function (val) {
   }
 };
 globalMy.HTMLTrackElement_get_src = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_src');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLTrackElement_get_src = function () {
   return result;
 };
 globalMy.HTMLTrackElement_set_src = function (val) {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_set_src, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLTrackElement_set_src = function (val) {
   }
 };
 globalMy.HTMLTrackElement_get_srclang = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_srclang');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLTrackElement_get_srclang = function () {
   return result;
 };
 globalMy.HTMLTrackElement_set_srclang = function (val) {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_set_srclang, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLTrackElement_set_srclang = function (val) {
   }
 };
 globalMy.HTMLTrackElement_get_label = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_label');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLTrackElement_get_label = function () {
   return result;
 };
 globalMy.HTMLTrackElement_set_label = function (val) {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_set_label, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLTrackElement_set_label = function (val) {
   }
 };
 globalMy.HTMLTrackElement_get_default = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_default');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLTrackElement_get_default = function () {
   return result;
 };
 globalMy.HTMLTrackElement_set_default = function (val) {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_set_default, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLTrackElement_set_default = function (val) {
   }
 };
 globalMy.HTMLTrackElement_get_readyState = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_readyState');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLTrackElement_get_readyState = function () {
   return result;
 };
 globalMy.HTMLTrackElement_get_track = function () {
+  if (!(this instanceof HTMLTrackElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTrackElement_get_track');
   }

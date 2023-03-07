@@ -1,5 +1,9 @@
 // dom构造函数原型方法
+// dom构造函数原型方法
 globalMy.XPathExpression_evaluate = function () {
+  if (!(this instanceof XPathExpression)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了XPathExpression_evaluate, arguments => ', arguments);
   }

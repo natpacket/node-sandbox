@@ -1,4 +1,7 @@
 globalMy.MimeTypeArray_get_length = function () {
+  if (!(this instanceof MimeTypeArray)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -8,6 +11,9 @@ globalMy.MimeTypeArray_get_length = function () {
   return result;
 };
 globalMy.MimeTypeArray_item = function () {
+  if (!(this instanceof MimeTypeArray)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -17,6 +23,9 @@ globalMy.MimeTypeArray_item = function () {
   return result;
 };
 globalMy.MimeTypeArray_namedItem = function () {
+  if (!(this instanceof MimeTypeArray)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -25,4 +34,5 @@ globalMy.MimeTypeArray_namedItem = function () {
   }
   return result;
 };
+// MouseEvent
 // MouseEvent

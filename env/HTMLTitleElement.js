@@ -1,4 +1,7 @@
 globalMy.HTMLTitleElement_get_text = function () {
+  if (!(this instanceof HTMLTitleElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTitleElement_get_text');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLTitleElement_get_text = function () {
   return result;
 };
 globalMy.HTMLTitleElement_set_text = function (val) {
+  if (!(this instanceof HTMLTitleElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTitleElement_set_text, 传参val => ' + val);
   }

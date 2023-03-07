@@ -1,4 +1,7 @@
 globalMy.HTMLTableColElement_get_span = function () {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_get_span');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLTableColElement_get_span = function () {
   return result;
 };
 globalMy.HTMLTableColElement_set_span = function (val) {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_set_span, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLTableColElement_set_span = function (val) {
   }
 };
 globalMy.HTMLTableColElement_get_align = function () {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_get_align');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLTableColElement_get_align = function () {
   return result;
 };
 globalMy.HTMLTableColElement_set_align = function (val) {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_set_align, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLTableColElement_set_align = function (val) {
   }
 };
 globalMy.HTMLTableColElement_get_ch = function () {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_get_ch');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLTableColElement_get_ch = function () {
   return result;
 };
 globalMy.HTMLTableColElement_set_ch = function (val) {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_set_ch, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLTableColElement_set_ch = function (val) {
   }
 };
 globalMy.HTMLTableColElement_get_chOff = function () {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_get_chOff');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLTableColElement_get_chOff = function () {
   return result;
 };
 globalMy.HTMLTableColElement_set_chOff = function (val) {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_set_chOff, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLTableColElement_set_chOff = function (val) {
   }
 };
 globalMy.HTMLTableColElement_get_vAlign = function () {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_get_vAlign');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLTableColElement_get_vAlign = function () {
   return result;
 };
 globalMy.HTMLTableColElement_set_vAlign = function (val) {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_set_vAlign, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLTableColElement_set_vAlign = function (val) {
   }
 };
 globalMy.HTMLTableColElement_get_width = function () {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_get_width');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLTableColElement_get_width = function () {
   return result;
 };
 globalMy.HTMLTableColElement_set_width = function (val) {
+  if (!(this instanceof HTMLTableColElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableColElement_set_width, 传参val => ' + val);
   }

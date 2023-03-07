@@ -1,4 +1,7 @@
 globalMy.OscillatorNode_get_type = function () {
+  if (!(this instanceof OscillatorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['type'];
@@ -8,6 +11,9 @@ globalMy.OscillatorNode_get_type = function () {
   return result;
 };
 globalMy.OscillatorNode_set_type = function (val) {
+  if (!(this instanceof OscillatorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['type'] = val;
@@ -16,6 +22,9 @@ globalMy.OscillatorNode_set_type = function (val) {
   }
 };
 globalMy.OscillatorNode_get_frequency = function () {
+  if (!(this instanceof OscillatorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['frequency'];
@@ -25,6 +34,9 @@ globalMy.OscillatorNode_get_frequency = function () {
   return result;
 };
 globalMy.OscillatorNode_get_detune = function () {
+  if (!(this instanceof OscillatorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['detune'];
@@ -34,6 +46,9 @@ globalMy.OscillatorNode_get_detune = function () {
   return result;
 };
 globalMy.OscillatorNode_setPeriodicWave = function () {
+  if (!(this instanceof OscillatorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

@@ -1,4 +1,7 @@
 globalMy.AudioNode_get_context = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['context'];
@@ -8,6 +11,9 @@ globalMy.AudioNode_get_context = function () {
   return result;
 };
 globalMy.AudioNode_get_numberOfInputs = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['numberOfInputs'];
@@ -17,6 +23,9 @@ globalMy.AudioNode_get_numberOfInputs = function () {
   return result;
 };
 globalMy.AudioNode_get_numberOfOutputs = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['numberOfOutputs'];
@@ -26,6 +35,9 @@ globalMy.AudioNode_get_numberOfOutputs = function () {
   return result;
 };
 globalMy.AudioNode_get_channelCount = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['channelCount'];
@@ -35,6 +47,9 @@ globalMy.AudioNode_get_channelCount = function () {
   return result;
 };
 globalMy.AudioNode_set_channelCount = function (val) {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['channelCount'] = val;
@@ -43,6 +58,9 @@ globalMy.AudioNode_set_channelCount = function (val) {
   }
 };
 globalMy.AudioNode_get_channelCountMode = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['channelCountMode'];
@@ -52,6 +70,9 @@ globalMy.AudioNode_get_channelCountMode = function () {
   return result;
 };
 globalMy.AudioNode_set_channelCountMode = function (val) {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['channelCountMode'] = val;
@@ -60,6 +81,9 @@ globalMy.AudioNode_set_channelCountMode = function (val) {
   }
 };
 globalMy.AudioNode_get_channelInterpretation = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['channelInterpretation'];
@@ -69,6 +93,9 @@ globalMy.AudioNode_get_channelInterpretation = function () {
   return result;
 };
 globalMy.AudioNode_set_channelInterpretation = function (val) {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['channelInterpretation'] = val;
@@ -77,6 +104,9 @@ globalMy.AudioNode_set_channelInterpretation = function (val) {
   }
 };
 globalMy.AudioNode_connect = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -85,6 +115,9 @@ globalMy.AudioNode_connect = function () {
   return result;
 };
 globalMy.AudioNode_disconnect = function () {
+  if (!(this instanceof AudioNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

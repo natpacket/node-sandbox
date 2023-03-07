@@ -1,4 +1,7 @@
 globalMy.IDBTransaction_get_objectStoreNames = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['objectStoreNames'];
@@ -8,6 +11,9 @@ globalMy.IDBTransaction_get_objectStoreNames = function () {
   return result;
 };
 globalMy.IDBTransaction_get_mode = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['mode'];
@@ -17,6 +23,9 @@ globalMy.IDBTransaction_get_mode = function () {
   return result;
 };
 globalMy.IDBTransaction_get_durability = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['durability'];
@@ -26,6 +35,9 @@ globalMy.IDBTransaction_get_durability = function () {
   return result;
 };
 globalMy.IDBTransaction_get_db = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['db'];
@@ -35,6 +47,9 @@ globalMy.IDBTransaction_get_db = function () {
   return result;
 };
 globalMy.IDBTransaction_get_error = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['error'];
@@ -44,6 +59,9 @@ globalMy.IDBTransaction_get_error = function () {
   return result;
 };
 globalMy.IDBTransaction_get_onabort = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onabort'];
@@ -53,6 +71,9 @@ globalMy.IDBTransaction_get_onabort = function () {
   return result;
 };
 globalMy.IDBTransaction_set_onabort = function (val) {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onabort'] = val;
@@ -61,6 +82,9 @@ globalMy.IDBTransaction_set_onabort = function (val) {
   }
 };
 globalMy.IDBTransaction_get_oncomplete = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['oncomplete'];
@@ -70,6 +94,9 @@ globalMy.IDBTransaction_get_oncomplete = function () {
   return result;
 };
 globalMy.IDBTransaction_set_oncomplete = function (val) {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['oncomplete'] = val;
@@ -78,6 +105,9 @@ globalMy.IDBTransaction_set_oncomplete = function (val) {
   }
 };
 globalMy.IDBTransaction_get_onerror = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -87,6 +117,9 @@ globalMy.IDBTransaction_get_onerror = function () {
   return result;
 };
 globalMy.IDBTransaction_set_onerror = function (val) {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -95,6 +128,9 @@ globalMy.IDBTransaction_set_onerror = function (val) {
   }
 };
 globalMy.IDBTransaction_abort = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -103,6 +139,9 @@ globalMy.IDBTransaction_abort = function () {
   return result;
 };
 globalMy.IDBTransaction_commit = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -111,6 +150,9 @@ globalMy.IDBTransaction_commit = function () {
   return result;
 };
 globalMy.IDBTransaction_objectStore = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -120,7 +162,12 @@ globalMy.IDBTransaction_objectStore = function () {
 };
 // IDBTransaction
 // IDBTransaction
+// IDBTransaction
+// IDBTransaction
 globalMy.IDBTransaction_objectStore = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var name = globalMy.setfoundName({});
   Object.setPrototypeOf(globalMy.element[name], IDBObjectStore.prototype);
@@ -131,6 +178,9 @@ globalMy.IDBTransaction_objectStore = function () {
   return result;
 };
 globalMy.IDBTransaction_get_objectStoreNames = function () {
+  if (!(this instanceof IDBTransaction)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['objectStoreNames'];
@@ -140,4 +190,5 @@ globalMy.IDBTransaction_get_objectStoreNames = function () {
   return result;
 };
 
+// IDBObjectStore
 // IDBObjectStore

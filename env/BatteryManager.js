@@ -1,4 +1,7 @@
 globalMy.BatteryManager_get_charging = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['charging'];
@@ -8,6 +11,9 @@ globalMy.BatteryManager_get_charging = function () {
   return result;
 };
 globalMy.BatteryManager_get_chargingTime = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['chargingTime'];
@@ -17,6 +23,9 @@ globalMy.BatteryManager_get_chargingTime = function () {
   return result;
 };
 globalMy.BatteryManager_get_dischargingTime = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['dischargingTime'];
@@ -26,6 +35,9 @@ globalMy.BatteryManager_get_dischargingTime = function () {
   return result;
 };
 globalMy.BatteryManager_get_level = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['level'];
@@ -35,6 +47,9 @@ globalMy.BatteryManager_get_level = function () {
   return result;
 };
 globalMy.BatteryManager_get_onchargingchange = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onchargingchange'];
@@ -44,6 +59,9 @@ globalMy.BatteryManager_get_onchargingchange = function () {
   return result;
 };
 globalMy.BatteryManager_set_onchargingchange = function (val) {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onchargingchange'] = val;
@@ -52,6 +70,9 @@ globalMy.BatteryManager_set_onchargingchange = function (val) {
   }
 };
 globalMy.BatteryManager_get_onchargingtimechange = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onchargingtimechange'];
@@ -61,6 +82,9 @@ globalMy.BatteryManager_get_onchargingtimechange = function () {
   return result;
 };
 globalMy.BatteryManager_set_onchargingtimechange = function (val) {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onchargingtimechange'] = val;
@@ -69,6 +93,9 @@ globalMy.BatteryManager_set_onchargingtimechange = function (val) {
   }
 };
 globalMy.BatteryManager_get_ondischargingtimechange = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ondischargingtimechange'];
@@ -78,6 +105,9 @@ globalMy.BatteryManager_get_ondischargingtimechange = function () {
   return result;
 };
 globalMy.BatteryManager_set_ondischargingtimechange = function (val) {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['ondischargingtimechange'] = val;
@@ -86,6 +116,9 @@ globalMy.BatteryManager_set_ondischargingtimechange = function (val) {
   }
 };
 globalMy.BatteryManager_get_onlevelchange = function () {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onlevelchange'];
@@ -95,6 +128,9 @@ globalMy.BatteryManager_get_onlevelchange = function () {
   return result;
 };
 globalMy.BatteryManager_set_onlevelchange = function (val) {
+  if (!(this instanceof BatteryManager)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onlevelchange'] = val;

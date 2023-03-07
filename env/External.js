@@ -1,4 +1,7 @@
 globalMy.External_AddSearchProvider = function () {
+  if (!(this instanceof External)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -8,6 +11,9 @@ globalMy.External_AddSearchProvider = function () {
   return result;
 };
 globalMy.External_IsSearchProviderInstalled = function () {
+  if (!(this instanceof External)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -16,4 +22,5 @@ globalMy.External_IsSearchProviderInstalled = function () {
   }
   return result;
 };
+// History
 // History

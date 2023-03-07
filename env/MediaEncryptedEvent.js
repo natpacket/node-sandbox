@@ -1,4 +1,7 @@
 globalMy.MediaEncryptedEvent_get_initDataType = function () {
+  if (!(this instanceof MediaEncryptedEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['initDataType'];
@@ -8,6 +11,9 @@ globalMy.MediaEncryptedEvent_get_initDataType = function () {
   return result;
 };
 globalMy.MediaEncryptedEvent_get_initData = function () {
+  if (!(this instanceof MediaEncryptedEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['initData'];

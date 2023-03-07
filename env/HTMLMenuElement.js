@@ -1,4 +1,7 @@
 globalMy.HTMLMenuElement_get_compact = function () {
+  if (!(this instanceof HTMLMenuElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMenuElement_get_compact');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLMenuElement_get_compact = function () {
   return result;
 };
 globalMy.HTMLMenuElement_set_compact = function (val) {
+  if (!(this instanceof HTMLMenuElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLMenuElement_set_compact, 传参val => ' + val);
   }

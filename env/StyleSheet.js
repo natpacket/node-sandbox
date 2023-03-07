@@ -1,4 +1,7 @@
 globalMy.StyleSheet_get_type = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_type');
   }
@@ -23,6 +26,9 @@ globalMy.StyleSheet_get_type = function () {
   return result;
 };
 globalMy.StyleSheet_get_href = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_href');
   }
@@ -47,6 +53,9 @@ globalMy.StyleSheet_get_href = function () {
   return result;
 };
 globalMy.StyleSheet_get_ownerNode = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_ownerNode');
   }
@@ -71,6 +80,9 @@ globalMy.StyleSheet_get_ownerNode = function () {
   return result;
 };
 globalMy.StyleSheet_get_parentStyleSheet = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_parentStyleSheet');
   }
@@ -95,6 +107,9 @@ globalMy.StyleSheet_get_parentStyleSheet = function () {
   return result;
 };
 globalMy.StyleSheet_get_title = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_title');
   }
@@ -119,6 +134,9 @@ globalMy.StyleSheet_get_title = function () {
   return result;
 };
 globalMy.StyleSheet_get_media = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_media');
   }
@@ -143,6 +161,9 @@ globalMy.StyleSheet_get_media = function () {
   return result;
 };
 globalMy.StyleSheet_set_media = function (val) {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_set_media, 传参val => ' + val);
   }
@@ -167,6 +188,9 @@ globalMy.StyleSheet_set_media = function (val) {
   }
 };
 globalMy.StyleSheet_get_disabled = function () {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_get_disabled');
   }
@@ -191,6 +215,9 @@ globalMy.StyleSheet_get_disabled = function () {
   return result;
 };
 globalMy.StyleSheet_set_disabled = function (val) {
+  if (!(this instanceof StyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了StyleSheet_set_disabled, 传参val => ' + val);
   }

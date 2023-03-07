@@ -1,4 +1,7 @@
 globalMy.DynamicsCompressorNode_get_threshold = function () {
+  if (!(this instanceof DynamicsCompressorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['threshold'];
@@ -8,6 +11,9 @@ globalMy.DynamicsCompressorNode_get_threshold = function () {
   return result;
 };
 globalMy.DynamicsCompressorNode_get_knee = function () {
+  if (!(this instanceof DynamicsCompressorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['knee'];
@@ -17,6 +23,9 @@ globalMy.DynamicsCompressorNode_get_knee = function () {
   return result;
 };
 globalMy.DynamicsCompressorNode_get_ratio = function () {
+  if (!(this instanceof DynamicsCompressorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ratio'];
@@ -26,6 +35,9 @@ globalMy.DynamicsCompressorNode_get_ratio = function () {
   return result;
 };
 globalMy.DynamicsCompressorNode_get_reduction = function () {
+  if (!(this instanceof DynamicsCompressorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['reduction'];
@@ -35,6 +47,9 @@ globalMy.DynamicsCompressorNode_get_reduction = function () {
   return result;
 };
 globalMy.DynamicsCompressorNode_get_attack = function () {
+  if (!(this instanceof DynamicsCompressorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['attack'];
@@ -44,6 +59,9 @@ globalMy.DynamicsCompressorNode_get_attack = function () {
   return result;
 };
 globalMy.DynamicsCompressorNode_get_release = function () {
+  if (!(this instanceof DynamicsCompressorNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['release'];

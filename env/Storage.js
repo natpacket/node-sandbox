@@ -1,4 +1,7 @@
 globalMy.Storage_clear = function () {
+  if (!(this instanceof Storage)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -8,6 +11,9 @@ globalMy.Storage_clear = function () {
   return result;
 };
 globalMy.Storage_getItem = function () {
+  if (!(this instanceof Storage)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   let tagName = arguments[0];
   //这里写方法实体
@@ -19,6 +25,9 @@ globalMy.Storage_getItem = function () {
   return result;
 };
 globalMy.Storage_key = function () {
+  if (!(this instanceof Storage)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -28,6 +37,9 @@ globalMy.Storage_key = function () {
   return result;
 };
 globalMy.Storage_removeItem = function () {
+  if (!(this instanceof Storage)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -37,6 +49,9 @@ globalMy.Storage_removeItem = function () {
   return result;
 };
 globalMy.Storage_setItem = function () {
+  if (!(this instanceof Storage)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 

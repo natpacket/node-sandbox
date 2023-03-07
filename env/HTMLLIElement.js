@@ -1,4 +1,7 @@
 globalMy.HTMLLIElement_get_value = function () {
+  if (!(this instanceof HTMLLIElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLIElement_get_value');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLLIElement_get_value = function () {
   return result;
 };
 globalMy.HTMLLIElement_set_value = function (val) {
+  if (!(this instanceof HTMLLIElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLIElement_set_value, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLLIElement_set_value = function (val) {
   }
 };
 globalMy.HTMLLIElement_get_type = function () {
+  if (!(this instanceof HTMLLIElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLIElement_get_type');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLLIElement_get_type = function () {
   return result;
 };
 globalMy.HTMLLIElement_set_type = function (val) {
+  if (!(this instanceof HTMLLIElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLIElement_set_type, 传参val => ' + val);
   }

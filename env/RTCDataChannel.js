@@ -1,4 +1,7 @@
 globalMy.RTCDataChannel_get_label = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['label'];
@@ -8,6 +11,9 @@ globalMy.RTCDataChannel_get_label = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_ordered = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ordered'];
@@ -17,6 +23,9 @@ globalMy.RTCDataChannel_get_ordered = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_maxPacketLifeTime = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['maxPacketLifeTime'];
@@ -26,6 +35,9 @@ globalMy.RTCDataChannel_get_maxPacketLifeTime = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_maxRetransmits = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['maxRetransmits'];
@@ -35,6 +47,9 @@ globalMy.RTCDataChannel_get_maxRetransmits = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_protocol = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['protocol'];
@@ -44,6 +59,9 @@ globalMy.RTCDataChannel_get_protocol = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_negotiated = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['negotiated'];
@@ -53,6 +71,9 @@ globalMy.RTCDataChannel_get_negotiated = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_id = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['id'];
@@ -62,6 +83,9 @@ globalMy.RTCDataChannel_get_id = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_readyState = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['readyState'];
@@ -71,6 +95,9 @@ globalMy.RTCDataChannel_get_readyState = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_bufferedAmount = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['bufferedAmount'];
@@ -80,6 +107,9 @@ globalMy.RTCDataChannel_get_bufferedAmount = function () {
   return result;
 };
 globalMy.RTCDataChannel_get_bufferedAmountLowThreshold = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['bufferedAmountLowThreshold'];
@@ -89,6 +119,9 @@ globalMy.RTCDataChannel_get_bufferedAmountLowThreshold = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_bufferedAmountLowThreshold = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['bufferedAmountLowThreshold'] = val;
@@ -97,6 +130,9 @@ globalMy.RTCDataChannel_set_bufferedAmountLowThreshold = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_onopen = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onopen'];
@@ -106,6 +142,9 @@ globalMy.RTCDataChannel_get_onopen = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_onopen = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onopen'] = val;
@@ -114,6 +153,9 @@ globalMy.RTCDataChannel_set_onopen = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_onbufferedamountlow = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onbufferedamountlow'];
@@ -123,6 +165,9 @@ globalMy.RTCDataChannel_get_onbufferedamountlow = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_onbufferedamountlow = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onbufferedamountlow'] = val;
@@ -131,6 +176,9 @@ globalMy.RTCDataChannel_set_onbufferedamountlow = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_onerror = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -140,6 +188,9 @@ globalMy.RTCDataChannel_get_onerror = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_onerror = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -148,6 +199,9 @@ globalMy.RTCDataChannel_set_onerror = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_onclosing = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onclosing'];
@@ -157,6 +211,9 @@ globalMy.RTCDataChannel_get_onclosing = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_onclosing = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onclosing'] = val;
@@ -165,6 +222,9 @@ globalMy.RTCDataChannel_set_onclosing = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_onclose = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onclose'];
@@ -174,6 +234,9 @@ globalMy.RTCDataChannel_get_onclose = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_onclose = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onclose'] = val;
@@ -182,6 +245,9 @@ globalMy.RTCDataChannel_set_onclose = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_onmessage = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onmessage'];
@@ -191,6 +257,9 @@ globalMy.RTCDataChannel_get_onmessage = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_onmessage = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onmessage'] = val;
@@ -199,6 +268,9 @@ globalMy.RTCDataChannel_set_onmessage = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_binaryType = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['binaryType'];
@@ -208,6 +280,9 @@ globalMy.RTCDataChannel_get_binaryType = function () {
   return result;
 };
 globalMy.RTCDataChannel_set_binaryType = function (val) {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['binaryType'] = val;
@@ -216,6 +291,9 @@ globalMy.RTCDataChannel_set_binaryType = function (val) {
   }
 };
 globalMy.RTCDataChannel_get_reliable = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['reliable'];
@@ -225,6 +303,9 @@ globalMy.RTCDataChannel_get_reliable = function () {
   return result;
 };
 globalMy.RTCDataChannel_close = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -233,6 +314,9 @@ globalMy.RTCDataChannel_close = function () {
   return result;
 };
 globalMy.RTCDataChannel_send = function () {
+  if (!(this instanceof RTCDataChannel)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {

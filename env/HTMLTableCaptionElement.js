@@ -1,4 +1,7 @@
 globalMy.HTMLTableCaptionElement_get_align = function () {
+  if (!(this instanceof HTMLTableCaptionElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableCaptionElement_get_align');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLTableCaptionElement_get_align = function () {
   return result;
 };
 globalMy.HTMLTableCaptionElement_set_align = function (val) {
+  if (!(this instanceof HTMLTableCaptionElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTableCaptionElement_set_align, 传参val => ' + val);
   }

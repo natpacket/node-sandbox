@@ -1,4 +1,7 @@
 globalMy.AudioScheduledSourceNode_get_onended = function () {
+  if (!(this instanceof AudioScheduledSourceNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onended'];
@@ -8,6 +11,9 @@ globalMy.AudioScheduledSourceNode_get_onended = function () {
   return result;
 };
 globalMy.AudioScheduledSourceNode_set_onended = function (val) {
+  if (!(this instanceof AudioScheduledSourceNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onended'] = val;
@@ -16,6 +22,9 @@ globalMy.AudioScheduledSourceNode_set_onended = function (val) {
   }
 };
 globalMy.AudioScheduledSourceNode_start = function () {
+  if (!(this instanceof AudioScheduledSourceNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -24,6 +33,9 @@ globalMy.AudioScheduledSourceNode_start = function () {
   return result;
 };
 globalMy.AudioScheduledSourceNode_stop = function () {
+  if (!(this instanceof AudioScheduledSourceNode)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

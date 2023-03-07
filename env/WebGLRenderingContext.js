@@ -1,5 +1,8 @@
 // WebGLRenderingContext
 globalMy.WebGLRenderingContext_get_canvas = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['canvas'];
@@ -9,6 +12,9 @@ globalMy.WebGLRenderingContext_get_canvas = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_get_drawingBufferWidth = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['drawingBufferWidth'];
@@ -18,6 +24,9 @@ globalMy.WebGLRenderingContext_get_drawingBufferWidth = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_get_drawingBufferHeight = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['drawingBufferHeight'];
@@ -27,6 +36,9 @@ globalMy.WebGLRenderingContext_get_drawingBufferHeight = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_activeTexture = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -36,6 +48,9 @@ globalMy.WebGLRenderingContext_activeTexture = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_attachShader = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -45,6 +60,9 @@ globalMy.WebGLRenderingContext_attachShader = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bindAttribLocation = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -54,6 +72,9 @@ globalMy.WebGLRenderingContext_bindAttribLocation = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bindRenderbuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -63,6 +84,9 @@ globalMy.WebGLRenderingContext_bindRenderbuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_blendColor = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -72,6 +96,9 @@ globalMy.WebGLRenderingContext_blendColor = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_blendEquation = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -81,6 +108,9 @@ globalMy.WebGLRenderingContext_blendEquation = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_blendEquationSeparate = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -90,6 +120,9 @@ globalMy.WebGLRenderingContext_blendEquationSeparate = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_blendFunc = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -99,6 +132,9 @@ globalMy.WebGLRenderingContext_blendFunc = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_blendFuncSeparate = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -108,6 +144,9 @@ globalMy.WebGLRenderingContext_blendFuncSeparate = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bufferData = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -117,6 +156,9 @@ globalMy.WebGLRenderingContext_bufferData = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bufferSubData = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -126,6 +168,9 @@ globalMy.WebGLRenderingContext_bufferSubData = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_checkFramebufferStatus = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -135,6 +180,9 @@ globalMy.WebGLRenderingContext_checkFramebufferStatus = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_compileShader = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -144,6 +192,9 @@ globalMy.WebGLRenderingContext_compileShader = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_compressedTexImage2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -153,6 +204,9 @@ globalMy.WebGLRenderingContext_compressedTexImage2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_compressedTexSubImage2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -162,6 +216,9 @@ globalMy.WebGLRenderingContext_compressedTexSubImage2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_copyTexImage2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -171,6 +228,9 @@ globalMy.WebGLRenderingContext_copyTexImage2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_copyTexSubImage2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -180,6 +240,9 @@ globalMy.WebGLRenderingContext_copyTexSubImage2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_createBuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -189,6 +252,9 @@ globalMy.WebGLRenderingContext_createBuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_createFramebuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -198,6 +264,9 @@ globalMy.WebGLRenderingContext_createFramebuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_createProgram = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -207,6 +276,9 @@ globalMy.WebGLRenderingContext_createProgram = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_createRenderbuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -216,6 +288,9 @@ globalMy.WebGLRenderingContext_createRenderbuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_createShader = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -225,6 +300,9 @@ globalMy.WebGLRenderingContext_createShader = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_createTexture = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -234,6 +312,9 @@ globalMy.WebGLRenderingContext_createTexture = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_cullFace = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -243,6 +324,9 @@ globalMy.WebGLRenderingContext_cullFace = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_deleteBuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -252,6 +336,9 @@ globalMy.WebGLRenderingContext_deleteBuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_deleteFramebuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -261,6 +348,9 @@ globalMy.WebGLRenderingContext_deleteFramebuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_deleteProgram = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -270,6 +360,9 @@ globalMy.WebGLRenderingContext_deleteProgram = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_deleteRenderbuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -279,6 +372,9 @@ globalMy.WebGLRenderingContext_deleteRenderbuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_deleteShader = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -288,6 +384,9 @@ globalMy.WebGLRenderingContext_deleteShader = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_deleteTexture = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -297,6 +396,9 @@ globalMy.WebGLRenderingContext_deleteTexture = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_depthFunc = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -306,6 +408,9 @@ globalMy.WebGLRenderingContext_depthFunc = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_depthMask = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -315,6 +420,9 @@ globalMy.WebGLRenderingContext_depthMask = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_depthRange = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -324,6 +432,9 @@ globalMy.WebGLRenderingContext_depthRange = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_detachShader = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -333,6 +444,9 @@ globalMy.WebGLRenderingContext_detachShader = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_disable = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -342,6 +456,9 @@ globalMy.WebGLRenderingContext_disable = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_enable = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -351,6 +468,9 @@ globalMy.WebGLRenderingContext_enable = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_finish = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -360,6 +480,9 @@ globalMy.WebGLRenderingContext_finish = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_flush = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -369,6 +492,9 @@ globalMy.WebGLRenderingContext_flush = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_framebufferRenderbuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -378,6 +504,9 @@ globalMy.WebGLRenderingContext_framebufferRenderbuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_framebufferTexture2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -387,6 +516,9 @@ globalMy.WebGLRenderingContext_framebufferTexture2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_frontFace = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -396,6 +528,9 @@ globalMy.WebGLRenderingContext_frontFace = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_generateMipmap = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -405,6 +540,9 @@ globalMy.WebGLRenderingContext_generateMipmap = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getActiveAttrib = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -414,6 +552,9 @@ globalMy.WebGLRenderingContext_getActiveAttrib = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getActiveUniform = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -423,6 +564,9 @@ globalMy.WebGLRenderingContext_getActiveUniform = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getAttachedShaders = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -432,6 +576,9 @@ globalMy.WebGLRenderingContext_getAttachedShaders = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getAttribLocation = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -441,6 +588,9 @@ globalMy.WebGLRenderingContext_getAttribLocation = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getBufferParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -450,6 +600,9 @@ globalMy.WebGLRenderingContext_getBufferParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getContextAttributes = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -459,6 +612,9 @@ globalMy.WebGLRenderingContext_getContextAttributes = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getError = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -468,6 +624,9 @@ globalMy.WebGLRenderingContext_getError = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getFramebufferAttachmentParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -477,6 +636,9 @@ globalMy.WebGLRenderingContext_getFramebufferAttachmentParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -486,6 +648,9 @@ globalMy.WebGLRenderingContext_getParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getProgramInfoLog = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -495,6 +660,9 @@ globalMy.WebGLRenderingContext_getProgramInfoLog = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getProgramParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -504,6 +672,9 @@ globalMy.WebGLRenderingContext_getProgramParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getRenderbufferParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -513,6 +684,9 @@ globalMy.WebGLRenderingContext_getRenderbufferParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getShaderInfoLog = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -522,6 +696,9 @@ globalMy.WebGLRenderingContext_getShaderInfoLog = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getShaderParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -531,6 +708,9 @@ globalMy.WebGLRenderingContext_getShaderParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getShaderPrecisionFormat = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -540,6 +720,9 @@ globalMy.WebGLRenderingContext_getShaderPrecisionFormat = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getShaderSource = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -549,6 +732,9 @@ globalMy.WebGLRenderingContext_getShaderSource = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getSupportedExtensions = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -558,6 +744,9 @@ globalMy.WebGLRenderingContext_getSupportedExtensions = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getTexParameter = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -567,6 +756,9 @@ globalMy.WebGLRenderingContext_getTexParameter = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getUniform = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -576,6 +768,9 @@ globalMy.WebGLRenderingContext_getUniform = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getUniformLocation = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -585,6 +780,9 @@ globalMy.WebGLRenderingContext_getUniformLocation = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getVertexAttrib = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -594,6 +792,9 @@ globalMy.WebGLRenderingContext_getVertexAttrib = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_getVertexAttribOffset = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -603,6 +804,9 @@ globalMy.WebGLRenderingContext_getVertexAttribOffset = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_hint = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -612,6 +816,9 @@ globalMy.WebGLRenderingContext_hint = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isBuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -621,6 +828,9 @@ globalMy.WebGLRenderingContext_isBuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isContextLost = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -630,6 +840,9 @@ globalMy.WebGLRenderingContext_isContextLost = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isEnabled = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -639,6 +852,9 @@ globalMy.WebGLRenderingContext_isEnabled = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isFramebuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -648,6 +864,9 @@ globalMy.WebGLRenderingContext_isFramebuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isProgram = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -657,6 +876,9 @@ globalMy.WebGLRenderingContext_isProgram = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isRenderbuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -666,6 +888,9 @@ globalMy.WebGLRenderingContext_isRenderbuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isShader = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -675,6 +900,9 @@ globalMy.WebGLRenderingContext_isShader = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_isTexture = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -684,6 +912,9 @@ globalMy.WebGLRenderingContext_isTexture = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_lineWidth = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -693,6 +924,9 @@ globalMy.WebGLRenderingContext_lineWidth = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_linkProgram = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -702,6 +936,9 @@ globalMy.WebGLRenderingContext_linkProgram = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_pixelStorei = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -711,6 +948,9 @@ globalMy.WebGLRenderingContext_pixelStorei = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_polygonOffset = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -720,6 +960,9 @@ globalMy.WebGLRenderingContext_polygonOffset = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_readPixels = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -729,6 +972,9 @@ globalMy.WebGLRenderingContext_readPixels = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_renderbufferStorage = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -738,6 +984,9 @@ globalMy.WebGLRenderingContext_renderbufferStorage = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_sampleCoverage = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -747,6 +996,9 @@ globalMy.WebGLRenderingContext_sampleCoverage = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_shaderSource = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -756,6 +1008,9 @@ globalMy.WebGLRenderingContext_shaderSource = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_stencilFunc = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -765,6 +1020,9 @@ globalMy.WebGLRenderingContext_stencilFunc = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_stencilFuncSeparate = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -774,6 +1032,9 @@ globalMy.WebGLRenderingContext_stencilFuncSeparate = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_stencilMask = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -783,6 +1044,9 @@ globalMy.WebGLRenderingContext_stencilMask = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_stencilMaskSeparate = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -792,6 +1056,9 @@ globalMy.WebGLRenderingContext_stencilMaskSeparate = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_stencilOp = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -801,6 +1068,9 @@ globalMy.WebGLRenderingContext_stencilOp = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_stencilOpSeparate = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -810,6 +1080,9 @@ globalMy.WebGLRenderingContext_stencilOpSeparate = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_texImage2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -819,6 +1092,9 @@ globalMy.WebGLRenderingContext_texImage2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_texParameterf = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -828,6 +1104,9 @@ globalMy.WebGLRenderingContext_texParameterf = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_texParameteri = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -837,6 +1116,9 @@ globalMy.WebGLRenderingContext_texParameteri = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_texSubImage2D = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -846,6 +1128,9 @@ globalMy.WebGLRenderingContext_texSubImage2D = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_useProgram = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -855,6 +1140,9 @@ globalMy.WebGLRenderingContext_useProgram = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_validateProgram = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -864,6 +1152,9 @@ globalMy.WebGLRenderingContext_validateProgram = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bindBuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -873,6 +1164,9 @@ globalMy.WebGLRenderingContext_bindBuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bindFramebuffer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -882,6 +1176,9 @@ globalMy.WebGLRenderingContext_bindFramebuffer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_bindTexture = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -891,6 +1188,9 @@ globalMy.WebGLRenderingContext_bindTexture = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_clear = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -900,6 +1200,9 @@ globalMy.WebGLRenderingContext_clear = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_clearColor = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -909,6 +1212,9 @@ globalMy.WebGLRenderingContext_clearColor = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_clearDepth = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -918,6 +1224,9 @@ globalMy.WebGLRenderingContext_clearDepth = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_clearStencil = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -927,6 +1236,9 @@ globalMy.WebGLRenderingContext_clearStencil = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_colorMask = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -936,6 +1248,9 @@ globalMy.WebGLRenderingContext_colorMask = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_disableVertexAttribArray = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -945,6 +1260,9 @@ globalMy.WebGLRenderingContext_disableVertexAttribArray = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_drawArrays = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -954,6 +1272,9 @@ globalMy.WebGLRenderingContext_drawArrays = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_drawElements = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -963,6 +1284,9 @@ globalMy.WebGLRenderingContext_drawElements = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_enableVertexAttribArray = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -972,6 +1296,9 @@ globalMy.WebGLRenderingContext_enableVertexAttribArray = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_scissor = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -981,6 +1308,9 @@ globalMy.WebGLRenderingContext_scissor = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform1f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -990,6 +1320,9 @@ globalMy.WebGLRenderingContext_uniform1f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform1fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -999,6 +1332,9 @@ globalMy.WebGLRenderingContext_uniform1fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform1i = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1008,6 +1344,9 @@ globalMy.WebGLRenderingContext_uniform1i = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform1iv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1017,6 +1356,9 @@ globalMy.WebGLRenderingContext_uniform1iv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform2f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1026,6 +1368,9 @@ globalMy.WebGLRenderingContext_uniform2f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform2fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1035,6 +1380,9 @@ globalMy.WebGLRenderingContext_uniform2fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform2i = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1044,6 +1392,9 @@ globalMy.WebGLRenderingContext_uniform2i = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform2iv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1053,6 +1404,9 @@ globalMy.WebGLRenderingContext_uniform2iv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform3f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1062,6 +1416,9 @@ globalMy.WebGLRenderingContext_uniform3f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform3fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1071,6 +1428,9 @@ globalMy.WebGLRenderingContext_uniform3fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform3i = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1080,6 +1440,9 @@ globalMy.WebGLRenderingContext_uniform3i = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform3iv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1089,6 +1452,9 @@ globalMy.WebGLRenderingContext_uniform3iv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform4f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1098,6 +1464,9 @@ globalMy.WebGLRenderingContext_uniform4f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform4fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1107,6 +1476,9 @@ globalMy.WebGLRenderingContext_uniform4fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform4i = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1116,6 +1488,9 @@ globalMy.WebGLRenderingContext_uniform4i = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniform4iv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1125,6 +1500,9 @@ globalMy.WebGLRenderingContext_uniform4iv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniformMatrix2fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1134,6 +1512,9 @@ globalMy.WebGLRenderingContext_uniformMatrix2fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniformMatrix3fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1143,6 +1524,9 @@ globalMy.WebGLRenderingContext_uniformMatrix3fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_uniformMatrix4fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1152,6 +1536,9 @@ globalMy.WebGLRenderingContext_uniformMatrix4fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib1f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1161,6 +1548,9 @@ globalMy.WebGLRenderingContext_vertexAttrib1f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib1fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1170,6 +1560,9 @@ globalMy.WebGLRenderingContext_vertexAttrib1fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib2f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1179,6 +1572,9 @@ globalMy.WebGLRenderingContext_vertexAttrib2f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib2fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1188,6 +1584,9 @@ globalMy.WebGLRenderingContext_vertexAttrib2fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib3f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1197,6 +1596,9 @@ globalMy.WebGLRenderingContext_vertexAttrib3f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib3fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1206,6 +1608,9 @@ globalMy.WebGLRenderingContext_vertexAttrib3fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib4f = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1215,6 +1620,9 @@ globalMy.WebGLRenderingContext_vertexAttrib4f = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttrib4fv = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1224,6 +1632,9 @@ globalMy.WebGLRenderingContext_vertexAttrib4fv = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_vertexAttribPointer = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1233,6 +1644,9 @@ globalMy.WebGLRenderingContext_vertexAttribPointer = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_viewport = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -1242,6 +1656,9 @@ globalMy.WebGLRenderingContext_viewport = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_get_drawingBufferColorSpace = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['drawingBufferColorSpace'];
@@ -1251,6 +1668,9 @@ globalMy.WebGLRenderingContext_get_drawingBufferColorSpace = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_set_drawingBufferColorSpace = function (val) {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['drawingBufferColorSpace'] = val;
@@ -1259,6 +1679,9 @@ globalMy.WebGLRenderingContext_set_drawingBufferColorSpace = function (val) {
   }
 };
 globalMy.WebGLRenderingContext_get_unpackColorSpace = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['unpackColorSpace'];
@@ -1268,6 +1691,9 @@ globalMy.WebGLRenderingContext_get_unpackColorSpace = function () {
   return result;
 };
 globalMy.WebGLRenderingContext_set_unpackColorSpace = function (val) {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['unpackColorSpace'] = val;
@@ -1276,6 +1702,9 @@ globalMy.WebGLRenderingContext_set_unpackColorSpace = function (val) {
   }
 };
 globalMy.WebGLRenderingContext_makeXRCompatible = function () {
+  if (!(this instanceof WebGLRenderingContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 

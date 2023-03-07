@@ -1,4 +1,7 @@
 globalMy.HTMLSelectElement_get_autocomplete = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_autocomplete');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLSelectElement_get_autocomplete = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_autocomplete = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_autocomplete, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLSelectElement_set_autocomplete = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_disabled = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_disabled');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLSelectElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_disabled = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_disabled, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLSelectElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_form = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_form');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLSelectElement_get_form = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_multiple = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_multiple');
   }
@@ -143,6 +161,9 @@ globalMy.HTMLSelectElement_get_multiple = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_multiple = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_multiple, 传参val => ' + val);
   }
@@ -167,6 +188,9 @@ globalMy.HTMLSelectElement_set_multiple = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_name = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_name');
   }
@@ -191,6 +215,9 @@ globalMy.HTMLSelectElement_get_name = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_name = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_name, 传参val => ' + val);
   }
@@ -215,6 +242,9 @@ globalMy.HTMLSelectElement_set_name = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_required = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_required');
   }
@@ -239,6 +269,9 @@ globalMy.HTMLSelectElement_get_required = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_required = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_required, 传参val => ' + val);
   }
@@ -263,6 +296,9 @@ globalMy.HTMLSelectElement_set_required = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_size = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_size');
   }
@@ -287,6 +323,9 @@ globalMy.HTMLSelectElement_get_size = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_size = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_size, 传参val => ' + val);
   }
@@ -311,6 +350,9 @@ globalMy.HTMLSelectElement_set_size = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_type = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_type');
   }
@@ -335,6 +377,9 @@ globalMy.HTMLSelectElement_get_type = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_options = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_options');
   }
@@ -359,6 +404,9 @@ globalMy.HTMLSelectElement_get_options = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_length = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_length');
   }
@@ -383,6 +431,9 @@ globalMy.HTMLSelectElement_get_length = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_length = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_length, 传参val => ' + val);
   }
@@ -407,6 +458,9 @@ globalMy.HTMLSelectElement_set_length = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_selectedOptions = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_selectedOptions');
   }
@@ -431,6 +485,9 @@ globalMy.HTMLSelectElement_get_selectedOptions = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_selectedIndex = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_selectedIndex');
   }
@@ -455,6 +512,9 @@ globalMy.HTMLSelectElement_get_selectedIndex = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_selectedIndex = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_selectedIndex, 传参val => ' + val);
   }
@@ -479,6 +539,9 @@ globalMy.HTMLSelectElement_set_selectedIndex = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_value = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_value');
   }
@@ -503,6 +566,9 @@ globalMy.HTMLSelectElement_get_value = function () {
   return result;
 };
 globalMy.HTMLSelectElement_set_value = function (val) {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_set_value, 传参val => ' + val);
   }
@@ -527,6 +593,9 @@ globalMy.HTMLSelectElement_set_value = function (val) {
   }
 };
 globalMy.HTMLSelectElement_get_willValidate = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_willValidate');
   }
@@ -551,6 +620,9 @@ globalMy.HTMLSelectElement_get_willValidate = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_validity = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_validity');
   }
@@ -575,6 +647,9 @@ globalMy.HTMLSelectElement_get_validity = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_validationMessage = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_validationMessage');
   }
@@ -599,6 +674,9 @@ globalMy.HTMLSelectElement_get_validationMessage = function () {
   return result;
 };
 globalMy.HTMLSelectElement_get_labels = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_get_labels');
   }
@@ -623,6 +701,9 @@ globalMy.HTMLSelectElement_get_labels = function () {
   return result;
 };
 globalMy.HTMLSelectElement_add = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_add, arguments => ', arguments);
   }
@@ -649,6 +730,9 @@ globalMy.HTMLSelectElement_add = function () {
   return result;
 };
 globalMy.HTMLSelectElement_checkValidity = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_checkValidity, arguments => ', arguments);
   }
@@ -675,6 +759,9 @@ globalMy.HTMLSelectElement_checkValidity = function () {
   return result;
 };
 globalMy.HTMLSelectElement_item = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_item, arguments => ', arguments);
   }
@@ -701,6 +788,9 @@ globalMy.HTMLSelectElement_item = function () {
   return result;
 };
 globalMy.HTMLSelectElement_namedItem = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_namedItem, arguments => ', arguments);
   }
@@ -727,6 +817,9 @@ globalMy.HTMLSelectElement_namedItem = function () {
   return result;
 };
 globalMy.HTMLSelectElement_remove = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_remove, arguments => ', arguments);
   }
@@ -753,6 +846,9 @@ globalMy.HTMLSelectElement_remove = function () {
   return result;
 };
 globalMy.HTMLSelectElement_reportValidity = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_reportValidity, arguments => ', arguments);
   }
@@ -779,6 +875,9 @@ globalMy.HTMLSelectElement_reportValidity = function () {
   return result;
 };
 globalMy.HTMLSelectElement_setCustomValidity = function () {
+  if (!(this instanceof HTMLSelectElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSelectElement_setCustomValidity, arguments => ', arguments);
   }

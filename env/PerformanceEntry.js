@@ -1,4 +1,7 @@
 globalMy.PerformanceEntry_get_name = function () {
+  if (!(this instanceof PerformanceEntry)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['name'];
@@ -8,6 +11,9 @@ globalMy.PerformanceEntry_get_name = function () {
   return result;
 };
 globalMy.PerformanceEntry_get_entryType = function () {
+  if (!(this instanceof PerformanceEntry)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['entryType'];
@@ -17,6 +23,9 @@ globalMy.PerformanceEntry_get_entryType = function () {
   return result;
 };
 globalMy.PerformanceEntry_get_startTime = function () {
+  if (!(this instanceof PerformanceEntry)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['startTime'];
@@ -26,6 +35,9 @@ globalMy.PerformanceEntry_get_startTime = function () {
   return result;
 };
 globalMy.PerformanceEntry_get_duration = function () {
+  if (!(this instanceof PerformanceEntry)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['duration'];
@@ -35,6 +47,9 @@ globalMy.PerformanceEntry_get_duration = function () {
   return result;
 };
 globalMy.PerformanceEntry_toJSON = function () {
+  if (!(this instanceof PerformanceEntry)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 

@@ -1,4 +1,7 @@
 globalMy.HTMLLabelElement_get_form = function () {
+  if (!(this instanceof HTMLLabelElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLabelElement_get_form');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLLabelElement_get_form = function () {
   return result;
 };
 globalMy.HTMLLabelElement_get_htmlFor = function () {
+  if (!(this instanceof HTMLLabelElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLabelElement_get_htmlFor');
   }
@@ -47,6 +53,9 @@ globalMy.HTMLLabelElement_get_htmlFor = function () {
   return result;
 };
 globalMy.HTMLLabelElement_set_htmlFor = function (val) {
+  if (!(this instanceof HTMLLabelElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLabelElement_set_htmlFor, 传参val => ' + val);
   }
@@ -71,6 +80,9 @@ globalMy.HTMLLabelElement_set_htmlFor = function (val) {
   }
 };
 globalMy.HTMLLabelElement_get_control = function () {
+  if (!(this instanceof HTMLLabelElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLabelElement_get_control');
   }

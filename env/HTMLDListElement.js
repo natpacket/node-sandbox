@@ -1,4 +1,7 @@
 globalMy.HTMLDListElement_get_compact = function () {
+  if (!(this instanceof HTMLDListElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDListElement_get_compact');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLDListElement_get_compact = function () {
   return result;
 };
 globalMy.HTMLDListElement_set_compact = function (val) {
+  if (!(this instanceof HTMLDListElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDListElement_set_compact, 传参val => ' + val);
   }

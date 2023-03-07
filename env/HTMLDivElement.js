@@ -1,4 +1,7 @@
 globalMy.HTMLDivElement_get_align = function () {
+  if (!(this instanceof HTMLDivElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDivElement_get_align');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLDivElement_get_align = function () {
   return result;
 };
 globalMy.HTMLDivElement_set_align = function (val) {
+  if (!(this instanceof HTMLDivElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDivElement_set_align, 传参val => ' + val);
   }

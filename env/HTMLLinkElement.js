@@ -1,4 +1,7 @@
 globalMy.HTMLLinkElement_get_disabled = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_disabled');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLLinkElement_get_disabled = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_disabled = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_disabled, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLLinkElement_set_disabled = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_href = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_href');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLLinkElement_get_href = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_href = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_href, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLLinkElement_set_href = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_crossOrigin = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_crossOrigin');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLLinkElement_get_crossOrigin = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_crossOrigin = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_crossOrigin, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLLinkElement_set_crossOrigin = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_rel = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_rel');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLLinkElement_get_rel = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_rel = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_rel, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLLinkElement_set_rel = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_relList = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_relList');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLLinkElement_get_relList = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_relList = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_relList, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLLinkElement_set_relList = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_media = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_media');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLLinkElement_get_media = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_media = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_media, 传参val => ' + val);
   }
@@ -287,6 +323,9 @@ globalMy.HTMLLinkElement_set_media = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_hreflang = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_hreflang');
   }
@@ -311,6 +350,9 @@ globalMy.HTMLLinkElement_get_hreflang = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_hreflang = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_hreflang, 传参val => ' + val);
   }
@@ -335,6 +377,9 @@ globalMy.HTMLLinkElement_set_hreflang = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_type = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_type');
   }
@@ -359,6 +404,9 @@ globalMy.HTMLLinkElement_get_type = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_type = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_type, 传参val => ' + val);
   }
@@ -383,6 +431,9 @@ globalMy.HTMLLinkElement_set_type = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_as = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_as');
   }
@@ -407,6 +458,9 @@ globalMy.HTMLLinkElement_get_as = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_as = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_as, 传参val => ' + val);
   }
@@ -431,6 +485,9 @@ globalMy.HTMLLinkElement_set_as = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_referrerPolicy = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_referrerPolicy');
   }
@@ -455,6 +512,9 @@ globalMy.HTMLLinkElement_get_referrerPolicy = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_referrerPolicy = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_referrerPolicy, 传参val => ' + val);
   }
@@ -479,6 +539,9 @@ globalMy.HTMLLinkElement_set_referrerPolicy = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_sizes = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_sizes');
   }
@@ -503,6 +566,9 @@ globalMy.HTMLLinkElement_get_sizes = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_sizes = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_sizes, 传参val => ' + val);
   }
@@ -527,6 +593,9 @@ globalMy.HTMLLinkElement_set_sizes = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_imageSrcset = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_imageSrcset');
   }
@@ -551,6 +620,9 @@ globalMy.HTMLLinkElement_get_imageSrcset = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_imageSrcset = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_imageSrcset, 传参val => ' + val);
   }
@@ -575,6 +647,9 @@ globalMy.HTMLLinkElement_set_imageSrcset = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_imageSizes = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_imageSizes');
   }
@@ -599,6 +674,9 @@ globalMy.HTMLLinkElement_get_imageSizes = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_imageSizes = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_imageSizes, 传参val => ' + val);
   }
@@ -623,6 +701,9 @@ globalMy.HTMLLinkElement_set_imageSizes = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_charset = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_charset');
   }
@@ -647,6 +728,9 @@ globalMy.HTMLLinkElement_get_charset = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_charset = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_charset, 传参val => ' + val);
   }
@@ -671,6 +755,9 @@ globalMy.HTMLLinkElement_set_charset = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_rev = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_rev');
   }
@@ -695,6 +782,9 @@ globalMy.HTMLLinkElement_get_rev = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_rev = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_rev, 传参val => ' + val);
   }
@@ -719,6 +809,9 @@ globalMy.HTMLLinkElement_set_rev = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_target = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_target');
   }
@@ -743,6 +836,9 @@ globalMy.HTMLLinkElement_get_target = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_target = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_target, 传参val => ' + val);
   }
@@ -767,6 +863,9 @@ globalMy.HTMLLinkElement_set_target = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_sheet = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_sheet');
   }
@@ -791,6 +890,9 @@ globalMy.HTMLLinkElement_get_sheet = function () {
   return result;
 };
 globalMy.HTMLLinkElement_get_integrity = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_integrity');
   }
@@ -815,6 +917,9 @@ globalMy.HTMLLinkElement_get_integrity = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_integrity = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_integrity, 传参val => ' + val);
   }
@@ -839,6 +944,9 @@ globalMy.HTMLLinkElement_set_integrity = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_fetchPriority = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_fetchPriority');
   }
@@ -863,6 +971,9 @@ globalMy.HTMLLinkElement_get_fetchPriority = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_fetchPriority = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_fetchPriority, 传参val => ' + val);
   }
@@ -887,6 +998,9 @@ globalMy.HTMLLinkElement_set_fetchPriority = function (val) {
   }
 };
 globalMy.HTMLLinkElement_get_blocking = function () {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_get_blocking');
   }
@@ -911,6 +1025,9 @@ globalMy.HTMLLinkElement_get_blocking = function () {
   return result;
 };
 globalMy.HTMLLinkElement_set_blocking = function (val) {
+  if (!(this instanceof HTMLLinkElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLLinkElement_set_blocking, 传参val => ' + val);
   }

@@ -1,4 +1,7 @@
 globalMy.HTMLHeadingElement_get_align = function () {
+  if (!(this instanceof HTMLHeadingElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHeadingElement_get_align');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLHeadingElement_get_align = function () {
   return result;
 };
 globalMy.HTMLHeadingElement_set_align = function (val) {
+  if (!(this instanceof HTMLHeadingElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLHeadingElement_set_align, 传参val => ' + val);
   }

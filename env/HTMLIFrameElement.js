@@ -1,4 +1,7 @@
 globalMy.HTMLIFrameElement_get_src = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_src');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLIFrameElement_get_src = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_src = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_src, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLIFrameElement_set_src = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_srcdoc = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_srcdoc');
   }
@@ -71,6 +80,9 @@ globalMy.HTMLIFrameElement_get_srcdoc = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_srcdoc = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_srcdoc, 传参val => ' + val);
   }
@@ -95,6 +107,9 @@ globalMy.HTMLIFrameElement_set_srcdoc = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_name = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_name');
   }
@@ -119,6 +134,9 @@ globalMy.HTMLIFrameElement_get_name = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_name = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_name, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.HTMLIFrameElement_set_name = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_sandbox = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_sandbox');
   }
@@ -167,6 +188,9 @@ globalMy.HTMLIFrameElement_get_sandbox = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_sandbox = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_sandbox, 传参val => ' + val);
   }
@@ -191,6 +215,9 @@ globalMy.HTMLIFrameElement_set_sandbox = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_allowFullscreen = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_allowFullscreen');
   }
@@ -215,6 +242,9 @@ globalMy.HTMLIFrameElement_get_allowFullscreen = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_allowFullscreen = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_allowFullscreen, 传参val => ' + val);
   }
@@ -239,6 +269,9 @@ globalMy.HTMLIFrameElement_set_allowFullscreen = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_width = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_width');
   }
@@ -263,6 +296,9 @@ globalMy.HTMLIFrameElement_get_width = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_width = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_width, 传参val => ' + val);
   }
@@ -287,6 +323,9 @@ globalMy.HTMLIFrameElement_set_width = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_height = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_height');
   }
@@ -311,6 +350,9 @@ globalMy.HTMLIFrameElement_get_height = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_height = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_height, 传参val => ' + val);
   }
@@ -335,6 +377,9 @@ globalMy.HTMLIFrameElement_set_height = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_contentDocument = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_contentDocument');
   }
@@ -359,6 +404,9 @@ globalMy.HTMLIFrameElement_get_contentDocument = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_get_contentWindow = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_contentWindow');
   }
@@ -383,6 +431,9 @@ globalMy.HTMLIFrameElement_get_contentWindow = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_get_referrerPolicy = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_referrerPolicy');
   }
@@ -407,6 +458,9 @@ globalMy.HTMLIFrameElement_get_referrerPolicy = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_referrerPolicy = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_referrerPolicy, 传参val => ' + val);
   }
@@ -431,6 +485,9 @@ globalMy.HTMLIFrameElement_set_referrerPolicy = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_csp = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_csp');
   }
@@ -455,6 +512,9 @@ globalMy.HTMLIFrameElement_get_csp = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_csp = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_csp, 传参val => ' + val);
   }
@@ -479,6 +539,9 @@ globalMy.HTMLIFrameElement_set_csp = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_allow = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_allow');
   }
@@ -503,6 +566,9 @@ globalMy.HTMLIFrameElement_get_allow = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_allow = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_allow, 传参val => ' + val);
   }
@@ -527,6 +593,9 @@ globalMy.HTMLIFrameElement_set_allow = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_featurePolicy = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_featurePolicy');
   }
@@ -551,6 +620,9 @@ globalMy.HTMLIFrameElement_get_featurePolicy = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_get_align = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_align');
   }
@@ -575,6 +647,9 @@ globalMy.HTMLIFrameElement_get_align = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_align = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_align, 传参val => ' + val);
   }
@@ -599,6 +674,9 @@ globalMy.HTMLIFrameElement_set_align = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_scrolling = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_scrolling');
   }
@@ -623,6 +701,9 @@ globalMy.HTMLIFrameElement_get_scrolling = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_scrolling = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_scrolling, 传参val => ' + val);
   }
@@ -647,6 +728,9 @@ globalMy.HTMLIFrameElement_set_scrolling = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_frameBorder = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_frameBorder');
   }
@@ -671,6 +755,9 @@ globalMy.HTMLIFrameElement_get_frameBorder = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_frameBorder = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_frameBorder, 传参val => ' + val);
   }
@@ -695,6 +782,9 @@ globalMy.HTMLIFrameElement_set_frameBorder = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_longDesc = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_longDesc');
   }
@@ -719,6 +809,9 @@ globalMy.HTMLIFrameElement_get_longDesc = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_longDesc = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_longDesc, 传参val => ' + val);
   }
@@ -743,6 +836,9 @@ globalMy.HTMLIFrameElement_set_longDesc = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_marginHeight = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_marginHeight');
   }
@@ -767,6 +863,9 @@ globalMy.HTMLIFrameElement_get_marginHeight = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_marginHeight = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_marginHeight, 传参val => ' + val);
   }
@@ -791,6 +890,9 @@ globalMy.HTMLIFrameElement_set_marginHeight = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_marginWidth = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_marginWidth');
   }
@@ -815,6 +917,9 @@ globalMy.HTMLIFrameElement_get_marginWidth = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_marginWidth = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_marginWidth, 传参val => ' + val);
   }
@@ -839,6 +944,9 @@ globalMy.HTMLIFrameElement_set_marginWidth = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_getSVGDocument = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_getSVGDocument, arguments => ', arguments);
   }
@@ -865,6 +973,9 @@ globalMy.HTMLIFrameElement_getSVGDocument = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_get_loading = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_loading');
   }
@@ -889,6 +1000,9 @@ globalMy.HTMLIFrameElement_get_loading = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_loading = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_loading, 传参val => ' + val);
   }
@@ -913,6 +1027,9 @@ globalMy.HTMLIFrameElement_set_loading = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_allowPaymentRequest = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_allowPaymentRequest');
   }
@@ -937,6 +1054,9 @@ globalMy.HTMLIFrameElement_get_allowPaymentRequest = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_allowPaymentRequest = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_allowPaymentRequest, 传参val => ' + val);
   }
@@ -961,6 +1081,9 @@ globalMy.HTMLIFrameElement_set_allowPaymentRequest = function (val) {
   }
 };
 globalMy.HTMLIFrameElement_get_credentialless = function () {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_get_credentialless');
   }
@@ -985,6 +1108,9 @@ globalMy.HTMLIFrameElement_get_credentialless = function () {
   return result;
 };
 globalMy.HTMLIFrameElement_set_credentialless = function (val) {
+  if (!(this instanceof HTMLIFrameElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLIFrameElement_set_credentialless, 传参val => ' + val);
   }

@@ -1,4 +1,7 @@
 globalMy.HTMLTimeElement_get_dateTime = function () {
+  if (!(this instanceof HTMLTimeElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTimeElement_get_dateTime');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLTimeElement_get_dateTime = function () {
   return result;
 };
 globalMy.HTMLTimeElement_set_dateTime = function (val) {
+  if (!(this instanceof HTMLTimeElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLTimeElement_set_dateTime, 传参val => ' + val);
   }

@@ -1,5 +1,9 @@
 // Navigator
+// Navigator
 globalMy.Navigator_get_vendorSub = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['vendorSub'];
@@ -9,6 +13,9 @@ globalMy.Navigator_get_vendorSub = function () {
   return result;
 };
 globalMy.Navigator_get_productSub = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['productSub'];
@@ -18,6 +25,9 @@ globalMy.Navigator_get_productSub = function () {
   return result;
 };
 globalMy.Navigator_get_vendor = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['vendor'];
@@ -27,6 +37,9 @@ globalMy.Navigator_get_vendor = function () {
   return result;
 };
 globalMy.Navigator_get_maxTouchPoints = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['maxTouchPoints'];
@@ -36,6 +49,9 @@ globalMy.Navigator_get_maxTouchPoints = function () {
   return result;
 };
 globalMy.Navigator_get_scheduling = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['scheduling'];
@@ -45,6 +61,9 @@ globalMy.Navigator_get_scheduling = function () {
   return result;
 };
 globalMy.Navigator_get_userActivation = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['userActivation'];
@@ -54,6 +73,9 @@ globalMy.Navigator_get_userActivation = function () {
   return result;
 };
 globalMy.Navigator_get_doNotTrack = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['doNotTrack'];
@@ -63,6 +85,9 @@ globalMy.Navigator_get_doNotTrack = function () {
   return result;
 };
 globalMy.Navigator_get_geolocation = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['geolocation'];
@@ -72,6 +97,9 @@ globalMy.Navigator_get_geolocation = function () {
   return result;
 };
 globalMy.Navigator_get_connection = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['connection'];
@@ -81,6 +109,9 @@ globalMy.Navigator_get_connection = function () {
   return result;
 };
 globalMy.Navigator_get_plugins = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['plugins'];
@@ -90,6 +121,9 @@ globalMy.Navigator_get_plugins = function () {
   return result;
 };
 globalMy.Navigator_get_mimeTypes = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['mimeTypes'];
@@ -99,6 +133,9 @@ globalMy.Navigator_get_mimeTypes = function () {
   return result;
 };
 globalMy.Navigator_get_pdfViewerEnabled = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pdfViewerEnabled'];
@@ -108,6 +145,9 @@ globalMy.Navigator_get_pdfViewerEnabled = function () {
   return result;
 };
 globalMy.Navigator_get_webkitTemporaryStorage = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['webkitTemporaryStorage'];
@@ -117,6 +157,9 @@ globalMy.Navigator_get_webkitTemporaryStorage = function () {
   return result;
 };
 globalMy.Navigator_get_webkitPersistentStorage = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['webkitPersistentStorage'];
@@ -126,6 +169,9 @@ globalMy.Navigator_get_webkitPersistentStorage = function () {
   return result;
 };
 globalMy.Navigator_get_hardwareConcurrency = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['hardwareConcurrency'];
@@ -135,6 +181,9 @@ globalMy.Navigator_get_hardwareConcurrency = function () {
   return result;
 };
 globalMy.Navigator_get_cookieEnabled = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['cookieEnabled'];
@@ -144,6 +193,9 @@ globalMy.Navigator_get_cookieEnabled = function () {
   return result;
 };
 globalMy.Navigator_get_appCodeName = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['appCodeName'];
@@ -153,6 +205,9 @@ globalMy.Navigator_get_appCodeName = function () {
   return result;
 };
 globalMy.Navigator_get_appName = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['appName'];
@@ -162,6 +217,9 @@ globalMy.Navigator_get_appName = function () {
   return result;
 };
 globalMy.Navigator_get_appVersion = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['appVersion'];
@@ -171,6 +229,9 @@ globalMy.Navigator_get_appVersion = function () {
   return result;
 };
 globalMy.Navigator_get_platform = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['platform'];
@@ -180,6 +241,9 @@ globalMy.Navigator_get_platform = function () {
   return result;
 };
 globalMy.Navigator_get_product = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['product'];
@@ -189,6 +253,9 @@ globalMy.Navigator_get_product = function () {
   return result;
 };
 globalMy.Navigator_get_userAgent = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['userAgent'];
@@ -198,6 +265,9 @@ globalMy.Navigator_get_userAgent = function () {
   return result;
 };
 globalMy.Navigator_get_language = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['language'];
@@ -207,6 +277,9 @@ globalMy.Navigator_get_language = function () {
   return result;
 };
 globalMy.Navigator_get_languages = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['languages'];
@@ -216,6 +289,9 @@ globalMy.Navigator_get_languages = function () {
   return result;
 };
 globalMy.Navigator_get_onLine = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onLine'];
@@ -225,6 +301,9 @@ globalMy.Navigator_get_onLine = function () {
   return result;
 };
 globalMy.Navigator_get_webdriver = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['webdriver'];
@@ -234,6 +313,9 @@ globalMy.Navigator_get_webdriver = function () {
   return result;
 };
 globalMy.Navigator_getGamepads = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -243,6 +325,9 @@ globalMy.Navigator_getGamepads = function () {
   return result;
 };
 globalMy.Navigator_javaEnabled = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -252,6 +337,9 @@ globalMy.Navigator_javaEnabled = function () {
   return result;
 };
 globalMy.Navigator_sendBeacon = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -261,6 +349,9 @@ globalMy.Navigator_sendBeacon = function () {
   return result;
 };
 globalMy.Navigator_vibrate = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -270,6 +361,9 @@ globalMy.Navigator_vibrate = function () {
   return result;
 };
 globalMy.Navigator_get_bluetooth = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['bluetooth'];
@@ -279,6 +373,9 @@ globalMy.Navigator_get_bluetooth = function () {
   return result;
 };
 globalMy.Navigator_get_clipboard = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['clipboard'];
@@ -288,6 +385,9 @@ globalMy.Navigator_get_clipboard = function () {
   return result;
 };
 globalMy.Navigator_get_credentials = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['credentials'];
@@ -297,6 +397,9 @@ globalMy.Navigator_get_credentials = function () {
   return result;
 };
 globalMy.Navigator_get_keyboard = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['keyboard'];
@@ -306,6 +409,9 @@ globalMy.Navigator_get_keyboard = function () {
   return result;
 };
 globalMy.Navigator_get_managed = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['managed'];
@@ -315,6 +421,9 @@ globalMy.Navigator_get_managed = function () {
   return result;
 };
 globalMy.Navigator_get_mediaDevices = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['mediaDevices'];
@@ -324,6 +433,9 @@ globalMy.Navigator_get_mediaDevices = function () {
   return result;
 };
 globalMy.Navigator_get_storage = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['storage'];
@@ -333,6 +445,9 @@ globalMy.Navigator_get_storage = function () {
   return result;
 };
 globalMy.Navigator_get_serviceWorker = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['serviceWorker'];
@@ -342,6 +457,9 @@ globalMy.Navigator_get_serviceWorker = function () {
   return result;
 };
 globalMy.Navigator_get_wakeLock = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['wakeLock'];
@@ -351,6 +469,9 @@ globalMy.Navigator_get_wakeLock = function () {
   return result;
 };
 globalMy.Navigator_get_deviceMemory = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['deviceMemory'];
@@ -360,6 +481,9 @@ globalMy.Navigator_get_deviceMemory = function () {
   return result;
 };
 globalMy.Navigator_get_ink = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['ink'];
@@ -369,6 +493,9 @@ globalMy.Navigator_get_ink = function () {
   return result;
 };
 globalMy.Navigator_get_hid = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['hid'];
@@ -378,6 +505,9 @@ globalMy.Navigator_get_hid = function () {
   return result;
 };
 globalMy.Navigator_get_locks = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['locks'];
@@ -387,6 +517,9 @@ globalMy.Navigator_get_locks = function () {
   return result;
 };
 globalMy.Navigator_get_mediaCapabilities = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['mediaCapabilities'];
@@ -396,6 +529,9 @@ globalMy.Navigator_get_mediaCapabilities = function () {
   return result;
 };
 globalMy.Navigator_get_mediaSession = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['mediaSession'];
@@ -405,6 +541,9 @@ globalMy.Navigator_get_mediaSession = function () {
   return result;
 };
 globalMy.Navigator_get_permissions = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['permissions'];
@@ -414,6 +553,9 @@ globalMy.Navigator_get_permissions = function () {
   return result;
 };
 globalMy.Navigator_get_presentation = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['presentation'];
@@ -423,6 +565,9 @@ globalMy.Navigator_get_presentation = function () {
   return result;
 };
 globalMy.Navigator_get_serial = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['serial'];
@@ -432,6 +577,9 @@ globalMy.Navigator_get_serial = function () {
   return result;
 };
 globalMy.Navigator_get_virtualKeyboard = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['virtualKeyboard'];
@@ -441,6 +589,9 @@ globalMy.Navigator_get_virtualKeyboard = function () {
   return result;
 };
 globalMy.Navigator_get_usb = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['usb'];
@@ -450,6 +601,9 @@ globalMy.Navigator_get_usb = function () {
   return result;
 };
 globalMy.Navigator_get_xr = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['xr'];
@@ -459,6 +613,9 @@ globalMy.Navigator_get_xr = function () {
   return result;
 };
 globalMy.Navigator_get_userAgentData = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['userAgentData'];
@@ -468,6 +625,9 @@ globalMy.Navigator_get_userAgentData = function () {
   return result;
 };
 globalMy.Navigator_canShare = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -477,6 +637,9 @@ globalMy.Navigator_canShare = function () {
   return result;
 };
 globalMy.Navigator_share = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -486,6 +649,9 @@ globalMy.Navigator_share = function () {
   return result;
 };
 globalMy.Navigator_clearAppBadge = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -495,6 +661,9 @@ globalMy.Navigator_clearAppBadge = function () {
   return result;
 };
 globalMy.Navigator_setAppBadge = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -504,6 +673,9 @@ globalMy.Navigator_setAppBadge = function () {
   return result;
 };
 globalMy.Navigator_getBattery = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -513,6 +685,9 @@ globalMy.Navigator_getBattery = function () {
   return result;
 };
 globalMy.Navigator_getInstalledRelatedApps = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -522,6 +697,9 @@ globalMy.Navigator_getInstalledRelatedApps = function () {
   return result;
 };
 globalMy.Navigator_getUserMedia = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -531,6 +709,9 @@ globalMy.Navigator_getUserMedia = function () {
   return result;
 };
 globalMy.Navigator_requestMIDIAccess = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -540,6 +721,9 @@ globalMy.Navigator_requestMIDIAccess = function () {
   return result;
 };
 globalMy.Navigator_requestMediaKeySystemAccess = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -549,6 +733,9 @@ globalMy.Navigator_requestMediaKeySystemAccess = function () {
   return result;
 };
 globalMy.Navigator_webkitGetUserMedia = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -558,6 +745,9 @@ globalMy.Navigator_webkitGetUserMedia = function () {
   return result;
 };
 globalMy.Navigator_registerProtocolHandler = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -567,6 +757,9 @@ globalMy.Navigator_registerProtocolHandler = function () {
   return result;
 };
 globalMy.Navigator_unregisterProtocolHandler = function () {
+  if (!(this instanceof Navigator)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -576,4 +769,5 @@ globalMy.Navigator_unregisterProtocolHandler = function () {
   return result;
 };
 
+// History
 // History

@@ -1,5 +1,9 @@
 // webgl
+// webgl
 globalMy.DOMTokenList_entries = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -8,6 +12,9 @@ globalMy.DOMTokenList_entries = function () {
   return result;
 };
 globalMy.DOMTokenList_keys = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -16,6 +23,9 @@ globalMy.DOMTokenList_keys = function () {
   return result;
 };
 globalMy.DOMTokenList_values = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -24,6 +34,9 @@ globalMy.DOMTokenList_values = function () {
   return result;
 };
 globalMy.DOMTokenList_forEach = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -32,6 +45,9 @@ globalMy.DOMTokenList_forEach = function () {
   return result;
 };
 globalMy.DOMTokenList_get_length = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -41,6 +57,9 @@ globalMy.DOMTokenList_get_length = function () {
   return result;
 };
 globalMy.DOMTokenList_get_value = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['value'];
@@ -50,6 +69,9 @@ globalMy.DOMTokenList_get_value = function () {
   return result;
 };
 globalMy.DOMTokenList_set_value = function (val) {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['value'] = val;
@@ -58,6 +80,9 @@ globalMy.DOMTokenList_set_value = function (val) {
   }
 };
 globalMy.DOMTokenList_add = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -66,6 +91,9 @@ globalMy.DOMTokenList_add = function () {
   return result;
 };
 globalMy.DOMTokenList_contains = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -74,6 +102,9 @@ globalMy.DOMTokenList_contains = function () {
   return result;
 };
 globalMy.DOMTokenList_item = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -82,6 +113,9 @@ globalMy.DOMTokenList_item = function () {
   return result;
 };
 globalMy.DOMTokenList_remove = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -90,6 +124,9 @@ globalMy.DOMTokenList_remove = function () {
   return result;
 };
 globalMy.DOMTokenList_replace = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -98,6 +135,9 @@ globalMy.DOMTokenList_replace = function () {
   return result;
 };
 globalMy.DOMTokenList_supports = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -106,6 +146,9 @@ globalMy.DOMTokenList_supports = function () {
   return result;
 };
 globalMy.DOMTokenList_toggle = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -114,6 +157,9 @@ globalMy.DOMTokenList_toggle = function () {
   return result;
 };
 globalMy.DOMTokenList_toString = function () {
+  if (!(this instanceof DOMTokenList)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

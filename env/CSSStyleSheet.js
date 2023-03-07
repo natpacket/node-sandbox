@@ -1,4 +1,7 @@
 globalMy.CSSStyleSheet_get_ownerRule = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_get_ownerRule');
   }
@@ -23,6 +26,9 @@ globalMy.CSSStyleSheet_get_ownerRule = function () {
   return result;
 };
 globalMy.CSSStyleSheet_get_cssRules = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_get_cssRules');
   }
@@ -47,6 +53,9 @@ globalMy.CSSStyleSheet_get_cssRules = function () {
   return result;
 };
 globalMy.CSSStyleSheet_get_rules = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_get_rules');
   }
@@ -71,6 +80,9 @@ globalMy.CSSStyleSheet_get_rules = function () {
   return result;
 };
 globalMy.CSSStyleSheet_addRule = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_addRule, arguments => ', arguments);
   }
@@ -97,6 +109,9 @@ globalMy.CSSStyleSheet_addRule = function () {
   return result;
 };
 globalMy.CSSStyleSheet_deleteRule = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_deleteRule, arguments => ', arguments);
   }
@@ -123,6 +138,9 @@ globalMy.CSSStyleSheet_deleteRule = function () {
   return result;
 };
 globalMy.CSSStyleSheet_insertRule = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_insertRule, arguments => ', arguments);
   }
@@ -149,6 +167,9 @@ globalMy.CSSStyleSheet_insertRule = function () {
   return result;
 };
 globalMy.CSSStyleSheet_removeRule = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_removeRule, arguments => ', arguments);
   }
@@ -175,6 +196,9 @@ globalMy.CSSStyleSheet_removeRule = function () {
   return result;
 };
 globalMy.CSSStyleSheet_replace = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_replace, arguments => ', arguments);
   }
@@ -201,6 +225,9 @@ globalMy.CSSStyleSheet_replace = function () {
   return result;
 };
 globalMy.CSSStyleSheet_replaceSync = function () {
+  if (!(this instanceof CSSStyleSheet)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleSheet_replaceSync, arguments => ', arguments);
   }

@@ -1,4 +1,7 @@
 globalMy.CSSStyleDeclaration_get_cssText = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_get_cssText');
   }
@@ -23,6 +26,9 @@ globalMy.CSSStyleDeclaration_get_cssText = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_set_cssText = function (val) {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_set_cssText, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.CSSStyleDeclaration_set_cssText = function (val) {
   }
 };
 globalMy.CSSStyleDeclaration_get_length = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_get_length');
   }
@@ -71,6 +80,9 @@ globalMy.CSSStyleDeclaration_get_length = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_get_parentRule = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_get_parentRule');
   }
@@ -95,6 +107,9 @@ globalMy.CSSStyleDeclaration_get_parentRule = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_get_cssFloat = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_get_cssFloat');
   }
@@ -119,6 +134,9 @@ globalMy.CSSStyleDeclaration_get_cssFloat = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_set_cssFloat = function (val) {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_set_cssFloat, 传参val => ' + val);
   }
@@ -143,6 +161,9 @@ globalMy.CSSStyleDeclaration_set_cssFloat = function (val) {
   }
 };
 globalMy.CSSStyleDeclaration_getPropertyPriority = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_getPropertyPriority, arguments => ', arguments);
   }
@@ -169,6 +190,9 @@ globalMy.CSSStyleDeclaration_getPropertyPriority = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_getPropertyValue = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_getPropertyValue, arguments => ', arguments);
   }
@@ -195,6 +219,9 @@ globalMy.CSSStyleDeclaration_getPropertyValue = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_item = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_item, arguments => ', arguments);
   }
@@ -221,6 +248,9 @@ globalMy.CSSStyleDeclaration_item = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_removeProperty = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_removeProperty, arguments => ', arguments);
   }
@@ -247,6 +277,9 @@ globalMy.CSSStyleDeclaration_removeProperty = function () {
   return result;
 };
 globalMy.CSSStyleDeclaration_setProperty = function () {
+  if (!(this instanceof CSSStyleDeclaration)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_setProperty, arguments => ', arguments);
   }

@@ -1,4 +1,7 @@
 globalMy.OfflineAudioContext_get_oncomplete = function () {
+  if (!(this instanceof OfflineAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['oncomplete'];
@@ -8,6 +11,9 @@ globalMy.OfflineAudioContext_get_oncomplete = function () {
   return result;
 };
 globalMy.OfflineAudioContext_set_oncomplete = function (val) {
+  if (!(this instanceof OfflineAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['oncomplete'] = val;
@@ -16,6 +22,9 @@ globalMy.OfflineAudioContext_set_oncomplete = function (val) {
   }
 };
 globalMy.OfflineAudioContext_get_length = function () {
+  if (!(this instanceof OfflineAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -25,6 +34,9 @@ globalMy.OfflineAudioContext_get_length = function () {
   return result;
 };
 globalMy.OfflineAudioContext_resume = function () {
+  if (!(this instanceof OfflineAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -33,6 +45,9 @@ globalMy.OfflineAudioContext_resume = function () {
   return result;
 };
 globalMy.OfflineAudioContext_startRendering = function () {
+  if (!(this instanceof OfflineAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -41,6 +56,9 @@ globalMy.OfflineAudioContext_startRendering = function () {
   return result;
 };
 globalMy.OfflineAudioContext_suspend = function () {
+  if (!(this instanceof OfflineAudioContext)) {
+    throw new TypeError("Illegal invocation");
+  }
   let result;
   //这里写方法实体
   if (globalMy.is_log) {

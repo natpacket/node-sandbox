@@ -1,5 +1,9 @@
 // PointerEvent
+// PointerEvent
 globalMy.PointerEvent_get_pointerId = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['pointerId'];
@@ -9,6 +13,9 @@ globalMy.PointerEvent_get_pointerId = function () {
   return result;
 };
 globalMy.PointerEvent_get_width = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['width'];
@@ -18,6 +25,9 @@ globalMy.PointerEvent_get_width = function () {
   return result;
 };
 globalMy.PointerEvent_get_height = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['height'];
@@ -27,6 +37,9 @@ globalMy.PointerEvent_get_height = function () {
   return result;
 };
 globalMy.PointerEvent_get_pressure = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['pressure'];
@@ -36,6 +49,9 @@ globalMy.PointerEvent_get_pressure = function () {
   return result;
 };
 globalMy.PointerEvent_get_tiltX = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['tiltX'];
@@ -45,6 +61,9 @@ globalMy.PointerEvent_get_tiltX = function () {
   return result;
 };
 globalMy.PointerEvent_get_tiltY = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['tiltY'];
@@ -54,6 +73,9 @@ globalMy.PointerEvent_get_tiltY = function () {
   return result;
 };
 globalMy.PointerEvent_get_azimuthAngle = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['azimuthAngle'];
@@ -63,6 +85,9 @@ globalMy.PointerEvent_get_azimuthAngle = function () {
   return result;
 };
 globalMy.PointerEvent_get_altitudeAngle = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['altitudeAngle'];
@@ -72,6 +97,9 @@ globalMy.PointerEvent_get_altitudeAngle = function () {
   return result;
 };
 globalMy.PointerEvent_get_tangentialPressure = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['tangentialPressure'];
@@ -81,6 +109,9 @@ globalMy.PointerEvent_get_tangentialPressure = function () {
   return result;
 };
 globalMy.PointerEvent_get_twist = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['twist'];
@@ -90,6 +121,9 @@ globalMy.PointerEvent_get_twist = function () {
   return result;
 };
 globalMy.PointerEvent_get_pointerType = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['pointerType'];
@@ -99,6 +133,9 @@ globalMy.PointerEvent_get_pointerType = function () {
   return result;
 };
 globalMy.PointerEvent_get_isPrimary = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundEventName(this);
   result = globalMy.event_value[foundName]['isPrimary'];
@@ -108,6 +145,9 @@ globalMy.PointerEvent_get_isPrimary = function () {
   return result;
 };
 globalMy.PointerEvent_getCoalescedEvents = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -117,6 +157,9 @@ globalMy.PointerEvent_getCoalescedEvents = function () {
   return result;
 };
 globalMy.PointerEvent_getPredictedEvents = function () {
+  if (!(this instanceof PointerEvent)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -126,4 +169,5 @@ globalMy.PointerEvent_getPredictedEvents = function () {
   return result;
 };
 
+// MouseEvent
 // MouseEvent

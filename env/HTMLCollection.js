@@ -1,4 +1,7 @@
 globalMy.HTMLCollection_get_length = function () {
+  if (!(this instanceof HTMLCollection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -8,6 +11,9 @@ globalMy.HTMLCollection_get_length = function () {
   return result;
 };
 globalMy.HTMLCollection_item = function () {
+  if (!(this instanceof HTMLCollection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 
@@ -17,6 +23,9 @@ globalMy.HTMLCollection_item = function () {
   return result;
 };
 globalMy.HTMLCollection_namedItem = function () {
+  if (!(this instanceof HTMLCollection)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
 

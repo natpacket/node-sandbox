@@ -1,4 +1,7 @@
 globalMy.MutationRecord_get_type = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_type');
   }
@@ -23,6 +26,9 @@ globalMy.MutationRecord_get_type = function () {
   return result;
 };
 globalMy.MutationRecord_get_target = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_target');
   }
@@ -47,6 +53,9 @@ globalMy.MutationRecord_get_target = function () {
   return result;
 };
 globalMy.MutationRecord_get_addedNodes = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_addedNodes');
   }
@@ -71,6 +80,9 @@ globalMy.MutationRecord_get_addedNodes = function () {
   return result;
 };
 globalMy.MutationRecord_get_removedNodes = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_removedNodes');
   }
@@ -95,6 +107,9 @@ globalMy.MutationRecord_get_removedNodes = function () {
   return result;
 };
 globalMy.MutationRecord_get_previousSibling = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_previousSibling');
   }
@@ -119,6 +134,9 @@ globalMy.MutationRecord_get_previousSibling = function () {
   return result;
 };
 globalMy.MutationRecord_get_nextSibling = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_nextSibling');
   }
@@ -143,6 +161,9 @@ globalMy.MutationRecord_get_nextSibling = function () {
   return result;
 };
 globalMy.MutationRecord_get_attributeName = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_attributeName');
   }
@@ -167,6 +188,9 @@ globalMy.MutationRecord_get_attributeName = function () {
   return result;
 };
 globalMy.MutationRecord_get_attributeNamespace = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_attributeNamespace');
   }
@@ -191,6 +215,9 @@ globalMy.MutationRecord_get_attributeNamespace = function () {
   return result;
 };
 globalMy.MutationRecord_get_oldValue = function () {
+  if (!(this instanceof MutationRecord)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了MutationRecord_get_oldValue');
   }
@@ -214,4 +241,5 @@ globalMy.MutationRecord_get_oldValue = function () {
   }
   return result;
 };
+// Navigator
 // Navigator

@@ -1,5 +1,10 @@
+// 函数实现
+// SpeechSynthesis
 // IDBRequest
 globalMy.SpeechSynthesisUtterance_get_text = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['text'];
@@ -9,6 +14,9 @@ globalMy.SpeechSynthesisUtterance_get_text = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_text = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['text'] = val;
@@ -17,6 +25,9 @@ globalMy.SpeechSynthesisUtterance_set_text = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_lang = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['lang'];
@@ -26,6 +37,9 @@ globalMy.SpeechSynthesisUtterance_get_lang = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_lang = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['lang'] = val;
@@ -34,6 +48,9 @@ globalMy.SpeechSynthesisUtterance_set_lang = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_voice = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['voice'];
@@ -43,6 +60,9 @@ globalMy.SpeechSynthesisUtterance_get_voice = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_voice = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['voice'] = val;
@@ -51,6 +71,9 @@ globalMy.SpeechSynthesisUtterance_set_voice = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_volume = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['volume'];
@@ -60,6 +83,9 @@ globalMy.SpeechSynthesisUtterance_get_volume = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_volume = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['volume'] = val;
@@ -68,6 +94,9 @@ globalMy.SpeechSynthesisUtterance_set_volume = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_rate = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['rate'];
@@ -77,6 +106,9 @@ globalMy.SpeechSynthesisUtterance_get_rate = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_rate = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['rate'] = val;
@@ -85,6 +117,9 @@ globalMy.SpeechSynthesisUtterance_set_rate = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_pitch = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['pitch'];
@@ -94,6 +129,9 @@ globalMy.SpeechSynthesisUtterance_get_pitch = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_pitch = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['pitch'] = val;
@@ -102,6 +140,9 @@ globalMy.SpeechSynthesisUtterance_set_pitch = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onstart = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onstart'];
@@ -111,6 +152,9 @@ globalMy.SpeechSynthesisUtterance_get_onstart = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onstart = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onstart'] = val;
@@ -119,6 +163,9 @@ globalMy.SpeechSynthesisUtterance_set_onstart = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onend = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onend'];
@@ -128,6 +175,9 @@ globalMy.SpeechSynthesisUtterance_get_onend = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onend = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onend'] = val;
@@ -136,6 +186,9 @@ globalMy.SpeechSynthesisUtterance_set_onend = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onerror = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onerror'];
@@ -145,6 +198,9 @@ globalMy.SpeechSynthesisUtterance_get_onerror = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onerror = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onerror'] = val;
@@ -153,6 +209,9 @@ globalMy.SpeechSynthesisUtterance_set_onerror = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onpause = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onpause'];
@@ -162,6 +221,9 @@ globalMy.SpeechSynthesisUtterance_get_onpause = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onpause = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onpause'] = val;
@@ -170,6 +232,9 @@ globalMy.SpeechSynthesisUtterance_set_onpause = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onresume = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onresume'];
@@ -179,6 +244,9 @@ globalMy.SpeechSynthesisUtterance_get_onresume = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onresume = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onresume'] = val;
@@ -187,6 +255,9 @@ globalMy.SpeechSynthesisUtterance_set_onresume = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onmark = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onmark'];
@@ -196,6 +267,9 @@ globalMy.SpeechSynthesisUtterance_get_onmark = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onmark = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onmark'] = val;
@@ -204,6 +278,9 @@ globalMy.SpeechSynthesisUtterance_set_onmark = function (val) {
   }
 };
 globalMy.SpeechSynthesisUtterance_get_onboundary = function () {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['onboundary'];
@@ -213,6 +290,9 @@ globalMy.SpeechSynthesisUtterance_get_onboundary = function () {
   return result;
 };
 globalMy.SpeechSynthesisUtterance_set_onboundary = function (val) {
+  if (!(this instanceof SpeechSynthesisUtterance)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['onboundary'] = val;

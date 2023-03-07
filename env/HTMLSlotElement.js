@@ -1,4 +1,7 @@
 globalMy.HTMLSlotElement_get_name = function () {
+  if (!(this instanceof HTMLSlotElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSlotElement_get_name');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLSlotElement_get_name = function () {
   return result;
 };
 globalMy.HTMLSlotElement_set_name = function (val) {
+  if (!(this instanceof HTMLSlotElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSlotElement_set_name, 传参val => ' + val);
   }
@@ -47,6 +53,9 @@ globalMy.HTMLSlotElement_set_name = function (val) {
   }
 };
 globalMy.HTMLSlotElement_assign = function () {
+  if (!(this instanceof HTMLSlotElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSlotElement_assign, arguments => ', arguments);
   }
@@ -73,6 +82,9 @@ globalMy.HTMLSlotElement_assign = function () {
   return result;
 };
 globalMy.HTMLSlotElement_assignedElements = function () {
+  if (!(this instanceof HTMLSlotElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSlotElement_assignedElements, arguments => ', arguments);
   }
@@ -99,6 +111,9 @@ globalMy.HTMLSlotElement_assignedElements = function () {
   return result;
 };
 globalMy.HTMLSlotElement_assignedNodes = function () {
+  if (!(this instanceof HTMLSlotElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLSlotElement_assignedNodes, arguments => ', arguments);
   }

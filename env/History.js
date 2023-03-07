@@ -1,5 +1,9 @@
 // History
+// History
 globalMy.History_get_length = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['length'];
@@ -9,6 +13,9 @@ globalMy.History_get_length = function () {
   return result;
 };
 globalMy.History_get_scrollRestoration = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['scrollRestoration'];
@@ -18,6 +25,9 @@ globalMy.History_get_scrollRestoration = function () {
   return result;
 };
 globalMy.History_set_scrollRestoration = function (val) {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   globalMy.value[foundName]['scrollRestoration'] = val;
@@ -26,6 +36,9 @@ globalMy.History_set_scrollRestoration = function (val) {
   }
 };
 globalMy.History_get_state = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   var foundName = globalMy.foundName(this);
   result = globalMy.value[foundName]['state'];
@@ -35,6 +48,9 @@ globalMy.History_get_state = function () {
   return result;
 };
 globalMy.History_back = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -43,6 +59,9 @@ globalMy.History_back = function () {
   return result;
 };
 globalMy.History_forward = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -51,6 +70,9 @@ globalMy.History_forward = function () {
   return result;
 };
 globalMy.History_go = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -59,6 +81,9 @@ globalMy.History_go = function () {
   return result;
 };
 globalMy.History_pushState = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -67,6 +92,9 @@ globalMy.History_pushState = function () {
   return result;
 };
 globalMy.History_replaceState = function () {
+  if (!(this instanceof History)) {
+    throw new TypeError("Illegal invocation");
+  }
   var result;
   //这里写方法实体
   if (globalMy.is_log) {
@@ -75,4 +103,5 @@ globalMy.History_replaceState = function () {
   return result;
 };
 
+// dom构造函数原型方法
 // dom构造函数原型方法

@@ -1,4 +1,7 @@
 globalMy.HTMLDetailsElement_get_open = function () {
+  if (!(this instanceof HTMLDetailsElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDetailsElement_get_open');
   }
@@ -23,6 +26,9 @@ globalMy.HTMLDetailsElement_get_open = function () {
   return result;
 };
 globalMy.HTMLDetailsElement_set_open = function (val) {
+  if (!(this instanceof HTMLDetailsElement)) {
+    throw new TypeError("Illegal invocation");
+  }
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了HTMLDetailsElement_set_open, 传参val => ' + val);
   }
