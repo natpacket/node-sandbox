@@ -6323,7 +6323,6 @@ globalMy.window_get_speechSynthesis = function () {
     return result;
 }
 
-
 // location
 globalMy.location_valueOf = function () {
     return this;

@@ -2636,6 +2636,8 @@ globalMy.window_openDatabase = function () {
   }
   return result;
 };
+globalMy.window_btoa = globalMy.base64.base64encode;
+globalMy.window_atob = globalMy.base64.base64decode;
 
 // 构造函数实现覆盖
 globalMy.RTCPeerConnection = function () {

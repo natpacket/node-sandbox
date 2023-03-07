@@ -24,7 +24,6 @@ let configure = {
     // url: "http://epub.cnipa.gov.cn/SW/",
     // url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
     url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=2',
-    // url: "https://www.zhipin.com/wapi/zpgeek/search/joblist.json?scene=1&query=%E7%88%AC%E8%99%AB&city=101190100&experience=&degree=&industry=&scale=&stage=&position=&jobType=&salary=&multiBusinessDistrict=&multiSubway=&page=2&pageSize=30",
 }
 const dom = new JSDOM(html, configure);
 
@@ -117,8 +116,18 @@ console.log(encodeURIComponent((new window.ABC).z("et6DuZOBezkCoI40DI0QqQ9bHByFP
     console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 }
 
-runRsVmp();
-// runBoss();
+// 知乎
+function runZhihu(){
+    let workCode = fs.readFileSync("./work/zhihu.js");
+    a = +new Date;
+    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
+    vm.runInNewContext(code, sandbox);
+    console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+}
+
+// runRsVmp();
+runBoss();
+// runZhihu();
 
 
 //// vm2
