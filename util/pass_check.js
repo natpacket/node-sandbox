@@ -20,9 +20,10 @@ delete cost_time;
 // console.log("document.all.length -> ",document.all.length)
 // console.log("document.all 耗时:", +new Date - a, );
 
+
 // 是否打印日志
 globalMy.is_log = true;
-globalMy.is_log = false;
+// globalMy.is_log = false;
 
 // js开始运行时的时间戳, 用来计算整个js耗时
 globalMy.memory.end_time = globalMy.memory.begin_time = Date.now();
