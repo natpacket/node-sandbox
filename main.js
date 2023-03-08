@@ -22,8 +22,8 @@ var html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 let configure = {
     // url:"https://pastebin.com/login",
     // url: "http://epub.cnipa.gov.cn/SW/",
-    // url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
-    url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=2',
+    url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
+    // url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=2',
 }
 const dom = new JSDOM(html, configure);
 
@@ -125,9 +125,10 @@ function runZhihu(){
     console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 }
 
+
 // runRsVmp();
-runBoss();
-// runZhihu();
+// runBoss();
+runZhihu();
 
 
 //// vm2
