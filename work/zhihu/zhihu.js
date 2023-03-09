@@ -1017,4 +1017,6 @@ h = S.__ZH__.zse = S.__ZH__.zse || {},
 var D = function(t) {
     return __g._encrypt(encodeURIComponent(t))
 };
-console.log(D("6e0896e6ddd966ac46abb3bf22221ef6"));
+// udid "101_3_3.0+/udid"
+// console.log("2.0_"+D("7d231a16e30ee2a3512cdf7a30f05226"));
+// console.log("2.0_"+D("a9724ba4c877bddbdeee40e878980ae0"));

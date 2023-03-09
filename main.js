@@ -22,7 +22,7 @@ var html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 let configure = {
     // url:"https://pastebin.com/login",
     // url: "http://epub.cnipa.gov.cn/SW/",
-    url: 'https://www.zhihu.com/search?type=content&q=%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86',
+    url: 'https://www.zhihu.com/search?q=%E8%A2%AB%E6%89%93%E8%BF%98%E6%89%8B%E4%B8%8D%E5%86%8D%E8%AE%A4%E5%AE%9A%E4%B8%BA%E4%BA%92%E6%AE%B4&utm_content=search_hot&type=content',
     // url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=2',
 }
 const dom = new JSDOM(html, configure);
@@ -117,8 +117,26 @@ console.log(encodeURIComponent((new window.ABC).z("et6DuZOBezkCoI40DI0QqQ9bHByFP
 }
 
 // 知乎
-function runZhihu(){
-    let workCode = fs.readFileSync("./work/zhihu.js");
+function runZhihu() {
+    let workCode = fs.readFileSync("./work/zhihu/zhihu.js");
+    a = +new Date;
+    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
+    vm.runInNewContext(code, sandbox);
+    console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+    const WebSocket = require('ws');
+    var wss = new WebSocket.Server({port: 8181});
+    wss.on('connection', function (ws) {
+        console.log('client connected');
+
+        ws.on('message', function (data, isBinary) {
+            console.log('Message from client ', isBinary ? data : data.toString());
+            ws.send("2.0_" + sandbox.D(data.toString()));
+        });
+    });
+}
+
+function runX81() {
+    let workCode = fs.readFileSync("./work/zhihu/x81.js");
     a = +new Date;
     var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
     vm.runInNewContext(code, sandbox);
@@ -129,6 +147,7 @@ function runZhihu(){
 // runRsVmp();
 // runBoss();
 runZhihu();
+// runX81();
 
 
 //// vm2
