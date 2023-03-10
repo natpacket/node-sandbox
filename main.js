@@ -18,7 +18,7 @@ var html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 <body>
 </body>
 </html>`
-// html = ``;
+html = ``;
 let configure = {
     // url:"https://pastebin.com/login",
     // url: "http://epub.cnipa.gov.cn/SW/",

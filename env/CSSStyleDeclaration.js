@@ -60,20 +60,21 @@ globalMy.CSSStyleDeclaration_get_length = function () {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_get_length');
   }
   var result;
-  var foundName = globalMy.foundName(this);
-  result = globalMy.jsdom_element[foundName]['length'];
-  if (result != null && result != undefined) {
-    switch (typeof result) {
-      case "object":
-        debugger;
-        break;
-      case "function":
-        debugger;
-        break;
-      default:
-        break;
-    }
-  }
+  // var foundName = globalMy.foundName(this);
+  // result = globalMy.jsdom_element[foundName]['length'];
+  // if (result != null && result != undefined) {
+  //   switch (typeof result) {
+  //     case "object":
+  //       debugger;
+  //       break;
+  //     case "function":
+  //       debugger;
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // }
+  result = 346;
   if (globalMy.is_log) {
     globalMy.console.log('[*]  调用了CSSStyleDeclaration_get_length, result => ', '' + result);
   }

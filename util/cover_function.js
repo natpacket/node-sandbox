@@ -360,6 +360,29 @@ globalMy.WebGLRenderingContext_getUniformLocation = function () {
     }
     return result;
 };
+globalMy.WebGLRenderingContext_getContextAttributes = function () {
+    if (!(this instanceof WebGLRenderingContext)) {
+        throw new TypeError("Illegal invocation");
+    }
+    var result;
+    //这里写方法实体
+    result = {
+        "alpha": true,
+        "antialias": true,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "default",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": false,
+        "stencil": false,
+        "xrCompatible": false
+    };
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了WebGLRenderingContext_getContextAttributes, arguments => ', arguments, '  result => ', '' + result);
+    }
+    return result;
+};
 
 // Navigator
 globalMy.Navigator_getBattery = function () {
@@ -2110,17 +2133,17 @@ globalMy.Document_get_defaultView = function () {
     return result;
 };
 globalMy.Document_get_wasDiscarded = function () {
-  if (!(this instanceof Document)) {
-    throw new TypeError("Illegal invocation");
-  }
-  if (globalMy.is_log) {
-    globalMy.console.log('[*]  调用了Document_get_wasDiscarded');
-  }
-  var result = false;
-  if (globalMy.is_log) {
-    globalMy.console.log('[*]  调用了Document_get_wasDiscarded, result => ', '' + result);
-  }
-  return result;
+    if (!(this instanceof Document)) {
+        throw new TypeError("Illegal invocation");
+    }
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了Document_get_wasDiscarded');
+    }
+    var result = false;
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了Document_get_wasDiscarded, result => ', '' + result);
+    }
+    return result;
 };
 
 // MutationRecord
@@ -2485,7 +2508,221 @@ globalMy.Performance_now = function () {
     }
     return result;
 };
+globalMy.Performance_getEntries = function () {
+    if (!(this instanceof Performance)) {
+        throw new TypeError("Illegal invocation");
+    }
+    var name, result = [];
+    result[0] = {};
+    Object.setPrototypeOf(result[0], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[0]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "theme-set",
+        "entryType": "measure",
+        "startTime": 0,
+        "duration": 68.39999999850988
+    };
+    result[1] = {};
+    Object.setPrototypeOf(result[1], PerformanceNavigationTiming.prototype);
+    name = globalMy.setfoundName(result[1]);
+    globalMy.value[name] = {
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 32.399999998509884,
+        "domContentLoadedEventStart": 64.80000000447035,
+        "domContentLoadedEventEnd": 64.80000000447035,
+        "domComplete": 70.80000000447035,
+        "loadEventStart": 70.80000000447035,
+        "loadEventEnd": 70.80000000447035,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "initiatorType": "navigation",
+        "nextHopProtocol": "",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.5,
+        "domainLookupStart": 0.5,
+        "domainLookupEnd": 0.5,
+        "connectStart": 0.5,
+        "connectEnd": 0.5,
+        "secureConnectionStart": 0.5,
+        "requestStart": 0.5,
+        "responseStart": 0.5,
+        "responseEnd": 1.6000000014901161,
+        "transferSize": 0,
+        "encodedBodySize": 0,
+        "decodedBodySize": 0,
+        "serverTiming": [],
+        "renderBlockingStatus": "blocking",
+        "responseStatus": 0,
+        "name": "",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 70.80000000447035
+    };
+    result[2] = {};
+    Object.setPrototypeOf(result[2], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[2]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "most-visited-rendered",
+        "entryType": "measure",
+        "startTime": 0,
+        "duration": 125.70000000298023
+    };
+    result[3] = {};
+    Object.setPrototypeOf(result[3], PerformanceMark.prototype);
+    name = globalMy.setfoundName(result[3]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "app-creation-start",
+        "entryType": "mark",
+        "startTime": 51,
+        "duration": 0
+    };
+    result[4] = {};
+    Object.setPrototypeOf(result[4], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[4]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "app-creation",
+        "entryType": "measure",
+        "startTime": 51,
+        "duration": 13.5
+    };
+    result[5] = {};
+    Object.setPrototypeOf(result[5], PerformanceMark.prototype);
+    name = globalMy.setfoundName(result[5]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "logo-creation-start",
+        "entryType": "mark",
+        "startTime": 54.399999998509884,
+        "duration": 0
+    };
+    result[6] = {};
+    Object.setPrototypeOf(result[6], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[6]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "logo-creation",
+        "entryType": "measure",
+        "startTime": 54.399999998509884,
+        "duration": 4
+    };
+    result[7] = {};
+    Object.setPrototypeOf(result[7], PerformanceMark.prototype);
+    name = globalMy.setfoundName(result[7]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "realbox-creation-start",
+        "entryType": "mark",
+        "startTime": 56.20000000298023,
+        "duration": 0
+    };
+    result[8] = {};
+    Object.setPrototypeOf(result[8], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[8]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "realbox-creation",
+        "entryType": "measure",
+        "startTime": 56.20000000298023,
+        "duration": 8.100000001490116
+    };
+    result[9] = {};
+    Object.setPrototypeOf(result[9], PerformancePaintTiming.prototype);
+    name = globalMy.setfoundName(result[9]);
+    globalMy.value[name] = {"name": "first-paint", "entryType": "paint", "startTime": 84.60000000149012, "duration": 0};
+    result[10] = {};
+    Object.setPrototypeOf(result[10], PerformancePaintTiming.prototype);
+    name = globalMy.setfoundName(result[10]);
+    globalMy.value[name] = {"name": "first-contentful-paint", "entryType": "paint", "startTime": 91.5, "duration": 0};
+    result[11] = {};
+    Object.setPrototypeOf(result[11], PerformanceMark.prototype);
+    name = globalMy.setfoundName(result[11]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "most-visited-creation-start",
+        "entryType": "mark",
+        "startTime": 110.89999999850988,
+        "duration": 0
+    };
+    result[12] = {};
+    Object.setPrototypeOf(result[12], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[12]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "most-visited-creation",
+        "entryType": "measure",
+        "startTime": 110.89999999850988,
+        "duration": 6.9000000059604645
+    };
+    result[13] = {};
+    Object.setPrototypeOf(result[13], PerformanceMark.prototype);
+    name = globalMy.setfoundName(result[13]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "most-visited-mojo-start",
+        "entryType": "mark",
+        "startTime": 118.30000000447035,
+        "duration": 0
+    };
+    result[14] = {};
+    Object.setPrototypeOf(result[14], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[14]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "most-visited-mojo",
+        "entryType": "measure",
+        "startTime": 118.30000000447035,
+        "duration": 3.5
+    };
+    result[15] = {};
+    Object.setPrototypeOf(result[15], PerformanceMeasure.prototype);
+    name = globalMy.setfoundName(result[15]);
+    globalMy.value[name] = {
+        "detail": null,
+        "name": "most-visited-mojo",
+        "entryType": "measure",
+        "startTime": 118.30000000447035,
+        "duration": 4
+    };
 
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了Performance_getEntries, arguments => ', arguments, '  result => ', '' + result);
+    }
+    return result;
+};
+globalMy.Performance_getEntriesByType = function () {
+    if (!(this instanceof Performance)) {
+        throw new TypeError("Illegal invocation");
+    }
+    var result;
+    //这里写方法实体
+    if (arguments[0] == "resource") {
+        // 针对阿里滑块225的 跟script节点有关系, 这个resource
+        var name;
+        result = [];
+        result[0] = {};
+        Object.setPrototypeOf(result[0], PerformanceResourceTiming.prototype);
+        name = globalMy.setfoundName(result[0]);
+        globalMy.value[name]["name"] = "https://15x0or.tdum.alibaba.com/dss.js";
+
+        result[1] = {};
+        Object.setPrototypeOf(result[1], PerformanceResourceTiming.prototype);
+        name = globalMy.setfoundName(result[1]);
+        globalMy.value[name]["name"] = "https://ynuf.aliapp.org/w/wu.json";
+    }
+
+    if (globalMy.is_log) {
+        globalMy.console.log('[*]  调用了Performance_getEntriesByType, arguments => ', arguments, '  result => ', '' + result);
+    }
+    return result;
+};
 // AudioParam
 globalMy.AudioParam_setValueAtTime = function () {
     let result;
@@ -2596,8 +2833,8 @@ globalMy.StorageManager_estimate = function () {
     let result;
     result = new Promise((resolve => {
         resolve({
-            quota:1764674537,
-            usage:0,
+            quota: 1764674537,
+            usage: 0,
             usageDetails: {},
         })
     }))
@@ -2716,7 +2953,10 @@ globalMy.window_matchMedia = function () {
 globalMy.window_getComputedStyle = function () {
     var name = globalMy.foundName(arguments[0]);
     var result = globalMy.dom_window.getComputedStyle(globalMy.jsdom_element[name]);
-    name = globalMy.foundJsdomName(result);
+    name = globalMy.foundJsdomName(result, "CSSStyleDeclaration");
+    for (var i in globalMy.style) {
+        globalMy.element[name][i] = globalMy.style[i];
+    }
     Object.setPrototypeOf(globalMy.element[name], CSSStyleDeclaration.prototype);
     result = globalMy.element[name];
     if (globalMy.is_log) {
@@ -2876,6 +3116,37 @@ globalMy.OfflineAudioContext = function OfflineAudioContext() {
     return offlineAudioContext;
 }
 globalMy.OfflineAudioContext.prototype = wanfeng.OfflineAudioContext.prototype;
+
+globalMy.AudioContext = function AudioContext() {
+    if (globalMy.is_log) {
+        globalMy.console.log("[*]  new 构造函数 -> AudioContext, ", "arguments => ", arguments)
+    }
+    var audioContext = this;
+    Object.setPrototypeOf(audioContext, AudioContext.prototype);
+    var name = globalMy.setfoundName(audioContext);
+    globalMy.value[name]["audioWorklet"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["audioWorklet"], AudioWorklet.prototype);
+    globalMy.value[name]["currentTime"] = 1.4613333333333334;
+    globalMy.value[name]["sampleRate"] = 48000;
+    globalMy.value[name]["baseLatency"] = 0.01;
+    globalMy.value[name]["state"] = "running";
+    globalMy.value[name]["oncomplete"] = null;
+    globalMy.value[name]["outputLatency"] = 0.04;
+
+    globalMy.value[name]["destination"] = {};
+    Object.setPrototypeOf(globalMy.value[name]["destination"], AudioDestinationNode.prototype);
+    var obj_name = globalMy.setfoundName(globalMy.value[name]["destination"]);
+    globalMy.value[obj_name]["context"] = audioContext;
+    globalMy.value[obj_name]["channelCount"] = 2;
+    globalMy.value[obj_name]["channelCountMode"] = "explicit";
+    globalMy.value[obj_name]["channelInterpretation"] = "speakers";
+    globalMy.value[obj_name]["maxChannelCount"] = 2;
+    globalMy.value[obj_name]["numberOfInputs"] = 1;
+    globalMy.value[obj_name]["numberOfOutputs"] = 0;
+
+    return audioContext;
+}
+globalMy.AudioContext.prototype = wanfeng.AudioContext.prototype;
 
 /*
 自定义Promise函数模块：IIFE

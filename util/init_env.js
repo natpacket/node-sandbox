@@ -2,7 +2,7 @@
 // Object.setPrototypeOf(globalMy, Object.prototype);
 
 Utils.Error_get_stack = function () {
-    // debugger;
+    debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
     console.log("报错堆栈 -> ", arguments[0]);
     return arguments[0];
@@ -563,6 +563,8 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[navigator_name]['cookieEnabled'] = true;
     globalMy.value[navigator_name]['appCodeName'] = 'Mozilla';
     globalMy.value[navigator_name]['appName'] = 'Netscape';
+    globalMy.value[navigator_name]['deviceMemory'] = 8;
+    
 
     globalMy.value[navigator_name]['platform'] = 'Win32';
     globalMy.value[navigator_name]['product'] = 'Gecko';
