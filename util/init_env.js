@@ -4,7 +4,7 @@
 Utils.Error_get_stack = function () {
     // debugger;
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
-    // console.log(arguments[0]);
+    console.log("报错堆栈 -> ", arguments[0]);
     return arguments[0];
 }
 
@@ -134,7 +134,6 @@ globalMy.createMimeType = function createMimeType(type, suffixes, description) {
 
 // 创建事件 供dispatchEvent触发
 globalMy.createEvent = function createEvent(type) {
-
     if (type.indexOf("mouse") !== -1 || type === 'click') {
         var name = globalMy.event.length;
         globalMy.event[name] = {};
@@ -175,7 +174,11 @@ globalMy.createEvent = function createEvent(type) {
         globalMy.event_value[name]["target"] = document;
         globalMy.event_value[name]["type"] = type;
         globalMy.event_value[name]["timeStamp"] = Date.now() - globalMy.memory.begin_time;
-    } else {
+    }
+    else if (type === "deviceorientation"){
+
+    }
+    else {
         debugger;
     }
 
@@ -377,6 +380,8 @@ globalMy.newWindow = function (dom_window, is_init) {
     Object.setPrototypeOf(globalMy.value[globalMy.obj_name]['navigation'], PerformanceNavigation.prototype);
     globalMy.obj_name_1 = globalMy.setfoundName(globalMy.value[globalMy.obj_name]['navigation']);
 
+    globalMy.value[globalMy.obj_name]['timeOrigin'] = Date.now() + 0.8;
+
     globalMy.value[globalMy.obj_name_1] = {
         redirectCount: 0,
         type: 0
@@ -575,17 +580,23 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[navigator_name]['locks'] = {};
     Object.setPrototypeOf(globalMy.value[navigator_name]['locks'], LockManager.prototype);
 
-    globalMy.value[navigator_name]['userActivation'] = {};
+
     globalMy.value[navigator_name]['scheduling'] = {};
     globalMy.obj_name = globalMy.setfoundName(globalMy.value[navigator_name]['scheduling']);
     globalMy.value[navigator_name]['scheduling'].__proto__ = Scheduling.prototype;
 
+    globalMy.value[navigator_name]['userActivation'] = {};
     globalMy.obj_name = globalMy.setfoundName(globalMy.value[navigator_name]['userActivation']);
     globalMy.value[globalMy.obj_name] = {
         hasBeenActive: true
         , isActive: true
     }
+
     globalMy.value[navigator_name]['userActivation'].__proto__ = UserActivation.prototype;
+
+    globalMy.value[navigator_name]['storage'] = {};
+    globalMy.obj_name = globalMy.setfoundName(globalMy.value[navigator_name]['storage']);
+    Object.setPrototypeOf(globalMy.value[navigator_name]['storage'], StorageManager.prototype);
 
     globalMy.value[navigator_name]['webkitTemporaryStorage'] = {};
     globalMy.value[navigator_name]['webkitPersistentStorage'] = {};

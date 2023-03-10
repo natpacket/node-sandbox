@@ -24,7 +24,8 @@ let configure = {
     // url: "http://epub.cnipa.gov.cn/SW/",
     // url: 'https://www.zhihu.com/search?q=%E8%A2%AB%E6%89%93%E8%BF%98%E6%89%8B%E4%B8%8D%E5%86%8D%E8%AE%A4%E5%AE%9A%E4%B8%BA%E4%BA%92%E6%AE%B4&utm_content=search_hot&type=content',
     // url: 'https://www.zhipin.com/web/geek/job?query=%E7%88%AC%E8%99%AB&city=101190100&page=2',
-    url: 'https://www.toutiao.com/',
+    // url: 'https://www.toutiao.com/',
+    url: 'https://login.taobao.com/member/login.jhtml?spm=a21bo.jianhua.754894437.1.5af911d9ha3rTs&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F',
 }
 const dom = new JSDOM(html, configure);
 
@@ -82,12 +83,13 @@ globalMy.console.log(localStorage._$rc);
 function runBoss() {
     let workCode = fs.readFileSync("./work/boss.js");
     // jsdom iframe document.cookie 和 top window document cookie 值是一样的, jsdom没有实现, 是空值
-    globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
-        .split("; ");
 
-    globalMy.cookies.map((item) => {
-        dom.window.document.cookie = item + "; "
-    });
+    // globalMy.cookies = "__g=-; wd_guid=4b0af4e0-f861-438f-97b2-aac8c458bafa; historyState=state; _bl_uid=jjlsbeI9syF1zzgjyv5va0dcRysI; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1677817919; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1677818563; __zp_stoken__=d84deEDF3EBx6fgA0f25LVToiURoXewkoNnMYSGZDFCZLVSYQPFUOBVp4UTdKHWxFGm41FmcXV0c6VhcYLTFfZR1jNRQ3UXJKASl1VxQcFWw6CVFCHBVqIgovKFkNKjAuWFcHd31sfD9yZUU%3D; __zp_sseed__=et6DuZOBezkCoI40DI0QqRe+cUEpgPIeSPrKnU6P45Q=; __zp_sname__=85a97204; __zp_sts__=1677818564123; __c=1677817918; __l=l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjob%3Fquery%3D%25E7%2588%25AC%25E8%2599%25AB%26city%3D101190100%26page%3D3&r=&g=&s=3&friend_source=0&s=3&friend_source=0; __a=87646262.1677817918..1677817918.6.1.6.6"
+    //     .split("; ");
+    //
+    // globalMy.cookies.map((item) => {
+    //     dom.window.document.cookie = item + "; "
+    // });
 
     a = +new Date;
     var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + ``;
@@ -153,12 +155,20 @@ function runAcSign(){
     console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
 }
 
+function run225(){
+    let workCode = fs.readFileSync("./work/ali225.js");
+    a = +new Date;
+    var code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode;
+    vm.runInNewContext(code, sandbox);
+    console.log("运行环境Js + 工作Js 耗时:", +new Date - a, "毫秒");
+}
+
 // runRsVmp();
 // runBoss();
 // runZhihu();
 // runX81();
-runAcSign();
-
+// runAcSign();
+run225();
 
 //// vm2
 // var vm = new VM({ sandbox: sandbox });
