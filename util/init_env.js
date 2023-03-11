@@ -1,33 +1,67 @@
-// Object.setPrototypeOf(wanfeng, Object.prototype);
-// Object.setPrototypeOf(globalMy, Object.prototype);
 
 Utils.Error_get_stack = function () {
     debugger;
+    var stack = arguments[0].split("\n");
+    for (var i = 0; i < stack.length; i++) {
+        if (stack[i].indexOf(`at globalMy.`) != -1){
+            stack.splice(i, 1);
+        }
+        if (stack[i].indexOf(`at Module._compile (node:`) != -1) {
+            stack = stack.slice(0, i);
+        }
+    }
+    stack = stack.join('\n');
     // console.log("请自行修改堆栈,不想修改就直接return arguments[0]");
-    console.log("报错堆栈 -> ", arguments[0]);
-    return arguments[0];
+    console.log("报错堆栈 -> ", stack);
+    return stack;
 }
 
 this.cost_time = +new Date;
+
 globalMy.initEnv = function () {
-    Utils.initEnv();
     var i;
-    for (i in wanfeng) {
+    for (i in globalMy.throw_err) {
         // 删除重复对象,否则会导致我们注册函数到global下时失败
         if (i in this) {
             delete this[i];
         }
+        var err = globalMy.throw_err[i];
+
         // 自定义的构造函数 比如Document. 这里只是随便生成了一个函数
-        globalMy[i] = function () {
-            globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]);
-        };
+        if (!(i in globalMy)) {
+            if (err.length == 2) {
+                var less_code = globalMy.arg_less_code.replace('replace', i).replace("1", err[1].toString());
+                var len = err[1];
+                globalMy[i] = function () {
+                    if (arguments.length < len) {
+                        throw new TypeError(less_code);
+                    }
+                    globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]);
+                };
+            }
+            else {
+                globalMy[i] = function () {
+                    globalMy.console.log("[*]  new 构造函数 ->", this[Symbol.toStringTag]);
+                };
+            }
+        }
+        var data = [globalMy[i]];
+        // 添加报错信息
+        if (err.length != 0) {
+            if (err[0] == i) {
+                data.push(globalMy.err_code.replace("replace", err[0]));
+            } else data.push(err[0]);
+        }
+        wanfeng[i] = wanfeng.SetNative(data, i);
         Object.setPrototypeOf(wanfeng[i], Function.prototype);
-        globalMy[i].prototype = wanfeng[i].prototype;
     }
     // 初始化global, 然后设置__proto__链
+
+    Utils.initEnv();
     Utils.register();
 }
 globalMy.initEnv.apply(this, []);
+
 globalMy.console.log("node环境框架初始化耗时:", +new Date - cost_time, "毫秒");
 
 cost_time = +new Date;
@@ -175,7 +209,7 @@ globalMy.createEvent = function createEvent(type) {
         globalMy.event_value[name]["type"] = type;
         globalMy.event_value[name]["timeStamp"] = Date.now() - globalMy.memory.begin_time;
     }
-    else if (type === "deviceorientation"){
+    else if (type === "deviceorientation") {
 
     }
     else {
@@ -564,7 +598,7 @@ globalMy.newWindow = function (dom_window, is_init) {
     globalMy.value[navigator_name]['appCodeName'] = 'Mozilla';
     globalMy.value[navigator_name]['appName'] = 'Netscape';
     globalMy.value[navigator_name]['deviceMemory'] = 8;
-    
+
 
     globalMy.value[navigator_name]['platform'] = 'Win32';
     globalMy.value[navigator_name]['product'] = 'Gecko';

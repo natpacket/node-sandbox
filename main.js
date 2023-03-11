@@ -5,10 +5,12 @@ const fs = require("fs");
 const vm = require("vm");
 const jsdom = require("jsdom");
 const {JSDOM} = jsdom;
+var wanfeng = require("wanfeng");
 // var ws = require("nodejs-websocket");
 console.log("导包耗时:", +new Date - a, "毫秒");
 a = +new Date;
 // const dom = new JSDOM(`<!DOCTYPE html><p>hello world</p>`);
+
 
 var html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -18,7 +20,7 @@ var html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 <body>
 </body>
 </html>`
-html = ``;
+// html = ``;
 let configure = {
     // url:"https://pastebin.com/login",
     // url: "http://epub.cnipa.gov.cn/SW/",
@@ -37,11 +39,13 @@ filePath.map((item) => {
 
 
 let init_env = fs.readFileSync("./util/init_env.js");
+let cover_construct_function = fs.readFileSync("./util/cover_construct_function.js");
 let cover_function = fs.readFileSync("./util/cover_function.js");
 let pass_check = fs.readFileSync("./util/pass_check.js");
 let globalMy_js = fs.readFileSync("./util/globalMy.js");
 let endCode = fs.readFileSync("./util/end.js");
 
+init_env = cover_construct_function + init_env;
 envCode += cover_function + pass_check;
 
 // workCode
@@ -50,7 +54,6 @@ envCode += cover_function + pass_check;
 
 // let workCode = fs.readFileSync("./work/zhihu.js");
 
-var wanfeng = require("wanfeng");
 
 globalMy = {
     dom_window: dom.window
@@ -98,21 +101,21 @@ function runBoss() {
     var ifr = dom.window.document.createElement("iframe");
     dom.window.document.body.appendChild(ifr);
 
-    globalMy.dom_window = ifr.contentWindow;
-    globalMy.window_frameElement = ifr;
-    globalMy.window_parent = sandbox.zzz_mark_key;
+    // globalMy.dom_window = ifr.contentWindow;
+    // globalMy.window_frameElement = ifr;
+    // globalMy.window_parent = sandbox.zzz_mark_key;
 
     const sandbox_ = {
         wanfeng: wanfeng,
-        // globalMy: {
-        //     dom_window: ifr.contentWindow,
-        //     window_frameElement: ifr,
-        //     window_parent: sandbox.Win
-        // },
-        globalMy: globalMy,
+        globalMy: {
+            dom_window: ifr.contentWindow,
+            window_frameElement: ifr,
+            window_parent: sandbox.zzz_mark_key
+        },
+        // globalMy: globalMy,
         console: console,
     }
-    code = "debugger;\r\n" + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode + `
+    code = "debugger;\r\n" + globalMy_js + init_env + envCode + "\r\n" + workCode + "\r\n" + endCode + `
 console.log(encodeURIComponent((new window.ABC).z("et6DuZOBezkCoI40DI0QqQ9bHByFPpZ2VUGLwTAeK8g=", parseInt("1677987995819") + 60 * (480 + (new Date).getTimezoneOffset()) * 1e3)));
 `;
     vm.runInNewContext(code, sandbox_);
@@ -164,11 +167,11 @@ function run225(){
 }
 
 // runRsVmp();
-// runBoss();
+runBoss();
 // runZhihu();
 // runX81();
 // runAcSign();
-run225();
+// run225();
 
 //// vm2
 // var vm = new VM({ sandbox: sandbox });
